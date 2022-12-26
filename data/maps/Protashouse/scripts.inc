@@ -7,7 +7,7 @@ TV::
 	msgbox TV_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_ne TV_2
-	msgbox TV_Text_8
+	msgbox TV_Text_7
 TV_1:
 	releaseall
 	end
@@ -18,7 +18,6 @@ TV_2:
 	msgbox TV_Text_4
 	msgbox TV_Text_5
 	msgbox TV_Text_6
-	msgbox TV_Text_7
 	goto TV_1
 
 
@@ -97,7 +96,7 @@ TV_Text_2:
 	.string "semaines, des rochers ont fait leur\l"
 	.string "apparition autour de la ville, bloquant\l"
 	.string "tous les accès, plein de pokémon acier\l"
-	.string "ce sont rassermblés dans la ville,\l"
+	.string "ce sont rassemblés dans la ville,\l"
 	.string "empêchant le passage au dessus du\l"
 	.string "pont, ils attaquent quiconque qui s'en\l"
 	.string "approcherait le seul moyen de quitter\l"
@@ -110,52 +109,24 @@ TV_Text_2:
 	.string "d'Olnyris, car plein de marques de\l"
 	.string "fabriques ne se situent que dans cette\l"
 	.string "ville, nous ferons un bilan détaillé\l"
-	.string "dans la chaine Economie TV d'ici peu\l"
+	.string "dans la chaîne Economie TV d'ici peu\l"
 	.string "Nous avons interrogé certains témoins\l"
 	.string "ATTENTION, LEURS TEMOIGNAGES SONT A\l"
 	.string "PRENDRE AU SECOND DEGRÉ, NOUS NE\l"
 	.string "POSSÉDONS AUCUN MOYEN DE VERIFIER LA\l"
-	.string "VÉRACITÉ DE LEURS INFORMATIONS$"
+	.string "VÉRACITÉ DE LEURS INFORMATIONS.$"
 
 TV_Text_3:
-	.string "INFO SPÉCIALE CELLAPOLIS : La ville de\n"
-	.string "Cellapolis est en pleine phase de\l"
-	.string "périurbaisation, plutôt devrais-je dire\l"
-	.string "était car oui, depuis quelques\l"
-	.string "semaines, des rochers ont fait leur\l"
-	.string "apparition autour de la ville, bloquant\l"
-	.string "ainsi tous les accès, plein de pokémon\l"
-	.string "acier ce sont rassermblés dans la ville,\l"
-	.string "empêchant le passage au dessus du\l"
-	.string "pont, ils attaquent quiconque qui s'en\l"
-	.string "approcherait. Le seul moyen de quitter\l"
-	.string "la ville est de prendre le train, train\l"
-	.string "qui malheureusement ne peut être pris\l"
-	.string "que par les privilégiés cela fait office\l"
-	.string "de blocus terrestre, empêchant toute\l"
-	.string "activité commerciale cela pourrait\l"
-	.string "fortement impacter l'économie\l"
-	.string "d'Olnyris, car plein de marques de\l"
-	.string "fabriques ne se situent que dans cette\l"
-	.string "ville, nous ferons un bilan détaillé\l"
-	.string "dans la chaine Economie TV d'ici peu\l"
-	.string "Nous avons interrogé certains témoins\l"
-	.string "ATTENTION, LEURS TEMOIGNAGES SONT A\l"
-	.string "PRENDRE AU SECOND DEGRÉ, NOUS NE\l"
-	.string "POSSÉDONS AUCUN MOYEN DE VERIFIER LA\l"
-	.string "VÉRACITÉ DE LEURS INFORMATIONS$"
-
-TV_Text_4:
 	.string "Témoin 1 : J'étais traaaanquille, je\n"
 	.string "sortais du magasin de vélos quand j'ai\l"
 	.string "vu de grosses météorites bombarder les\l"
 	.string "alentours de la ville, j'ai vraiment cru\l"
 	.string "que j'allais y passer. Après leur chute,\l"
-	.string "j'ai vu un Pokémon qui s'blait être trop\l"
-	.string "fortiche, genre un légendaire ou un\l"
-	.string "fabuleux$"
+	.string "j'ai vu un Pokémon qui avait l'air être\l"
+	.string "trop fortiche, genre un légendaire ou\l"
+	.string "un fabuleux.$"
 
-TV_Text_5:
+TV_Text_4:
 	.string "Témoin 2 : Je n'ai pas assisté à la chute\n"
 	.string "des météorites, et je ne crois pas en\l"
 	.string "ces histoires. J'ai vu un Pokémon qui\l"
@@ -163,18 +134,18 @@ TV_Text_5:
 	.string "l'entourait, c'est lui qui les a déposé.\l"
 	.string "J'irai dire qu'il était manipulé par\l"
 	.string "quelqu'un voulant bloquer les échanges\l"
-	.string "commerciaux de la ville$"
+	.string "commerciaux de la ville.$"
 
-TV_Text_6:
+TV_Text_5:
 	.string "Témoin 3 : Je n'ai entendu aucun bruit\n"
 	.string "lors des bombardements, je pense aussi\l"
 	.string "que quelqu'un les a déposé. Le Pokémon\l"
-	.string "que j'ai vu avait une sorte de mirroirs\l"
+	.string "que j'ai vu avait une sorte de miroirs\l"
 	.string "attachés au visage et il allait\l"
 	.string "suuuuuper vite, j'crois c'est un\l"
-	.string "pokémon dragon$"
+	.string "pokémon dragon.$"
 
-TV_Text_7:
+TV_Text_6:
 	.string "Merci pour tous vos renseignements.\n"
 	.string "grâce aux informations récoltées nous\l"
 	.string "avons pu émettre quelques théories :\l"
@@ -187,20 +158,20 @@ TV_Text_7:
 	.string "pu trouver que diverses sortes de\l"
 	.string "métaux étaient dans les rochers et\l"
 	.string "certains d'entre eux sont extrêmement\l"
-	.string "magnetiques nous n'avons pas pu vous\l"
+	.string "magnétiques nous n'avons pas pu vous\l"
 	.string "prendre des photos car tous nos\l"
 	.string "appareils électriques étaient attirés\l"
-	.string "par une grande force magnetique et se\l"
-	.string "fracassaient contre les rochers ça\l"
+	.string "par une si grande force magnetique et\l"
+	.string "se fracassaient contre les rochers ça\l"
 	.string "semble être la cause de la frustration\l"
 	.string "des Pokémon acier. Merci d'avoir\l"
 	.string "regardé ce reportage, rappel : Nous\l"
 	.string "parlerons des impacts de cet incident\l"
 	.string "au niveau économique plus\l"
 	.string "profondément dans la chaîne Economie\l"
-	.string "TV d'ici peu$"
+	.string "TV d'ici peu.$"
 
-TV_Text_8:
+TV_Text_7:
 	.string "La télé s'est éteinte.$"
 
 Lit_Text_0:
