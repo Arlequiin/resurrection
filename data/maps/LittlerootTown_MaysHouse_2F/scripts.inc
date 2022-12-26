@@ -400,4 +400,3 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
 	.string "Hé, {PLAYER}, si on se croise pendant que\n"
 	.string "j’attrape des POKéMON, on pourra\l"
 	.string "faire un petit combat, si tu veux.$"
-	

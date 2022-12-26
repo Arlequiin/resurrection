@@ -410,4 +410,3 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Salut, toi!\p"
 	.string "Est-ce que tu as déjà des\n"
 	.string "POKéMON à toi?$"
-	

@@ -303,4 +303,3 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "C’est une Nintendo GameCube.\p"
 	.string "Une Game Boy Advance est branchée\n"
 	.string "dessus et sert de manette.$"
-	
