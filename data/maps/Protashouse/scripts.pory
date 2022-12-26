@@ -1,0 +1,70 @@
+mapscripts Protashouse_MapScripts{
+
+}
+
+script TV {
+	msgbox(format("On dirait qu'il y a une émission..."))
+	msgbox(format("Voir l'émission (durée : 25 min) ?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0) {
+	msgbox(format("INFO SPÉCIALE CELLAPOLIS : La ville de Cellapolis est en pleine phase de périurbaisation, plutôt devrais-je dire était car oui, depuis quelques semaines, des rochers ont fait leur apparition autour de la ville, bloquant tous les accès, plein de pokémon acier ce sont rassermblés dans la ville, empêchant le passage au dessus du pont, ils attaquent quiconque qui s'en approcherait le seul moyen de quitter la ville est de prendre le train, train qui malheureusement ne peut être pris que par les privilégiés cela fait office de blocus terrestre, empêchant toute activité commerciale cela pourrait fortement impacter l'économie d'Olnyris, car plein de marques de fabriques ne se situent que dans cette ville, nous ferons un bilan détaillé dans la chaine Economie TV d'ici peu Nous avons interrogé certains témoins ATTENTION, LEURS TEMOIGNAGES SONT A PRENDRE AU SECOND DEGRÉ, NOUS NE POSSÉDONS AUCUN MOYEN DE VERIFIER LA VÉRACITÉ DE LEURS INFORMATIONS"))
+	msgbox(format("INFO SPÉCIALE CELLAPOLIS : La ville de Cellapolis est en pleine phase de périurbaisation, plutôt devrais-je dire était car oui, depuis quelques semaines, des rochers ont fait leur apparition autour de la ville, bloquant ainsi tous les accès, plein de pokémon acier ce sont rassermblés dans la ville, empêchant le passage au dessus du pont, ils attaquent quiconque qui s'en approcherait. Le seul moyen de quitter la ville est de prendre le train, train qui malheureusement ne peut être pris que par les privilégiés cela fait office de blocus terrestre, empêchant toute activité commerciale cela pourrait fortement impacter l'économie d'Olnyris, car plein de marques de fabriques ne se situent que dans cette ville, nous ferons un bilan détaillé dans la chaine Economie TV d'ici peu Nous avons interrogé certains témoins ATTENTION, LEURS TEMOIGNAGES SONT A PRENDRE AU SECOND DEGRÉ, NOUS NE POSSÉDONS AUCUN MOYEN DE VERIFIER LA VÉRACITÉ DE LEURS INFORMATIONS"))
+	msgbox(format("Témoin 1 : J'étais traaaanquille, je sortais du magasin de vélos quand j'ai vu de grosses météorites bombarder les alentours de la ville, j'ai vraiment cru que j'allais y passer. Après leur chute, j'ai vu un Pokémon qui s'blait être trop fortiche, genre un légendaire ou un fabuleux"))
+	msgbox(format("Témoin 2 : Je n'ai pas assisté à la chute des météorites, et je ne crois pas en ces histoires. J'ai vu un Pokémon qui resplendissait de lumière, des étoiles l'entourait, c'est lui qui les a déposé. J'irai dire qu'il était manipulé par quelqu'un voulant bloquer les échanges commerciaux de la ville"))
+	msgbox(format("Témoin 3 : Je n'ai entendu aucun bruit lors des bombardements, je pense aussi que quelqu'un les a déposé. Le Pokémon que j'ai vu avait une sorte de mirroirs attachés au visage et il allait  suuuuuper vite, j'crois c'est un pokémon dragon"))
+	msgbox(format("Merci pour tous vos renseignements. grâce aux informations récoltées nous avons pu émettre quelques théories : Le Pokémon qui a été vu devait être un Deoxys ou un Jirachi. Il possédait la capacité Draco-Météore, hors, aucun de ses deux Pokémon ne possède cette capacité. Après avoir fait des tests d'identification de matière nous avons pu trouver que diverses sortes de métaux étaient dans les rochers et certains d'entre eux sont extrêmement magnetiques nous n'avons pas pu vous prendre des photos car tous nos appareils électriques étaient attirés par une grande force magnetique et se fracassaient contre les rochers ça semble être la cause de la frustration des Pokémon acier. Merci d'avoir regardé ce reportage, rappel : Nous parlerons des impacts de cet incident au niveau économique plus profondément dans la chaîne Economie TV d'ici peu"))
+	} else {
+		msgbox(format("La télé s'est éteinte."))
+	}
+	releaseall
+	end
+}
+
+script Lit{
+	lock
+	msgbox("C'est votre lit.",MSGBOX_SIGN)
+	release
+	end
+}
+
+script NintendoSwitch{
+	lock
+	msgbox("C'est une Nintendo Switch. \nVoulez-vous y jouer ?",MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0) {
+		random(SPECIES_JIRACHI)
+		addvar(VAR_RESULT, 1)
+		bufferspeciesname(STR_VAR_1, VAR_RESULT)
+		showmonpic(VAR_RESULT, 0, 3)
+		playmoncry(VAR_RESULT, 0)
+		waitmoncry
+		closemessage
+		random(100)
+		addvar(VAR_RESULT,1)
+		buffernumberstring(STR_VAR_2, VAR_RESULT)
+		msgbox("Un {STR_VAR_1} sauvage apparaît ! (Nv.{STR_VAR_2})")
+		msgbox("Le capturer ?",MSGBOX_YESNO)
+		if (var(VAR_RESULT) != 0) {
+		random(2)
+		switch (var(VAR_RESULT)) {
+           case 0: msgbox("Mince, il casse la Ball")
+		   hidemonpic
+           case 1: playfanfare(FANFARE_OBTAIN_ITEM)
+		   msgbox("Félicitations {STR_VAR_1} est capturé !")
+		   hidemonpic
+		}
+		} else {
+			msgbox("Vous prenez la fuite !")
+			hidemonpic
+		}
+	} else {
+		msgbox("Pas l'temps.")
+	}
+	release
+	end
+}
+
+script ordinateur {
+	msgbox(format("C'est une vidéo d'un chercheur Pokémon nommé Flomars. Il parle d'un certain dragon originel, Pokémon étant la fusion de Reshiram, Zekrom et Kyurem qui risque d'être ressucité. "))
+	releaseall
+	end
+}
+

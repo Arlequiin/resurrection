@@ -2983,22 +2983,25 @@ static void GetBattlerNick(u32 battlerId, u8 *dst)
     StringGet_Nickname(dst);
 }
 
-#define HANDLE_NICKNAME_STRING_CASE(battlerId)                          \
+#define HANDLE_NICKNAME_STRING_CASE(battlerId, monIndex)                \
     if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)                     \
     {                                                                   \
         if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)                     \
             toCpy = sText_FoePkmnPrefix;                                \
         else                                                            \
             toCpy = sText_WildPkmnPrefix;                               \
-        while (*toCpy != EOS)                                           \
-        {                                                               \
-            dst[dstID] = *toCpy;                                        \
-            dstID++;                                                    \
-            toCpy++;                                                    \
-        }                                                               \
+                                                                        \
+        GetMonData(&gEnemyParty[monIndex], MON_DATA_NICKNAME, text);    \
+        StringGet_Nickname(text);                                       \
+        StringAppend(text, toCpy);                                      \
     }                                                                   \
-    GetBattlerNick(battlerId, text);                                    \
-    toCpy = text;
+    else                                                                \
+    {                                                                   \
+        GetMonData(&gPlayerParty[monIndex], MON_DATA_NICKNAME, text);   \
+        StringGet_Nickname(text);                                       \
+    }                                                                   \
+                                                                        \
+    toCpy = text;                                                     
 
 static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text, u8 multiplayerId, u8 battlerId)
 {
@@ -3234,10 +3237,10 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 toCpy = text;
                 break;
             case B_TXT_ATK_NAME_WITH_PREFIX: // attacker name with prefix
-                HANDLE_NICKNAME_STRING_CASE(gBattlerAttacker)
+                HANDLE_NICKNAME_STRING_CASE(gBattlerAttacker,gBattlerPartyIndexes[gBattlerAttacker])
                 break;
             case B_TXT_DEF_NAME_WITH_PREFIX: // target name with prefix
-                HANDLE_NICKNAME_STRING_CASE(gBattlerTarget)
+                HANDLE_NICKNAME_STRING_CASE(gBattlerTarget,gBattlerPartyIndexes[gBattlerTarget])
                 break;
             case B_TXT_DEF_NAME: // target name
                 GetBattlerNick(gBattlerTarget, text);
@@ -3256,13 +3259,13 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 toCpy = text;
                 break;
             case B_TXT_EFF_NAME_WITH_PREFIX: // effect battlerId name with prefix
-                HANDLE_NICKNAME_STRING_CASE(gEffectBattler)
+                HANDLE_NICKNAME_STRING_CASE(gEffectBattler, gBattlerPartyIndexes[gEffectBattler])
                 break;
             case B_TXT_ACTIVE_NAME_WITH_PREFIX: // active battlerId name with prefix
-                HANDLE_NICKNAME_STRING_CASE(gActiveBattler)
+                HANDLE_NICKNAME_STRING_CASE(gActiveBattler, gBattlerPartyIndexes[gActiveBattler])
                 break;
             case B_TXT_SCR_ACTIVE_NAME_WITH_PREFIX: // scripting active battlerId name with prefix
-                HANDLE_NICKNAME_STRING_CASE(gBattleScripting.battler)
+                HANDLE_NICKNAME_STRING_CASE(gBattleScripting.battler, gBattlerPartyIndexes[gActiveBattler])
                 break;
             case B_TXT_CURRENT_MOVE: // current move name
                 if (gBattleStruct->zmove.active)
