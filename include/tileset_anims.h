@@ -8,6 +8,8 @@ void TransferTilesetAnimsBuffer(void);
 
 void InitTilesetAnim_General(void);
 void InitTilesetAnim_Petalburg(void);
+void InitTilesetAnim_CellapolisNord(void);
+void InitTilesetAnim_Bedroom(void);
 void InitTilesetAnim_Rustboro(void);
 void InitTilesetAnim_Dewford(void);
 void InitTilesetAnim_Slateport(void);
@@ -23,6 +25,8 @@ void InitTilesetAnim_Sootopolis(void);
 void InitTilesetAnim_BattleFrontierOutsideWest(void);
 void InitTilesetAnim_BattleFrontierOutsideEast(void);
 void InitTilesetAnim_Building(void);
+void InitTilesetAnim_IndoorResu(void);
+void InitTilesetAnim_GeneralResu(void);
 void InitTilesetAnim_Cave(void);
 void InitTilesetAnim_BikeShop(void);
 void InitTilesetAnim_Underwater(void);

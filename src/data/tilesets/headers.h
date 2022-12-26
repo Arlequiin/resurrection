@@ -20,6 +20,28 @@ const struct Tileset gTileset_Petalburg =
     .callback = InitTilesetAnim_Petalburg,
 };
 
+const struct Tileset gTileset_CellapolisNord =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CellapolisNord,
+    .palettes = gTilesetPalettes_CellapolisNord,
+    .metatiles = gMetatiles_CellapolisNord,
+    .metatileAttributes = gMetatileAttributes_CellapolisNord,
+    .callback = InitTilesetAnim_CellapolisNord,
+};
+
+const struct Tileset gTileset_Bedroom =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Bedroom,
+    .palettes = gTilesetPalettes_Bedroom,
+    .metatiles = gMetatiles_Bedroom,
+    .metatileAttributes = gMetatileAttributes_Bedroom,
+    .callback = InitTilesetAnim_Bedroom,
+};
+
 const struct Tileset gTileset_Rustboro =
 {
     .isCompressed = TRUE,
@@ -183,6 +205,28 @@ const struct Tileset gTileset_Building =
     .metatiles = gMetatiles_InsideBuilding,
     .metatileAttributes = gMetatileAttributes_InsideBuilding,
     .callback = InitTilesetAnim_Building,
+};
+
+const struct Tileset gTileset_IndoorResu =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_IndoorResu,
+    .palettes = gTilesetPalettes_IndoorResu,
+    .metatiles = gMetatiles_IndoorResu,
+    .metatileAttributes = gMetatileAttributes_IndoorResu,
+    .callback = InitTilesetAnim_IndoorResu,
+};
+
+const struct Tileset gTileset_GeneralResu =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralResu,
+    .palettes = gTilesetPalettes_GeneralResu,
+    .metatiles = gMetatiles_GeneralResu,
+    .metatileAttributes = gMetatileAttributes_GeneralResu,
+    .callback = InitTilesetAnim_GeneralResu,
 };
 
 const struct Tileset gTileset_Shop =

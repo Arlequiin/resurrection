@@ -1,2 +1,2 @@
-ProtasRoom_MapScripts::
+Protasroom_MapScripts::
 	.byte 0

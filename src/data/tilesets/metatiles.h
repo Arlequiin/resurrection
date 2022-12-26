@@ -4,6 +4,9 @@ const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/gene
 const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
 const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatile_attributes.bin");
 
+const u16 gMetatiles_CellapolisNord[] = INCBIN_U16("data/tilesets/secondary/cellapolis_nord/metatiles.bin");
+const u16 gMetatileAttributes_CellapolisNord[] = INCBIN_U16("data/tilesets/secondary/cellapolis_nord/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 
@@ -49,8 +52,14 @@ const u16 gMetatileAttributes_BattleFrontierOutsideEast[] = INCBIN_U16("data/til
 const u16 gMetatiles_InsideBuilding[] = INCBIN_U16("data/tilesets/primary/building/metatiles.bin");
 const u16 gMetatileAttributes_InsideBuilding[] = INCBIN_U16("data/tilesets/primary/building/metatile_attributes.bin");
 
+const u16 gMetatiles_IndoorResu[] = INCBIN_U16("data/tilesets/primary/indoor_resu/metatiles.bin");
+const u16 gMetatileAttributes_IndoorResu[] = INCBIN_U16("data/tilesets/primary/indoor_resu/metatile_attributes.bin");
+
 const u16 gMetatiles_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatiles.bin");
 const u16 gMetatileAttributes_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralResu[] = INCBIN_U16("data/tilesets/primary/gen_resu/metatiles.bin");
+const u16 gMetatileAttributes_GeneralResu[] = INCBIN_U16("data/tilesets/primary/gen_resu/metatile_attributes.bin");
 
 const u16 gMetatiles_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatiles.bin");
 const u16 gMetatileAttributes_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatile_attributes.bin");
@@ -138,6 +147,9 @@ const u16 gMetatileAttributes_LavaridgeGym[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_PetalburgGym[] = INCBIN_U16("data/tilesets/secondary/petalburg_gym/metatiles.bin");
 const u16 gMetatileAttributes_PetalburgGym[] = INCBIN_U16("data/tilesets/secondary/petalburg_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_Bedroom[] = INCBIN_U16("data/tilesets/secondary/bedroom/metatiles.bin");
+const u16 gMetatileAttributes_Bedroom[] = INCBIN_U16("data/tilesets/secondary/bedroom/metatile_attributes.bin");
 
 const u16 gMetatiles_FortreeGym[] = INCBIN_U16("data/tilesets/secondary/fortree_gym/metatiles.bin");
 const u16 gMetatileAttributes_FortreeGym[] = INCBIN_U16("data/tilesets/secondary/fortree_gym/metatile_attributes.bin");
