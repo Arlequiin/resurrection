@@ -3,29 +3,29 @@ static const u8 sDummyDesc[] = _(
 
 // Poké Balls
 static const u8 sPokeBallDesc[] = _(
-    "A tool used for\n"
-    "catching wild\n"
-    "Pokémon.");
+    "Un objet qui permet\n"
+    "d’attraper les\n"
+    "POKéMON sauvages.");
 
 static const u8 sGreatBallDesc[] = _(
-    "A good Ball with a\n"
-    "higher catch rate\n"
-    "than a Poké Ball.");
+    "BALL au taux de\n"
+    "réussite supérieur\n"
+    "à la POKé BALL.");
 
 static const u8 sUltraBallDesc[] = _(
-    "A better Ball with\n"
-    "a higher catch rate\n"
-    "than a Great Ball.");
+    "BALL au taux de\n"
+    "réussite supérieur\n"
+    "à la SUPER BALL.");
 
 static const u8 sMasterBallDesc[] = _(
-    "The best Ball that\n"
-    "catches a Pokémon\n"
-    "without fail.");
+    "La meilleure BALL.\n"
+    "Capture le POKéMON\n"
+    "à coup sûr.");
 
 static const u8 sPremierBallDesc[] = _(
-    "A rare Ball made\n"
-    "in commemoration\n"
-    "of some event.");
+    "Une BALL rare créée\n"
+    "à l’occasion d’un\n"
+    "grand évènement.");
 
 static const u8 sHealBallDesc[] = _(
     "A remedial Ball\n"
@@ -184,36 +184,23 @@ static const u8 sMaxReviveDesc[] = _(
     "its HP.");
 
 static const u8 sFreshWaterDesc[] = _(
-    "A mineral water\n"
-    "that restores HP\n"
-#if I_HEALTH_RECOVERY >= GEN_7
-    "by 30 points.");
-#else
-    "by 50 points.");
-#endif
+    "Une eau minérale\n"
+    "qui restaure 30 PV.");
 
 static const u8 sSodaPopDesc[] = _(
-    "A fizzy soda drink\n"
-    "that restores HP\n"
-#if I_HEALTH_RECOVERY >= GEN_7
-    "by 50 points.");
-#else
-    "by 60 points.");
-#endif
+    "Une boisson\n"
+    "pétillante qui\n"
+    "restaure 50 PV.");
 
 static const u8 sLemonadeDesc[] = _(
-    "A very sweet drink\n"
-    "that restores HP\n"
-#if I_HEALTH_RECOVERY >= GEN_7
-    "by 70 points.");
-#else
-    "by 80 points.");
-#endif
+    "Une boisson très\n"
+    "sucrée qui\n"
+    "restaure 70 PV.");
 
 static const u8 sMoomooMilkDesc[] = _(
-    "A nutritious milk\n"
-    "that restores HP\n"
-    "by 100 points.");
+    "Un lait nourrissant\n"
+    "qui restaure les PV\n"
+    "de 100 points.");
 
 static const u8 sEnergyPowderDesc[] = _(
     "A bitter powder\n"
@@ -318,9 +305,9 @@ static const u8 sRageCandyBarDesc[] = _(
     "one Pokémon.");
 
 static const u8 sLavaCookieDesc[] = _(
-    "A local specialty\n"
-    "that heals all\n"
-    "status problems.");
+    "Spécialité locale\n"
+    "soignant les chan-\n"
+    "gements de statut.");
 
 static const u8 sOldGateauDesc[] = _(
     "Heals all the\n"
@@ -3540,14 +3527,14 @@ static const u8 sBicycleDesc[] = _(
     "the Running Shoes.");
 
 static const u8 sMachBikeDesc[] = _(
-    "A folding bicycle\n"
-    "that doubles your\n"
-    "speed or better.");
+    "Un vélo pliable\n"
+    "pour aller 2 fois\n"
+    "plus vite qu’à pied.");
 
 static const u8 sAcroBikeDesc[] = _(
-    "A folding bicycle\n"
-    "capable of jumps\n"
-    "and wheelies.");
+    "Appareil permettant\n"
+    "d'appeler un\n"
+    "Pokémon-monture.");
 
 static const u8 sOldRodDesc[] = _(
     "Use by any body of\n"
@@ -3645,14 +3632,14 @@ static const u8 sSSTicketDesc[] = _(
     "ferry.");
 
 static const u8 sEonTicketDesc[] = _(
-    "The ticket for a\n"
-    "ferry to a distant\n"
-    "southern island.");
+    "Un ticket de train\n"
+    "pour le Centre de\n"
+    "Recherches.");
 
 static const u8 sMysticTicketDesc[] = _(
-    "A ticket required\n"
-    "to board the ship\n"
-    "to Navel Rock.");
+    "Un ticket de train\n"
+    "pour le Centre de\n"
+    "Recherches.");
 
 static const u8 sAuroraTicketDesc[] = _(
     "A ticket required\n"

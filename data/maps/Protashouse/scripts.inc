@@ -10,14 +10,15 @@ StopPlayer:
 	walk_up
 	walk_up
 	walk_up
+	face_left
 	step_end
 
 FaceMom:
-	face_down
+	face_right
 	step_end
 
 maman::
-	checkitem ITEM_MACH_BIKE
+	checkitem ITEM_ACRO_BIKE
 	compare VAR_RESULT, 1
 	goto_if_ne maman_2
 maman_1:
@@ -25,14 +26,16 @@ maman_1:
 	end
 
 maman_2:
-	lockall
+	lock
+	faceplayer
 	applymovement 1, StopPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, FaceMom
 	msgbox maman_Text_0
 	closemessage
-	faceplayer
 	msgbox maman_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_EON_TICKET, 1
+	waitfanfare
 	closemessage
 	msgbox maman_Text_2
 	closemessage
@@ -41,16 +44,23 @@ maman_2:
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	msgbox maman_Text_4
 	closemessage
-	giveitem ITEM_MACH_BIKE, 1
-	closemessage
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_ACRO_BIKE, 1
+	waitfanfare
 	msgbox maman_Text_5
 	closemessage
-	giveitem ITEM_FRESH_WATER, 5
-	closemessage
-	giveitem ITEM_LAVA_COOKIE, 5
-	closemessage
 	msgbox maman_Text_6
+	closemessage
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_FRESH_WATER, 5
+	waitfanfare
+	closemessage
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_LAVA_COOKIE, 5
+	waitfanfare
+	closemessage
 	msgbox maman_Text_7
+	msgbox maman_Text_8
 	closemessage
 	goto maman_1
 
@@ -217,14 +227,18 @@ maman_Text_3:
 	.string "importées d'Unys$"
 
 maman_Text_4:
-	.string "Enfin, une petite surprise, un vélo tout\n"
-	.string "neuf... je ne m'y connais pas trop en\l"
-	.string "vélos mais le vendeur proposait un\l"
-	.string "crossover, un vélo de route et un vélo\l"
-	.string "en bois. Celui-là m'a semblé adapté à\l"
-	.string "tous les usages.$"
+	.string "Enfin, une petite surprise, une\n"
+	.string "Poké-Monture!$"
 
 maman_Text_5:
+	.string "Il s'appelle Motorizard, il vient de la\n"
+	.string "région de Paldea, pour l'instant il ne\l"
+	.string "peut que marcher et faire de petits\l"
+	.string "sauts mais je suis sûre qu'avec toi il\l"
+	.string "apprendra à nager et escalader voire\l"
+	.string "plus!$"
+
+maman_Text_6:
 	.string "Bien, n'oublies surtout pas de\n"
 	.string "t'hydrater et de bien manger, je ne\l"
 	.string "veux pas que tu sois anémique à ton\l"
@@ -232,11 +246,11 @@ maman_Text_5:
 	.string "cookies que ta tante m'a ramenée de la\l"
 	.string "région de Hoenn.$"
 
-maman_Text_6:
+maman_Text_7:
 	.string "S'il te plaît reviens me voir ! Je tiens\n"
 	.string "beaucoup à toi$"
 
-maman_Text_7:
+maman_Text_8:
 	.string "{PLAYER} s'il t'arrive quelque chose\n"
 	.string "je ne pourrai pas m'en remettre. Les\l"
 	.string "séparations sont toujours\l"

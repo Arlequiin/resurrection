@@ -4,38 +4,48 @@ mapscripts Protashouse_MapScripts{
 movement StopPlayer{
           walk_left * 4
           walk_up * 3
+		  face_left
 }
 
 movement FaceMom{
-     face_down
+     face_right
 }
 
 script maman{
-  checkitem(ITEM_MACH_BIKE)
+  checkitem(ITEM_ACRO_BIKE)
   if (var(VAR_RESULT) != 1){
-	lockall
+	lock
+	faceplayer
 	applymovement(1, StopPlayer)
 	applymovement(OBJ_EVENT_ID_PLAYER, FaceMom)
 	msgbox(format("Ah, tu es là!"))
 	closemessage
-	faceplayer
 	msgbox(format("Bon, {PLAYER} tu vas être en retard, le train part dans moins d'une heure. Tu as dormi comme un Ronflex ! J'ai quelques objets à te donner avant que l'on se quitte"))
+	playfanfare(MUS_OBTAIN_ITEM)
 	giveitem(ITEM_EON_TICKET,1)
+	waitfanfare
 	closemessage
 	msgbox(format("C'est le ticket que tu devras présenter avant de prendre le train pour le Centre de Recherches. Quel chanceux tu es, seuls les scientifiques du labo l'utilisent."))
 	closemessage
 	msgbox(format("Ah et, pour faciliter tes déplacements, j'ai dépensé beaucoup d'argent. Tiens, de nouvelles chaussures de sport, c'est des chaussures de marques importées d'Unys"))
 	closemessage
 	setflag(FLAG_RECEIVED_RUNNING_SHOES)
-	msgbox(format("Enfin, une petite surprise, un vélo tout neuf... je ne m'y connais pas trop en vélos mais le vendeur proposait un crossover, un vélo de route et un vélo en bois. Celui-là m'a semblé adapté à tous les usages."))
+	msgbox(format("Enfin, une petite surprise, une Poké-Monture!"))
 	closemessage
-	giveitem(ITEM_MACH_BIKE,1)
+	playfanfare(MUS_OBTAIN_ITEM)
+	giveitem(ITEM_ACRO_BIKE,1)
+	waitfanfare
+	msgbox(format("Il s'appelle Motorizard, il vient de la région de Paldea, pour l'instant il ne peut que marcher et faire de petits sauts mais je suis sûre qu'avec toi il apprendra à nager et escalader voire plus!"))
 	closemessage
 	msgbox(format("Bien, n'oublies surtout pas de t'hydrater et de bien manger, je ne veux pas que tu sois anémique à ton retour ! Tiens, de l'eau fraiche et des cookies que ta tante m'a ramenée de la région de Hoenn."))
 	closemessage
+	playfanfare(MUS_OBTAIN_ITEM)
 	giveitem(ITEM_FRESH_WATER,5)
+	waitfanfare
 	closemessage
+	playfanfare(MUS_OBTAIN_ITEM)
 	giveitem(ITEM_LAVA_COOKIE,5)
+	waitfanfare
 	closemessage
 	msgbox(format("S'il te plaît reviens me voir ! Je tiens beaucoup à toi"))
 	msgbox(format("{PLAYER} s'il t'arrive quelque chose je ne pourrai pas m'en remettre. Les séparations sont toujours compliquées... Mais bon, la vie l'exige, moi aussi j'étais une grande dresseuse à une époque. Le niveau de Jungko en témoigne. Dis lui au revoir en sortant ! Bien. Je ne te retiens pas plus. Au revoir mon bouchon ... (larme)"))
