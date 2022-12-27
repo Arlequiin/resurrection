@@ -1,69 +1,141 @@
 mapscripts Protashouse_MapScripts{
 
 }
+movement StopPlayer{
+          walk_left * 4
+          walk_up * 3
+}
 
-script TV {
-	msgbox(format("On dirait qu'il y a une émission..."))
-	msgbox(format("Voir l'émission (durée : 25 min) ?"),MSGBOX_YESNO)
-	if (var(VAR_RESULT) != 0) {
-	msgbox(format("INFO SPÉCIALE CELLAPOLIS : La ville de Cellapolis est en pleine phase de périurbaisation, plutôt devrais-je dire était car oui, depuis quelques semaines, des rochers ont fait leur apparition autour de la ville, bloquant tous les accès, plein de pokémon acier ce sont rassemblés dans la ville, empêchant le passage au dessus du pont, ils attaquent quiconque qui s'en approcherait le seul moyen de quitter la ville est de prendre le train, train qui malheureusement ne peut être pris que par les privilégiés cela fait office de blocus terrestre, empêchant toute activité commerciale cela pourrait fortement impacter l'économie d'Olnyris, car plein de marques de fabriques ne se situent que dans cette ville, nous ferons un bilan détaillé dans la chaîne Economie TV d'ici peu Nous avons interrogé certains témoins ATTENTION, LEURS TEMOIGNAGES SONT A PRENDRE AU SECOND DEGRÉ, NOUS NE POSSÉDONS AUCUN MOYEN DE VERIFIER LA VÉRACITÉ DE LEURS INFORMATIONS."))
-	msgbox(format("Témoin 1 : J'étais traaaanquille, je sortais du magasin de vélos quand j'ai vu de grosses météorites bombarder les alentours de la ville, j'ai vraiment cru que j'allais y passer. Après leur chute, j'ai vu un Pokémon qui avait l'air être trop fortiche, genre un légendaire ou un fabuleux."))
-	msgbox(format("Témoin 2 : Je n'ai pas assisté à la chute des météorites, et je ne crois pas en ces histoires. J'ai vu un Pokémon qui resplendissait de lumière, des étoiles l'entourait, c'est lui qui les a déposé. J'irai dire qu'il était manipulé par quelqu'un voulant bloquer les échanges commerciaux de la ville."))
-	msgbox(format("Témoin 3 : Je n'ai entendu aucun bruit lors des bombardements, je pense aussi que quelqu'un les a déposé. Le Pokémon que j'ai vu avait une sorte de miroirs attachés au visage et il allait  suuuuuper vite, j'crois c'est un pokémon dragon."))
-	msgbox(format("Merci pour tous vos renseignements. grâce aux informations récoltées nous avons pu émettre quelques théories : Le Pokémon qui a été vu devait être un Deoxys ou un Jirachi. Il possédait la capacité Draco-Météore, hors, aucun de ses deux Pokémon ne possède cette capacité. Après avoir fait des tests d'identification de matière nous avons pu trouver que diverses sortes de métaux étaient dans les rochers et certains d'entre eux sont extrêmement magnétiques nous n'avons pas pu vous prendre des photos car tous nos appareils électriques étaient attirés par une si grande force magnetique et se fracassaient contre les rochers ça semble être la cause de la frustration des Pokémon acier. Merci d'avoir regardé ce reportage, rappel : Nous parlerons des impacts de cet incident au niveau économique plus profondément dans la chaîne Economie TV d'ici peu."))
+movement FaceMom{
+     face_down
+}
+
+script maman{
+  checkitem(ITEM_MACH_BIKE)
+  if (var(VAR_RESULT) != 1){
+	lockall
+	applymovement(1, StopPlayer)
+	applymovement(OBJ_EVENT_ID_PLAYER, FaceMom)
+	msgbox(format("Ah, tu es là!"))
+	closemessage
+	faceplayer
+	msgbox(format("Bon, {PLAYER} tu vas être en retard, le train part dans moins d'une heure. Tu as dormi comme un Ronflex ! J'ai quelques objets à te donner avant que l'on se quitte"))
+	giveitem(ITEM_EON_TICKET,1)
+	closemessage
+	msgbox(format("C'est le ticket que tu devras présenter avant de prendre le train pour le Centre de Recherches. Quel chanceux tu es, seuls les scientifiques du labo l'utilisent."))
+	closemessage
+	msgbox(format("Ah et, pour faciliter tes déplacements, j'ai dépensé beaucoup d'argent. Tiens, de nouvelles chaussures de sport, c'est des chaussures de marques importées d'Unys"))
+	closemessage
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	msgbox(format("Enfin, une petite surprise, un vélo tout neuf... je ne m'y connais pas trop en vélos mais le vendeur proposait un crossover, un vélo de route et un vélo en bois. Celui-là m'a semblé adapté à tous les usages."))
+	closemessage
+	giveitem(ITEM_MACH_BIKE,1)
+	closemessage
+	msgbox(format("Bien, n'oublies surtout pas de t'hydrater et de bien manger, je ne veux pas que tu sois anémique à ton retour ! Tiens, de l'eau fraiche et des cookies que ta tante m'a ramenée de la région de Hoenn."))
+	closemessage
+	giveitem(ITEM_FRESH_WATER,5)
+	closemessage
+	giveitem(ITEM_LAVA_COOKIE,5)
+	closemessage
+	msgbox(format("S'il te plaît reviens me voir ! Je tiens beaucoup à toi"))
+	msgbox(format("{PLAYER} s'il t'arrive quelque chose je ne pourrai pas m'en remettre. Les séparations sont toujours compliquées... Mais bon, la vie l'exige, moi aussi j'étais une grande dresseuse à une époque. Le niveau de Jungko en témoigne. Dis lui au revoir en sortant ! Bien. Je ne te retiens pas plus. Au revoir mon bouchon ... (larme)"))
+	closemessage
+  } 
+	releaseall
+	end
+}
+
+script larmes{
+	getPartySize()
+	addvar(VAR_RESULT, 1)
+	if (var(VAR_RESULT) == 1){
+	lock
+	faceplayer
+	msgbox(format("Snif... Au revoir {PLAYER}, profite bien de ton voyage."))
 	} else {
-		msgbox(format("La télé s'est éteinte."))
+		msgbox(format("Oh tu es revenu ! Alors, raconte moi tout !"))
+		msgbox(format("................."))
+		//if (VAR_RESULT < 6 && VAR_RESULT > 0) {
+			buffernumberstring(STR_VAR_2, VAR_RESULT)
+			checkplayergender()
+			if (var(VAR_RESULT) == MALE) {
+			 msgbox(format("Tu as des badges et {STR_VAR_2} Pokémon ! Mais c'est fantastique ! Mon fils est un grand dresseur !"))
+			} else {
+				msgbox(format("Tu as des badges {STR_VAR_2} Pokémon ! Mais c'est fantastique ! Ma fille est une grande dresseuse !"))
+			}
+		//} else {
+		//msgbox(format("8 badges ! T'iras loin toi !"))
+		//}
 	}
 	releaseall
 	end
 }
 
-script Lit{
+script carton{
 	lock
-	msgbox("C'est votre lit.",MSGBOX_SIGN)
+	msgbox(format("C'est un carton. Il contient tous les souvenirs de Papa."))
+	msgbox(format("Il y a ses papiers, sa photo et ses lunettes."))
 	release
 	end
 }
 
-script NintendoSwitch{
-	lock
-	msgbox("C'est une Nintendo Switch. \nVoulez-vous y jouer ?",MSGBOX_YESNO)
+script etagere_zonezero{
+	msgbox(format("C'est une bibliothèque."))
+	msgbox(format("Il y a un livre qui parle de la Zone Zéro, le lire?"),MSGBOX_YESNO)
 	if (var(VAR_RESULT) != 0) {
-		random(SPECIES_JIRACHI)
-		addvar(VAR_RESULT, 1)
-		bufferspeciesname(STR_VAR_1, VAR_RESULT)
-		showmonpic(VAR_RESULT, 0, 3)
-		playmoncry(VAR_RESULT, 0)
-		waitmoncry
-		closemessage
-		random(100)
-		addvar(VAR_RESULT,1)
-		buffernumberstring(STR_VAR_2, VAR_RESULT)
-		msgbox("Un {STR_VAR_1} sauvage apparaît ! (Nv.{STR_VAR_2})")
-		msgbox("Le capturer ?",MSGBOX_YESNO)
-		if (var(VAR_RESULT) != 0) {
-		random(2)
-		switch (var(VAR_RESULT)) {
-           case 0: msgbox("Mince, il casse la Ball")
-		   hidemonpic
-           case 1: playfanfare(FANFARE_OBTAIN_ITEM)
-		   msgbox("Félicitations {STR_VAR_1} est capturé !")
-		   hidemonpic
-		}
-		} else {
-			msgbox("Vous prenez la fuite !")
-			hidemonpic
-		}
-	} else {
-		msgbox("Pas l'temps.")
+		msgbox(format("Il y a 200 ans, un groupe d'explorateurs financé par l'académie regroupait les meilleurs talents de Paldea, combattants expérimentés et érudits. L'écrivain et spécialiste d'histoire naturelle Bruyer, accompagné de son Motorizard, faisait partie de cette équipe nommée : Le groupe d'observation de la Zone Zéro. Bruyer nous raconte les évènements et découvertes faites lors de cette expédition dans son ouvrage intitulé le Livre Écarlate ou Violet."))
 	}
-	release
-	end
-}
-
-script ordinateur {
-	msgbox(format("C'est une vidéo d'un chercheur Pokémon nommé Flomars. Il parle d'un certain dragon originel, Pokémon étant la fusion de Reshiram, Zekrom et Kyurem qui risque d'être ressucité. "))
 	releaseall
 	end
 }
 
+script etagere_origin{
+	msgbox(format("C'est une bibliothèque."))
+	msgbox(format("Il y a un Journal du bord qui parle du dragon originel, il a été écrit par Papa. Le lire?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0) {
+		msgbox(format("Les 73 premières pages sont brûlées."))
+		msgbox(format("Des expériences plutôt concluantes ont permis de déterminer que Reshiram, Zekrom et Kyurem ne formait à l'origine qu'un seul Pokémon, les mythes de la région d'Unys les concernant sont donc fondés. Nous avons trouvé des similitudes dans leurs gènes et, il y a de cela quelques années, en 2012, une organisation nommée 'Team Plasma' fusionna deux des trois Pokémon à l'aide d'un objet mystérieux nommé Pointeau ADN. Dans la mythologie d'Unys, Reshiram serait issu de la fission du Dragon Originel qui aurait fondé la région. Reshiram se serait allié à l'un des deux frères, l'aîné, en quête de réalité."))
+		msgbox(format("Dans le but d'en savoir plus, je me suis procuré un Célébi, Pokémon possédant la faculté de voyager dans le temps."))
+		msgbox(format("Journal du Bord, Jour 74"))
+		msgbox(format("Cher lecteur, j'ai pu voir le Dragon Originel de mes propres yeux suite à de nombreuses explorations spatio-temporelles, contrairement à ce que disent les livres, je l'ai vu dans la région d'Olnyris plutôt qu'Unys. Ce Pokémon est magnifique et extrêmement puissant. Je me demande si Arceus, prétendu créateur des autres Pokémon pourrait le battre. Son aura est dévastatrice, j'étais à 3 km de lui malgré ça l'une de mes deux jambes est immobilisée. À en croire mon appareil, nous sommes en l'an 3000 avant notre ère. Le Dragon semble être ami avec les civilisations de l'époque, les Olnims."))
+		msgbox(format("Message Posthume"))
+		msgbox(format("Cher Lecteur, aujourd'hui ce n'est pas le Professeur .... qui vous écrit mais l'un de ses assistants, il finit par succomber suite à une paralysie totale. Je ne saurais vous dire si c'est dû au voyage dans le temps ou au choc lorsqu'il vu le Dragon. Toutes mes condoléances à ses proches. Il avait un enfant nommé {PLAYER}, ce dernier au jour où je vous écris est âgé de 3 ans. Merci de remettre ce journal à sa famille."))
+	}
+	releaseall
+	end
+}
+
+script frigo{
+	msgbox(format("Vous voulez ouvrir le réfrégirateur?"),MSGBOX_YESNO)
+	random(9)
+	switch (var(VAR_RESULT)) {
+		case 0: 
+		msgbox(format("Génial, il y a une bouteille d'eau!"))
+		giveitem(ITEM_FRESH_WATER)
+		case 1:
+		msgbox(format("Génial, il y a une limonade!"))
+		giveitem(ITEM_LEMONADE)
+		case 2:
+		msgbox(format("Génial, il y a un soda!"))
+		giveitem(ITEM_SODA_POP)
+		case 3:
+		msgbox(format("Incroyable! Une glace Volute! Elle a du en faire du chemin pour arriver jusqu'ici."))
+		giveitem(ITEM_CASTELIACONE)
+		case 4:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 5:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 6:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 7:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 8:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 9:
+		msgbox(format("Il n'y a rien dans le frigo."))
+		case 10:
+		msgbox(format("Il n'y a rien dans le frigo."))
+    }
+	releaseall
+	end
+}

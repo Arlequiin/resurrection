@@ -2,205 +2,388 @@ Protashouse_MapScripts::
 	.byte 0
 
 
-TV::
-	msgbox TV_Text_0
-	msgbox TV_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne TV_2
-	msgbox TV_Text_7
-TV_1:
+StopPlayer:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+FaceMom:
+	face_down
+	step_end
+
+maman::
+	checkitem ITEM_MACH_BIKE
+	compare VAR_RESULT, 1
+	goto_if_ne maman_2
+maman_1:
 	releaseall
 	end
 
-TV_2:
-	msgbox TV_Text_2
-	msgbox TV_Text_3
-	msgbox TV_Text_4
-	msgbox TV_Text_5
-	msgbox TV_Text_6
-	goto TV_1
-
-
-Lit::
-	lock
-	msgbox Lit_Text_0, MSGBOX_SIGN
-	release
-	end
-
-
-NintendoSwitch::
-	lock
-	msgbox NintendoSwitch_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne NintendoSwitch_2
-	msgbox NintendoSwitch_Text_6
-NintendoSwitch_1:
-	release
-	end
-
-NintendoSwitch_2:
-	random SPECIES_JIRACHI
-	addvar VAR_RESULT, 1
-	bufferspeciesname STR_VAR_1, VAR_RESULT
-	showmonpic VAR_RESULT, 0, 3
-	playmoncry VAR_RESULT, 0
-	waitmoncry
+maman_2:
+	lockall
+	applymovement 1, StopPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, FaceMom
+	msgbox maman_Text_0
 	closemessage
-	random 100
+	faceplayer
+	msgbox maman_Text_1
+	giveitem ITEM_EON_TICKET, 1
+	closemessage
+	msgbox maman_Text_2
+	closemessage
+	msgbox maman_Text_3
+	closemessage
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	msgbox maman_Text_4
+	closemessage
+	giveitem ITEM_MACH_BIKE, 1
+	closemessage
+	msgbox maman_Text_5
+	closemessage
+	giveitem ITEM_FRESH_WATER, 5
+	closemessage
+	giveitem ITEM_LAVA_COOKIE, 5
+	closemessage
+	msgbox maman_Text_6
+	msgbox maman_Text_7
+	closemessage
+	goto maman_1
+
+
+larmes::
+	getPartySize
 	addvar VAR_RESULT, 1
+	compare VAR_RESULT, 1
+	goto_if_eq larmes_2
+	msgbox larmes_Text_1
+	msgbox larmes_Text_2
 	buffernumberstring STR_VAR_2, VAR_RESULT
-	msgbox NintendoSwitch_Text_1
-	msgbox NintendoSwitch_Text_2, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne NintendoSwitch_5
-	msgbox NintendoSwitch_Text_5
-	hidemonpic
-	goto NintendoSwitch_1
-
-NintendoSwitch_5:
-	random 2
-	switch VAR_RESULT
-	case 0, NintendoSwitch_9
-	case 1, NintendoSwitch_10
-	goto NintendoSwitch_1
-
-NintendoSwitch_9:
-	msgbox NintendoSwitch_Text_3
-	hidemonpic
-	goto NintendoSwitch_1
-
-NintendoSwitch_10:
-	playfanfare FANFARE_OBTAIN_ITEM
-	msgbox NintendoSwitch_Text_4
-	hidemonpic
-	goto NintendoSwitch_1
-
-
-ordinateur::
-	msgbox ordinateur_Text_0
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq larmes_5
+	msgbox larmes_Text_4
+larmes_1:
 	releaseall
 	end
 
+larmes_2:
+	lock
+	faceplayer
+	msgbox larmes_Text_0
+	goto larmes_1
 
-TV_Text_0:
-	.string "On dirait qu'il y a une émission...$"
+larmes_5:
+	msgbox larmes_Text_3
+	goto larmes_1
 
-TV_Text_1:
-	.string "Voir l'émission (durée : 25 min) ?$"
 
-TV_Text_2:
-	.string "INFO SPÉCIALE CELLAPOLIS : La ville de\n"
-	.string "Cellapolis est en pleine phase de\l"
-	.string "périurbaisation, plutôt devrais-je dire\l"
-	.string "était car oui, depuis quelques\l"
-	.string "semaines, des rochers ont fait leur\l"
-	.string "apparition autour de la ville, bloquant\l"
-	.string "tous les accès, plein de pokémon acier\l"
-	.string "ce sont rassemblés dans la ville,\l"
-	.string "empêchant le passage au dessus du\l"
-	.string "pont, ils attaquent quiconque qui s'en\l"
-	.string "approcherait le seul moyen de quitter\l"
-	.string "la ville est de prendre le train, train\l"
-	.string "qui malheureusement ne peut être pris\l"
-	.string "que par les privilégiés cela fait office\l"
-	.string "de blocus terrestre, empêchant toute\l"
-	.string "activité commerciale cela pourrait\l"
-	.string "fortement impacter l'économie\l"
-	.string "d'Olnyris, car plein de marques de\l"
-	.string "fabriques ne se situent que dans cette\l"
-	.string "ville, nous ferons un bilan détaillé\l"
-	.string "dans la chaîne Economie TV d'ici peu\l"
-	.string "Nous avons interrogé certains témoins\l"
-	.string "ATTENTION, LEURS TEMOIGNAGES SONT A\l"
-	.string "PRENDRE AU SECOND DEGRÉ, NOUS NE\l"
-	.string "POSSÉDONS AUCUN MOYEN DE VERIFIER LA\l"
-	.string "VÉRACITÉ DE LEURS INFORMATIONS.$"
+carton::
+	lock
+	msgbox carton_Text_0
+	msgbox carton_Text_1
+	release
+	end
 
-TV_Text_3:
-	.string "Témoin 1 : J'étais traaaanquille, je\n"
-	.string "sortais du magasin de vélos quand j'ai\l"
-	.string "vu de grosses météorites bombarder les\l"
-	.string "alentours de la ville, j'ai vraiment cru\l"
-	.string "que j'allais y passer. Après leur chute,\l"
-	.string "j'ai vu un Pokémon qui avait l'air être\l"
-	.string "trop fortiche, genre un légendaire ou\l"
-	.string "un fabuleux.$"
 
-TV_Text_4:
-	.string "Témoin 2 : Je n'ai pas assisté à la chute\n"
-	.string "des météorites, et je ne crois pas en\l"
-	.string "ces histoires. J'ai vu un Pokémon qui\l"
-	.string "resplendissait de lumière, des étoiles\l"
-	.string "l'entourait, c'est lui qui les a déposé.\l"
-	.string "J'irai dire qu'il était manipulé par\l"
-	.string "quelqu'un voulant bloquer les échanges\l"
-	.string "commerciaux de la ville.$"
+etagere_zonezero::
+	msgbox etagere_zonezero_Text_0
+	msgbox etagere_zonezero_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne etagere_zonezero_2
+etagere_zonezero_1:
+	releaseall
+	end
 
-TV_Text_5:
-	.string "Témoin 3 : Je n'ai entendu aucun bruit\n"
-	.string "lors des bombardements, je pense aussi\l"
-	.string "que quelqu'un les a déposé. Le Pokémon\l"
-	.string "que j'ai vu avait une sorte de miroirs\l"
-	.string "attachés au visage et il allait\l"
-	.string "suuuuuper vite, j'crois c'est un\l"
-	.string "pokémon dragon.$"
+etagere_zonezero_2:
+	msgbox etagere_zonezero_Text_2
+	goto etagere_zonezero_1
 
-TV_Text_6:
-	.string "Merci pour tous vos renseignements.\n"
-	.string "grâce aux informations récoltées nous\l"
-	.string "avons pu émettre quelques théories :\l"
-	.string "Le Pokémon qui a été vu devait être un\l"
-	.string "Deoxys ou un Jirachi. Il possédait la\l"
-	.string "capacité Draco-Météore, hors, aucun de\l"
-	.string "ses deux Pokémon ne possède cette\l"
-	.string "capacité. Après avoir fait des tests\l"
-	.string "d'identification de matière nous avons\l"
-	.string "pu trouver que diverses sortes de\l"
-	.string "métaux étaient dans les rochers et\l"
-	.string "certains d'entre eux sont extrêmement\l"
-	.string "magnétiques nous n'avons pas pu vous\l"
-	.string "prendre des photos car tous nos\l"
-	.string "appareils électriques étaient attirés\l"
-	.string "par une si grande force magnetique et\l"
-	.string "se fracassaient contre les rochers ça\l"
-	.string "semble être la cause de la frustration\l"
-	.string "des Pokémon acier. Merci d'avoir\l"
-	.string "regardé ce reportage, rappel : Nous\l"
-	.string "parlerons des impacts de cet incident\l"
-	.string "au niveau économique plus\l"
-	.string "profondément dans la chaîne Economie\l"
-	.string "TV d'ici peu.$"
 
-TV_Text_7:
-	.string "La télé s'est éteinte.$"
+etagere_origin::
+	msgbox etagere_zonezero_Text_0
+	msgbox etagere_origin_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne etagere_origin_2
+etagere_origin_1:
+	releaseall
+	end
 
-Lit_Text_0:
-	.string "C'est votre lit.$"
+etagere_origin_2:
+	msgbox etagere_origin_Text_1
+	msgbox etagere_origin_Text_2
+	msgbox etagere_origin_Text_3
+	msgbox etagere_origin_Text_4
+	msgbox etagere_origin_Text_5
+	msgbox etagere_origin_Text_6
+	msgbox etagere_origin_Text_7
+	goto etagere_origin_1
 
-NintendoSwitch_Text_0:
-	.string "C'est une Nintendo Switch. \nVoulez-vous y jouer ?$"
 
-NintendoSwitch_Text_1:
-	.string "Un {STR_VAR_1} sauvage apparaît ! (Nv.{STR_VAR_2})$"
+frigo::
+	msgbox frigo_Text_0, MSGBOX_YESNO
+	random 9
+	switch VAR_RESULT
+	case 0, frigo_3
+	case 1, frigo_4
+	case 2, frigo_5
+	case 3, frigo_6
+	case 4, frigo_7
+	case 5, frigo_8
+	case 6, frigo_9
+	case 7, frigo_10
+	case 8, frigo_11
+	case 9, frigo_12
+	case 10, frigo_13
+frigo_1:
+	releaseall
+	end
 
-NintendoSwitch_Text_2:
-	.string "Le capturer ?$"
+frigo_3:
+	msgbox frigo_Text_1
+	giveitem ITEM_FRESH_WATER
+	goto frigo_1
 
-NintendoSwitch_Text_3:
-	.string "Mince, il casse la Ball$"
+frigo_4:
+	msgbox frigo_Text_2
+	giveitem ITEM_LEMONADE
+	goto frigo_1
 
-NintendoSwitch_Text_4:
-	.string "Félicitations {STR_VAR_1} est capturé !$"
+frigo_5:
+	msgbox frigo_Text_3
+	giveitem ITEM_SODA_POP
+	goto frigo_1
 
-NintendoSwitch_Text_5:
-	.string "Vous prenez la fuite !$"
+frigo_6:
+	msgbox frigo_Text_4
+	giveitem ITEM_CASTELIACONE
+	goto frigo_1
 
-NintendoSwitch_Text_6:
-	.string "Pas l'temps.$"
+frigo_7:
+	msgbox frigo_Text_5
+	goto frigo_1
 
-ordinateur_Text_0:
-	.string "C'est une vidéo d'un chercheur Pokémon\n"
-	.string "nommé Flomars. Il parle d'un certain\l"
-	.string "dragon originel, Pokémon étant la\l"
-	.string "fusion de Reshiram, Zekrom et Kyurem\l"
-	.string "qui risque d'être ressucité.$"
+frigo_8:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+frigo_9:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+frigo_10:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+frigo_11:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+frigo_12:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+frigo_13:
+	msgbox frigo_Text_5
+	goto frigo_1
+
+
+maman_Text_0:
+	.string "Ah, tu es là!$"
+
+maman_Text_1:
+	.string "Bon, {PLAYER} tu vas être en retard,\n"
+	.string "le train part dans moins d'une heure. Tu\l"
+	.string "as dormi comme un Ronflex ! J'ai\l"
+	.string "quelques objets à te donner avant que\l"
+	.string "l'on se quitte$"
+
+maman_Text_2:
+	.string "C'est le ticket que tu devras présenter\n"
+	.string "avant de prendre le train pour le\l"
+	.string "Centre de Recherches. Quel chanceux\l"
+	.string "tu es, seuls les scientifiques du labo\l"
+	.string "l'utilisent.$"
+
+maman_Text_3:
+	.string "Ah et, pour faciliter tes déplacements,\n"
+	.string "j'ai dépensé beaucoup d'argent. Tiens,\l"
+	.string "de nouvelles chaussures de sport,\l"
+	.string "c'est des chaussures de marques\l"
+	.string "importées d'Unys$"
+
+maman_Text_4:
+	.string "Enfin, une petite surprise, un vélo tout\n"
+	.string "neuf... je ne m'y connais pas trop en\l"
+	.string "vélos mais le vendeur proposait un\l"
+	.string "crossover, un vélo de route et un vélo\l"
+	.string "en bois. Celui-là m'a semblé adapté à\l"
+	.string "tous les usages.$"
+
+maman_Text_5:
+	.string "Bien, n'oublies surtout pas de\n"
+	.string "t'hydrater et de bien manger, je ne\l"
+	.string "veux pas que tu sois anémique à ton\l"
+	.string "retour ! Tiens, de l'eau fraiche et des\l"
+	.string "cookies que ta tante m'a ramenée de la\l"
+	.string "région de Hoenn.$"
+
+maman_Text_6:
+	.string "S'il te plaît reviens me voir ! Je tiens\n"
+	.string "beaucoup à toi$"
+
+maman_Text_7:
+	.string "{PLAYER} s'il t'arrive quelque chose\n"
+	.string "je ne pourrai pas m'en remettre. Les\l"
+	.string "séparations sont toujours\l"
+	.string "compliquées... Mais bon, la vie l'exige,\l"
+	.string "moi aussi j'étais une grande dresseuse\l"
+	.string "à une époque. Le niveau de Jungko en\l"
+	.string "témoigne. Dis lui au revoir en sortant !\l"
+	.string "Bien. Je ne te retiens pas plus. Au\l"
+	.string "revoir mon bouchon ... (larme)$"
+
+larmes_Text_0:
+	.string "Snif... Au revoir {PLAYER}, profite\n"
+	.string "bien de ton voyage.$"
+
+larmes_Text_1:
+	.string "Oh tu es revenu ! Alors, raconte moi\n"
+	.string "tout !$"
+
+larmes_Text_2:
+	.string ".................$"
+
+larmes_Text_3:
+	.string "Tu as des badges et {STR_VAR_2}\n"
+	.string "Pokémon ! Mais c'est fantastique ! Mon\l"
+	.string "fils est un grand dresseur !$"
+
+larmes_Text_4:
+	.string "Tu as des badges {STR_VAR_2}\n"
+	.string "Pokémon ! Mais c'est fantastique ! Ma\l"
+	.string "fille est une grande dresseuse !$"
+
+carton_Text_0:
+	.string "C'est un carton. Il contient tous les\n"
+	.string "souvenirs de Papa.$"
+
+carton_Text_1:
+	.string "Il y a ses papiers, sa photo et ses\n"
+	.string "lunettes.$"
+
+etagere_zonezero_Text_0:
+	.string "C'est une bibliothèque.$"
+
+etagere_zonezero_Text_1:
+	.string "Il y a un livre qui parle de la Zone Zéro,\n"
+	.string "le lire?$"
+
+etagere_zonezero_Text_2:
+	.string "Il y a 200 ans, un groupe d'explorateurs\n"
+	.string "financé par l'académie regroupait les\l"
+	.string "meilleurs talents de Paldea,\l"
+	.string "combattants expérimentés et érudits.\l"
+	.string "L'écrivain et spécialiste d'histoire\l"
+	.string "naturelle Bruyer, accompagné de son\l"
+	.string "Motorizard, faisait partie de cette\l"
+	.string "équipe nommée : Le groupe\l"
+	.string "d'observation de la Zone Zéro. Bruyer\l"
+	.string "nous raconte les évènements et\l"
+	.string "découvertes faites lors de cette\l"
+	.string "expédition dans son ouvrage intitulé\l"
+	.string "le Livre Écarlate ou Violet.$"
+
+etagere_origin_Text_0:
+	.string "Il y a un Journal du bord qui parle du\n"
+	.string "dragon originel, il a été écrit par Papa.\l"
+	.string "Le lire?$"
+
+etagere_origin_Text_1:
+	.string "Les 73 premières pages sont brûlées.$"
+
+etagere_origin_Text_2:
+	.string "Des expériences plutôt concluantes\n"
+	.string "ont permis de déterminer que Reshiram,\l"
+	.string "Zekrom et Kyurem ne formait à l'origine\l"
+	.string "qu'un seul Pokémon, les mythes de la\l"
+	.string "région d'Unys les concernant sont donc\l"
+	.string "fondés. Nous avons trouvé des\l"
+	.string "similitudes dans leurs gènes et, il y a\l"
+	.string "de cela quelques années, en 2012, une\l"
+	.string "organisation nommée 'Team Plasma'\l"
+	.string "fusionna deux des trois Pokémon à\l"
+	.string "l'aide d'un objet mystérieux nommé\l"
+	.string "Pointeau ADN. Dans la mythologie\l"
+	.string "d'Unys, Reshiram serait issu de la\l"
+	.string "fission du Dragon Originel qui aurait\l"
+	.string "fondé la région. Reshiram se serait\l"
+	.string "allié à l'un des deux frères, l'aîné, en\l"
+	.string "quête de réalité.$"
+
+etagere_origin_Text_3:
+	.string "Dans le but d'en savoir plus, je me suis\n"
+	.string "procuré un Célébi, Pokémon possédant\l"
+	.string "la faculté de voyager dans le temps.$"
+
+etagere_origin_Text_4:
+	.string "Journal du Bord, Jour 74$"
+
+etagere_origin_Text_5:
+	.string "Cher lecteur, j'ai pu voir le Dragon\n"
+	.string "Originel de mes propres yeux suite à de\l"
+	.string "nombreuses explorations\l"
+	.string "spatio-temporelles, contrairement à ce\l"
+	.string "que disent les livres, je l'ai vu dans la\l"
+	.string "région d'Olnyris plutôt qu'Unys. Ce\l"
+	.string "Pokémon est magnifique et extrêmement\l"
+	.string "puissant. Je me demande si Arceus,\l"
+	.string "prétendu créateur des autres Pokémon\l"
+	.string "pourrait le battre. Son aura est\l"
+	.string "dévastatrice, j'étais à 3 km de lui\l"
+	.string "malgré ça l'une de mes deux jambes est\l"
+	.string "immobilisée. À en croire mon appareil,\l"
+	.string "nous sommes en l'an 3000 avant notre\l"
+	.string "ère. Le Dragon semble être ami avec les\l"
+	.string "civilisations de l'époque, les Olnims.$"
+
+etagere_origin_Text_6:
+	.string "Message Posthume$"
+
+etagere_origin_Text_7:
+	.string "Cher Lecteur, aujourd'hui ce n'est pas\n"
+	.string "le Professeur .... qui vous écrit mais\l"
+	.string "l'un de ses assistants, il finit par\l"
+	.string "succomber suite à une paralysie\l"
+	.string "totale. Je ne saurais vous dire si c'est\l"
+	.string "dû au voyage dans le temps ou au choc\l"
+	.string "lorsqu'il vu le Dragon. Toutes mes\l"
+	.string "condoléances à ses proches. Il avait\l"
+	.string "un enfant nommé {PLAYER}, ce dernier\l"
+	.string "au jour où je vous écris est âgé de 3\l"
+	.string "ans. Merci de remettre ce journal à sa\l"
+	.string "famille.$"
+
+frigo_Text_0:
+	.string "Vous voulez ouvrir le réfrégirateur?$"
+
+frigo_Text_1:
+	.string "Génial, il y a une bouteille d'eau!$"
+
+frigo_Text_2:
+	.string "Génial, il y a une limonade!$"
+
+frigo_Text_3:
+	.string "Génial, il y a un soda!$"
+
+frigo_Text_4:
+	.string "Incroyable! Une glace Volute! Elle a du\n"
+	.string "en faire du chemin pour arriver\l"
+	.string "jusqu'ici.$"
+
+frigo_Text_5:
+	.string "Il n'y a rien dans le frigo.$"
