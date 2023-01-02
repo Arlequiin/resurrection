@@ -2728,7 +2728,7 @@
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/LilycoveCity_Department\u0000\u0000\u0000\u0000eElevator/border.bin",
+      "border_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/border.bin",
       "blockdata_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/map.bin"
     },
     {
@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Gare",
       "border_filepath": "data/layouts/Passage/border.bin",
       "blockdata_filepath": "data/layouts/Passage/map.bin"
+    },
+    {
+      "id": "LAYOUT_HALL_GARE",
+      "name": "Hall_Gare_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hall_Gare/border.bin",
+      "blockdata_filepath": "data/layouts/Hall_Gare/map.bin"
     }
   ]
 }

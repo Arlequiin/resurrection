@@ -943,8 +943,8 @@ gText_ThankYouForAccessingMysteryGift::
 	.string "MYSTERY GIFT System.$"
 
 gText_PlayerFoundOneTMHM::
-	.string "{PLAYER} found one {STR_VAR_1}\n"
-	.string "{STR_VAR_2}!$"
+	.string "{PLAYER} trouve la {STR_VAR_1}\n"
+    .string "{STR_VAR_2}!$"
 
 gText_Sudowoodo_Attacked::
 	.string "The weird tree doesn't like the\n"
@@ -1065,3 +1065,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Protasroom/scripts.inc"
 
 	.include "data/maps/Passage/scripts.inc"
+
+	.include "data/maps/Hall_Gare/scripts.inc"
