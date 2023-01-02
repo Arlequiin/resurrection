@@ -1063,3 +1063,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Protashouse/scripts.inc"
 
 	.include "data/maps/Protasroom/scripts.inc"
+
+	.include "data/maps/Passage/scripts.inc"

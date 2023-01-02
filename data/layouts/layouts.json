@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_Bedroom",
       "border_filepath": "data/layouts/Protasroom/border.bin",
       "blockdata_filepath": "data/layouts/Protasroom/map.bin"
+    },
+    {
+      "id": "LAYOUT_PASSAGE",
+      "name": "Passage_Layout",
+      "width": 20,
+      "height": 50,
+      "primary_tileset": "gTileset_GeneralResu",
+      "secondary_tileset": "gTileset_CellapolisNord",
+      "border_filepath": "data/layouts/Passage/border.bin",
+      "blockdata_filepath": "data/layouts/Passage/map.bin"
     }
   ]
 }
