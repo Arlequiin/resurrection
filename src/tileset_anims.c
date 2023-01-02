@@ -706,6 +706,13 @@ void InitTilesetAnim_CellapolisNord(void)
     sSecondaryTilesetAnimCallback = NULL;
 }
 
+void InitTilesetAnim_Gare(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
 void InitTilesetAnim_Bedroom(void)
 {
     sSecondaryTilesetAnimCounter = 0;

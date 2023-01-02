@@ -104,10 +104,10 @@
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_GeneralResu",
+      "secondary_tileset": "gTileset_Gare",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
@@ -2728,7 +2728,7 @@
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/border.bin",
+      "border_filepath": "data/layouts/LilycoveCity_Department\u0000\u0000\u0000\u0000eElevator/border.bin",
       "blockdata_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/map.bin"
     },
     {
