@@ -42,6 +42,8 @@ const u16 gTilesetPalettes_CellapolisNord[][16] =
 	INCBIN_U16("data/tilesets/secondary/cellapolis_nord/palettes/15.gbapal"),
 };
 
+const u32 gTilesetTiles_Gare[] = INCBIN_U32("data/tilesets/secondary/gare/tiles.4bpp.lz");
+
 const u16 gTilesetPalettes_Gare[][16] =
 {
 	INCBIN_U16("data/tilesets/secondary/gare/palettes/00.gbapal"),
