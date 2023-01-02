@@ -8,3 +8,34 @@ script btl{
 	releaseall
 	end
 }
+
+script eolienne{
+	lock
+	msgbox(format("C'est une éolienne. Elle produit de l'énergie à l'aide du vent."))
+	random(9)
+	switch (var(VAR_RESULT)) {
+		case 0:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_HEALTH_FEATHER)
+		case 1:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_MUSCLE_FEATHER)
+		case 2:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_RESIST_FEATHER)
+		case 3:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_GENIUS_FEATHER)
+		case 4:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_CLEVER_FEATHER)
+		case 5:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_SWIFT_FEATHER)
+		case 6:
+		 msgbox(format("Oh, il y a quelque chose au sol."))
+		 giveitem(ITEM_PRETTY_FEATHER)
+	}
+	releaseall
+	end
+}
