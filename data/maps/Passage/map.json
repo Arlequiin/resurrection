@@ -2,14 +2,14 @@
   "id": "MAP_PASSAGE",
   "name": "Passage",
   "layout": "LAYOUT_PASSAGE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -40,7 +40,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -48,7 +48,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -56,7 +56,7 @@
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -64,7 +64,7 @@
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -72,7 +72,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -80,7 +80,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -88,7 +88,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -96,7 +96,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     },
     {
       "type": "sign",
@@ -104,7 +104,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Rocks"
     }
   ]
 }

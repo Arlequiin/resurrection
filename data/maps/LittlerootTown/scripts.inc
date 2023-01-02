@@ -61,6 +61,13 @@ eolienne_9:
 	goto eolienne_1
 
 
+Rocks::
+	lock
+	msgbox Rocks_Text_0
+	releaseall
+	end
+
+
 btl_Text_0:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Maison de {PLAYER}$"
 
@@ -70,3 +77,7 @@ eolienne_Text_0:
 
 eolienne_Text_1:
 	.string "Oh, il y a quelque chose au sol.$"
+
+Rocks_Text_0:
+	.string "Ces roches émettent des ondes\n"
+	.string "étranges. Elles sont infranchissables.$"
