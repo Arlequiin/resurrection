@@ -4435,9 +4435,9 @@
       "id": "LAYOUT_PASSAGE",
       "name": "Passage_Layout",
       "width": 20,
-      "height": 50,
+      "height": 51,
       "primary_tileset": "gTileset_GeneralResu",
-      "secondary_tileset": "gTileset_CellapolisNord",
+      "secondary_tileset": "gTileset_Gare",
       "border_filepath": "data/layouts/Passage/border.bin",
       "blockdata_filepath": "data/layouts/Passage/map.bin"
     }

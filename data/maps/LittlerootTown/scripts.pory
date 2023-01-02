@@ -39,3 +39,10 @@ script eolienne{
 	releaseall
 	end
 }
+
+script Rocks{
+	lock
+	msgbox(format("Ces roches émettent des ondes étranges. Elles sont infranchissables."))
+	releaseall
+	end
+}
