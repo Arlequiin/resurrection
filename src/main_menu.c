@@ -571,8 +571,8 @@ static u32 InitMainMenu(bool8 returningFromOptionsMenu)
     DmaFill16(3, 0, (void *)(PLTT + 2), PLTT_SIZE - 2);
 
     ResetPaletteFade();
-    LoadPalette(sMainMenuBgPal, 0, 32);
-    LoadPalette(sMainMenuTextPal, 0xF0, 32);
+    //LoadPalette(sMainMenuBgPal, 0, 32);
+    //LoadPalette(sMainMenuTextPal, 0xF0, 32);
     ScanlineEffect_Stop();
     ResetTasks();
     ResetSpriteData();
@@ -590,7 +590,7 @@ static u32 InitMainMenu(bool8 returningFromOptionsMenu)
     InitWindows(sWindowTemplates_MainMenu);
     DeactivateAllTextPrinters();
     LoadMainMenuWindowFrameTiles(0, MAIN_MENU_BORDER_TILE);
-
+    ResetPaletteFade();
     SetGpuReg(REG_OFFSET_WIN0H, 0);
     SetGpuReg(REG_OFFSET_WIN0V, 0);
     SetGpuReg(REG_OFFSET_WININ, 0);
@@ -1271,17 +1271,17 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
-
+    ResetPaletteFade();
     LZ77UnCompVram(sBirchSpeechShadowGfx, (void *)VRAM);
     LZ77UnCompVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, 0, 64);
-    LoadPalette(sBirchSpeechPlatformBlackPal, 1, 16);
+    //LoadPalette(sBirchSpeechPlatformBlackPal, 1, 16);
     ScanlineEffect_Stop();
     ResetSpriteData();
     FreeAllSpritePalettes();
     ResetAllPicSprites();
     AddBirchSpeechObjects(taskId);
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    //BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tBG1HOFS = 0;
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
     gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
@@ -1810,7 +1810,7 @@ static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
     LZ77UnCompVram(sBirchSpeechShadowGfx, (u8 *)VRAM);
     LZ77UnCompVram(sBirchSpeechBgMap, (u8 *)(BG_SCREEN_ADDR(7)));
     LoadPalette(sBirchSpeechBgPals, 0, 64);
-    LoadPalette(&sBirchSpeechBgGradientPal[1], 1, 16);
+    //LoadPalette(&sBirchSpeechBgGradientPal[1], 1, 16);
     ResetTasks();
     taskId = CreateTask(Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox, 0);
     gTasks[taskId].tTimer = 5;
@@ -2029,7 +2029,7 @@ static void Task_NewGameBirchSpeech_FadePlatformIn(u8 taskId)
     {
         gTasks[taskId].tDelayTimer = gTasks[taskId].tDelay;
         gTasks[taskId].tPalIndex++;
-        LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], 1, 16);
+        //LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], 1, 16);
     }
 }
 
@@ -2063,7 +2063,7 @@ static void Task_NewGameBirchSpeech_FadePlatformOut(u8 taskId)
     {
         gTasks[taskId].tDelayTimer = gTasks[taskId].tDelay;
         gTasks[taskId].tPalIndex--;
-        LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], 1, 16);
+        //LoadPalette(&sBirchSpeechBgGradientPal[gTasks[taskId].tPalIndex], 1, 16);
     }
 }
 
