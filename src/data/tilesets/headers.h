@@ -42,6 +42,17 @@ const struct Tileset gTileset_Gare =
     .callback = InitTilesetAnim_Gare,
 };
 
+const struct Tileset gTileset_IntGare =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_IntGare,
+    .palettes = gTilesetPalettes_IntGare,
+    .metatiles = gMetatiles_IntGare,
+    .metatileAttributes = gMetatileAttributes_IntGare,
+    .callback = InitTilesetAnim_IntGare,
+};
+
 const struct Tileset gTileset_Bedroom =
 {
     .isCompressed = TRUE,

@@ -4446,8 +4446,8 @@
       "name": "Hall_Gare_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_IndoorResu",
+      "secondary_tileset": "gTileset_IntGare",
       "border_filepath": "data/layouts/Hall_Gare/border.bin",
       "blockdata_filepath": "data/layouts/Hall_Gare/map.bin"
     }

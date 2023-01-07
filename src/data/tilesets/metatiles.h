@@ -10,6 +10,9 @@ const u16 gMetatileAttributes_CellapolisNord[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_Gare[] = INCBIN_U16("data/tilesets/secondary/gare/metatiles.bin");
 const u16 gMetatileAttributes_Gare[] = INCBIN_U16("data/tilesets/secondary/gare/metatile_attributes.bin");
 
+const u16 gMetatiles_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatiles.bin");
+const u16 gMetatileAttributes_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 
