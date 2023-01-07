@@ -4445,7 +4445,7 @@
       "id": "LAYOUT_HALL_GARE",
       "name": "Hall_Gare_Layout",
       "width": 20,
-      "height": 20,
+      "height": 21,
       "primary_tileset": "gTileset_IndoorResu",
       "secondary_tileset": "gTileset_IntGare",
       "border_filepath": "data/layouts/Hall_Gare/border.bin",
