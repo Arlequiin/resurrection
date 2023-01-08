@@ -127,7 +127,7 @@ script marc{
 	msgbox(format("....."))
 	msgbox(format("Voilà, c'est ici. Je m'occupe de vos bagages."))
 	showmoneybox(14,1)
-	msgbox(format("Lui donner un pourboire de 100¥?"),MSGBOX_YESNO)
+	msgbox(format("Lui donner un pourboire de 150¥?"),MSGBOX_YESNO)
 	if (var(VAR_RESULT)==1){
 		hidemoneybox
 		removemoney(150)

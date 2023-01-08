@@ -39,7 +39,7 @@ NintendoSwitch_1:
 	end
 
 NintendoSwitch_2:
-	random SPECIES_JIRACHI
+	random SPECIES_CALYREX
 	addvar VAR_RESULT, 1
 	bufferspeciesname STR_VAR_1, VAR_RESULT
 	showmonpic VAR_RESULT, 0, 3

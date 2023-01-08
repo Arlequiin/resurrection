@@ -26,22 +26,22 @@ gText_Birch_Pokemon::
 	.string "Montre-toi !$"
 
 gText_Birch_MainSpeech::
-	.string "C'est un Chelast, heim, pardon\n"
-	.string "ein Tortipouss en français.\p"
+	.string "C'est un Krarmor, heim, pardon\n"
+	.string "ein Corvallius en français.\p"
 	.string "N'est-il pas magnifique ?\n"
 	.string "Cet endroit est très surveillé\p"
 	.string "seuls les scientifiques les plus\n"
 	.string "brillants peuvent y accéder. Les\p"
 	.string "personnes que le hasard a choisi sont\n"
 	.string "les suivantes : le premier se namen\p"
-	.string "Daniel, originaire de Portokov. \n"
+	.string "Midori, originaire de Kanto. \n"
 	.string "La deuxième quant à elle se nomme\p"
-	.string "Louise, elle vient de Littoralia\n"
-	.string "\p"
-	.string "$"
+	.string "Lisa, elle vient d'Unys.$"
 
 gText_Birch_AndYouAre::
-	.string "Enfin, le troisième$"
+	.string "Enfin, le troisième, le seul\n"
+	.string "à ne pas être un étudiant\p"
+	.string "international.$"
 
 gText_Birch_BoyOrGirl::
 	.string "C'est un.. une?\p"

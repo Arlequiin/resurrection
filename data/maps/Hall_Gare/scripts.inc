@@ -344,7 +344,7 @@ marc_Text_4:
 	.string "bagages.$"
 
 marc_Text_5:
-	.string "Lui donner un pourboire de 100¥?$"
+	.string "Lui donner un pourboire de 150¥?$"
 
 marc_Text_6:
 	.string "Merci beaucoup! Bonne route!$"
