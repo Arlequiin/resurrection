@@ -5,7 +5,7 @@ mapscripts Passage_MapScripts{
 script scientist_wonder{
     lock
     faceplayer
-    random(3)
+    random(4)
     switch (var(VAR_RESULT)) {
         case 1:
             msgbox(format("Ces roches.. sont très étranges. Nous sommes venues du Centre de Recherches pour les étudier."))
@@ -13,6 +13,9 @@ script scientist_wonder{
             msgbox(format("Ces roches.. sont très étranges. Elles bloquent complètement l'accès à Cellapolis Centre."))
         case 3:
             msgbox(format("Ces roches.. sont très étranges. Elles perturbent les Pokémon acier. Tout le monde en parle, à la télé, dans les réseaux sociaux..."))
+        case 4:
+             msgbox(format("On a envoyé des Taupiqueurs voir ce qu'il y a en dessous. Aucun d'entre eux n'est revenu..."))
+
     }
     releaseall
     end

@@ -20,15 +20,43 @@ script agent{
 	end
 }
 
+script hotesse{
+	faceplayer
+	msgbox(format("Bonjour et Bienvenue à la gare de Cellapolis!"))
+	msgbox(format("Je suis là pour répondre à vos questions."))
+	releaseall
+	end
+}
+
+script sc_gare_1{
+	faceplayer
+	msgbox(format("Tu ne trouves pas que cette gare est agréable?"))
+	if (var(VAR_RESULT) != 1) {
+        msgbox(format("Tu n'as pas de goûts."))
+    } else {
+		msgbox(format("Elle est la preuve de la richesse du Centre de Recherches, les gares reliant Cellapolis Sud et ce dernier ont été entièrement construites avec les fonds du CDR."))
+	}
+	releaseall
+	end
+}
+
+script sc_gare_2{
+	faceplayer
+	msgbox(format("Au CDR, on travaille comme des fous pendant une semaine puis on a deux jours de congé, les jours de travail on dort là-bas, il y a des dortoirs, un restaurant et j'en passe."))
+	msgbox(format("Mais on est si bien payés que ça vaut le coup."))
+	releaseall
+	end
+}
+
 script movetodoor{
 	walk_left
 }
 script Retard{
-	playfanfare(MUS_OBTAIN_BADGE)
-	waitfanfare
 	if (var(VAR_UNUSED_0x404E)==0){
+	playfanfare(MUS_OBTAIN_BADGE)
 	msgbox(format("HAUT-PARLEURS : (jingle de la gare)"))
-	msgbox(format("{COLOR LIGHT_RED}LE TRAIN POUR LE CENTRE DE RECHERCHES PART DANS QUELQUES MINUTES, VEUILLEZ MONTER A BORD!"))
+	waitfanfare
+	msgbox(format("{COLOR LIGHT_RED}{SHADOW RED}LE TRAIN POUR LE CENTRE DE RECHERCHES PART DANS QUELQUES MINUTES, VEUILLEZ MONTER A BORD!"))
 	setvar(VAR_UNUSED_0x404E,1)
 	}
 	releaseall

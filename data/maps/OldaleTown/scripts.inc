@@ -20,6 +20,34 @@ agent::
 	end
 
 
+hotesse::
+	msgbox hotesse_Text_0
+	msgbox hotesse_Text_1
+	releaseall
+	end
+
+
+sc_gare_1::
+	msgbox sc_gare_1_Text_0
+	compare VAR_RESULT, 1
+	goto_if_ne sc_gare_1_2
+	msgbox sc_gare_1_Text_2
+sc_gare_1_1:
+	releaseall
+	end
+
+sc_gare_1_2:
+	msgbox sc_gare_1_Text_1
+	goto sc_gare_1_1
+
+
+sc_gare_2::
+	msgbox sc_gare_2_Text_0
+	msgbox sc_gare_2_Text_1
+	releaseall
+	end
+
+
 movetodoor::
 	walk_left
 	return
@@ -59,6 +87,39 @@ agent_Text_0:
 	.string "quai, va vite composter ton ticket, si\l"
 	.string "t'en as pas ça ne sert à rien de rester\l"
 	.string "là!$"
+
+hotesse_Text_0:
+	.string "Bonjour et Bienvenue à la gare de\n"
+	.string "Cellapolis!$"
+
+hotesse_Text_1:
+	.string "Je suis là pour répondre à vos\n"
+	.string "questions.$"
+
+sc_gare_1_Text_0:
+	.string "Tu ne trouves pas que cette gare est\n"
+	.string "agréable?$"
+
+sc_gare_1_Text_1:
+	.string "Tu n'as pas de goûts.$"
+
+sc_gare_1_Text_2:
+	.string "Elle est la preuve de la richesse du\n"
+	.string "Centre de Recherches, les gares\l"
+	.string "reliant Cellapolis Sud et ce dernier ont\l"
+	.string "été entièrement construites avec les\l"
+	.string "fonds du CDR.$"
+
+sc_gare_2_Text_0:
+	.string "Au CDR, on travaille comme des fous\n"
+	.string "pendant une semaine puis on a deux\l"
+	.string "jours de congé, les jours de travail on\l"
+	.string "dort là-bas, il y a des dortoirs, un\l"
+	.string "restaurant et j'en passe.$"
+
+sc_gare_2_Text_1:
+	.string "Mais on est si bien payés que ça vaut le\n"
+	.string "coup.$"
 
 Retard_Text_0:
 	.string "HAUT-PARLEURS : (jingle de la gare)$"
