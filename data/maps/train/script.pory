@@ -1,0 +1,67 @@
+mapscripts train_MapScripts{
+
+}
+
+script sc_train{
+    random(3)
+    switch (var(VAR_RESULT)) {
+        case 0: 
+        msgbox(format("Je vous donne un petit cadeau, disons que c'est pour vous souhaiter bonne chance."))
+        giveitem(ITEM_ROCKY_HELMET)
+        case 1: msgbox(format("Salut les jeunes! C'est donc vous les trois boursiers dont tout le monde parle?"))
+        case 2: msgbox(format("Surtout pensez à parler à tous les scientifiques avant de quitter le CDR, ils ont des choses à vous apprendre... voire vous donner."))
+    }
+    releaseall
+    end
+}
+
+script rivaux_train_1{
+    applymovement(10,face_down)
+    waitmovement(10)
+    applymovement(11,face_up)
+    waitmovement(11)
+    applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Salut."))
+    msgbox(format("C'est toi le troisième boursier?"))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_down)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("De toute évidence oui, autrement ce serait un scientifique. Oups, j'ai oublié de me présenter. \nJe m'appelle Lisa, tu peux m'appeler Liz si ça te chante. Je viens de la ville de Portokov et, avant de m'installer à Olnyris, j'habitais à Unys, à Maillard."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Moi c'est Midori. Moi aussi j'suis un expat, je viens de la région de Kanto."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_down)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Lisa : Ma mère assiste la Prof. Keteleeria, c'est une grande dresseuse et c'est grâce à elle que je sm'y connais bien en Pokémon."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Midori : Je suis le fils de l'ex-maître de la région de Kanto qui, aujourd'hui est le Champion de l'arène de Jadielle."))
+    msgbox(format("........"))
+    msgbox(format("Midori : Ton père était le PDG de Vitalis Navitas?! Ouah la dinguerie!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_down)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Lisa : Tu dis était, sous-entendant ainsi qu'il n'a plus ce post. Pourquoi il a quitté son poste?"))
+    msgbox(format("........."))
+    msgbox(format("Lisa : Je suis désolé de l'apprendre."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Midori : Vous avez choisi quel Pokémon? Perso j'ai demandé un Coupenotte, j'ai toujours rêvé d'en avoir un."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_down)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Lisa : Pour ma part, un Évoli, tellement de possibilités avec ce Pokémon! Et toi?"))
+    msgbox(format("........."))
+    msgbox(format("Tu n'en as pas demandé?! Mais... La date limite pour envoyer le mail c'était il y a une semaine! Ils doivent préparer les Pokémon à être reçus par leurs dresseurs. J'espère qu'ils en trouveront un pour toi."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Midori : Le train ralentit, je pense qu'on va bientôt arriver."))
+    applymovement(OBJ_EVENT_ID_PLAYER, face_right)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    playfanfare(FANFARE_RG_DEX_RATING)
+    msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}(jingle ENCF) Le train pour le CDR est arrivé à destination, veillez à ne pas oublier vos bagages."))
+    waitfanfare
+    fadescreen(0)
+    msgbox(format("Agent : Bienvenue à la gare du Centre de Recherches, j'espère que le voyage n'a pas été trop long. Voici vos bagages. Bonne journée et au plaisir de vous revoir!"))
+    fadescreen(1)
+    releaseall
+    end
+}
