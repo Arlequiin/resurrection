@@ -43,6 +43,7 @@ script rivaux_train_1{
     waitmovement(11)
     applymovement(OBJ_EVENT_ID_PLAYER, haut)
     waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("..."))
     msgbox(format("Salut."))
     msgbox(format("C'est toi le troisième boursier?"))
     applymovement(OBJ_EVENT_ID_PLAYER, bas)
@@ -82,6 +83,7 @@ script rivaux_train_1{
     waitfanfare
     fadescreen(1)
     msgbox(format("Agent : Bienvenue à la gare du Centre de Recherches, j'espère que le voyage n'a pas été trop long. Voici vos bagages. Bonne journée et au plaisir de vous revoir!"))
+    warp(MAP_CDR_INT_GARE, 1)
     fadescreen(0)
     releaseall
     end

@@ -64,6 +64,17 @@ const struct Tileset gTileset_Train =
     .callback = InitTilesetAnim_Train,
 };
 
+const struct Tileset gTileset_CDR =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CDR,
+    .palettes = gTilesetPalettes_CDR,
+    .metatiles = gMetatiles_CDR,
+    .metatileAttributes = gMetatileAttributes_CDR,
+    .callback = InitTilesetAnim_CDR,
+};
+
 const struct Tileset gTileset_Bedroom =
 {
     .isCompressed = TRUE,

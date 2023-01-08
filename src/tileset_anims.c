@@ -727,6 +727,13 @@ void InitTilesetAnim_Train(void)
     sSecondaryTilesetAnimCallback = NULL;
 }
 
+void InitTilesetAnim_CDR(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
 void InitTilesetAnim_Bedroom(void)
 {
     sSecondaryTilesetAnimCounter = 0;

@@ -65,44 +65,46 @@ rivaux_train_1_1:
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_0
 	msgbox rivaux_train_1_Text_1
-	applymovement OBJ_EVENT_ID_PLAYER, bas
-	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_2
-	applymovement OBJ_EVENT_ID_PLAYER, haut
+	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_3
-	applymovement OBJ_EVENT_ID_PLAYER, bas
+	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_4
-	applymovement OBJ_EVENT_ID_PLAYER, haut
+	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_5
+	applymovement OBJ_EVENT_ID_PLAYER, haut
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_6
 	msgbox rivaux_train_1_Text_7
+	msgbox rivaux_train_1_Text_8
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_8
 	msgbox rivaux_train_1_Text_9
 	msgbox rivaux_train_1_Text_10
-	applymovement OBJ_EVENT_ID_PLAYER, haut
-	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_11
-	applymovement OBJ_EVENT_ID_PLAYER, bas
+	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_12
-	msgbox rivaux_train_1_Text_9
+	applymovement OBJ_EVENT_ID_PLAYER, bas
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_13
+	msgbox rivaux_train_1_Text_10
+	msgbox rivaux_train_1_Text_14
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_14
+	msgbox rivaux_train_1_Text_15
 	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
 	waitmovement OBJ_EVENT_ID_PLAYER
 	playfanfare FANFARE_RG_DEX_RATING
-	msgbox rivaux_train_1_Text_15
-	waitfanfare
-	fadescreen 0
 	msgbox rivaux_train_1_Text_16
+	waitfanfare
 	fadescreen 1
+	msgbox rivaux_train_1_Text_17
+	warp MAP_CDR_INT_GARE, 1
+	fadescreen 0
 	releaseall
 	end
 
@@ -127,12 +129,15 @@ sc_train_Text_2:
 	.string "voire vous donner.$"
 
 rivaux_train_1_Text_0:
-	.string "Salut.$"
+	.string "...$"
 
 rivaux_train_1_Text_1:
-	.string "C'est toi le troisième boursier?$"
+	.string "Salut.$"
 
 rivaux_train_1_Text_2:
+	.string "C'est toi le troisième boursier?$"
+
+rivaux_train_1_Text_3:
 	.string "De toute évidence oui, autrement ce\n"
 	.string "serait un scientifique. Oups, j'ai\l"
 	.string "oublié de me présenter. Je m'appelle\l"
@@ -141,50 +146,50 @@ rivaux_train_1_Text_2:
 	.string "et, avant de m'installer à Olnyris,\l"
 	.string "j'habitais à Unys, à Maillard.$"
 
-rivaux_train_1_Text_3:
+rivaux_train_1_Text_4:
 	.string "Moi c'est Midori. Moi aussi j'suis un\n"
 	.string "expat, je viens de la région de Kanto.$"
 
-rivaux_train_1_Text_4:
+rivaux_train_1_Text_5:
 	.string "Lisa : Ma mère assiste la Prof.\n"
 	.string "Keteleeria, c'est une grande dresseuse\l"
-	.string "et c'est grâce à elle que je sm'y\l"
-	.string "connais bien en Pokémon.$"
+	.string "et c'est grâce à elle que je m'y connais\l"
+	.string "bien en Pokémon.$"
 
-rivaux_train_1_Text_5:
+rivaux_train_1_Text_6:
 	.string "Midori : Je suis le fils de l'ex-maître de\n"
 	.string "la région de Kanto qui, aujourd'hui est\l"
 	.string "le Champion de l'arène de Jadielle.$"
 
-rivaux_train_1_Text_6:
+rivaux_train_1_Text_7:
 	.string "........$"
 
-rivaux_train_1_Text_7:
+rivaux_train_1_Text_8:
 	.string "Midori : Ton père était le PDG de Vitalis\n"
 	.string "Navitas?! Ouah la dinguerie!$"
 
-rivaux_train_1_Text_8:
+rivaux_train_1_Text_9:
 	.string "Lisa : Tu dis était, sous-entendant\n"
 	.string "ainsi qu'il n'a plus ce post. Pourquoi il\l"
 	.string "a quitté son poste?$"
 
-rivaux_train_1_Text_9:
+rivaux_train_1_Text_10:
 	.string ".........$"
 
-rivaux_train_1_Text_10:
+rivaux_train_1_Text_11:
 	.string "Lisa : Je suis désolé de l'apprendre.$"
 
-rivaux_train_1_Text_11:
+rivaux_train_1_Text_12:
 	.string "Midori : Vous avez choisi quel Pokémon?\n"
 	.string "Perso j'ai demandé un Coupenotte, j'ai\l"
 	.string "toujours rêvé d'en avoir un.$"
 
-rivaux_train_1_Text_12:
+rivaux_train_1_Text_13:
 	.string "Lisa : Pour ma part, un Évoli, tellement\n"
 	.string "de possibilités avec ce Pokémon! Et\l"
 	.string "toi?$"
 
-rivaux_train_1_Text_13:
+rivaux_train_1_Text_14:
 	.string "Tu n'en as pas demandé?! Mais... La date\n"
 	.string "limite pour envoyer le mail c'était il y a\l"
 	.string "une semaine! Ils doivent préparer les\l"
@@ -192,16 +197,16 @@ rivaux_train_1_Text_13:
 	.string "dresseurs. J'espère qu'ils en\l"
 	.string "trouveront un pour toi.$"
 
-rivaux_train_1_Text_14:
+rivaux_train_1_Text_15:
 	.string "Midori : Le train ralentit, je pense\n"
 	.string "qu'on va bientôt arriver.$"
 
-rivaux_train_1_Text_15:
+rivaux_train_1_Text_16:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}(jingle ENCF) Le train pour le CDR est\n"
 	.string "arrivé à destination, veillez à ne pas\l"
 	.string "oublier vos bagages.$"
 
-rivaux_train_1_Text_16:
+rivaux_train_1_Text_17:
 	.string "Agent : Bienvenue à la gare du Centre\n"
 	.string "de Recherches, j'espère que le voyage\l"
 	.string "n'a pas été trop long. Voici vos\l"
