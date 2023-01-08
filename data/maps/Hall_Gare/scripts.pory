@@ -50,14 +50,14 @@ script sc_amour{
 	releaseall
 	end
 }
-movement compostmove{
+movement droite{
 	walk_right
 	face_up
 }
 
-movement compostmoveback{
+movement gauche{
 	walk_left
-	face_up
+	face_down
 }
 
 movement seemarc{
@@ -69,7 +69,19 @@ movement seeprot{
 }
 
 script garde{
+	checkitem(ITEM_EON_TICKET)
+	if (var(VAR_RESULT) == 1){
 	msgbox(format("Si t'as un train à prendre sors ton billet et composte-le. Sinon fous le camp y a d'autres personnes qui attendent."))
+	} else {
+		if (var(VAR_TEMP_1)==0){
+		msgbox(format("Ah tu fais partie des 3 boursiers. Bienvenue à la gare de Cellapolis Sud, parle au garde derrière, il t'indiquera le chemin."))
+		applymovement(9, gauche)
+		waitmovement(9)
+		setvar(VAR_TEMP_1,1)
+		} else {
+			msgbox(format("Bonne route!"))
+		}
+	}
 	releaseall
 	end
 }
@@ -91,64 +103,13 @@ script attente{
 script compost{
 	checkitem(ITEM_EON_TICKET)
 	if (var(VAR_RESULT) == 1){
-	msgbox(format("Veuillez composter votre billet avant de passer..."))
-	applymovement(OBJ_EVENT_ID_PLAYER, compostmove)
 	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}. . . Bzzzzzzt"))
 	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED} Clic !"))
 	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED} Ticket composté !"))
-	applymovement(OBJ_EVENT_ID_PLAYER, compostmoveback)
-	msgbox(format("Bien, je te laisse passer. Il n'y a qu'un seul quai il est derrière moi. Évite de te perdre gamin..."))
-	
 	removeitem(ITEM_EON_TICKET,1)
-	releaseall
-	end
 	} else {
-		msgbox(format("Puis-je voir votre ticket ?"))
-		msgbox(format(". . . . . . . . . . . . . ."))
-		msgbox(format("Ok, vous pouvez passer."))
-		releaseall
-		end
+		msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}Votre ticket est déjà composté."))
 	}
-}
-
-script gardetrain {
-  lock
-  faceplayer
-  if (!flag(FLAG_TEMP_1)){
-	applymovement(10, seemarc)
-	msgbox(format("MARC ! Pourquoi t'as laissé un môme passer ce train c'est que pour les scientifiques du CDR !"))
-	msgbox(format("........................................."))
-	applymovement(10, seeprot)
-	msgbox(format("Veuillez m'excuser, l'ENCF vous souhaite la bienvenue."))
-	fadescreen(1)
-	msgbox(format("... Bonjour monsieur, puis-je voir votre ticket ?............... Votre numéro est le 78, ce n'est pas dans cette voiture, suivez moi..................... C'est le compartiment 4, c'est juste ici, puis-je avoir vos bagages ? .................. Bon voyage ! Si vous avez besoin de quoique ce soit appelez-moi."))
-    msgbox(format("{COLOR RED} ATTENTION AU DEPART... DESTINATION LE CENTRE DE RECHERCHES ! VEUILLEZ ATTACHER VOS CEINTURES DÉPART IMMINENT"))
-    msgbox(format("... S.. Salut, moi c'est Louise, tu peux m'appeler Liz, je serai, comme toi une dresseuse... Yo, moi c'est Daniel, Dan bref comme tu veux. J'compte devenir le prochain maître, si tu te mets sur ma route je t'exterminerai sans hésiter.. haha. Dis moi p'tite tête, comment tu t'appelles ? ...... {PLAYER} c'est ça ? Drôle de nom, ça vient de quel genre de bled paumé ça ? Liz : Dan ! Ne sois pas méchant avec lui vous vous connaissez à peine ! Désolé, il a tendance à être désagréable quand il rencontre quelqu'un mais il a un bon fond... Je crois."))
-    msgbox(format("Dan : Vous comptez prendre quel Pokémon du coup ? Perso j'ai demandé un Pokémon dragon, un Coupenotte, son évolution pète la classe. Et toi Liz ? Liz : Évoli, sans hésiter une seule seconde. Et toi, {PLAYER} ? .... tu n'as pas encore choisi ? Le mail disait pourtant que le dernier délai pour choisir c'était hier ! Espérons que le prof ait un autre Pokémon à te donner."))
-	msgbox(format("{COLOR LIGHT_RED} (jingle ENCF) Le train est arrivé à destination, veuillez prendre vos bagages et vous diriger calmement vers la sortie."))
-	fadescreen(0)
-	warp(MAP_ROUTE123_BERRY_MASTERS_HOUSE, 1)
-	setflag(FLAG_TEMP_1)
-	msgbox(format("Bonjour ! Nous espérons que votre voyage s'est bien déroulé. Soyez les bienvenus au Centre de Recherches (CDR)."))
-  } else {
-	msgbox(format("Bienvenue, l'ENCF vous souhaite un bon voyage !"))
-	fadescreen(1)
-	msgbox(format("... Bonjour monsieur, puis-je voir votre ticket ?............... Votre numéro est le... EH, vous n'avez pas de numéro. T'as de la chance le train n'a pas encore demarré autrement j'aurais appelé la police. Allez, fous le camp. On va pas au CDR comme ça."))
-	fadescreen(0)
-	applymovement(12, seemarc)
-	msgbox(format("MARC ! Tu fais pas ton travail ducon !"))
-	msgbox(format("Marc : Toi non plus abruti."))
-	applymovement(12, seeprot)
-	msgbox(format("Toi... Déguerpis et vite ou j'appelle les keufs."))
-  }
-  releaseall
-  end
-}
-
-script gardetrainb{
-	lock
-    faceplayer
-	msgbox(format("T'as oublié ta barbe et ta blouse ou quoi ? T'es bien le seul scientifique habillé différemment."))
 	releaseall
 	end
 }
