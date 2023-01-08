@@ -8,6 +8,48 @@ script reserve{
 	end
 }
 
+script sc_amour{
+	lock
+	faceplayer
+	msgbox(format("Oh ciel! Je suis follement amoureux de... Tiens, quelqu'un m'écoute."))
+	msgbox(format("Eh, c'est impoli d'écouter les gens penser à haute voix! Bon, tu ne la connais pas c'est pas grave."))
+	msgbox(format("Dis-donc, tu pourrais m'aider! Elle adore les Jolies Plumes. Si tu m'en apportes, je te donnerai un truc sympa en échange."))
+	checkitem(ITEM_PRETTY_FEATHER)
+	if (var(VAR_RESULT) == 1){
+		msgbox(format("Oh! Tu en as une! Tu me l'échanges ?"),MSGBOX_YESNO)
+	    if (var(VAR_RESULT)==1){
+			removeitem(ITEM_PRETTY_FEATHER,1)
+			msgbox(format("Merci beaucoup! Tiens, c'est pour toi."))
+			random(17)
+			switch (var(VAR_RESULT)) {
+			case 0: giveitem(ITEM_BLACK_BELT)
+			case 1: giveitem(ITEM_BLACK_GLASSES)
+			case 2: giveitem(ITEM_CHARCOAL)
+			case 3: giveitem(ITEM_DRAGON_FANG)
+			case 4: giveitem(ITEM_HARD_STONE)
+			case 5: giveitem(ITEM_MAGNET)
+			case 6: giveitem(ITEM_METAL_COAT)
+			case 7: giveitem(ITEM_MIRACLE_SEED)
+			case 8: giveitem(ITEM_MYSTIC_WATER)
+			case 9: giveitem(ITEM_NEVER_MELT_ICE)
+			case 10: giveitem(ITEM_POISON_BARB)
+			case 11: giveitem(ITEM_SHARP_BEAK)
+			case 12: giveitem(ITEM_SILK_SCARF)
+			case 13: giveitem(ITEM_SILVER_POWDER)
+			case 14: giveitem(ITEM_SOFT_SAND)
+			case 15: giveitem(ITEM_SPELL_TAG)
+			case 16: giveitem(ITEM_TWISTED_SPOON)
+			case 17: giveitem(ITEM_LEFTOVERS)
+			}
+		} else {
+			msgbox(format("Allez! S'il te plaît!"))
+		}
+	} else {
+		msgbox(format("..."))
+	}
+	releaseall
+	end
+}
 movement compostmove{
 	walk_right
 	face_up
@@ -37,9 +79,9 @@ script attente{
 	faceplayer
 	random(4)
 	switch (var(VAR_RESULT)) {
-	case 0 : msgbox(format("Roooh, ils en mettent du temps, mon train va bientôt partir!"))
+	case 0 : msgbox(format("Déjà la fin de mon week-end. C'est passé tellement vite..."))
 	case 1 : msgbox(format("Il n'y a qu'un train par semaine ils trouvent quand même le moyen d'être lents."))
-	case 2 : msgbox(format("Bougez vous, on a un train à prendre!"))
+	case 2 : msgbox(format("La gare s'est lancé dans une démarche de décarbonisation, le train roule désormais à l'électrique, entièrement issu du renouvelable et d'ici quelques années ils prévoient de dématérialiser les tickets de train."))
 	case 3 : msgbox(format("Nous autres scientifiques sommes très ponctuels et nous avons horreur des retards ne dépendant pas nous."))
 	}
 	releaseall

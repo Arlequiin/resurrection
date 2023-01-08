@@ -21,6 +21,7 @@ agent::
 
 
 hotesse::
+	faceplayer
 	msgbox hotesse_Text_0
 	msgbox hotesse_Text_1
 	releaseall
@@ -28,7 +29,8 @@ hotesse::
 
 
 sc_gare_1::
-	msgbox sc_gare_1_Text_0
+	faceplayer
+	msgbox sc_gare_1_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_ne sc_gare_1_2
 	msgbox sc_gare_1_Text_2
@@ -42,6 +44,7 @@ sc_gare_1_2:
 
 
 sc_gare_2::
+	faceplayer
 	msgbox sc_gare_2_Text_0
 	msgbox sc_gare_2_Text_1
 	releaseall
@@ -54,8 +57,6 @@ movetodoor::
 
 
 Retard::
-	playfanfare MUS_OBTAIN_BADGE
-	waitfanfare
 	compare VAR_UNUSED_0x404E, 0
 	goto_if_eq Retard_2
 Retard_1:
@@ -63,7 +64,9 @@ Retard_1:
 	end
 
 Retard_2:
+	playfanfare MUS_OBTAIN_BADGE
 	msgbox Retard_Text_0
+	waitfanfare
 	msgbox Retard_Text_1
 	setvar VAR_UNUSED_0x404E, 1
 	goto Retard_1
@@ -125,7 +128,7 @@ Retard_Text_0:
 	.string "HAUT-PARLEURS : (jingle de la gare)$"
 
 Retard_Text_1:
-	.string "{COLOR LIGHT_RED}LE TRAIN POUR LE CENTRE DE RECHERCHES\n"
+	.string "{COLOR LIGHT_RED}{SHADOW RED}LE TRAIN POUR LE CENTRE DE RECHERCHES\n"
 	.string "PART DANS QUELQUES MINUTES, VEUILLEZ\l"
 	.string "MONTER A BORD!$"
 

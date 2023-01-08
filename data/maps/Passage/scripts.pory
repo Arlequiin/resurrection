@@ -7,8 +7,10 @@ script scientist_wonder{
     faceplayer
     random(4)
     switch (var(VAR_RESULT)) {
+        case 0:
+            msgbox(format("On a réussi à recopier l'une de ces roches grâce à l'ADN de Métamorph, de fait on peut désormais les étudier au Centre de Recherches. On récolte quand même des infos sur ces roches, au cas où il y aurait des résultats différents."))
         case 1:
-            msgbox(format("Ces roches.. sont très étranges. Nous sommes venues du Centre de Recherches pour les étudier."))
+            msgbox(format("Ces roches.. sont très étranges. Nous sommes venus du Centre de Recherches pour les étudier."))
         case 2:
             msgbox(format("Ces roches.. sont très étranges. Elles bloquent complètement l'accès à Cellapolis Centre."))
         case 3:
