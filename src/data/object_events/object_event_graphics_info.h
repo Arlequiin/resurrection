@@ -380,7 +380,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanF = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man1 = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 32,
@@ -893,7 +893,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist1 = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 32,
@@ -2204,7 +2204,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist2 = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 32,
