@@ -1,0 +1,39 @@
+{
+  "id": "MAP_CDRAREAS",
+  "name": "CDRAreas",
+  "layout": "LAYOUT_CDRAREAS",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_DEWFORD_TOWN",
+      "offset": 5,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_MAIN_CDR",
+      "offset": 39,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

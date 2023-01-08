@@ -91,6 +91,8 @@
 #define MAP_DEWFORD_TOWN_HALL              (4 | (3 << 8))
 #define MAP_DEWFORD_TOWN_HOUSE2            (5 | (3 << 8))
 #define MAP_CDR_INT_GARE                   (6 | (3 << 8))
+#define MAP_CDRAREAS                       (7 | (3 << 8))
+#define MAP_MAIN_CDR                       (8 | (3 << 8))
 
 // gMapGroup_IndoorLavaridge
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))

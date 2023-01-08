@@ -1071,3 +1071,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/train/scripts.inc"
 
 	.include "data/maps/CDR_IntGare/scripts.inc"
+
+	.include "data/maps/CDRAreas/scripts.inc"
+
+	.include "data/maps/MainCDR/scripts.inc"

@@ -4470,6 +4470,26 @@
       "secondary_tileset": "gTileset_IntGare",
       "border_filepath": "data/layouts/CDR_IntGare/border.bin",
       "blockdata_filepath": "data/layouts/CDR_IntGare/map.bin"
+    },
+    {
+      "id": "LAYOUT_CDRAREAS",
+      "name": "CDRAreas_Layout",
+      "width": 91,
+      "height": 71,
+      "primary_tileset": "gTileset_GeneralResu",
+      "secondary_tileset": "gTileset_Gare",
+      "border_filepath": "data/layouts/CDRAreas/border.bin",
+      "blockdata_filepath": "data/layouts/CDRAreas/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAIN_CDR",
+      "name": "MainCDR_Layout",
+      "width": 20,
+      "height": 70,
+      "primary_tileset": "gTileset_GeneralResu",
+      "secondary_tileset": "gTileset_CDR",
+      "border_filepath": "data/layouts/MainCDR/border.bin",
+      "blockdata_filepath": "data/layouts/MainCDR/map.bin"
     }
   ]
 }
