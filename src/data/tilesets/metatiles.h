@@ -13,6 +13,9 @@ const u16 gMetatileAttributes_Gare[] = INCBIN_U16("data/tilesets/secondary/gare/
 const u16 gMetatiles_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatiles.bin");
 const u16 gMetatileAttributes_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatile_attributes.bin");
 
+const u16 gMetatiles_Train[] = INCBIN_U16("data/tilesets/secondary/train/metatiles.bin");
+const u16 gMetatileAttributes_Train[] = INCBIN_U16("data/tilesets/secondary/train/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 

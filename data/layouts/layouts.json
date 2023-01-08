@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_IntGare",
       "border_filepath": "data/layouts/Hall_Gare/border.bin",
       "blockdata_filepath": "data/layouts/Hall_Gare/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRAIN",
+      "name": "train_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_IndoorResu",
+      "secondary_tileset": "gTileset_Train",
+      "border_filepath": "data/layouts/train/border.bin",
+      "blockdata_filepath": "data/layouts/train/map.bin"
     }
   ]
 }

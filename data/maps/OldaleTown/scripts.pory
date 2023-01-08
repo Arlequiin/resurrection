@@ -53,7 +53,7 @@ script movetodoor{
 }
 script Retard{
 	if (var(VAR_UNUSED_0x404E)==0){
-	playfanfare(MUS_OBTAIN_BADGE)
+	playfanfare(FANFARE_RG_DEX_RATING)
 	msgbox(format("HAUT-PARLEURS : (jingle de la gare)"))
 	waitfanfare
 	msgbox(format("{COLOR LIGHT_RED}{SHADOW RED}LE TRAIN POUR LE CENTRE DE RECHERCHES PART DANS QUELQUES MINUTES, VEUILLEZ MONTER A BORD!"))

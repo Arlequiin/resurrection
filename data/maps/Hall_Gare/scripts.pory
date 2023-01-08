@@ -3,6 +3,7 @@ mapscripts Hall_Gare_MapScripts{
 }
 
 script reserve{
+	faceplayer
 	msgbox(format("Désolé, cette zone est réservée au personnel. Le seul motif valable pour y accéder est d'avoir un R.D.V avec le chef de gare."))
 	releaseall
 	end
@@ -103,13 +104,41 @@ script attente{
 script compost{
 	checkitem(ITEM_EON_TICKET)
 	if (var(VAR_RESULT) == 1){
-	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}. . . Bzzzzzzt"))
-	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED} Clic !"))
+	playse(SE_M_EXPLOSION)
+	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}. . . Bzzzzzzt... Clic"))
+	waitse
+	playfanfare(FANFARE_MOVE_DELETED)
 	msgbox(format("{COLOR RED}{SHADOW LIGHT_RED} Ticket composté !"))
+	waitfanfare
 	removeitem(ITEM_EON_TICKET,1)
 	} else {
 		msgbox(format("{COLOR RED}{SHADOW LIGHT_RED}Votre ticket est déjà composté."))
 	}
+	releaseall
+	end
+}
+
+script marc{
+	msgbox(format("Bonjour, laissez-moi vous accompagner à votre train."))
+	fadescreen(1)
+	msgbox(format("Puis-je voir votre ticket?"))
+	msgbox(format("....."))
+	msgbox(format("Place 87, suivez-moi s'il vous plaît."))
+	msgbox(format("....."))
+	msgbox(format("Voilà, c'est ici. Je m'occupe de vos bagages."))
+	showmoneybox(14,1)
+	msgbox(format("Lui donner un pourboire de 100¥?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT)==1){
+		hidemoneybox
+		removemoney(150)
+		showmoneybox(14,1)
+		msgbox(format("Merci beaucoup! Bonne route!"))
+	} else {
+		msgbox(format("Hmpf.."))
+	}
+	hidemoneybox
+	warp(MAP_TRAIN, 0)
+	fadescreen(0)
 	releaseall
 	end
 }

@@ -1067,3 +1067,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Passage/scripts.inc"
 
 	.include "data/maps/Hall_Gare/scripts.inc"
+
+	.include "data/maps/train/scripts.inc"

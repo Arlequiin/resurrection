@@ -3,6 +3,7 @@ Hall_Gare_MapScripts::
 
 
 reserve::
+	faceplayer
 	msgbox reserve_Text_0
 	releaseall
 	end
@@ -202,17 +203,48 @@ compost::
 	checkitem ITEM_EON_TICKET
 	compare VAR_RESULT, 1
 	goto_if_eq compost_2
-	msgbox compost_Text_3
+	msgbox compost_Text_2
 compost_1:
 	releaseall
 	end
 
 compost_2:
+	playse SE_M_EXPLOSION
 	msgbox compost_Text_0
+	waitse
+	playfanfare FANFARE_MOVE_DELETED
 	msgbox compost_Text_1
-	msgbox compost_Text_2
+	waitfanfare
 	removeitem ITEM_EON_TICKET, 1
 	goto compost_1
+
+
+marc::
+	msgbox marc_Text_0
+	fadescreen 1
+	msgbox marc_Text_1
+	msgbox marc_Text_2
+	msgbox marc_Text_3
+	msgbox marc_Text_2
+	msgbox marc_Text_4
+	showmoneybox 14, 1
+	msgbox marc_Text_5, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq marc_2
+	msgbox marc_Text_7
+marc_1:
+	hidemoneybox
+	warp MAP_TRAIN, 0
+	fadescreen 0
+	releaseall
+	end
+
+marc_2:
+	hidemoneybox
+	removemoney 150
+	showmoneybox 14, 1
+	msgbox marc_Text_6
+	goto marc_1
 
 
 reserve_Text_0:
@@ -286,13 +318,36 @@ attente_Text_3:
 	.string "retards ne dépendant pas nous.$"
 
 compost_Text_0:
-	.string "{COLOR RED}{SHADOW LIGHT_RED}. . . Bzzzzzzt$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}. . . Bzzzzzzt... Clic$"
 
 compost_Text_1:
-	.string "{COLOR RED}{SHADOW LIGHT_RED} Clic !$"
-
-compost_Text_2:
 	.string "{COLOR RED}{SHADOW LIGHT_RED} Ticket composté !$"
 
-compost_Text_3:
+compost_Text_2:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Votre ticket est déjà composté.$"
+
+marc_Text_0:
+	.string "Bonjour, laissez-moi vous accompagner\n"
+	.string "à votre train.$"
+
+marc_Text_1:
+	.string "Puis-je voir votre ticket?$"
+
+marc_Text_2:
+	.string ".....$"
+
+marc_Text_3:
+	.string "Place 87, suivez-moi s'il vous plaît.$"
+
+marc_Text_4:
+	.string "Voilà, c'est ici. Je m'occupe de vos\n"
+	.string "bagages.$"
+
+marc_Text_5:
+	.string "Lui donner un pourboire de 100¥?$"
+
+marc_Text_6:
+	.string "Merci beaucoup! Bonne route!$"
+
+marc_Text_7:
+	.string "Hmpf..$"

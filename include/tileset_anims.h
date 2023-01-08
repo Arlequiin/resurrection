@@ -11,6 +11,7 @@ void InitTilesetAnim_Petalburg(void);
 void InitTilesetAnim_CellapolisNord(void);
 void InitTilesetAnim_Gare(void);
 void InitTilesetAnim_IntGare(void);
+void InitTilesetAnim_Train(void);
 void InitTilesetAnim_Bedroom(void);
 void InitTilesetAnim_Rustboro(void);
 void InitTilesetAnim_Dewford(void);

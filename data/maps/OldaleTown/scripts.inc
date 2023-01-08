@@ -64,7 +64,7 @@ Retard_1:
 	end
 
 Retard_2:
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare FANFARE_RG_DEX_RATING
 	msgbox Retard_Text_0
 	waitfanfare
 	msgbox Retard_Text_1
