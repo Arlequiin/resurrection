@@ -1,0 +1,32 @@
+mapscripts CDR_IntGare_MapScripts {}
+
+script sc_train_cdr{
+    lock
+    faceplayer
+    msgbox(format("C'est donc vous les trois boursiers dont tout le monde parle?"))
+    random(5)
+    switch (var(VAR_RESULT)) {
+        case 0: 
+        msgbox(format("Je vous donne un petit cadeau, disons que c'est pour vous souhaiter bonne chance."))
+        giveitem(ITEM_ROCKY_HELMET)
+        case 1: msgbox(format("Surtout pensez à parler à tous les scientifiques avant de quitter le CDR, ils ont des choses à vous apprendre... voire vous donner."))
+    }
+    releaseall
+    end
+}
+
+script gardecdr{
+	getPartySize()
+	if (var(VAR_RESULT) > 1){
+	msgbox(format("Vous voulez rentrer à Cellapolis ?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0) {
+		msgbox(format("Bien, retour à Cellapolis"))
+		fadescreen(1)
+		warp(MAP_TRAIN, 0)
+	} else {
+		msgbox(format("Vous n'êtes pas venus pour rien allons, allez donc voir le Prof.Schwartz, vous rentrerez après."))
+	}
+	releaseall
+	end
+}
+}
