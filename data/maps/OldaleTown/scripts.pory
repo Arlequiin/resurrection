@@ -26,8 +26,11 @@ script movetodoor{
 script Retard{
 	playfanfare(MUS_OBTAIN_BADGE)
 	waitfanfare
-	msgbox(format("HAUT-PARLEURS : (jingle de la gare) LE TRAIN POUR LE CENTRE DE RECHERCHES PART DANS QUELQUES MINUTES, VEUILLEZ MONTER A BORD!"))
-	applymovement(OBJ_EVENT_ID_PLAYER, movetodoor)
+	if (var(VAR_UNUSED_0x404E)==0){
+	msgbox(format("HAUT-PARLEURS : (jingle de la gare)"))
+	msgbox(format("{COLOR LIGHT_RED}LE TRAIN POUR LE CENTRE DE RECHERCHES PART DANS QUELQUES MINUTES, VEUILLEZ MONTER A BORD!"))
+	setvar(VAR_UNUSED_0x404E,1)
+	}
 	releaseall
 	end
 }

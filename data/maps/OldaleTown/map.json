@@ -83,7 +83,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x404E",
+      "var_value": "0",
+      "script": "Retard"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x404E",
+      "var_value": "0",
+      "script": "Retard"
+    }
   ],
   "bg_events": [
     {

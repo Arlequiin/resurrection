@@ -28,10 +28,17 @@ movetodoor::
 Retard::
 	playfanfare MUS_OBTAIN_BADGE
 	waitfanfare
-	msgbox Retard_Text_0
-	applymovement OBJ_EVENT_ID_PLAYER, movetodoor
+	compare VAR_UNUSED_0x404E, 0
+	goto_if_eq Retard_2
+Retard_1:
 	releaseall
 	end
+
+Retard_2:
+	msgbox Retard_Text_0
+	msgbox Retard_Text_1
+	setvar VAR_UNUSED_0x404E, 1
+	goto Retard_1
 
 
 sca::
@@ -54,8 +61,10 @@ agent_Text_0:
 	.string "là!$"
 
 Retard_Text_0:
-	.string "HAUT-PARLEURS : (jingle de la gare) LE\n"
-	.string "TRAIN POUR LE CENTRE DE RECHERCHES\l"
+	.string "HAUT-PARLEURS : (jingle de la gare)$"
+
+Retard_Text_1:
+	.string "{COLOR LIGHT_RED}LE TRAIN POUR LE CENTRE DE RECHERCHES\n"
 	.string "PART DANS QUELQUES MINUTES, VEUILLEZ\l"
 	.string "MONTER A BORD!$"
 
