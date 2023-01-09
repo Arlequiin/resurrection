@@ -10,8 +10,8 @@ Please check related projects :
 # Credits
 - Arlequiin
 - CynoxxKh
-- Shyzera (made the artwork below)
 - Flomars
+- Shyzera (made the artwork below)
 <details>
 <summary>Tiles</summary>
 - HGSS Tiles by Gold and WesleyFG<br>
