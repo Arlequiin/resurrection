@@ -10,7 +10,7 @@ Please check related projects :
 # Credits
 - Arlequiin
 - CynoxxKh
-- Flomars
+- Flomars (scenario)
 - Shyzera (made the artwork below)
 <details>
 <summary>Tiles</summary>
