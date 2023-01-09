@@ -3,6 +3,8 @@
 Please check related projects :
 - <a href="https://github.com/Arlequiin/VN">Discord bot that fetch data from this repository</a>
 - <a href="https://github.com/Arlequiin/VN">Official website of the project</a>
+</ul>
+<br>Join the <a href="https://discord.gg/krD4e8JT">discord</a> of Pokémon Résurrection
 # What is this?
 <img src='dragon.png'><br>
 <p>This repository contains the source code of Pokémon Résurrection, if you need more info about the game, check the official website.</p>
