@@ -36,6 +36,12 @@ midcdr:
 	face_left
 	step_end
 
+signgare2::
+	lock
+	msgbox signgare2_Text_0
+	return
+
+
 quitmid:
 	walk_down
 	walk_down
@@ -70,6 +76,30 @@ arrivee_gare_2:
 	msgbox arrivee_gare_Text_3
 	setflag FLAG_UNUSED_0x021
 	goto arrivee_gare_1
+
+
+regard_bas:
+	face_down
+	step_end
+
+sc_gare_cdr_1::
+	faceplayer
+	applymovement 4, regard_bas
+	msgbox sc_gare_cdr_1_Text_0
+	msgbox sc_gare_cdr_1_Text_1
+	msgbox sc_gare_cdr_1_Text_2
+	msgbox sc_gare_cdr_1_Text_3
+	msgbox sc_gare_cdr_1_Text_4
+	msgbox sc_gare_cdr_1_Text_5
+	releaseall
+	end
+
+
+sc_gare_cdr_2::
+	faceplayer
+	msgbox sc_gare_cdr_2_Text_0
+	releaseall
+	end
 
 
 telephone2_Text_0:
@@ -116,6 +146,10 @@ telephone2_Text_4:
 telephone2_Text_5:
 	.string "Le téléphone s'est éteint.$"
 
+signgare2_Text_0:
+	.string "Gare du Centre de Recherches,\n"
+	.string "inaugurée en 2013 par Apostrate.$"
+
 arrivee_gare_Text_0:
 	.string "Lisa : Aaah, enfin arrivés ! Le vent est\n"
 	.string "si doux... Ça me fait penser à\l"
@@ -132,3 +166,39 @@ arrivee_gare_Text_2:
 
 arrivee_gare_Text_3:
 	.string "Tarde pas!$"
+
+sc_gare_cdr_1_Text_0:
+	.string "La mer est si belle, elle reflète les\n"
+	.string "doux rayons du soleil et les émotions.$"
+
+sc_gare_cdr_1_Text_1:
+	.string "Quand j'étais chaque dimanche, j'allais\n"
+	.string "à la plage, qu'il fasse beau ou non.$"
+
+sc_gare_cdr_1_Text_2:
+	.string "En observant les vagues danser,\n"
+	.string "certaines m'avaient l'air tristes,\l"
+	.string "d'autres joyeuses d'être en vie.$"
+
+sc_gare_cdr_1_Text_3:
+	.string "Les jours où j'étais triste, elles\n"
+	.string "m'avaient toutes l'air tristes,\l"
+	.string "inversement joyeuses. Du coup, à\l"
+	.string "chaque fois que j'allais à la plage\l"
+	.string "j'étais en adéquation avec\l"
+	.string "l'environnement ce qui me rassurait.$"
+
+sc_gare_cdr_1_Text_4:
+	.string "J'avais l'impression d'être comprise,\n"
+	.string "pour une fois de mon existence.$"
+
+sc_gare_cdr_1_Text_5:
+	.string "... (larme) .... Laisse moi pleurer veux-tu.$"
+
+sc_gare_cdr_2_Text_0:
+	.string "Tu vois la scientifique clouée devant la\n"
+	.string "mer, elle est toujours en train de\l"
+	.string "chialer. J'ai jamais essayé de la\l"
+	.string "comprendre, c'est stupide d'être aussi\l"
+	.string "triste, et puis, elle doit pas avoir de\l"
+	.string "bien gros problèmes.$"

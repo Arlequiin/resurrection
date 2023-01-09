@@ -29,6 +29,11 @@ movement midcdr{
 	face_left
 }
 
+script signgare2{
+	lock
+	msgbox(format("Gare du Centre de Recherches, inaugurée en 2013 par Apostrate."))
+}
+
 movement quitmid{
 	walk_down
 	walk_down
@@ -58,6 +63,29 @@ script arrivee_gare{
 	msgbox(format("Tarde pas!"))
 	setflag(FLAG_UNUSED_0x021)
 	}
+	releaseall
+	end
+}
+
+movement regard_bas{
+	face_down
+}
+script sc_gare_cdr_1{
+	faceplayer
+	applymovement(4,regard_bas)
+	msgbox(format("La mer est si belle, elle reflète les doux rayons du soleil et les émotions."))
+	msgbox(format("Quand j'étais chaque dimanche, j'allais à la plage, qu'il fasse beau ou non."))
+	msgbox(format("En observant les vagues danser, certaines m'avaient l'air tristes, d'autres joyeuses d'être en vie."))
+	msgbox(format("Les jours où j'étais triste, elles m'avaient toutes l'air tristes, inversement joyeuses. Du coup, à chaque fois que j'allais à la plage j'étais en adéquation avec l'environnement ce qui me rassurait."))
+	msgbox(format("J'avais l'impression d'être comprise, pour une fois de mon existence."))
+	msgbox(format("... (larme) .... Laisse moi pleurer veux-tu."))
+	releaseall
+	end
+}
+
+script sc_gare_cdr_2{
+	faceplayer
+	msgbox(format("Tu vois la scientifique clouée devant la mer, elle est toujours en train de chialer. J'ai jamais essayé de la comprendre, c'est stupide d'être aussi triste, et puis, elle doit pas avoir de bien gros problèmes."))
 	releaseall
 	end
 }
