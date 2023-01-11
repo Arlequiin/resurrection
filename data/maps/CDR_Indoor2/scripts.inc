@@ -213,7 +213,8 @@ Schwartz0_1:
 	end
 
 Schwartz0_2:
-	msgbox Schwartz0_Text_0
+	msgbox_mugshot Schwartz0_Text_0, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
+	closemessage
 	multichoice 0, 0, MULTI_STARTERS, TRUE
 	compare VAR_RESULT, 0
 	goto_if_eq Schwartz0_6
@@ -245,6 +246,8 @@ Schwartz0_78:
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_POKENAV_GET
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Schwartz0_Text_1
 	fadescreen 1
@@ -257,7 +260,6 @@ Schwartz0_78:
 	fadescreen 0
 	msgbox Schwartz0_Text_4
 	msgbox Schwartz0_Text_5
-	setflag FLAG_SYS_NATIONAL_DEX
 	msgbox Schwartz0_Text_6
 	giveitem ITEM_POKE_BALL, 20
 	msgbox Schwartz0_Text_7
@@ -275,6 +277,7 @@ Schwartz0_78:
 	goto Schwartz0_1
 
 Schwartz0_6:
+	closemessage
 	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
 	compare VAR_RESULT, 0
 	goto_if_eq Schwartz0_12
@@ -480,9 +483,8 @@ Schwartz0_76:
 
 Schwartz0_79:
 	random SPECIES_CALYREX
-	addvar VAR_RESULT, 1
-	givemon VAR_RESULT, 5, ITEM_LEFTOVERS
 	bufferspeciesname STR_VAR_1, VAR_RESULT
+	givemon VAR_RESULT, 5, ITEM_LEFTOVERS
 	goto Schwartz0_78
 
 Schwartz0_82:

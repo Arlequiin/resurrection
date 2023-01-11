@@ -185,31 +185,32 @@ script machineheal{
 script Schwartz0{
 	faceplayer
 	if (!flag(FLAG_UNUSED_0x023)){
-	msgbox("Lequel tu veux?")
+	msgbox_mugshot("Lequel tu veux?",MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
+	closemessage
 	multichoice(0, 0, MULTI_STARTERS, TRUE)
 
    if (var(VAR_RESULT) == 0){
-	 multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
-	 if (var(VAR_RESULT) == 0){
+    if (var(VAR_RESULT) == 0){
 
-		givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
-		addvar(VAR_RESULT, SPECIES_BULBASAUR)
-		bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
-	 }
-	 if (var(VAR_RESULT) == 1){
-
-		givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
-		addvar(VAR_RESULT, SPECIES_CHARMANDER)
-		bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
-	 }
-	 if (var(VAR_RESULT) == 2){
-
-		givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
-		addvar(VAR_RESULT, SPECIES_SQUIRTLE)
-		bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
-	 }
+     givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_BULBASAUR)
+     bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
     }
+    if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_CHARMANDER)
+     bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
+    }
+    if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_SQUIRTLE)
+     bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
+    }
+  }
    if (var(VAR_RESULT) == 1){
 
     multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
@@ -233,7 +234,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_TOTODILE)
     }
   }
-  if (var(VAR_RESULT) == 2){
+   if (var(VAR_RESULT) == 2){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -256,7 +257,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_MUDKIP)
     }
   }
-  if (var(VAR_RESULT) == 3){
+   if (var(VAR_RESULT) == 3){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -279,7 +280,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_PIPLUP)
     }
   }
-  if (var(VAR_RESULT) == 4){
+   if (var(VAR_RESULT) == 4){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -302,7 +303,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_OSHAWOTT)
     }
   }
-  if (var(VAR_RESULT) == 5){
+   if (var(VAR_RESULT) == 5){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -325,7 +326,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_FROAKIE)
     }
   }
-  if (var(VAR_RESULT) == 6){
+   if (var(VAR_RESULT) == 6){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -348,7 +349,7 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_POPPLIO)
     }
   }
-  if (var(VAR_RESULT) == 7){
+   if (var(VAR_RESULT) == 7){
 
    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
@@ -371,15 +372,16 @@ script Schwartz0{
      bufferspeciesname(STR_VAR_1, SPECIES_SOBBLE)
     }
   }
-  if (var(VAR_RESULT) == 8){
+   if (var(VAR_RESULT) == 8){
 	random(SPECIES_CALYREX)
-	addvar(VAR_RESULT, 1)
-	givemon(VAR_RESULT, 5, ITEM_LEFTOVERS)
 	bufferspeciesname(STR_VAR_1, VAR_RESULT)
+	givemon(VAR_RESULT, 5, ITEM_LEFTOVERS)
   }
     setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_POKEDEX_GET)
 	setflag(FLAG_SYS_POKENAV_GET)
+	setflag(FLAG_SYS_NATIONAL_DEX)
+	special(EnableNationalPokedex)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(format("{COLOR BLUE} Vous recevez un {STR_VAR_1}"))
 	fadescreen(1)
@@ -392,7 +394,6 @@ script Schwartz0{
 	fadescreen(0)
 	msgbox(format("Bien, passons aux objets. Voici un V.N Tech, un appareil fabriqué par Vitalis Navitas SARL qui vous permettra de nous contacter, il est muni d'une application nommé V.N Maps, un service mondial de carthographie et bien d'autre encore, je vous laisserai découvrir ça par vous-même."))
 	msgbox(format("Un Pokédex pour chacun, il contient des descriptions très détaillées et des informations sur les Pokémon aussi bien sur leurs caractéristiques physiques que leurs atouts en combat, c'est le Pokédex National."))
-	setflag(FLAG_SYS_NATIONAL_DEX)
 	msgbox(format("20 Poké Balls, je pense que ça vous suffira pour l'instant."))
 	giveitem(ITEM_POKE_BALL, 20)
 	msgbox(format("Et, un petit cadeau de ma part, un Patch Talent et une Pilule Talent, ces objets sont très rares, très chers et très convoités. Faites-en bon usage!"))
