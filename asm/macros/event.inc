@@ -1522,6 +1522,14 @@
 	.byte \y
 	.endm
 
+	@ Calls a msgbox with a desired mugshot, string and msgbox type.
+	.macro msgbox_mugshot msgText:req, msgType:req, mugshot:req
+	setvar VAR_0x8000, \mugshot
+	callnative DrawMugshot
+	msgbox \msgText, \msgType
+	callnative ClearMugshot
+	.endm
+
 	@ Increases the value of the specified game stat by 1. The maximum value of a stat is 0xFFFFFF. See include/constants/game_stat.h
 	.macro incrementgamestat stat:req
 	.byte 0xc3
