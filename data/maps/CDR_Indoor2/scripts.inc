@@ -112,12 +112,16 @@ sch1:
 
 sch2:
 	walk_up
+	walk_right
+	walk_right
 	face_right
 	step_end
 
 sch3:
 	walk_down
 	walk_down
+	walk_right
+	walk_right
 	face_right
 	step_end
 
@@ -163,27 +167,27 @@ Schwartz::
 
 Schwartz_1:
 	msgbox Schwartz_Text_0
-	applymovement 3, lizlab
-	waitmovement 3
 	applymovement 2, midlab
 	waitmovement 2
 	applymovement OBJ_EVENT_ID_PLAYER, playlab
 	waitmovement 0
+	applymovement 3, lizlab
+	waitmovement 3
 	applymovement 1, sch1
 	msgbox Schwartz_Text_1
-	msgbox Schwartz_Text_2
-	msgbox Schwartz_Text_3
+	msgbox_mugshot Schwartz_Text_2, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
+	msgbox_mugshot Schwartz_Text_3, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	applymovement 1, sch2
-	msgbox Schwartz_Text_4
+	msgbox_mugshot Schwartz_Text_4, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Schwartz_Text_5
 	applymovement 1, sch3
-	msgbox Schwartz_Text_6
+	msgbox_mugshot Schwartz_Text_6, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Schwartz_Text_7
 	msgbox Schwartz_Text_8
 	applymovement 1, sch4
-	msgbox Schwartz_Text_9
+	msgbox_mugshot Schwartz_Text_9, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	msgbox Schwartz_Text_10
 	closemessage
 	multichoice 0, 0, MULTI_STARTERS, TRUE

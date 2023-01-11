@@ -106,6 +106,7 @@ movement sch1{
 
 movement sch2{
 	walk_up
+	walk_right
 	face_right
 }
 
@@ -146,27 +147,27 @@ movement playlab{
 script Schwartz{
  if (!flag(FLAG_UNUSED_0x022)){
 	msgbox(format("Tout le monde est là?"))
-	applymovement(3, lizlab)
-	waitmovement(3)
 	applymovement(2, midlab)
 	waitmovement(2)
 	applymovement(OBJ_EVENT_ID_PLAYER, playlab)
 	waitmovement(0)
+	applymovement(3, lizlab)
+	waitmovement(3)
 	applymovement(1,sch1)
 	msgbox("........")
-	msgbox(format("Perfekt, je peux donc commencer. Vous êtes la 7ème promotion de dresseurs du CDR. Je ne vais pas vous raconter l'histoire du CDR, même si ça semble vous intéresser car il y a des panneaux avec tout ce qu'il y a à savoir dehors. Votre objectif en tant que dresseurs, ou plutôt vos objectifs sont de faire des découvertes diverses. Je m'explique : vous devrez, en tissant des spiels, heim, liens avec vos futurs Pokémon, les faire évoluer et nous les apporter, ici au Centre de Recherches afin que nous puissions les étudier, bien entendu vous n'allez pas vous déplacer à chaque fois, nous utilisons un système de transfert dernier cri, un simple ordinateur vous suffira pour nous les transférer. Les moyens de tissers des liens avec eux sont divers, le plus connu est de participer à des COMBATS de Pokémon. Les dresseurs les plus brillants participeront à la fin de l'année à la Ligue des Champions d'Olnyris, un énorme tournoi visant à déterminer le dresseur le plus puissant de l'année. Ce dresseur, va combattre par la suite le Conseil 4 d'Olnyris et essayer de vaincre le champion."))
-	msgbox(format("Bien, voyons voir les mails reçus..."))
+	msgbox_mugshot(format("Perfekt, je peux donc commencer. Vous êtes la 7ème promotion de dresseurs du CDR. Je ne vais pas vous raconter l'histoire du CDR, même si ça semble vous intéresser car il y a des panneaux avec tout ce qu'il y a à savoir dehors. Votre objectif en tant que dresseurs, ou plutôt vos objectifs sont de faire des découvertes diverses. Je m'explique : vous devrez, en tissant des spiels, heim, liens avec vos futurs Pokémon, les faire évoluer et nous les apporter, ici au Centre de Recherches afin que nous puissions les étudier, bien entendu vous n'allez pas vous déplacer à chaque fois, nous utilisons un système de transfert dernier cri, un simple ordinateur vous suffira pour nous les transférer. Les moyens de tissers des liens avec eux sont divers, le plus connu est de participer à des COMBATS de Pokémon. Les dresseurs les plus brillants participeront à la fin de l'année à la Ligue des Champions d'Olnyris, un énorme tournoi visant à déterminer le dresseur le plus puissant de l'année. Ce dresseur, va combattre par la suite le Conseil 4 d'Olnyris et essayer de vaincre le champion."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
+	msgbox_mugshot(format("Bien, voyons voir les mails reçus..."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
 	applymovement(1,sch2)
-	msgbox(format("Midori, tu as demandé un Coupenotte... Le voilà, tout chaud dans sa Poké Ball."))
+	msgbox_mugshot(format("Midori, tu as demandé un Coupenotte... Le voilà, tout chaud dans sa Poké Ball."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(format("{COLOR BLUE}Midori obtient un COUPENOTTE"))
 	applymovement(1, sch3)
-	msgbox(format("Lisa, tu as demandé un Évoli, tiens."))
+	msgbox_mugshot(format("Lisa, tu as demandé un Évoli, tiens."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(format("{COLOR BLUE} Lisa a obtenu une ÉVOLI"))
 	msgbox("Oh ! Elle est si mignonne!!!")
 	applymovement(1, sch4)
-	msgbox(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."))
+	msgbox_mugshot(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
 	msgbox("Lequel tu veux?")
 	closemessage
 	multichoice(0, 0, MULTI_STARTERS, TRUE)

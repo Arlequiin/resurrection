@@ -30,14 +30,13 @@ static const u16 sMugshotPal_MidoriHappy[] = INCBIN_U16("graphics/mugshots/midor
 //static const u32 sMugshotImg_Lisa[] = INCBIN_U32("graphics/mugshots/lisa.4bpp.lz");
 //static const u16 sMugshotPal_Lisa[] = INCBIN_U16("graphics/mugshots/lisa.gbapal");
 
-//static const u32 sMugshotImg_Schwartz[] = INCBIN_U32("graphics/mugshots/schwartz.4bpp.lz");
-//static const u16 sMugshotPal_Schwartz[] = INCBIN_U16("graphics/mugshots/schwartz.gbapal");
+static const u32 sMugshotImg_Schwartz[] = INCBIN_U32("graphics/mugshots/schwartz.4bpp.lz");
+static const u16 sMugshotPal_Schwartz[] = INCBIN_U16("graphics/mugshots/schwartz.gbapal");
 
 static const struct Mugshot sMugshots[] = {
    [MUGSHOT_MIDORI] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
    [MUGSHOT_MIDORI_HAPPY] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_MidoriHappy, .palette = sMugshotPal_MidoriHappy},
-   //[MUGSHOT_LISA] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Lisa, .palette = sMugshotPal_Lisa},
-   //[MUGSHOT_SCHWARTZ] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Schwartz, .palette = sMugshotPal_Schwartz},
+   [MUGSHOT_SCHWARTZ] = {.x = 16, .y = 2, .width = 120, .height = 96, .image = sMugshotImg_Schwartz, .palette = sMugshotPal_Schwartz},
 };
 
 
