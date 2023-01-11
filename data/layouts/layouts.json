@@ -4490,6 +4490,36 @@
       "secondary_tileset": "gTileset_CDR",
       "border_filepath": "data/layouts/MainCDR/border.bin",
       "blockdata_filepath": "data/layouts/MainCDR/map.bin"
+    },
+    {
+      "id": "LAYOUT_CDR_INDOOR1",
+      "name": "CDR_Indoor1_Layout",
+      "width": 17,
+      "height": 10,
+      "primary_tileset": "gTileset_IndoorResu",
+      "secondary_tileset": "gTileset_IndoorCdr",
+      "border_filepath": "data/layouts/CDR_Indoor1/border.bin",
+      "blockdata_filepath": "data/layouts/CDR_Indoor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CDR_INDOOR2",
+      "name": "CDR_Indoor2_Layout",
+      "width": 30,
+      "height": 15,
+      "primary_tileset": "gTileset_IndoorResu",
+      "secondary_tileset": "gTileset_IndoorCdr",
+      "border_filepath": "data/layouts/CDR_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/CDR_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CDR_INDOOR3",
+      "name": "CDR_Indoor3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CDR_Indoor3/border.bin",
+      "blockdata_filepath": "data/layouts/CDR_Indoor3/map.bin"
     }
   ]
 }

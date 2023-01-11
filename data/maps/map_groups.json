@@ -123,7 +123,10 @@
     "DewfordTown_House2",
     "CDR_IntGare",
     "CDRAreas",
-    "MainCDR"
+    "MainCDR",
+    "CDR_Indoor1",
+    "CDR_Indoor2",
+    "CDR_Indoor3"
   ],
   "gMapGroup_IndoorLavaridge": [
     "LavaridgeTown_HerbShop",

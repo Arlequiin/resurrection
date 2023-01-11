@@ -666,6 +666,13 @@ void InitTilesetAnim_IndoorResu(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_Building;
 }
 
+void InitTilesetAnim_IndoorCdr(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
 static void TilesetAnim_General(u16 timer)
 {
     if (timer % 16 == 0)

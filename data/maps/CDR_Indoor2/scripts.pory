@@ -1,0 +1,416 @@
+mapscripts CDR_Indoor2_MapScripts{
+
+}
+
+script LV1{
+	msgbox(format("Trois essais sur la théorie sexuelle chez les Pokémon, en 12 volumes"))
+	msgbox(format("De la camaraderie à la pension à l'oeuf"))
+	msgbox(format("Adalbert Freud"))
+	releaseall
+	end
+}
+
+script LV2{
+	msgbox(format("17 équations qui ont changé le monde de la stratégie Pokémon"))
+	msgbox(format("Rigobert Dagobert"))
+	releaseall
+	end
+}
+
+script LV3{
+	msgbox(format("C'est si compliqué que vous avez renoncé à lire le titre."))
+	releaseall
+	end
+}
+
+script LV4{
+	msgbox(format("La fraude fiscale pour les nuls"))
+	msgbox(format("{COLOR BLUE}Il semblerait que ce livre ne soit pas au bon endroit..."))
+	releaseall
+	end
+}
+
+script LV5{
+	msgbox(format("Origine des Fantominus"))
+	msgbox(format("Et si ce Fantominus qui vous harcelait était votre ancien Pokémon?"))
+	msgbox(format("Arnvald Rongier"))
+	releaseall
+	end
+}
+
+script LV6{
+	msgbox(format("Mélodelfe, Ectoplasma, quelle relation ?"))
+	msgbox(format("Clodomir Duvald"))
+	releaseall
+	end
+}
+
+script LV7{
+	msgbox(format("AZOTH - V.N"))
+	msgbox(format("{COLOR BLUE}Une feuille recouvre le nom de l'auteur"))
+	releaseall
+	end
+}
+
+script lizbefore{
+	msgbox(format("Je ne tiens plus en place!!!! Je vais avoir mon tout premier Pokémon!"))
+	releaseall
+	end
+}
+
+script midbefore{
+	msgbox_mugshot(format("Pitié faites que Coupenotte ait une bonne nature."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	releaseall
+	end
+}
+
+movement aleft{
+	walk_right
+}
+
+movement aup{
+	walk_up * 2
+	walk_left
+	walk_up
+	walk_up
+	walk_right
+	face_left
+}
+
+movement aup2{
+	walk_right * 2
+	walk_up * 2
+	face_left
+}
+
+movement fleft{
+	face_left
+}
+
+script trigger2{
+	if (!flag(FLAG_UNUSED_0x022)){
+	applymovement(OBJ_EVENT_ID_PLAYER, aleft)
+	}
+}
+
+movement sch1{
+	walk_right
+	walk_up
+	face_left
+	walk_down
+	walk_down
+	face_left
+	walk_up
+	face_right
+}
+
+movement sch2{
+	walk_up
+	face_right
+}
+
+movement sch3{
+	walk_down
+	walk_down
+	face_right
+}
+
+movement sch4{
+	walk_up
+	face_right
+}
+
+movement sch5{
+	walk_right
+	face_down
+}
+
+script Schwartz{
+ if (!flag(FLAG_UNUSED_0x022)){
+	msgbox(format("Tout le monde est là?"))
+	applymovement(3, aup)
+	applymovement(2, aup2)
+	applymovement(OBJ_EVENT_ID_PLAYER, fleft)
+	waitmovement(0)
+	applymovement(1,sch1)
+	msgbox("........")
+	msgbox(format("Perfekt, je peux donc commencer. Vous êtes la 7ème promotion de dresseurs du CDR. Je ne vais pas vous raconter l'histoire du CDR, même si ça semble vous intéresser car il y a des panneaux avec tout ce qu'il y a à savoir dehors. Votre objectif en tant que dresseurs, ou plutôt vos objectifs sont de faire des découvertes diverses. Je m'explique : vous devrez, en tissant des spiels, heim, liens avec vos futurs Pokémon, les faire évoluer et nous les apporter, ici au Centre de Recherches afin que nous puissions les étudier, bien entendu vous n'allez pas vous déplacer à chaque fois, nous utilisons un système de transfert dernier cri, un simple ordinateur vous suffira pour nous les transférer. Les moyens de tissers des liens avec eux sont divers, le plus connu est de participer à des COMBATS de Pokémon. Les dresseurs les plus brillants participeront à la fin de l'année à la Ligue des Champions d'Olnyris, un énorme tournoi visant à déterminer le dresseur le plus puissant de l'année. Ce dresseur, va combattre par la suite le Conseil 4 d'Olnyris et essayer de vaincre le champion."))
+	msgbox(format("Bien, voyons voir les mails reçus..."))
+	applymovement(1,sch2)
+	msgbox(format("Daniel, tu as demandé un Coupenotte... Le voilà, tout chaud dans sa Poké Ball."))
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("{COLOR BLUE}Daniel obtient un COUPENOTTE"))
+	applymovement(1, sch3)
+	msgbox(format("Louise, tu as demandé un Évoli, tiens."))
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("{COLOR BLUE} Louise a obtenu une ÉVOLI"))
+	msgbox("Oh ! Elle est si mignonne!!!")
+	applymovement(1, sch4)
+	msgbox(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."))
+	msgbox("Lequel tu veux?")
+	closemessage
+	multichoice(0, 0, MULTI_STARTERS, TRUE)
+  if (var(VAR_RESULT) == 0){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_BULBASAUR)
+     bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_CHARMANDER)
+     bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_SQUIRTLE)
+     bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
+    }
+  }
+  if (var(VAR_RESULT) == 1){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_CHIKORITA, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_CHIKORITA)
+     bufferspeciesname(STR_VAR_1, SPECIES_CHIKORITA)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_CYNDAQUIL, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_CYNDAQUIL)
+     bufferspeciesname(STR_VAR_1, SPECIES_CYNDAQUIL)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_TOTODILE, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_TOTODILE)
+     bufferspeciesname(STR_VAR_1, SPECIES_TOTODILE)
+    }
+  }
+  if (var(VAR_RESULT) == 2){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_TREECKO, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_TREECKO)
+     bufferspeciesname(STR_VAR_1, SPECIES_TREECKO)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_TORCHIC, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_TORCHIC)
+     bufferspeciesname(STR_VAR_1, SPECIES_TORCHIC)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_MUDKIP, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_MUDKIP)
+     bufferspeciesname(STR_VAR_1, SPECIES_MUDKIP)
+    }
+  }
+  if (var(VAR_RESULT) == 3){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_TURTWIG, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_TURTWIG)
+     bufferspeciesname(STR_VAR_1, SPECIES_TURTWIG)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_CHIMCHAR, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_CHIMCHAR)
+     bufferspeciesname(STR_VAR_1, SPECIES_CHIMCHAR)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_PIPLUP, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_PIPLUP)
+     bufferspeciesname(STR_VAR_1, SPECIES_PIPLUP)
+    }
+  }
+  if (var(VAR_RESULT) == 4){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_SNIVY, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_SNIVY)
+     bufferspeciesname(STR_VAR_1, SPECIES_SNIVY)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_TEPIG, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_TEPIG)
+     bufferspeciesname(STR_VAR_1, SPECIES_TEPIG)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_OSHAWOTT, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_OSHAWOTT)
+     bufferspeciesname(STR_VAR_1, SPECIES_OSHAWOTT)
+    }
+  }
+  if (var(VAR_RESULT) == 5){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_CHESPIN, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_CHESPIN)
+     bufferspeciesname(STR_VAR_1, SPECIES_CHESPIN)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_FENNEKIN, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_FENNEKIN)
+     bufferspeciesname(STR_VAR_1, SPECIES_FENNEKIN)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_FROAKIE, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_FROAKIE)
+     bufferspeciesname(STR_VAR_1, SPECIES_FROAKIE)
+    }
+  }
+  if (var(VAR_RESULT) == 6){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_ROWLET, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_ROWLET)
+     bufferspeciesname(STR_VAR_1, SPECIES_ROWLET)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_LITTEN, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_LITTEN)
+     bufferspeciesname(STR_VAR_1, SPECIES_LITTEN)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_POPPLIO, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_POPPLIO)
+     bufferspeciesname(STR_VAR_1, SPECIES_POPPLIO)
+    }
+  }
+  if (var(VAR_RESULT) == 7){
+
+   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+
+   if (var(VAR_RESULT) == 0){
+
+     givemon(SPECIES_GROOKEY, 5, ITEM_MIRACLE_SEED)
+	 addvar(VAR_RESULT, SPECIES_GROOKEY)
+     bufferspeciesname(STR_VAR_1, SPECIES_GROOKEY)
+    }
+   if (var(VAR_RESULT) == 1){
+
+     givemon(SPECIES_SCORBUNNY, 5, ITEM_CHARCOAL)
+	 addvar(VAR_RESULT, SPECIES_SCORBUNNY)
+     bufferspeciesname(STR_VAR_1, SPECIES_SCORBUNNY)
+    }
+   if (var(VAR_RESULT) == 2){
+
+     givemon(SPECIES_SOBBLE, 5, ITEM_MYSTIC_WATER)
+	 addvar(VAR_RESULT, SPECIES_SOBBLE)
+     bufferspeciesname(STR_VAR_1, SPECIES_SOBBLE)
+    }
+  }
+  if (var(VAR_RESULT) == 8){
+	random(SPECIES_CALYREX)
+	addvar(VAR_RESULT, 1)
+	bufferspeciesname(STR_VAR_1, VAR_RESULT)
+	givemon(VAR_RESULT, 5, ITEM_LEFTOVERS)
+  }
+    setflag(FLAG_SYS_POKEMON_GET)
+	setflag(FLAG_SYS_POKEDEX_GET)
+	setflag(FLAG_SYS_POKENAV_GET)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("{COLOR BLUE} Vous recevez un {STR_VAR_1}"))
+	fadescreen(1)
+	playmoncry(VAR_RESULT, 0)
+	waitmoncry
+	showmonpic(VAR_RESULT, 5, 3)
+	msgbox(format("{STR_VAR_1}!"))
+	msgbox(format("{COLOR BLUE}On dirait que {STR_VAR_1} vous apprécie."))
+	hidemonpic
+	fadescreen(0)
+	msgbox(format("Bien, passons aux objets. Voici un V.N Tech, un appareil fabriqué par Vitalis Navitas SARL qui vous permettra de nous contacter, il est muni d'une application nommé V.N Maps, un service mondial de carthographie et bien d'autre encore, je vous laisserai découvrir ça par vous-même."))
+	msgbox(format("Un Pokédex pour chacun, il contient des descriptions très détaillées et des informations sur les Pokémon aussi bien sur leurs caractéristiques physiques que leurs atouts en combat, c'est le Pokédex National."))
+	setflag(FLAG_SYS_NATIONAL_DEX)
+	msgbox(format("20 Poké Balls, je pense que ça vous suffira pour l'instant."))
+	giveitem(ITEM_POKE_BALL, 20)
+	msgbox(format("Et, un petit cadeau de ma part, un Patch Talent et une Pilule Talent, ces objets sont très rares, très chers et très convoités. Faites-en bon usage!"))
+	giveitem(ITEM_ABILITY_PATCH, 1)
+	giveitem(ITEM_ABILITY_CAPSULE, 1)
+	msgbox(format("Une dernière chose, voici la CT Puissance Cachée."))
+	giveitem(ITEM_TM10_HIDDEN_POWER)
+	msgbox(format("Bien, filez jeunesse, qui sait, peut être que deviendrez, en l'espace d'un an les meilleurs dresseurs de la région!"))
+	msgbox(format("Ne tardez pas, votre train va bientôt partir. Bonne chance !"))
+	fadescreen(1)
+	removeobject(2)
+	removeobject(3)
+	setflag(FLAG_UNUSED_0x022)
+	fadescreen(0)
+	releaseall
+	end
+	}
+}
+
+script machineheal{
+	msgbox(format("Soigner vos Pokémon?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0){
+	special(HealPlayerParty)
+	playfanfare(MUS_HEAL)
+	}
+	releaseall
+	end
+}
+script Schwartz0{
+	if (!flag(FLAG_UNUSED_0x022)){
+	msgbox(format("Bonjour! Et bienvenue!"))
+	} else {
+		msgbox(format("Tes amis sont déjà partis, qu'attends-tu?"))
+	}
+	releaseall
+	end
+}
+
+script machine{
+	msgbox(format("Des Pokémon sont stockés dans cette machine, il vaut mieux ne pas y toucher."))
+	releaseall
+	end
+}
+script LV8{
+	msgbox(format("Mein Kampf"))
+	msgbox(format("Le livre qui décrit avec une certaine intensité le combat d'un jeune dresseur pour devenir le Maître."))
+	msgbox(format("Adolph Nietschtler"))
+	releaseall
+	end
+}
+
+script LV9{
+	msgbox(format("Kalos n'a pas dit son dernier mot"))
+	msgbox(format("Possesseur d'un café en plein Illumis et d'une entreprise concernant les nouvelles technologies, Lysandre explique dans ce livre comment redonner à Kalos sa gloire d'antan"))
+	msgbox(format("Éric Lysandre"))
+	releaseall
+	end
+}

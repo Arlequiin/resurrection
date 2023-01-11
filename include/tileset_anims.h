@@ -10,6 +10,7 @@ void InitTilesetAnim_General(void);
 void InitTilesetAnim_Petalburg(void);
 void InitTilesetAnim_CellapolisNord(void);
 void InitTilesetAnim_Gare(void);
+void InitTilesetAnim_IndoorCdr(void);
 void InitTilesetAnim_IntGare(void);
 void InitTilesetAnim_Train(void);
 void InitTilesetAnim_CDR(void);

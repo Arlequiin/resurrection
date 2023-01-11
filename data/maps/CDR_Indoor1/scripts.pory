@@ -1,0 +1,61 @@
+mapscripts CDR_Indoor_1_MapScripts{
+	
+}
+
+script SCDR1{
+	lock
+	faceplayer
+	msgbox(format("Éh, salut futur dresseur ! Tu vois ce qu'il y a devant moi, c'est LACIE ! LACIE est un serveur qui peut stocker jusqu'à 100 To ! On y stocke toutes les données concernant les recherches... secrètes du CDR... Tu veux que je te parle d'une découverte récente, ça reste entre nous... ?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 1){
+		msgbox(format("Désolé... Je parle beaucoup."))
+	} else {
+		msgbox(format("Tu vois les énormes rochers qui encerclent Cellapolis Centre et le rocher qu'on a ramené ici ? Bah, paraît-il ils viennent d'une autre planète parce qu'ils peuvent faire évoluer des Mélofée, leur seul moyen d'évolution anciennement connu était la Pierre Lune, qui vient de l'espace ! Après plusieurs tests on a pu comprendre que c'était le résultat d'une attaque Draco-Météore un peu spéciale... Il y a deux Pokémon dans le coup, Deoxys et Jirachi, deux fabuleux originaires de Hoenn. Ils ont laissé des traces un peu partout dans la région jusqu'au sud-est d'Onlyris, là-bas a été récemment découvert un vieux temple sans toît. On y a envoyé une équipe d'exploration, ils ont dit que tout y est bizarre, comme si ce temple n'était pas soumis aux lois physiques. Ils y ont trouvé des morceaux de météorites ce qui valide nos hypothèses. La dernière chose qu'ils ont trouvé est un triangle noir, qui bougeait de plus en plus vite jusqu'à devenir progressivement rouge, une chose horrible en est sortie. Depuis, les explorateurs que l'on a envoyé n'ont pas donné de nouvelles et ne sont jamais revenus."))
+
+	}
+	releaseall
+	end
+}
+
+script poubelle{
+	msgbox("C'est vide.")
+	releaseall
+	end
+}
+
+movement faceright{
+	face_right
+}
+
+movement faceup{
+	face_up
+}
+
+movement faceleft{
+	face_left
+}
+
+movement facedown{
+	face_down
+}
+
+script donttouch1{
+	applymovement(1,faceleft)
+	msgbox(format("Ne touche surtout pas à ça !"))
+	applymovement(1,faceup)
+	releaseall
+	end
+}
+
+script donttouch2{
+	applymovement(2,faceright)
+	msgbox(format("Ne touche surtout pas à ça !"))
+	applymovement(2,facedown)
+	releaseall
+	end
+}
+
+script prive{
+	msgbox(format("Bonjour. Cette zone est interdite au public, elle est dédiée aux recherches."))
+	releaseall
+	end
+}

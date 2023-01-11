@@ -1077,3 +1077,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CDRAreas/scripts.inc"
 
 	.include "data/maps/MainCDR/scripts.inc"
+
+	.include "data/maps/CDR_Indoor1/scripts.inc"
+
+	.include "data/maps/CDR_Indoor2/scripts.inc"
+
+	.include "data/maps/CDR_Indoor3/scripts.inc"
