@@ -782,7 +782,6 @@ static const struct MenuAction MultichoiceList_StarterChoose[] =
     {gText_Alola},
     {gText_Galar},
     {gText_Alea},
-    
 };
 
 static const struct MenuAction MultichoiceList_FireWaterGrass[] =

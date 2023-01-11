@@ -2,7 +2,7 @@
   "id": "MAP_CDR_INDOOR2",
   "name": "CDR_Indoor2",
   "layout": "LAYOUT_CDR_INDOOR2",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_BIRCH_LAB",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Schwartz0",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "midbefore",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x022"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "lizbefore",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x022"
     }
   ],
   "warp_events": [
@@ -60,7 +60,7 @@
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_CDR_INDOOR1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -145,7 +145,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "poubelle"
     },
     {
       "type": "sign",
@@ -265,7 +265,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -313,7 +313,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -329,7 +329,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -337,7 +337,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -345,7 +345,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -353,7 +353,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -361,7 +361,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -369,7 +369,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -377,7 +377,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -385,7 +385,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -393,7 +393,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -401,7 +401,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -409,7 +409,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -417,7 +417,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -425,7 +425,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -433,7 +433,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -441,7 +441,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -449,7 +449,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -457,7 +457,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -465,7 +465,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -473,7 +473,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -481,7 +481,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -489,7 +489,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -497,7 +497,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -505,7 +505,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     },
     {
       "type": "sign",
@@ -513,7 +513,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "machine"
     }
   ]
 }

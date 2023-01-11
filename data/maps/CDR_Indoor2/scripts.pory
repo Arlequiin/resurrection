@@ -145,7 +145,7 @@ movement playlab{
 	face_left
 }
 script Schwartz{
- if (!flag(FLAG_UNUSED_0x022)){
+ if (!flag(FLAG_UNUSED_0x023)){
 	msgbox(format("Tout le monde est là?"))
 	applymovement(2, midlab)
 	waitmovement(2)
@@ -168,49 +168,65 @@ script Schwartz{
 	msgbox("Oh ! Elle est si mignonne!!!")
 	applymovement(1, sch4)
 	msgbox_mugshot(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
-	msgbox("Lequel tu veux?")
-	closemessage
-	multichoice(0, 0, MULTI_STARTERS, TRUE)
-  if (var(VAR_RESULT) == 0){
+ }
+	releaseall
+	end
+}
 
-   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
+script machineheal{
+	msgbox(format("Soigner vos Pokémon?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT) != 0){
+	special(HealPlayerParty)
+	playfanfare(MUS_HEAL)
+	}
+	releaseall
+	end
+}
+script Schwartz0{
+	faceplayer
+	if (!flag(FLAG_UNUSED_0x023)){
+	msgbox("Lequel tu veux?")
+	multichoice(0, 0, MULTI_STARTERS, TRUE)
 
    if (var(VAR_RESULT) == 0){
+	 multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
-     givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
-	 addvar(VAR_RESULT, SPECIES_BULBASAUR)
-     bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
+	 if (var(VAR_RESULT) == 0){
+
+		givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
+		addvar(VAR_RESULT, SPECIES_BULBASAUR)
+		bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
+	 }
+	 if (var(VAR_RESULT) == 1){
+
+		givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
+		addvar(VAR_RESULT, SPECIES_CHARMANDER)
+		bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
+	 }
+	 if (var(VAR_RESULT) == 2){
+
+		givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
+		addvar(VAR_RESULT, SPECIES_SQUIRTLE)
+		bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
+	 }
     }
    if (var(VAR_RESULT) == 1){
 
-     givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
-	 addvar(VAR_RESULT, SPECIES_CHARMANDER)
-     bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
-    }
-   if (var(VAR_RESULT) == 2){
+    multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
 
-     givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
-	 addvar(VAR_RESULT, SPECIES_SQUIRTLE)
-     bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
-    }
-  }
-  if (var(VAR_RESULT) == 1){
-
-   multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
-
-   if (var(VAR_RESULT) == 0){
+    if (var(VAR_RESULT) == 0){
 
      givemon(SPECIES_CHIKORITA, 5, ITEM_MIRACLE_SEED)
 	 addvar(VAR_RESULT, SPECIES_CHIKORITA)
      bufferspeciesname(STR_VAR_1, SPECIES_CHIKORITA)
     }
-   if (var(VAR_RESULT) == 1){
+    if (var(VAR_RESULT) == 1){
 
      givemon(SPECIES_CYNDAQUIL, 5, ITEM_CHARCOAL)
 	 addvar(VAR_RESULT, SPECIES_CYNDAQUIL)
      bufferspeciesname(STR_VAR_1, SPECIES_CYNDAQUIL)
     }
-   if (var(VAR_RESULT) == 2){
+    if (var(VAR_RESULT) == 2){
 
      givemon(SPECIES_TOTODILE, 5, ITEM_MYSTIC_WATER)
 	 addvar(VAR_RESULT, SPECIES_TOTODILE)
@@ -249,13 +265,13 @@ script Schwartz{
      givemon(SPECIES_TURTWIG, 5, ITEM_MIRACLE_SEED)
 	 addvar(VAR_RESULT, SPECIES_TURTWIG)
      bufferspeciesname(STR_VAR_1, SPECIES_TURTWIG)
-    }
+   }
    if (var(VAR_RESULT) == 1){
 
      givemon(SPECIES_CHIMCHAR, 5, ITEM_CHARCOAL)
 	 addvar(VAR_RESULT, SPECIES_CHIMCHAR)
      bufferspeciesname(STR_VAR_1, SPECIES_CHIMCHAR)
-    }
+   }
    if (var(VAR_RESULT) == 2){
 
      givemon(SPECIES_PIPLUP, 5, ITEM_MYSTIC_WATER)
@@ -358,8 +374,8 @@ script Schwartz{
   if (var(VAR_RESULT) == 8){
 	random(SPECIES_CALYREX)
 	addvar(VAR_RESULT, 1)
-	bufferspeciesname(STR_VAR_1, VAR_RESULT)
 	givemon(VAR_RESULT, 5, ITEM_LEFTOVERS)
+	bufferspeciesname(STR_VAR_1, VAR_RESULT)
   }
     setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_POKEDEX_GET)
@@ -389,25 +405,8 @@ script Schwartz{
 	fadescreen(1)
 	removeobject(2)
 	removeobject(3)
-	setflag(FLAG_UNUSED_0x022)
 	fadescreen(0)
-	releaseall
-	end
-	}
-}
-
-script machineheal{
-	msgbox(format("Soigner vos Pokémon?"),MSGBOX_YESNO)
-	if (var(VAR_RESULT) != 0){
-	special(HealPlayerParty)
-	playfanfare(MUS_HEAL)
-	}
-	releaseall
-	end
-}
-script Schwartz0{
-	if (!flag(FLAG_UNUSED_0x022)){
-	msgbox(format("Bonjour! Et bienvenue!"))
+	setflag(FLAG_UNUSED_0x023)
 	} else {
 		msgbox(format("Tes amis sont déjà partis, qu'attends-tu?"))
 	}

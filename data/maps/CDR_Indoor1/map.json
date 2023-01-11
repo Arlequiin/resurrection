@@ -2,7 +2,7 @@
   "id": "MAP_CDR_INDOOR1",
   "name": "CDR_Indoor1",
   "layout": "LAYOUT_CDR_INDOOR1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_BIRCH_LAB",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
