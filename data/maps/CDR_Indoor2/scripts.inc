@@ -214,35 +214,18 @@ Schwartz0_1:
 
 Schwartz0_2:
 	msgbox_mugshot Schwartz0_Text_0, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
-	closemessage
 	multichoice 0, 0, MULTI_STARTERS, TRUE
-	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_6
+	switch VAR_RESULT
+	case 0, Schwartz0_7
+	case 1, Schwartz0_8
+	case 2, Schwartz0_9
+	case 3, Schwartz0_10
+	case 4, Schwartz0_11
+	case 5, Schwartz0_12
+	case 6, Schwartz0_13
+	case 7, Schwartz0_14
+	case 8, Schwartz0_15
 Schwartz0_5:
-	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_9
-Schwartz0_8:
-	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_15
-Schwartz0_14:
-	compare VAR_RESULT, 3
-	goto_if_eq Schwartz0_24
-Schwartz0_23:
-	compare VAR_RESULT, 4
-	goto_if_eq Schwartz0_35
-Schwartz0_34:
-	compare VAR_RESULT, 5
-	goto_if_eq Schwartz0_46
-Schwartz0_45:
-	compare VAR_RESULT, 6
-	goto_if_eq Schwartz0_57
-Schwartz0_56:
-	compare VAR_RESULT, 7
-	goto_if_eq Schwartz0_68
-Schwartz0_67:
-	compare VAR_RESULT, 8
-	goto_if_eq Schwartz0_79
-Schwartz0_78:
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_POKENAV_GET
@@ -276,252 +259,251 @@ Schwartz0_78:
 	setflag FLAG_UNUSED_0x023
 	goto Schwartz0_1
 
-Schwartz0_6:
-	closemessage
+Schwartz0_7:
 	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
 	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_12
-Schwartz0_11:
+	goto_if_eq Schwartz0_17
+Schwartz0_16:
 	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_21
-Schwartz0_20:
+	goto_if_eq Schwartz0_41
+Schwartz0_40:
 	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_32
+	goto_if_eq Schwartz0_64
+	goto Schwartz0_5
+
+Schwartz0_8:
+	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Schwartz0_20
+Schwartz0_19:
+	compare VAR_RESULT, 1
+	goto_if_eq Schwartz0_44
+Schwartz0_43:
+	compare VAR_RESULT, 2
+	goto_if_eq Schwartz0_66
 	goto Schwartz0_5
 
 Schwartz0_9:
 	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
 	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_18
-Schwartz0_17:
+	goto_if_eq Schwartz0_23
+Schwartz0_22:
 	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_30
-Schwartz0_29:
+	goto_if_eq Schwartz0_47
+Schwartz0_46:
 	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_43
-	goto Schwartz0_8
+	goto_if_eq Schwartz0_68
+	goto Schwartz0_5
 
-Schwartz0_12:
-	givemon SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_BULBASAUR
-	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
-	goto Schwartz0_11
-
-Schwartz0_15:
+Schwartz0_10:
 	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
 	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_27
-Schwartz0_26:
+	goto_if_eq Schwartz0_26
+Schwartz0_25:
 	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_41
-Schwartz0_40:
+	goto_if_eq Schwartz0_50
+Schwartz0_49:
 	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_54
-	goto Schwartz0_14
+	goto_if_eq Schwartz0_70
+	goto Schwartz0_5
 
-Schwartz0_18:
-	givemon SPECIES_CHIKORITA, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_CHIKORITA
-	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
-	goto Schwartz0_17
+Schwartz0_11:
+	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Schwartz0_29
+Schwartz0_28:
+	compare VAR_RESULT, 1
+	goto_if_eq Schwartz0_53
+Schwartz0_52:
+	compare VAR_RESULT, 2
+	goto_if_eq Schwartz0_72
+	goto Schwartz0_5
 
-Schwartz0_21:
-	givemon SPECIES_CHARMANDER, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_CHARMANDER
-	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
-	goto Schwartz0_20
+Schwartz0_12:
+	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Schwartz0_32
+Schwartz0_31:
+	compare VAR_RESULT, 1
+	goto_if_eq Schwartz0_56
+Schwartz0_55:
+	compare VAR_RESULT, 2
+	goto_if_eq Schwartz0_74
+	goto Schwartz0_5
 
-Schwartz0_24:
+Schwartz0_13:
+	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Schwartz0_35
+Schwartz0_34:
+	compare VAR_RESULT, 1
+	goto_if_eq Schwartz0_59
+Schwartz0_58:
+	compare VAR_RESULT, 2
+	goto_if_eq Schwartz0_76
+	goto Schwartz0_5
+
+Schwartz0_14:
 	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
 	compare VAR_RESULT, 0
 	goto_if_eq Schwartz0_38
 Schwartz0_37:
 	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_52
-Schwartz0_51:
+	goto_if_eq Schwartz0_62
+Schwartz0_61:
 	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_65
-	goto Schwartz0_23
+	goto_if_eq Schwartz0_78
+	goto Schwartz0_5
 
-Schwartz0_27:
+Schwartz0_15:
+	random SPECIES_CALYREX
+	bufferspeciesname STR_VAR_1, VAR_RESULT
+	givemon VAR_RESULT, 5, ITEM_LEFTOVERS
+	goto Schwartz0_5
+
+Schwartz0_17:
+	givemon SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_BULBASAUR
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	goto Schwartz0_16
+
+Schwartz0_20:
+	givemon SPECIES_CHIKORITA, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_CHIKORITA
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
+	goto Schwartz0_19
+
+Schwartz0_23:
 	givemon SPECIES_TREECKO, 5, ITEM_MIRACLE_SEED
 	addvar VAR_RESULT, SPECIES_TREECKO
 	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
-	goto Schwartz0_26
+	goto Schwartz0_22
 
-Schwartz0_30:
+Schwartz0_26:
+	givemon SPECIES_TURTWIG, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_TURTWIG
+	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
+	goto Schwartz0_25
+
+Schwartz0_29:
+	givemon SPECIES_SNIVY, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_SNIVY
+	bufferspeciesname STR_VAR_1, SPECIES_SNIVY
+	goto Schwartz0_28
+
+Schwartz0_32:
+	givemon SPECIES_CHESPIN, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_CHESPIN
+	bufferspeciesname STR_VAR_1, SPECIES_CHESPIN
+	goto Schwartz0_31
+
+Schwartz0_35:
+	givemon SPECIES_ROWLET, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_ROWLET
+	bufferspeciesname STR_VAR_1, SPECIES_ROWLET
+	goto Schwartz0_34
+
+Schwartz0_38:
+	givemon SPECIES_GROOKEY, 5, ITEM_MIRACLE_SEED
+	addvar VAR_RESULT, SPECIES_GROOKEY
+	bufferspeciesname STR_VAR_1, SPECIES_GROOKEY
+	goto Schwartz0_37
+
+Schwartz0_41:
+	givemon SPECIES_CHARMANDER, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_CHARMANDER
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
+	goto Schwartz0_40
+
+Schwartz0_44:
 	givemon SPECIES_CYNDAQUIL, 5, ITEM_CHARCOAL
 	addvar VAR_RESULT, SPECIES_CYNDAQUIL
 	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
-	goto Schwartz0_29
+	goto Schwartz0_43
 
-Schwartz0_32:
+Schwartz0_47:
+	givemon SPECIES_TORCHIC, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_TORCHIC
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
+	goto Schwartz0_46
+
+Schwartz0_50:
+	givemon SPECIES_CHIMCHAR, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_CHIMCHAR
+	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
+	goto Schwartz0_49
+
+Schwartz0_53:
+	givemon SPECIES_TEPIG, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_TEPIG
+	bufferspeciesname STR_VAR_1, SPECIES_TEPIG
+	goto Schwartz0_52
+
+Schwartz0_56:
+	givemon SPECIES_FENNEKIN, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_FENNEKIN
+	bufferspeciesname STR_VAR_1, SPECIES_FENNEKIN
+	goto Schwartz0_55
+
+Schwartz0_59:
+	givemon SPECIES_LITTEN, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_LITTEN
+	bufferspeciesname STR_VAR_1, SPECIES_LITTEN
+	goto Schwartz0_58
+
+Schwartz0_62:
+	givemon SPECIES_SCORBUNNY, 5, ITEM_CHARCOAL
+	addvar VAR_RESULT, SPECIES_SCORBUNNY
+	bufferspeciesname STR_VAR_1, SPECIES_SCORBUNNY
+	goto Schwartz0_61
+
+Schwartz0_64:
 	givemon SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_SQUIRTLE
 	bufferspeciesname STR_VAR_1, SPECIES_SQUIRTLE
 	goto Schwartz0_5
 
-Schwartz0_35:
-	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
-	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_49
-Schwartz0_48:
-	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_63
-Schwartz0_62:
-	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_76
-	goto Schwartz0_34
-
-Schwartz0_38:
-	givemon SPECIES_TURTWIG, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_TURTWIG
-	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
-	goto Schwartz0_37
-
-Schwartz0_41:
-	givemon SPECIES_TORCHIC, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_TORCHIC
-	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
-	goto Schwartz0_40
-
-Schwartz0_43:
+Schwartz0_66:
 	givemon SPECIES_TOTODILE, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_TOTODILE
 	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
-	goto Schwartz0_8
+	goto Schwartz0_5
 
-Schwartz0_46:
-	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
-	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_60
-Schwartz0_59:
-	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_74
-Schwartz0_73:
-	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_87
-	goto Schwartz0_45
-
-Schwartz0_49:
-	givemon SPECIES_SNIVY, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_SNIVY
-	bufferspeciesname STR_VAR_1, SPECIES_SNIVY
-	goto Schwartz0_48
-
-Schwartz0_52:
-	givemon SPECIES_CHIMCHAR, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_CHIMCHAR
-	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
-	goto Schwartz0_51
-
-Schwartz0_54:
+Schwartz0_68:
 	givemon SPECIES_MUDKIP, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_MUDKIP
 	bufferspeciesname STR_VAR_1, SPECIES_MUDKIP
-	goto Schwartz0_14
+	goto Schwartz0_5
 
-Schwartz0_57:
-	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
-	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_71
 Schwartz0_70:
-	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_85
-Schwartz0_84:
-	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_92
-	goto Schwartz0_56
-
-Schwartz0_60:
-	givemon SPECIES_CHESPIN, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_CHESPIN
-	bufferspeciesname STR_VAR_1, SPECIES_CHESPIN
-	goto Schwartz0_59
-
-Schwartz0_63:
-	givemon SPECIES_TEPIG, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_TEPIG
-	bufferspeciesname STR_VAR_1, SPECIES_TEPIG
-	goto Schwartz0_62
-
-Schwartz0_65:
 	givemon SPECIES_PIPLUP, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_PIPLUP
 	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
-	goto Schwartz0_23
+	goto Schwartz0_5
 
-Schwartz0_68:
-	multichoice 0, 0, MULTI_FIREWATERGRASS, TRUE
-	compare VAR_RESULT, 0
-	goto_if_eq Schwartz0_82
-Schwartz0_81:
-	compare VAR_RESULT, 1
-	goto_if_eq Schwartz0_90
-Schwartz0_89:
-	compare VAR_RESULT, 2
-	goto_if_eq Schwartz0_94
-	goto Schwartz0_67
-
-Schwartz0_71:
-	givemon SPECIES_ROWLET, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_ROWLET
-	bufferspeciesname STR_VAR_1, SPECIES_ROWLET
-	goto Schwartz0_70
-
-Schwartz0_74:
-	givemon SPECIES_FENNEKIN, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_FENNEKIN
-	bufferspeciesname STR_VAR_1, SPECIES_FENNEKIN
-	goto Schwartz0_73
-
-Schwartz0_76:
+Schwartz0_72:
 	givemon SPECIES_OSHAWOTT, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_OSHAWOTT
 	bufferspeciesname STR_VAR_1, SPECIES_OSHAWOTT
-	goto Schwartz0_34
+	goto Schwartz0_5
 
-Schwartz0_79:
-	random SPECIES_CALYREX
-	bufferspeciesname STR_VAR_1, VAR_RESULT
-	givemon VAR_RESULT, 5, ITEM_LEFTOVERS
-	goto Schwartz0_78
-
-Schwartz0_82:
-	givemon SPECIES_GROOKEY, 5, ITEM_MIRACLE_SEED
-	addvar VAR_RESULT, SPECIES_GROOKEY
-	bufferspeciesname STR_VAR_1, SPECIES_GROOKEY
-	goto Schwartz0_81
-
-Schwartz0_85:
-	givemon SPECIES_LITTEN, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_LITTEN
-	bufferspeciesname STR_VAR_1, SPECIES_LITTEN
-	goto Schwartz0_84
-
-Schwartz0_87:
+Schwartz0_74:
 	givemon SPECIES_FROAKIE, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_FROAKIE
 	bufferspeciesname STR_VAR_1, SPECIES_FROAKIE
-	goto Schwartz0_45
+	goto Schwartz0_5
 
-Schwartz0_90:
-	givemon SPECIES_SCORBUNNY, 5, ITEM_CHARCOAL
-	addvar VAR_RESULT, SPECIES_SCORBUNNY
-	bufferspeciesname STR_VAR_1, SPECIES_SCORBUNNY
-	goto Schwartz0_89
-
-Schwartz0_92:
+Schwartz0_76:
 	givemon SPECIES_POPPLIO, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_POPPLIO
 	bufferspeciesname STR_VAR_1, SPECIES_POPPLIO
-	goto Schwartz0_56
+	goto Schwartz0_5
 
-Schwartz0_94:
+Schwartz0_78:
 	givemon SPECIES_SOBBLE, 5, ITEM_MYSTIC_WATER
 	addvar VAR_RESULT, SPECIES_SOBBLE
 	bufferspeciesname STR_VAR_1, SPECIES_SOBBLE
-	goto Schwartz0_67
+	goto Schwartz0_5
 
 
 machine::
