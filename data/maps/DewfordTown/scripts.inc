@@ -84,19 +84,20 @@ regard_bas:
 
 sc_gare_cdr_1::
 	faceplayer
-	applymovement 4, regard_bas
 	msgbox sc_gare_cdr_1_Text_0
+	applymovement 4, regard_bas
+	waitmovement 4
 	msgbox sc_gare_cdr_1_Text_1
 	msgbox sc_gare_cdr_1_Text_2
 	msgbox sc_gare_cdr_1_Text_3
 	msgbox sc_gare_cdr_1_Text_4
 	msgbox sc_gare_cdr_1_Text_5
+	msgbox sc_gare_cdr_1_Text_6
 	releaseall
 	end
 
 
 sc_gare_cdr_2::
-	faceplayer
 	msgbox sc_gare_cdr_2_Text_0
 	releaseall
 	end
@@ -168,19 +169,23 @@ arrivee_gare_Text_3:
 	.string "Tarde pas!$"
 
 sc_gare_cdr_1_Text_0:
+	.string "....$"
+
+sc_gare_cdr_1_Text_1:
 	.string "La mer est si belle, elle reflète les\n"
 	.string "doux rayons du soleil et les émotions.$"
 
-sc_gare_cdr_1_Text_1:
-	.string "Quand j'étais chaque dimanche, j'allais\n"
-	.string "à la plage, qu'il fasse beau ou non.$"
-
 sc_gare_cdr_1_Text_2:
+	.string "Quand j'étais jeune, chaque dimanche,\n"
+	.string "j'allais à la plage, qu'il fasse beau ou\l"
+	.string "non.$"
+
+sc_gare_cdr_1_Text_3:
 	.string "En observant les vagues danser,\n"
 	.string "certaines m'avaient l'air tristes,\l"
 	.string "d'autres joyeuses d'être en vie.$"
 
-sc_gare_cdr_1_Text_3:
+sc_gare_cdr_1_Text_4:
 	.string "Les jours où j'étais triste, elles\n"
 	.string "m'avaient toutes l'air tristes,\l"
 	.string "inversement joyeuses. Du coup, à\l"
@@ -188,11 +193,11 @@ sc_gare_cdr_1_Text_3:
 	.string "j'étais en adéquation avec\l"
 	.string "l'environnement ce qui me rassurait.$"
 
-sc_gare_cdr_1_Text_4:
+sc_gare_cdr_1_Text_5:
 	.string "J'avais l'impression d'être comprise,\n"
 	.string "pour une fois de mon existence.$"
 
-sc_gare_cdr_1_Text_5:
+sc_gare_cdr_1_Text_6:
 	.string "... (larme) .... Laisse moi pleurer veux-tu.$"
 
 sc_gare_cdr_2_Text_0:
