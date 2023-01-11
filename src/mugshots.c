@@ -31,7 +31,7 @@ static const u16 sMugshotPal_Midori[] = INCBIN_U16("graphics/mugshots/midori.gba
 //static const u16 sMugshotPal_Schwartz[] = INCBIN_U16("graphics/mugshots/schwartz.gbapal");
 
 static const struct Mugshot sMugshots[] = {
-   [MUGSHOT_MIDORI] = {.x = 16, .y = 5, .width = 80, .height = 72, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
+   [MUGSHOT_MIDORI] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
    //[MUGSHOT_LISA] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Lisa, .palette = sMugshotPal_Lisa},
    //[MUGSHOT_SCHWARTZ] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Schwartz, .palette = sMugshotPal_Schwartz},
 };

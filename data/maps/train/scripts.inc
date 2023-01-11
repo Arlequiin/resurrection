@@ -63,23 +63,35 @@ rivaux_train_1_1:
 	waitmovement 11
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_0
 	msgbox rivaux_train_1_Text_1
 	msgbox rivaux_train_1_Text_2
+	callnative ClearMugshot
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_3
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_4
+	callnative ClearMugshot
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_5
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_6
+	callnative ClearMugshot
 	msgbox rivaux_train_1_Text_7
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_8
+	callnative ClearMugshot
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_9
@@ -87,7 +99,10 @@ rivaux_train_1_1:
 	msgbox rivaux_train_1_Text_11
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_12
+	callnative ClearMugshot
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_13
@@ -95,7 +110,10 @@ rivaux_train_1_1:
 	msgbox rivaux_train_1_Text_14
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_MIDORI
+	callnative DrawMugshot
 	msgbox rivaux_train_1_Text_15
+	callnative ClearMugshot
 	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
 	waitmovement OBJ_EVENT_ID_PLAYER
 	playfanfare FANFARE_RG_DEX_RATING
