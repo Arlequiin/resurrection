@@ -190,25 +190,23 @@ script Schwartz0{
    switch (var(VAR_RESULT)){
    case 0:
     multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
-
-    if (var(VAR_RESULT) == 0){
-
+	switch (var(VAR_RESULT)){
+    case 0:
      givemon(SPECIES_BULBASAUR, 5, ITEM_MIRACLE_SEED)
 	 addvar(VAR_RESULT, SPECIES_BULBASAUR)
      bufferspeciesname(STR_VAR_1, SPECIES_BULBASAUR)
-    }
-    if (var(VAR_RESULT) == 1){
+    case 1:
 
      givemon(SPECIES_CHARMANDER, 5, ITEM_CHARCOAL)
 	 addvar(VAR_RESULT, SPECIES_CHARMANDER)
      bufferspeciesname(STR_VAR_1, SPECIES_CHARMANDER)
-    }
-    if (var(VAR_RESULT) == 2){
+    case 2:
 
      givemon(SPECIES_SQUIRTLE, 5, ITEM_MYSTIC_WATER)
 	 addvar(VAR_RESULT, SPECIES_SQUIRTLE)
      bufferspeciesname(STR_VAR_1, SPECIES_SQUIRTLE)
-    }
+
+	}
    case 1:
 
     multichoice(0, 0, MULTI_FIREWATERGRASS, TRUE)
