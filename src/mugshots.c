@@ -24,6 +24,9 @@ void ClearMugshot(void);
 static const u32 sMugshotImg_Midori[] = INCBIN_U32("graphics/mugshots/midori.4bpp.lz");
 static const u16 sMugshotPal_Midori[] = INCBIN_U16("graphics/mugshots/midori.gbapal");
 
+static const u32 sMugshotImg_MidoriHappy[] = INCBIN_U32("graphics/mugshots/midori_happy.4bpp.lz");
+static const u16 sMugshotPal_MidoriHappy[] = INCBIN_U16("graphics/mugshots/midori_happy.gbapal");
+
 //static const u32 sMugshotImg_Lisa[] = INCBIN_U32("graphics/mugshots/lisa.4bpp.lz");
 //static const u16 sMugshotPal_Lisa[] = INCBIN_U16("graphics/mugshots/lisa.gbapal");
 
@@ -32,6 +35,7 @@ static const u16 sMugshotPal_Midori[] = INCBIN_U16("graphics/mugshots/midori.gba
 
 static const struct Mugshot sMugshots[] = {
    [MUGSHOT_MIDORI] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
+   [MUGSHOT_MIDORI_HAPPY] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_MidoriHappy, .palette = sMugshotPal_MidoriHappy},
    //[MUGSHOT_LISA] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Lisa, .palette = sMugshotPal_Lisa},
    //[MUGSHOT_SCHWARTZ] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Schwartz, .palette = sMugshotPal_Schwartz},
 };

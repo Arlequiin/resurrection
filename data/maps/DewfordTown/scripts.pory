@@ -51,7 +51,7 @@ script arrivee_gare{
 	if (!flag(FLAG_UNUSED_0x021)){
 	msgbox(format("Lisa : Aaah, enfin arrivés ! Le vent est si doux... Ça me fait penser à Vaguelone, une ville à Unys."))
 	applymovement(2,midcdr)
-	msgbox(format("J'vous laisse profiter du vent, moi j'file au labo, pas envie de perdre du temps."))
+	msgbox_mugshot(format("J'vous laisse profiter du vent, moi j'file au labo, pas envie de perdre du temps."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
 	applymovement(2,quitmid)
 	waitmovement(0)
 	removeobject(2)

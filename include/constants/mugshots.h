@@ -2,5 +2,6 @@
 #define GUARD_CONSTANTS_MUGSHOTS_H
 
 #define MUGSHOT_MIDORI 0
+#define MUGSHOT_MIDORI_HAPPY 1
 
 #endif

@@ -71,7 +71,7 @@ rivaux_train_1_1:
 	msgbox rivaux_train_1_Text_3
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox_mugshot rivaux_train_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot rivaux_train_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_5
@@ -87,7 +87,7 @@ rivaux_train_1_1:
 	msgbox rivaux_train_1_Text_11
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox_mugshot rivaux_train_1_Text_12, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot rivaux_train_1_Text_12, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox rivaux_train_1_Text_13

@@ -64,7 +64,7 @@ arrivee_gare_1:
 arrivee_gare_2:
 	msgbox arrivee_gare_Text_0
 	applymovement 2, midcdr
-	msgbox arrivee_gare_Text_1
+	msgbox_mugshot arrivee_gare_Text_1, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	applymovement 2, quitmid
 	waitmovement 0
 	removeobject 2
