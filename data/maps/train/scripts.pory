@@ -44,7 +44,7 @@ script rivaux_train_1{
     applymovement(OBJ_EVENT_ID_PLAYER, haut)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox_mugshot(format("..."), MSGBOX_SIGN, MUGSHOT_MIDORI)
-    msgbox_mugshot(format("Salut."), MSGBOX_SIGN, MUGSHOT_MIDORI)
+    msgbox_mugshot(format("Salut."), MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY)
     msgbox_mugshot(format("C'est toi le troisième boursier?"), MSGBOX_SIGN, MUGSHOT_MIDORI)
     applymovement(OBJ_EVENT_ID_PLAYER, bas)
     waitmovement(OBJ_EVENT_ID_PLAYER)
