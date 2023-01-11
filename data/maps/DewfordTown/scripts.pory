@@ -31,7 +31,7 @@ movement midcdr{
 
 script signgare2{
 	lock
-	msgbox(format("Gare du Centre de Recherches, inaugurée en 2013 par Apostrate."))
+	msgbox(format("Gare du Centre de Recherches, inaugurée en 2009 par son excellente le Prof.Chen."))
 }
 
 movement quitmid{

@@ -1,4 +1,4 @@
-CDR_Indoor_1_MapScripts::
+CDR_Indoor1_MapScripts::
 	.byte 0
 
 
@@ -19,9 +19,18 @@ SCDR1_2:
 
 
 poubelle::
-	msgbox poubelle_Text_0
+	random 5
+	compare VAR_RESULT, 1
+	goto_if_eq poubelle_2
+	msgbox poubelle_Text_1
+poubelle_1:
 	releaseall
 	end
+
+poubelle_2:
+	msgbox poubelle_Text_0
+	giveitem ITEM_BLACK_SLUDGE
+	goto poubelle_1
 
 
 faceright:
@@ -109,6 +118,10 @@ SCDR1_Text_2:
 	.string "sont jamais revenus.$"
 
 poubelle_Text_0:
+	.string "Oh! Il y a quelque chose dans la\n"
+	.string "poubelle!$"
+
+poubelle_Text_1:
 	.string "C'est vide.$"
 
 donttouch1_Text_0:

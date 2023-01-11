@@ -1,4 +1,4 @@
-mapscripts CDR_Indoor_1_MapScripts{
+mapscripts CDR_Indoor1_MapScripts{
 	
 }
 
@@ -17,7 +17,13 @@ script SCDR1{
 }
 
 script poubelle{
+	random(5)
+	if (var(VAR_RESULT)==1){
+		msgbox(format("Oh! Il y a quelque chose dans la poubelle!"))
+		giveitem(ITEM_BLACK_SLUDGE)
+	} else {
 	msgbox("C'est vide.")
+	}
 	releaseall
 	end
 }

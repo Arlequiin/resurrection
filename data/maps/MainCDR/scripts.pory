@@ -1,0 +1,59 @@
+mapscripts MainCDR_MapScripts{
+	
+}
+
+script CDR1{
+	lock
+	faceplayer
+	msgbox(format("Le Centre de Recherches a été créé en 1812 par un Professeur originaire de la région de Sinnoh. Il possède une surface de 3.5 hectares. Depuis sa création il héberge des espèces en voie de disparition et veille à leur qualité de vie."))
+	releaseall
+	end
+}
+
+script CDR2{
+	lock
+	faceplayer
+	msgbox(format("Dès 1939, des Professeurs de différentes régions s'y sont installés car il est très bien équipé et facilite énormément leurs recherches. Ils apportèrent des Pokémon rares de leurs régions respectives."))
+	releaseall
+	end
+}
+
+script CDR3{
+	lock
+	faceplayer
+	msgbox(format("Depuis 1998 a lieu un congrès dédié à la recherche scientifique concernant la préservation des Pokémon. Depuis 2004, des sociétés diverses commercialisant des produits dédiés au dresseurs tel que Sylph co., Devon SARL et Vitalis Navitas, dit V.N S.A.R.L. participent à ces congrès, dans le but de présenter leurs créations."))
+	releaseall
+	end
+}
+
+script CDR4{
+	lock
+	faceplayer
+	msgbox(format("En 2013, le Centre de Recherches a été reconnu comme patrimoine scientifique par l'UNPEVD (Union Nationale de Préservation des Espèces en Voie de Disparition."))
+	releaseall
+	end
+}
+
+script CDR5{
+	lock
+	faceplayer
+	msgbox(format("En 2014, le Centre de Recherches a fait l'objet d'un attentat terroriste, qui aura détruit plusieurs biotopes et écosystème, donc conduit des espèces en voie de disparition à leur extinction totale. Depuis cela, le Centre de Recherches et devenu interdit au public et très protégé."))
+	releaseall
+	end
+}
+
+script CDR6{
+	lock
+	faceplayer
+	msgbox(format("En 2017, il a été décidé par les 7 membres du Conseil International de la recherche que 3 personnes parmis les plus brillantes des différentes académies, pas plus pour ne pas influencer les écosystèmes seront tirées au sort dans le but de recevoir un Pokémon rare. Tout cela pour permettre à ces espèces d'évoluer plus vite. Ces heureuses personnes seront nommées 'Boursiers', en effet, le Centre de Recherches couvrira l'intégralité des frais d'inscriptions au tournoi des arènes et, dans une moindre mesure au grand tournoi d'Olnyris tout en leur offrant un Pokédex."))
+	releaseall
+	end
+}
+
+script CDR7{
+	msgbox(format("Noms des dresseurs de la première promotion des dresseurs du CDR:"))
+    msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}2013 : Apostrate, Appolonia, Zûhr"))
+    msgbox(format("Aujourd'hui, ces trois dresseurs sont les plus puissants de la région."))
+	releaseall
+	end
+}

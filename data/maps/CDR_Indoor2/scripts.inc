@@ -58,14 +58,8 @@ lizbefore::
 	end
 
 
-danbefore::
-	msgbox danbefore_Text_0
-	releaseall
-	end
-
-
-schwartzbefore::
-	msgbox schwartzbefore_Text_0
+midbefore::
+	msgbox_mugshot midbefore_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
 	releaseall
 	end
 
@@ -137,15 +131,43 @@ sch5:
 	face_down
 	step_end
 
+lizlab:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	face_left
+	step_end
+
+midlab:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	face_left
+	step_end
+
+playlab:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	face_left
+	step_end
+
 Schwartz::
 	goto_if_unset FLAG_UNUSED_0x022, Schwartz_1
 	return
 
 Schwartz_1:
 	msgbox Schwartz_Text_0
-	applymovement 3, aup
-	applymovement 2, aup2
-	applymovement OBJ_EVENT_ID_PLAYER, fleft
+	applymovement 3, lizlab
+	waitmovement 3
+	applymovement 2, midlab
+	waitmovement 2
+	applymovement OBJ_EVENT_ID_PLAYER, playlab
 	waitmovement 0
 	applymovement 1, sch1
 	msgbox Schwartz_Text_1
@@ -575,12 +597,9 @@ lizbefore_Text_0:
 	.string "Je ne tiens plus en place!!!! Je vais\n"
 	.string "avoir mon tout premier Pokémon!$"
 
-danbefore_Text_0:
+midbefore_Text_0:
 	.string "Pitié faites que Coupenotte ait une\n"
 	.string "bonne nature.$"
-
-schwartzbefore_Text_0:
-	.string "Soyez pas timides, avancez!$"
 
 Schwartz_Text_0:
 	.string "Tout le monde est là?$"
@@ -623,17 +642,17 @@ Schwartz_Text_3:
 	.string "Bien, voyons voir les mails reçus...$"
 
 Schwartz_Text_4:
-	.string "Daniel, tu as demandé un Coupenotte...\n"
+	.string "Midori, tu as demandé un Coupenotte...\n"
 	.string "Le voilà, tout chaud dans sa Poké Ball.$"
 
 Schwartz_Text_5:
-	.string "{COLOR BLUE}Daniel obtient un COUPENOTTE$"
+	.string "{COLOR BLUE}Midori obtient un COUPENOTTE$"
 
 Schwartz_Text_6:
-	.string "Louise, tu as demandé un Évoli, tiens.$"
+	.string "Lisa, tu as demandé un Évoli, tiens.$"
 
 Schwartz_Text_7:
-	.string "{COLOR BLUE} Louise a obtenu une ÉVOLI$"
+	.string "{COLOR BLUE} Lisa a obtenu une ÉVOLI$"
 
 Schwartz_Text_8:
 	.string "Oh ! Elle est si mignonne!!!$"

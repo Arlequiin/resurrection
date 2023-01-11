@@ -3024,6 +3024,20 @@ extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
 
+// NEW MULTICHOICES
+extern const u8 gText_Kanto[];
+extern const u8 gText_Johto[];
+extern const u8 gText_Hoenn2[];
+extern const u8 gText_Sinnoh[];
+extern const u8 gText_Unys[];
+extern const u8 gText_Kalos[];
+extern const u8 gText_Alola[];
+extern const u8 gText_Galar[];
+extern const u8 gText_Alea[];
+extern const u8 gText_Grass[];
+extern const u8 gText_Fire[];
+extern const u8 gText_Water[];
+
 // Naming Screen
 extern const u8 gText_MoveOkBack[];
 extern const u8 gText_YourName[];

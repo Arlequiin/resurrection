@@ -149,7 +149,8 @@ telephone2_Text_5:
 
 signgare2_Text_0:
 	.string "Gare du Centre de Recherches,\n"
-	.string "inaugurée en 2013 par Apostrate.$"
+	.string "inaugurée en 2009 par son excellente\l"
+	.string "le Prof.Chen.$"
 
 arrivee_gare_Text_0:
 	.string "Lisa : Aaah, enfin arrivés ! Le vent est\n"
