@@ -256,10 +256,10 @@ maman_Text_8:
 	.string "séparations sont toujours\l"
 	.string "compliquées... Mais bon, la vie l'exige,\l"
 	.string "moi aussi j'étais une grande dresseuse\l"
-	.string "à une époque. Le niveau de Jungko en\l"
-	.string "témoigne. Dis lui au revoir en sortant !\l"
-	.string "Bien. Je ne te retiens pas plus. Au\l"
-	.string "revoir mon bouchon ... (larme)$"
+	.string "à une époque. Le niveau de Florizarre\l"
+	.string "en témoigne. Dis lui au revoir en\l"
+	.string "sortant ! Bien. Je ne te retiens pas\l"
+	.string "plus. Au revoir mon bouchon ... (larme)$"
 
 larmes_Text_0:
 	.string "Snif... Au revoir {PLAYER}, profite\n"

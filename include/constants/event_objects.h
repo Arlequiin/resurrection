@@ -763,7 +763,6 @@
 #define OBJ_EVENT_GFX_DARKRAI                    754
 #define OBJ_EVENT_GFX_SHAYMIN_LAND               755
 #define OBJ_EVENT_GFX_ARCEUS_NORMAL              756
-
 #define OBJ_EVENT_GFX_EXPANDING_SPARKLE          757
 
 #else

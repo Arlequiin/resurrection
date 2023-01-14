@@ -48,7 +48,7 @@ script maman{
 	waitfanfare
 	closemessage
 	msgbox(format("S'il te plaît reviens me voir ! Je tiens beaucoup à toi"))
-	msgbox(format("{PLAYER} s'il t'arrive quelque chose je ne pourrai pas m'en remettre. Les séparations sont toujours compliquées... Mais bon, la vie l'exige, moi aussi j'étais une grande dresseuse à une époque. Le niveau de Jungko en témoigne. Dis lui au revoir en sortant ! Bien. Je ne te retiens pas plus. Au revoir mon bouchon ... (larme)"))
+	msgbox(format("{PLAYER} s'il t'arrive quelque chose je ne pourrai pas m'en remettre. Les séparations sont toujours compliquées... Mais bon, la vie l'exige, moi aussi j'étais une grande dresseuse à une époque. Le niveau de Florizarre en témoigne. Dis lui au revoir en sortant ! Bien. Je ne te retiens pas plus. Au revoir mon bouchon ... (larme)"))
 	closemessage
   } 
 	releaseall
