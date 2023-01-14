@@ -19,6 +19,7 @@ LGPE_2:
 	msgbox LGPE_Text_4, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq LGPE_5
+	msgbox LGPE_Text_6
 	goto LGPE_1
 
 LGPE_5:

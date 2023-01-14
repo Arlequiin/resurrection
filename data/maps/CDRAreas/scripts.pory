@@ -19,7 +19,9 @@ script LGPE{
             removeobject(53)
             fadescreen(0)
             setflag(FLAG_UNUSED_0x024)
-		}
+		} else {
+            msgbox(format("Tu n'es pas la personne que je cherche."))
+        }
 	} else {
 		msgbox(format("Tu n'es pas la personne que je cherche."))
 	}

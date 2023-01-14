@@ -667,7 +667,7 @@
       "x": 68,
       "y": 22,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_PLAYER",
+      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
