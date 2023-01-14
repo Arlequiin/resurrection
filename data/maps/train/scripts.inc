@@ -57,6 +57,52 @@ rivaux_train_1::
 	return
 
 rivaux_train_1_1:
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_lt rivaux_train_1_4
+	msgbox_mugshot rivaux_train_1_Text_18, MSGBOX_SIGN, MUGSHOT_MIDORI
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_gt rivaux_train_1_8
+rivaux_train_1_7:
+	msgbox_mugshot rivaux_train_1_Text_20, MSGBOX_SIGN, MUGSHOT_MIDORI
+	applymovement OBJ_EVENT_ID_PLAYER, bas
+	msgbox rivaux_train_1_Text_21
+	applymovement OBJ_EVENT_ID_PLAYER, haut
+	msgbox_mugshot rivaux_train_1_Text_22, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	msgbox_mugshot rivaux_train_1_Text_23, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	fadescreen 1
+	msgbox rivaux_train_1_Text_24
+	showobjectat 12, MAP_TRAIN
+	showobjectat 13, MAP_TRAIN
+	showobjectat 14, MAP_TRAIN
+	fadescreen 0
+	playbgm MUS_ABNORMAL_WEATHER, FALSE
+	msgbox_mugshot rivaux_train_1_Text_25, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox rivaux_train_1_Text_26
+	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
+	playmoncry SPECIES_ELECTRODE, 0
+	waitmoncry
+	playmoncry SPECIES_ELECTRODE, 0
+	waitmoncry
+	playmoncry SPECIES_ELECTRODE, 0
+	waitmoncry
+	msgbox rivaux_train_1_Text_27
+	msgbox rivaux_train_1_Text_28
+	msgbox_mugshot rivaux_train_1_Text_29, MSGBOX_SIGN, MUGSHOT_MIDORI
+	showobjectat 15, MAP_TRAIN
+	playmoncry SPECIES_GEODUDE, 0
+	waitmoncry
+	msgbox_mugshot rivaux_train_1_Text_30, MSGBOX_SIGN, MUGSHOT_MIDORI
+	fadescreen 1
+	playse SE_M_ROCK_THROW
+	playse SE_M_EXPLOSION
+rivaux_train_1_3:
+	fadescreen 0
+	releaseall
+	end
+
+rivaux_train_1_4:
 	applymovement 10, bas
 	waitmovement 10
 	applymovement 11, haut
@@ -104,9 +150,11 @@ rivaux_train_1_1:
 	fadescreen 1
 	msgbox rivaux_train_1_Text_17
 	warp MAP_CDR_INT_GARE, 1
-	fadescreen 0
-	releaseall
-	end
+	goto rivaux_train_1_3
+
+rivaux_train_1_8:
+	msgbox_mugshot rivaux_train_1_Text_19, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	goto rivaux_train_1_7
 
 
 train_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_0:
@@ -212,3 +260,76 @@ rivaux_train_1_Text_17:
 	.string "n'a pas été trop long. Voici vos\l"
 	.string "bagages. Bonne journée et au plaisir de\l"
 	.string "vous revoir!$"
+
+rivaux_train_1_Text_18:
+	.string "Re, vous avez choppé d'autres Pokémon?$"
+
+rivaux_train_1_Text_19:
+	.string "Oh stylé un Pikachu. Dès qu'on arrive à\n"
+	.string "destination, on fera notre premier\l"
+	.string "combat.$"
+
+rivaux_train_1_Text_20:
+	.string "Comme autre Pokémon j'ai choppé un\n"
+	.string "Racaillou, rassurez-vous je l'ai pas\l"
+	.string "capturé mais on me l'a donné. Un\l"
+	.string "scientifique m'a expliqué qu'il se\l"
+	.string "sentait pas bien et tout, fallait qu'il\l"
+	.string "change de cadre.$"
+
+rivaux_train_1_Text_21:
+	.string "Lisa : Moi j'ai ramené que ma petite\n"
+	.string "Évoli.$"
+
+rivaux_train_1_Text_22:
+	.string "Bon, {PLAYER} je pense que t'es du\n"
+	.string "même avis$"
+
+rivaux_train_1_Text_23:
+	.string "Objectif, battre le champion de toutes\n"
+	.string "les arènes d'Olnyris pour participer au\l"
+	.string "Grand Tournoi d'Olnyris, je compte sur\l"
+	.string "toi pour être mon adversaire en finale.$"
+
+rivaux_train_1_Text_24:
+	.string "Après de longues discussions....$"
+
+rivaux_train_1_Text_25:
+	.string "Pourquoi le train s'arrête?$"
+
+rivaux_train_1_Text_26:
+	.string "{COLOR LIGHT_RED}{COLOR RED}HAUT PARLEURS : Salut tout le monde,\n"
+	.string "j'suis pas spécialement croyant mais je\l"
+	.string "me suis dit que ce serait bien de vous\l"
+	.string "prévenir pour les dernières prières.$"
+
+rivaux_train_1_Text_27:
+	.string "Scientiqiue : Qu'est-ce qui se passe?\n"
+	.string "Qu'est-ce que c'est que ce bordel?\l"
+	.string "Pourquoi y a des Électrodes, ils ont\l"
+	.string "l'air doppés ma parole, 20 ans que\l"
+	.string "j'observe des Pokémon j'en ai jamais vu\l"
+	.string "d'aussi renfrognés!$"
+
+rivaux_train_1_Text_28:
+	.string "{COLOR LIGHT_RED}{COLOR RED}HAUT-PARLEURS : Bon bah on vous aura\n"
+	.string "prévenu, on a besoin du moteur du train\l"
+	.string "vite fait bien fait. Je vais pas\l"
+	.string "m'éterniser parce que dans 1 min et 37\l"
+	.string "secondes ils auront compris que le\l"
+	.string "train s'est arrêté et enverront une\l"
+	.string "équipe spéciale qui mettra au plus 15\l"
+	.string "min à arriver. Vous allez pas trop\l"
+	.string "souffrir l'explosion sera si forte que\l"
+	.string "votre âme quittera le corps en une\l"
+	.string "seconde.$"
+
+rivaux_train_1_Text_29:
+	.string "Putain on est mal, bon, un dernier\n"
+	.string "espoir, Go Racaillou!$"
+
+rivaux_train_1_Text_30:
+	.string "LANCE TON ATTQUE BÉLIER LA PLUS\n"
+	.string "PUISSANTE SUR CETTE VITRE!\l"
+	.string "{PLAYER}, Lisa, faut qu'on sorte de\l"
+	.string "là!$"

@@ -15,6 +15,7 @@ void InitTilesetAnim_IntGare(void);
 void InitTilesetAnim_Train(void);
 void InitTilesetAnim_CDR(void);
 void InitTilesetAnim_Bedroom(void);
+void InitTilesetAnim_Solidago(void);
 void InitTilesetAnim_Rustboro(void);
 void InitTilesetAnim_Dewford(void);
 void InitTilesetAnim_Slateport(void);

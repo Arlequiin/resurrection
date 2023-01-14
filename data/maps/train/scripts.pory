@@ -37,6 +37,8 @@ script sc_train{
 
 script rivaux_train_1{
   if (var(VAR_TEMP_0)==0){
+    getpartysize
+    if (var(VAR_RESULT)<1){
     applymovement(10,bas)
     waitmovement(10)
     applymovement(11,haut)
@@ -84,6 +86,45 @@ script rivaux_train_1{
     fadescreen(1)
     msgbox(format("Agent : Bienvenue à la gare du Centre de Recherches, j'espère que le voyage n'a pas été trop long. Voici vos bagages. Bonne journée et au plaisir de vous revoir!"))
     warp(MAP_CDR_INT_GARE, 1)
+    } else {
+        msgbox_mugshot(format("Re, vous avez choppé d'autres Pokémon?"), MSGBOX_SIGN, MUGSHOT_MIDORI)
+        getpartysize
+        if (var(VAR_RESULT)>1){
+            msgbox_mugshot(format("Oh stylé un Pikachu. Dès qu'on arrive à destination, on fera notre premier combat."), MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY)
+        }
+        msgbox_mugshot(format("Comme autre Pokémon j'ai choppé un Racaillou, rassurez-vous je l'ai pas capturé mais on me l'a donné. Un scientifique m'a expliqué qu'il se sentait pas bien et tout, fallait qu'il change de cadre."), MSGBOX_SIGN, MUGSHOT_MIDORI)
+        applymovement(OBJ_EVENT_ID_PLAYER, bas)
+        msgbox(format("Lisa : Moi j'ai ramené que ma petite Évoli."))
+        applymovement(OBJ_EVENT_ID_PLAYER, haut)
+        msgbox_mugshot(format("Bon, {PLAYER} je pense que t'es du même avis"), MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY)
+        msgbox_mugshot(format("Objectif, battre le champion de toutes les arènes d'Olnyris pour participer au Grand Tournoi d'Olnyris, je compte sur toi pour être mon adversaire en finale."), MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY)
+        fadescreen(1)
+        msgbox(format("Après de longues discussions...."))
+        showobjectat(12, MAP_TRAIN)
+        showobjectat(13, MAP_TRAIN)
+        showobjectat(14, MAP_TRAIN)
+        fadescreen(0)
+        playbgm(MUS_ABNORMAL_WEATHER,FALSE)
+        msgbox_mugshot(format("Pourquoi le train s'arrête?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+        msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT PARLEURS : Salut tout le monde, j'suis pas spécialement croyant mais je me suis dit que ce serait bien de vous prévenir pour les dernières prières."))
+        applymovement(OBJ_EVENT_ID_PLAYER, regard_droit)
+        playmoncry(SPECIES_ELECTRODE,0)
+        waitmoncry
+        playmoncry(SPECIES_ELECTRODE,0)
+        waitmoncry
+        playmoncry(SPECIES_ELECTRODE,0)
+        waitmoncry
+        msgbox(format("Scientiqiue : Qu'est-ce qui se passe? Qu'est-ce que c'est que ce bordel? Pourquoi y a des Électrodes, ils ont l'air doppés ma parole, 20 ans que j'observe des Pokémon j'en ai jamais vu d'aussi renfrognés!"))
+        msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT-PARLEURS : Bon bah on vous aura prévenu, on a besoin du moteur du train vite fait bien fait. Je vais pas m'éterniser parce que dans 1 min et 37 secondes ils auront compris que le train s'est arrêté et enverront une équipe spéciale qui mettra au plus 15 min à arriver. Vous allez pas trop souffrir l'explosion sera si forte que votre âme quittera le corps en une seconde."))
+        msgbox_mugshot(format("Putain on est mal, bon, un dernier espoir, Go Racaillou!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+        showobjectat(15, MAP_TRAIN)
+        playmoncry(SPECIES_GEODUDE,0)
+        waitmoncry
+        msgbox_mugshot(format("LANCE TON ATTQUE BÉLIER LA PLUS PUISSANTE SUR CETTE VITRE! {PLAYER}, Lisa, faut qu'on sorte de là!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+        fadescreen(1)
+        playse(SE_M_ROCK_THROW)
+        playse(SE_M_EXPLOSION)
+    }
     fadescreen(0)
     releaseall
     end

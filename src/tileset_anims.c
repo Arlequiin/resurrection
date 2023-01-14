@@ -750,6 +750,13 @@ void InitTilesetAnim_IntGare(void)
     sSecondaryTilesetAnimCallback = NULL;
 }
 
+void InitTilesetAnim_Solidago(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
 void InitTilesetAnim_Train(void)
 {
     sSecondaryTilesetAnimCounter = 0;

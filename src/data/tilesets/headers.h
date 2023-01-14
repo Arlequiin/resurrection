@@ -31,6 +31,17 @@ const struct Tileset gTileset_CellapolisNord =
     .callback = InitTilesetAnim_CellapolisNord,
 };
 
+const struct Tileset gTileset_Solidago =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Solidago,
+    .palettes = gTilesetPalettes_Solidago,
+    .metatiles = gMetatiles_Solidago,
+    .metatileAttributes = gMetatileAttributes_Solidago,
+    .callback = InitTilesetAnim_Solidago,
+};
+
 const struct Tileset gTileset_IndoorCdr =
 {
     .isCompressed = TRUE,

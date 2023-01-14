@@ -25,25 +25,27 @@ sc_train_cdr_4:
 
 
 gardecdr::
-	getPartySize
+	getpartysize
 	compare VAR_RESULT, 1
-	goto_if_gt gardecdr_1
-	return
-
+	goto_if_ge gardecdr_2
+	msgbox gardecdr_Text_3
 gardecdr_1:
-	msgbox gardecdr_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_ne gardecdr_4
-	msgbox gardecdr_Text_2
-gardecdr_3:
 	releaseall
 	end
 
-gardecdr_4:
-	msgbox gardecdr_Text_1
+gardecdr_2:
+	msgbox gardecdr_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq gardecdr_6
+	msgbox gardecdr_Text_2
+gardecdr_5:
 	fadescreen 1
 	warp MAP_TRAIN, 0
-	goto gardecdr_3
+	goto gardecdr_1
+
+gardecdr_6:
+	msgbox gardecdr_Text_1
+	goto gardecdr_5
 
 
 sc_train_cdr_Text_0:
@@ -62,12 +64,19 @@ sc_train_cdr_Text_2:
 	.string "voire vous donner.$"
 
 gardecdr_Text_0:
-	.string "Vous voulez rentrer à Cellapolis ?$"
+	.string "Bonjour. J'espère que votre visite du\n"
+	.string "Centre de Recherches s'est bien\l"
+	.string "déroulée, votre train va bientôt\l"
+	.string "partir. Vous voulez le prendre tout de\l"
+	.string "suite?$"
 
 gardecdr_Text_1:
 	.string "Bien, retour à Cellapolis$"
 
 gardecdr_Text_2:
+	.string "Bien, ne tardez pas.$"
+
+gardecdr_Text_3:
 	.string "Vous n'êtes pas venus pour rien allons,\n"
 	.string "allez donc voir le Prof.Schwartz, vous\l"
 	.string "rentrerez après.$"
