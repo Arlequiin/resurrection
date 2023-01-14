@@ -19,8 +19,8 @@ telephone2_2:
 	showmoneybox 14, 1
 	msgbox telephone2_Text_1
 	getpartysize
-	compare VAR_RESULT, 2
-	goto_if_le telephone2_6
+	compare VAR_RESULT, 1
+	goto_if_ge telephone2_6
 	msgbox telephone2_Text_3
 telephone2_5:
 	msgbox telephone2_Text_4
@@ -110,22 +110,6 @@ telephone2_Text_1:
 	.string "{COLOR RED}.... bip .... bip .... bip ....$"
 
 telephone2_Text_2:
-	.string "{COLOR LIGHT_BLUE}{SHADOW BLUE}Âllo ? Qui est à l'appareil ? Oh,\n"
-	.string "{PLAYER} ! Comment se passe ton\l"
-	.string "voyage ? Oh ! Déjà au Centre de\l"
-	.string "Recherches, eh bah. Ton père avait mis\l"
-	.string "9 jours à y arriver mais bon, ce n'était\l"
-	.string "pas les mêmes conditions, lui il n'y est\l"
-	.string "pas allé en train mais à pied, il a pris\l"
-	.string "son vélo, un VTT et a traversé la forêt\l"
-	.string "Solidago avec ses amis. Il avait emmené\l"
-	.string "des bouteilles d'eau et des biscuits\l"
-	.string "pour... rester en vie. Un de ses amis est\l"
-	.string "mort pendant le voyage, l'autre a fait\l"
-	.string "demi-tour. Bref, je te raconterai ça\l"
-	.string "une autre fois. Profite de ton voyage !$"
-
-telephone2_Text_3:
 	.string "{COLOR LIGHT_BLUE}{SHADOW BLUE}Allô ? Tu as obtenu ton premier Pokémon\n"
 	.string "c'est fantastique ! Viens vite à\l"
 	.string "Cellapolis pour me le montrer..\l"
@@ -140,6 +124,22 @@ telephone2_Text_3:
 	.string "forêt... Quiconque y met les pieds n'en\l"
 	.string "ressort jamais. Bien, je ne te retarde\l"
 	.string "pas plus, au revoir !$"
+
+telephone2_Text_3:
+	.string "{COLOR LIGHT_BLUE}{SHADOW BLUE}Âllo ? Qui est à l'appareil ? Oh,\n"
+	.string "{PLAYER} ! Comment se passe ton\l"
+	.string "voyage ? Oh ! Déjà au Centre de\l"
+	.string "Recherches, eh bah. Ton père avait mis\l"
+	.string "9 jours à y arriver mais bon, ce n'était\l"
+	.string "pas les mêmes conditions, lui il n'y est\l"
+	.string "pas allé en train mais à pied, il a pris\l"
+	.string "son vélo, un VTT et a traversé la forêt\l"
+	.string "Solidago avec ses amis. Il avait emmené\l"
+	.string "des bouteilles d'eau et des biscuits\l"
+	.string "pour... rester en vie. Un de ses amis est\l"
+	.string "mort pendant le voyage, l'autre a fait\l"
+	.string "demi-tour. Bref, je te raconterai ça\l"
+	.string "une autre fois. Profite de ton voyage !$"
 
 telephone2_Text_4:
 	.string "{COLOR LIGHT_GRAY}{SHADOW DARK_GRAY}Tut !$"

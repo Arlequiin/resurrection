@@ -58,6 +58,36 @@ CDR7::
 	end
 
 
+CDR_ROCHES_1::
+	msgbox CDR_ROCHES_1_Text_0
+	releaseall
+	end
+
+
+CDR_ROCHES_2::
+	msgbox CDR_ROCHES_2_Text_0
+	releaseall
+	end
+
+
+CDR_ROCHES_3::
+	msgbox CDR_ROCHES_3_Text_0
+	releaseall
+	end
+
+
+CDR_ROCHES_4::
+	msgbox CDR_ROCHES_4_Text_0
+	releaseall
+	end
+
+
+CDR_ROCHES_5::
+	msgbox CDR_ROCHES_5_Text_0
+	releaseall
+	end
+
+
 CDR1_Text_0:
 	.string "Le Centre de Recherches a été créé en\n"
 	.string "1812 par un Professeur originaire de la\l"
@@ -132,3 +162,37 @@ CDR7_Text_1:
 CDR7_Text_2:
 	.string "Aujourd'hui, ces trois dresseurs sont\n"
 	.string "les plus puissants de la région.$"
+
+CDR_ROCHES_1_Text_0:
+	.string "Ces Pokémon sont fascinés par ces\n"
+	.string "roches. Ils évoluent ou ont tous\l"
+	.string "évolué à l'aide d'une Pierre Lune, y\l"
+	.string "aurait-il une relation entre la Pierre\l"
+	.string "Lune et ces roches?$"
+
+CDR_ROCHES_2_Text_0:
+	.string "Ces roches sont un vrai casse-tête! Qui\n"
+	.string "les ramène? D'où viennent-elles?$"
+
+CDR_ROCHES_3_Text_0:
+	.string "Alakazam, Mackogneur, Ectoplasma,\n"
+	.string "Grolem et quelques autres... Ces\l"
+	.string "Pokémon n'évoluent que par échange,\l"
+	.string "que c'est étrange, comment est-ce\l"
+	.string "possible?$"
+
+CDR_ROCHES_4_Text_0:
+	.string "Travailler au Centre de Recherches,\n"
+	.string "c'est passionant, mais ça peut être\l"
+	.string "plutôt stressant. Si on ne nourrit pas\l"
+	.string "assez les Pokémon ils peuvent devenir\l"
+	.string "aggressifs et.. ça peut finir en\l"
+	.string "bagarre générale. Je suis très\l"
+	.string "ponctuelle dans mon travail, nous le\l"
+	.string "sommes tous ici.$"
+
+CDR_ROCHES_5_Text_0:
+	.string "Nous, scientifiques travaillons en\n"
+	.string "alternance de façon à ce qu'il y ait\l"
+	.string "constamment au minimum une trentaine\l"
+	.string "de personnes sur place.$"

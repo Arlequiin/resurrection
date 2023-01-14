@@ -57,3 +57,33 @@ script CDR7{
 	releaseall
 	end
 }
+
+script CDR_ROCHES_1{
+	msgbox(format("Ces Pokémon sont fascinés par ces roches. Ils évoluent ou ont tous évolué à l'aide d'une Pierre Lune, y aurait-il une relation entre la Pierre Lune et ces roches?"))
+	releaseall
+	end
+}
+
+script CDR_ROCHES_2{
+	msgbox(format("Ces roches sont un vrai casse-tête! Qui les ramène? D'où viennent-elles?"))
+	releaseall
+	end
+}
+
+script CDR_ROCHES_3{
+	msgbox(format("Alakazam, Mackogneur, Ectoplasma, Grolem et quelques autres... Ces Pokémon n'évoluent que par échange, que c'est étrange, comment est-ce possible?"))
+	releaseall
+	end
+}
+
+script CDR_ROCHES_4{
+	msgbox(format("Travailler au Centre de Recherches, c'est passionant, mais ça peut être plutôt stressant. Si on ne nourrit pas assez les Pokémon ils peuvent devenir aggressifs et.. ça peut finir en bagarre générale. Je suis très ponctuelle dans mon travail, nous le sommes tous ici."))
+	releaseall
+	end
+}
+
+script CDR_ROCHES_5{
+	msgbox(format("Nous, scientifiques travaillons en alternance de façon à ce qu'il y ait constamment au minimum une trentaine de personnes sur place."))
+	releaseall
+	end
+}

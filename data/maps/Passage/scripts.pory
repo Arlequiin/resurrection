@@ -8,7 +8,7 @@ script scientist_wonder{
     random(4)
     switch (var(VAR_RESULT)) {
         case 0:
-            msgbox(format("On a réussi à recopier l'une de ces roches grâce à l'ADN de Métamorph, de fait on peut désormais les étudier au Centre de Recherches. On récolte quand même des infos sur ces roches, au cas où il y aurait des résultats différents."))
+            msgbox(format("On a réussi à emmener l'une de ces roches, de fait on peut désormais les étudier au Centre de Recherches mais elle a repoussé juste après au même endroit, donc pas moyen de les enlever. On récolte quand même des infos sur ces roches, au cas où il y aurait des résultats différents."))
         case 1:
             msgbox(format("Ces roches.. sont très étranges. Nous sommes venus du Centre de Recherches pour les étudier."))
         case 2:

@@ -38,13 +38,14 @@ scientist_wonder_7:
 
 
 scientist_wonder_Text_0:
-	.string "On a réussi à recopier l'une de ces\n"
-	.string "roches grâce à l'ADN de Métamorph, de\l"
-	.string "fait on peut désormais les étudier au\l"
-	.string "Centre de Recherches. On récolte quand\l"
-	.string "même des infos sur ces roches, au cas\l"
-	.string "où il y aurait des résultats\l"
-	.string "différents.$"
+	.string "On a réussi à emmener l'une de ces\n"
+	.string "roches, de fait on peut désormais les\l"
+	.string "étudier au Centre de Recherches mais\l"
+	.string "elle a repoussé juste après au même\l"
+	.string "endroit, donc pas moyen de les enlever.\l"
+	.string "On récolte quand même des infos sur\l"
+	.string "ces roches, au cas où il y aurait des\l"
+	.string "résultats différents.$"
 
 scientist_wonder_Text_1:
 	.string "Ces roches.. sont très étranges. Nous\n"

@@ -1,0 +1,28 @@
+mapscripts CDRAreas_MapScripts{
+
+}
+
+script LGPE{
+	msgbox(format("Oh... Quel système stupide."))
+	msgbox(format("Je vais bientôt quitter Olnyris pour le travail mais je ne peux emmener que l'un de mes deux amis."))
+	msgbox(format("Ils ont été modifié génétiquement par une organisation criminelle, je les ai combattus et j'ai pu les libérer. Cela fait maintenant plusieurs années que je viens à cet endroit les nourrir et jouer avec eux."))
+	msgbox(format("J'aimerai donner celui que je n'emmenerai pas à un dresseur qui saura s'en occuper."))
+	getpartysize
+	if(var(VAR_RESULT) >=1){
+		msgbox(format("Ton Pokémon... Il a l'air heureux. Tu voudrais prendre soin de mon Pikachu?"),MSGBOX_YESNO)
+		if (var(VAR_RESULT) == 1){
+            removeobject(54)
+			givemon(SPECIES_PIKACHU_PARTNER_CAP,10,ITEM_LIGHT_BALL)
+			msgbox(format("Prends en soin. Au revoir."))
+			fadescreen(1)
+			removeobject(52)
+            removeobject(53)
+            fadescreen(0)
+            setflag(FLAG_UNUSED_0x024)
+		}
+	} else {
+		msgbox(format("Tu n'es pas la personne que je cherche."))
+	}
+    releaseall
+    end
+}

@@ -9,11 +9,11 @@ script telephone2{
 	showmoneybox(14,1)
 	msgbox(format("{COLOR RED}.... bip .... bip .... bip ...."))
 	getpartysize
-	if(var(VAR_RESULT) <= 2){
-		
-		msgbox(format("{COLOR LIGHT_BLUE}{SHADOW BLUE}Âllo ? Qui est à l'appareil ? Oh, {PLAYER} ! Comment se passe ton voyage ? Oh ! Déjà au Centre de Recherches, eh bah. Ton père avait mis 9 jours à y arriver mais bon, ce n'était pas les mêmes conditions, lui il n'y est pas allé en train mais à pied, il a pris son vélo, un VTT et a traversé la forêt Solidago avec ses amis. Il avait emmené des bouteilles d'eau et des biscuits pour... rester en vie. Un de ses amis est mort pendant le voyage, l'autre a fait demi-tour. Bref, je te raconterai ça une autre fois. Profite de ton voyage !"))
-	} else {
+	if(var(VAR_RESULT) >=1){
 		msgbox(format("{COLOR LIGHT_BLUE}{SHADOW BLUE}Allô ? Tu as obtenu ton premier Pokémon c'est fantastique ! Viens vite à Cellapolis pour me le montrer.. Prochaine destination Mirabilis c'est ça ? Ton train va, si tout se passe bien revenir à Cellapolis, après tu prendras la Route 1 pour aller à Mirabilis. À l'époque où ton père faisait son voyage, il n'y avait pas encore d'arènes. Ne mets surtout pas tes pieds à la forêt Solidago, cette forêt... Quiconque y met les pieds n'en ressort jamais. Bien, je ne te retarde pas plus, au revoir !"))
+	} else {
+		msgbox(format("{COLOR LIGHT_BLUE}{SHADOW BLUE}Âllo ? Qui est à l'appareil ? Oh, {PLAYER} ! Comment se passe ton voyage ? Oh ! Déjà au Centre de Recherches, eh bah. Ton père avait mis 9 jours à y arriver mais bon, ce n'était pas les mêmes conditions, lui il n'y est pas allé en train mais à pied, il a pris son vélo, un VTT et a traversé la forêt Solidago avec ses amis. Il avait emmené des bouteilles d'eau et des biscuits pour... rester en vie. Un de ses amis est mort pendant le voyage, l'autre a fait demi-tour. Bref, je te raconterai ça une autre fois. Profite de ton voyage !"))
+
 	}
 	msgbox(format("{COLOR LIGHT_GRAY}{SHADOW DARK_GRAY}Tut !"))
 	hidemoneybox
