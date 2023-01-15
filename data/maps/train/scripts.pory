@@ -87,7 +87,9 @@ script rivaux_train_1{
     msgbox(format("Agent : Bienvenue à la gare du Centre de Recherches, j'espère que le voyage n'a pas été trop long. Voici vos bagages. Bonne journée et au plaisir de vous revoir!"))
     warp(MAP_CDR_INT_GARE, 1)
     setvar(VAR_TEMP_0,1)
+    fadescreen(0)
     } else {
+        applymovement(OBJ_EVENT_ID_PLAYER, haut)
         msgbox_mugshot(format("Re, vous avez choppé d'autres Pokémon?"), MSGBOX_SIGN, MUGSHOT_MIDORI)
         getpartysize
         if (var(VAR_RESULT)>1){
@@ -106,29 +108,31 @@ script rivaux_train_1{
         showobjectat(14, MAP_TRAIN)
         fadescreen(0)
         playbgm(MUS_ABNORMAL_WEATHER,FALSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, regard_droit)
         msgbox_mugshot(format("Pourquoi le train s'arrête?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
         msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT PARLEURS : Salut tout le monde, j'suis pas spécialement croyant mais je me suis dit que ce serait bien de vous prévenir pour les dernières prières."))
-        applymovement(OBJ_EVENT_ID_PLAYER, regard_droit)
         playmoncry(SPECIES_ELECTRODE,0)
         waitmoncry
         playmoncry(SPECIES_ELECTRODE,0)
         waitmoncry
         playmoncry(SPECIES_ELECTRODE,0)
         waitmoncry
-        msgbox(format("Scientiqiue : Qu'est-ce qui se passe? Qu'est-ce que c'est que ce bordel? Pourquoi y a des Électrodes, ils ont l'air doppés ma parole, 20 ans que j'observe des Pokémon j'en ai jamais vu d'aussi renfrognés!"))
+        msgbox(format("Scientique : Qu'est-ce qui se passe? Qu'est-ce que c'est que ce bordel? Pourquoi y a des Électrodes, ils ont l'air doppés ma parole, 20 ans que j'observe des Pokémon j'en ai jamais vu d'aussi renfrognés!"))
         msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT-PARLEURS : Bon bah on vous aura prévenu, on a besoin du moteur du train vite fait bien fait. Je vais pas m'éterniser parce que dans 1 min et 37 secondes ils auront compris que le train s'est arrêté et enverront une équipe spéciale qui mettra au plus 15 min à arriver. Vous allez pas trop souffrir l'explosion sera si forte que votre âme quittera le corps en une seconde."))
         msgbox_mugshot(format("Putain on est mal, bon, un dernier espoir, Go Racaillou!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
         showobjectat(15, MAP_TRAIN)
         playmoncry(SPECIES_GEODUDE,0)
         waitmoncry
-        msgbox_mugshot(format("LANCE TON ATTQUE BÉLIER LA PLUS PUISSANTE SUR CETTE VITRE! {PLAYER}, Lisa, faut qu'on sorte de là!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
-        fadescreen(1)
+        msgbox_mugshot(format("LANCE TON ATTAQUE BÉLIER LA PLUS PUISSANTE SUR CETTE VITRE! {PLAYER}, Lisa, faut qu'on sorte de là!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+        fadescreen(3)
         playse(SE_M_ROCK_THROW)
+        waitse
         playse(SE_M_EXPLOSION)
-        warp(MAP_LAVARIDGE, 0)
+        waitse
         setvar(VAR_TEMP_0,1)
+        warp(MAP_LAVARIDGE_TOWN, 0)
+        fadescreen(2)
     }
-    fadescreen(0)
     releaseall
     end
 }

@@ -60,6 +60,7 @@ rivaux_train_1_1:
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_lt rivaux_train_1_4
+	applymovement OBJ_EVENT_ID_PLAYER, haut
 	msgbox_mugshot rivaux_train_1_Text_18, MSGBOX_SIGN, MUGSHOT_MIDORI
 	getpartysize
 	compare VAR_RESULT, 1
@@ -78,9 +79,9 @@ rivaux_train_1_7:
 	showobjectat 14, MAP_TRAIN
 	fadescreen 0
 	playbgm MUS_ABNORMAL_WEATHER, FALSE
+	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
 	msgbox_mugshot rivaux_train_1_Text_25, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox rivaux_train_1_Text_26
-	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
 	playmoncry SPECIES_ELECTRODE, 0
 	waitmoncry
 	playmoncry SPECIES_ELECTRODE, 0
@@ -94,13 +95,15 @@ rivaux_train_1_7:
 	playmoncry SPECIES_GEODUDE, 0
 	waitmoncry
 	msgbox_mugshot rivaux_train_1_Text_30, MSGBOX_SIGN, MUGSHOT_MIDORI
-	fadescreen 1
+	fadescreen 3
 	playse SE_M_ROCK_THROW
+	waitse
 	playse SE_M_EXPLOSION
-	warp MAP_LAVARIDGE, 0
+	waitse
 	setvar VAR_TEMP_0, 1
+	warp MAP_LAVARIDGE_TOWN, 0
+	fadescreen 2
 rivaux_train_1_3:
-	fadescreen 0
 	releaseall
 	end
 
@@ -153,6 +156,7 @@ rivaux_train_1_4:
 	msgbox rivaux_train_1_Text_17
 	warp MAP_CDR_INT_GARE, 1
 	setvar VAR_TEMP_0, 1
+	fadescreen 0
 	goto rivaux_train_1_3
 
 rivaux_train_1_8:
@@ -307,7 +311,7 @@ rivaux_train_1_Text_26:
 	.string "prévenir pour les dernières prières.$"
 
 rivaux_train_1_Text_27:
-	.string "Scientiqiue : Qu'est-ce qui se passe?\n"
+	.string "Scientique : Qu'est-ce qui se passe?\n"
 	.string "Qu'est-ce que c'est que ce bordel?\l"
 	.string "Pourquoi y a des Électrodes, ils ont\l"
 	.string "l'air doppés ma parole, 20 ans que\l"
@@ -332,7 +336,7 @@ rivaux_train_1_Text_29:
 	.string "espoir, Go Racaillou!$"
 
 rivaux_train_1_Text_30:
-	.string "LANCE TON ATTQUE BÉLIER LA PLUS\n"
+	.string "LANCE TON ATTAQUE BÉLIER LA PLUS\n"
 	.string "PUISSANTE SUR CETTE VITRE!\l"
 	.string "{PLAYER}, Lisa, faut qu'on sorte de\l"
 	.string "là!$"

@@ -2,7 +2,7 @@
   "id": "MAP_CDRAREAS",
   "name": "CDRAreas",
   "layout": "LAYOUT_CDRAREAS",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_RG_ROUTE3",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
