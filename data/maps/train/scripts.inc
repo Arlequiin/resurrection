@@ -70,9 +70,9 @@ rivaux_train_1_7:
 	msgbox_mugshot rivaux_train_1_Text_23, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	fadescreen 1
 	msgbox rivaux_train_1_Text_24
-	showobjectat 12, MAP_TRAIN
-	showobjectat 13, MAP_TRAIN
-	showobjectat 14, MAP_TRAIN
+	showobjectat 7, MAP_TRAIN
+	showobjectat 6, MAP_TRAIN
+	showobjectat 5, MAP_TRAIN
 	fadescreen 0
 	playbgm MUS_ABNORMAL_WEATHER, FALSE
 	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
@@ -87,7 +87,7 @@ rivaux_train_1_7:
 	msgbox rivaux_train_1_Text_27
 	msgbox rivaux_train_1_Text_28
 	msgbox_mugshot rivaux_train_1_Text_29, MSGBOX_SIGN, MUGSHOT_MIDORI
-	showobjectat 15, MAP_TRAIN
+	showobjectat 8, MAP_TRAIN
 	playmoncry SPECIES_GEODUDE, 0
 	waitmoncry
 	msgbox_mugshot rivaux_train_1_Text_30, MSGBOX_SIGN, MUGSHOT_MIDORI
@@ -104,10 +104,10 @@ rivaux_train_1_3:
 	end
 
 rivaux_train_1_4:
-	applymovement 10, bas
+	applymovement 9, bas
+	waitmovement 9
+	applymovement 10, haut
 	waitmovement 10
-	applymovement 11, haut
-	waitmovement 11
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI

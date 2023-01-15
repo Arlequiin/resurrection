@@ -36,10 +36,10 @@ script rivaux_train_1{
   if (var(VAR_TEMP_0)==0){
     getpartysize
     if (var(VAR_RESULT)<1){
-    applymovement(10,bas)
+    applymovement(9,bas)
+    waitmovement(9)
+    applymovement(10,haut)
     waitmovement(10)
-    applymovement(11,haut)
-    waitmovement(11)
     applymovement(OBJ_EVENT_ID_PLAYER, haut)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox_mugshot(format("..."), MSGBOX_SIGN, MUGSHOT_MIDORI)
@@ -100,9 +100,9 @@ script rivaux_train_1{
         msgbox_mugshot(format("Objectif, battre le champion de toutes les arènes d'Olnyris pour participer au Grand Tournoi d'Olnyris, je compte sur toi pour être mon adversaire en finale."), MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY)
         fadescreen(1)
         msgbox(format("Après de longues discussions...."))
-        showobjectat(12, MAP_TRAIN)
-        showobjectat(13, MAP_TRAIN)
-        showobjectat(14, MAP_TRAIN)
+        showobjectat(7, MAP_TRAIN)
+        showobjectat(6, MAP_TRAIN)
+        showobjectat(5, MAP_TRAIN)
         fadescreen(0)
         playbgm(MUS_ABNORMAL_WEATHER,FALSE)
         applymovement(OBJ_EVENT_ID_PLAYER, regard_droit)
@@ -117,7 +117,7 @@ script rivaux_train_1{
         msgbox(format("Scientique : Qu'est-ce qui se passe? Qu'est-ce que c'est que ce bordel? Pourquoi y a des Électrodes, ils ont l'air doppés ma parole, 20 ans que j'observe des Pokémon j'en ai jamais vu d'aussi renfrognés!"))
         msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT-PARLEURS : Bon bah on vous aura prévenu, on a besoin du moteur du train vite fait bien fait. Je vais pas m'éterniser parce que dans 1 min et 37 secondes ils auront compris que le train s'est arrêté et enverront une équipe spéciale qui mettra au plus 15 min à arriver. Vous allez pas trop souffrir l'explosion sera si forte que votre âme quittera le corps en une seconde."))
         msgbox_mugshot(format("Putain on est mal, bon, un dernier espoir, Go Racaillou!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
-        showobjectat(15, MAP_TRAIN)
+        showobjectat(8, MAP_TRAIN)
         playmoncry(SPECIES_GEODUDE,0)
         waitmoncry
         msgbox_mugshot(format("LANCE TON ATTAQUE BÉLIER LA PLUS PUISSANTE SUR CETTE VITRE! {PLAYER}, Lisa, faut qu'on sorte de là!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
