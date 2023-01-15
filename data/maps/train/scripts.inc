@@ -8,10 +8,6 @@ train_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	.2byte 0
 
 train_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
-	lock
-	msgbox train_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_0
-	setvar VAR_TEMP_0, 2
-	release
 	return
 
 
@@ -163,9 +159,6 @@ rivaux_train_1_8:
 	msgbox_mugshot rivaux_train_1_Text_19, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	goto rivaux_train_1_7
 
-
-train_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1_Text_0:
-	.string "Retour du CDR.$"
 
 sc_train_Text_0:
 	.string "Je vous donne un petit cadeau, disons\n"

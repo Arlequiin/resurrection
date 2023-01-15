@@ -2,10 +2,7 @@ mapscripts train_MapScripts{
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0: rivaux_train_1
         VAR_TEMP_0, 1 {
-            lock
-            msgbox("Retour du CDR.")
-            setvar(VAR_TEMP_0, 2)
-            release
+
         }
     ]
 }
