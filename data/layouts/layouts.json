@@ -125,7 +125,7 @@
       "id": "LAYOUT_LAVARIDGE_TOWN",
       "name": "LavaridgeTown_Layout",
       "width": 50,
-      "height": 50,
+      "height": 70,
       "primary_tileset": "gTileset_GeneralResu",
       "secondary_tileset": "gTileset_Solidago",
       "border_filepath": "data/layouts/LavaridgeTown/border.bin",
