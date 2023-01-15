@@ -4,16 +4,6 @@ LavaridgeTown_MapScripts::
 
 LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
-	goto_if_unset FLAG_UNUSED_0x026, LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
-	setmetatile 2, 2, 0x2F8, 1
-	setmetatile 2, 3, 0x300, 1
-	setmetatile 3, 2, 0x2F9, 1
-	setmetatile 3, 3, 0x301, 1
-	special DrawWholeMapView
-	return
-
-LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
-	msgbox LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_Text_0
 	return
 
 
@@ -75,8 +65,8 @@ foret_1_1:
 	end
 
 foret_1_2:
-	turnobject 30, DIR_WEST
-	turnobject 31, DIR_WEST
+	turnobject 26, DIR_WEST
+	turnobject 27, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox_mugshot foret_1_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox foret_1_Text_1
@@ -84,9 +74,9 @@ foret_1_2:
 	msgbox foret_1_Text_3
 	msgbox_mugshot foret_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_1_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI
-	applymovement 30, midforest_1
-	waitmovement 30
-	removeobject 30, MAP_LAVARIDGE_TOWN
+	applymovement 26, midforest_1
+	waitmovement 26
+	removeobject 26, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x025
 	setvar VAR_UNUSED_0x4083, 1
 	goto foret_1_1
@@ -94,6 +84,8 @@ foret_1_2:
 
 foret_2::
 	goto_if_unset FLAG_UNUSED_0x026, foret_2_2
+	compare VAR_TEMP_2, 0
+	goto_if_eq foret_2_5
 foret_2_1:
 	releaseall
 	end
@@ -136,6 +128,24 @@ foret_2_2:
 	removeobject 54
 	setflag FLAG_UNUSED_0x026
 	goto foret_2_1
+
+foret_2_5:
+	setmetatile 2, 2, 0x2F8, TRUE
+	setmetatile 2, 3, 0x300, TRUE
+	setmetatile 3, 2, 0x2F9, TRUE
+	setmetatile 3, 3, 0x301, TRUE
+	fadescreen 3
+	special DrawWholeMapView
+	msgbox foret_2_Text_12
+	fadescreen 2
+	setvar VAR_TEMP_2, 1
+	goto foret_2_1
+
+
+reste_onix::
+	msgbox reste_onix_Text_0
+	releaseall
+	end
 
 
 tombes::
@@ -311,9 +321,6 @@ Spinarak::
 	end
 
 
-LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_Text_0:
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Le train a explosé...$"
-
 foret_1_Text_0:
 	.string "Putain de merde. C'est vraiment le pire\n"
 	.string "endroit où on aurait pu atterir.$"
@@ -410,6 +417,12 @@ foret_2_Text_10:
 foret_2_Text_11:
 	.string "Faut qu'on quitte cette forêt le plus\n"
 	.string "vite possible.$"
+
+foret_2_Text_12:
+	.string "C'est l'endroit ou l'Onix a été tué.$"
+
+reste_onix_Text_0:
+	.string "Ce sont les restes d'Onix.$"
 
 tombes_Text_0:
 	.string "À nos camarades partis trop tôt.$"

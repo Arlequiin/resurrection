@@ -1,15 +1,6 @@
 mapscripts LavaridgeTown_MapScripts{
 	MAP_SCRIPT_ON_TRANSITION {
 	setrespawn(HEAL_LOCATION_LAVARIDGE_TOWN)
-	if (!flag(FLAG_UNUSED_0x026)){
-		msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Le train a explosé..."))
-	} else {
-		setmetatile(2,2,0x2F8,1)
-		setmetatile(2,3,0x300,1)
-		setmetatile(3,2,0x2F9,1)
-		setmetatile(3,3,0x301,1)
-		special(DrawWholeMapView)
-	}
 	}
 }
 
@@ -40,8 +31,8 @@ script foret_1{
    if (!flag(FLAG_UNUSED_0x025)){
 	//showobjectat(30, MAP_LAVARIDGE_TOWN)
 	//showobjectat(31, MAP_LAVARIDGE_TOWN)
-	turnobject(30,DIR_WEST)
-	turnobject(31,DIR_WEST)
+	turnobject(26,DIR_WEST)
+	turnobject(27,DIR_WEST)
 	turnobject(OBJ_EVENT_ID_PLAYER,DIR_WEST)
 	msgbox_mugshot(format("Putain de merde. C'est vraiment le pire endroit où on aurait pu atterir."),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox(format("Lisa : De ce que j'ai lu dans les livres, nombreux sont les cadavres dans cette forêt, rares sont les personnes qui en ressortent vivantes."))
@@ -49,9 +40,9 @@ script foret_1{
 	msgbox(format("Lisa : ..A.. Attendez! Les Pokémon de cette forêt sont très dangereux. Je vais rester là avec Évoli, venez me voir si vous avez besoin que je soigne vos Pokémon."))
 	msgbox_mugshot(format("Il devait y avoir une trentaine de scientifique dans ce train qui n'avaient rien fait de mal, qui rentrait simplement chez eux après une dûre semaine de travail. Quel genre de monstre a pu faire ça?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox_mugshot(format("Bon, {PLAYER} on y va?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
-	applymovement(30, midforest_1)
-	waitmovement(30)
-	removeobject(30, MAP_LAVARIDGE_TOWN)
+	applymovement(26, midforest_1)
+	waitmovement(26)
+	removeobject(26, MAP_LAVARIDGE_TOWN)
 	setflag(FLAG_UNUSED_0x025)
 	setvar(VAR_UNUSED_0x4083,1)
    }
@@ -97,10 +88,28 @@ script foret_2{
 	waitmovement(54)
 	removeobject(54)
 	setflag(FLAG_UNUSED_0x026)
+  } else {
+	if (var(VAR_TEMP_2)==0){
+	setmetatile(2,2,0x2F8,TRUE)
+	setmetatile(2,3,0x300,TRUE)
+	setmetatile(3,2,0x2F9,TRUE)
+	setmetatile(3,3,0x301,TRUE)
+	fadescreen(3)
+	special(DrawWholeMapView)
+	msgbox("C'est l'endroit ou l'Onix a été tué.")
+	fadescreen(2)
+	setvar(VAR_TEMP_2,1)
+	}
   }
   releaseall
   end
 	
+}
+
+script reste_onix{
+	msgbox(format("Ce sont les restes d'Onix."))
+	releaseall
+	end
 }
 
 script tombes{
