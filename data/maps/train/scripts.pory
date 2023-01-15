@@ -124,6 +124,8 @@ script rivaux_train_1{
         fadescreen(1)
         playse(SE_M_ROCK_THROW)
         playse(SE_M_EXPLOSION)
+        warp(MAP_CDR_INT_GARE, 1)
+        msgbox(format("La version démo s'arrête ici, merci d'avoir joué."))
     }
     fadescreen(0)
     releaseall
