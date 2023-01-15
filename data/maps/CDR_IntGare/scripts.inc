@@ -36,16 +36,15 @@ gardecdr_1:
 gardecdr_2:
 	msgbox gardecdr_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq gardecdr_6
+	goto_if_eq gardecdr_5
 	msgbox gardecdr_Text_2
+	goto gardecdr_1
+
 gardecdr_5:
+	msgbox gardecdr_Text_1
 	fadescreen 1
 	warp MAP_TRAIN, 0
 	goto gardecdr_1
-
-gardecdr_6:
-	msgbox gardecdr_Text_1
-	goto gardecdr_5
 
 
 sc_train_cdr_Text_0:

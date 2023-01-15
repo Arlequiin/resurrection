@@ -21,11 +21,11 @@ script gardecdr{
 	msgbox(format("Bonjour. J'espère que votre visite du Centre de Recherches s'est bien déroulée, votre train va bientôt partir. Vous voulez le prendre tout de suite?"),MSGBOX_YESNO)
       if (var(VAR_RESULT)==1){
         msgbox(format("Bien, retour à Cellapolis"))
+        fadescreen(1)
+		    warp(MAP_TRAIN, 0)
       } else {
         msgbox(format("Bien, ne tardez pas."))
       }
-		fadescreen(1)
-		warp(MAP_TRAIN, 0)
 	} else {
 		msgbox(format("Vous n'êtes pas venus pour rien allons, allez donc voir le Prof.Schwartz, vous rentrerez après."))
 	}
