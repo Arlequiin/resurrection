@@ -4,6 +4,16 @@ LavaridgeTown_MapScripts::
 
 LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
+	goto_if_unset FLAG_UNUSED_0x026, LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	setmetatile 2, 2, 0x2F8, 1
+	setmetatile 2, 3, 0x300, 1
+	setmetatile 3, 2, 0x2F9, 1
+	setmetatile 3, 3, 0x301, 1
+	special DrawWholeMapView
+	return
+
+LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	msgbox LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_Text_0
 	return
 
 
@@ -17,6 +27,45 @@ midforest_1:
 	walk_up
 	walk_up
 	walk_up
+	step_end
+
+protaforest_2:
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+leave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+midleave_forest2:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 foret_1::
@@ -39,12 +88,54 @@ foret_1_2:
 	waitmovement 30
 	removeobject 30, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x025
+	setvar VAR_UNUSED_0x4083, 1
 	goto foret_1_1
 
 
 foret_2::
-	msgbox_mugshot foret_2_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
+	goto_if_unset FLAG_UNUSED_0x026, foret_2_2
+foret_2_1:
+	releaseall
 	end
+
+foret_2_2:
+	applymovement OBJ_EVENT_ID_PLAYER, protaforest_2
+	msgbox_mugshot foret_2_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox foret_2_Text_1
+	msgbox foret_2_Text_2
+	msgbox foret_2_Text_3
+	msgbox foret_2_Text_4
+	msgbox foret_2_Text_5
+	applymovement 56, leave
+	waitmovement 56
+	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
+	applymovement 55, leave
+	waitmovement 56
+	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
+	removeobject 56, MAP_LAVARIDGE_TOWN
+	removeobject 55, MAP_LAVARIDGE_TOWN
+	msgbox_mugshot foret_2_Text_6, MSGBOX_SIGN, MUGSHOT_MIDORI
+	fadescreen 3
+	playmoncry SPECIES_ONIX, CRY_MODE_FAINT
+	msgbox foret_2_Text_7
+	msgbox foret_2_Text_8
+	removeobject 58, MAP_LAVARIDGE_TOWN
+	removeobject 59, MAP_LAVARIDGE_TOWN
+	removeobject 57, MAP_LAVARIDGE_TOWN
+	setmetatile 2, 2, 0x2F8, TRUE
+	setmetatile 2, 3, 0x300, TRUE
+	setmetatile 3, 2, 0x2F9, TRUE
+	setmetatile 3, 3, 0x301, TRUE
+	special DrawWholeMapView
+	fadescreen 2
+	msgbox_mugshot foret_2_Text_9, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot foret_2_Text_10, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot foret_2_Text_11, MSGBOX_SIGN, MUGSHOT_MIDORI
+	applymovement 54, midleave_forest2
+	waitmovement 54
+	removeobject 54
+	setflag FLAG_UNUSED_0x026
+	goto foret_2_1
 
 
 tombes::
@@ -220,6 +311,9 @@ Spinarak::
 	end
 
 
+LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_Text_0:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Le train a explosé...$"
+
 foret_1_Text_0:
 	.string "Putain de merde. C'est vraiment le pire\n"
 	.string "endroit où on aurait pu atterir.$"
@@ -253,7 +347,69 @@ foret_1_Text_5:
 	.string "Bon, {PLAYER} on y va?$"
 
 foret_2_Text_0:
-	.string "Fais pas de bruit!$"
+	.string "Fais pas de bruit! Je crois que c'est les\n"
+	.string "types qui ont fait sauter le train, je\l"
+	.string "les ai entendus parler de moteur.$"
+
+foret_2_Text_1:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Plus que 9 litres d'énergie\n"
+	.string "vitale et on pourra rentrer au Q.G.\l"
+	.string "Cette mission se déroule à la\l"
+	.string "perfection.$"
+
+foret_2_Text_2:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Tu m'étonnes y a personne pour\n"
+	.string "nous gêner, ils sont tous en train de\l"
+	.string "moisir dans ce qui reste du train.$"
+
+foret_2_Text_3:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : L'équipe de secours ne peut\n"
+	.string "même pas nous suspecter s'ils\l"
+	.string "viennent, on ne fait que nous promener\l"
+	.string "dans la forêt, aucune preuve du\l"
+	.string "contraire le moteur a déjà été envoyé à\l"
+	.string "Ryuichi.$"
+
+foret_2_Text_4:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Dépéchons-nous quand même,\n"
+	.string "regarde moi ce bel Onix, aussi grand\l"
+	.string "qu'il est il devrait nous rapporter bien\l"
+	.string "plus que 9 L d'énergie vitale.$"
+
+foret_2_Text_5:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Bah qu'est-ce que t'attends,\n"
+	.string "actionne la machine!$"
+
+foret_2_Text_6:
+	.string "Regarde ces pauvres Onix, ils fuient, ils\n"
+	.string "sont terrifiés, ils doivent savoir ce\l"
+	.string "qui va lui arriver.$"
+
+foret_2_Text_7:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Quoi?! Seulement 5 litres, avec\n"
+	.string "cette si grande taille! Faut qu'on\l"
+	.string "trouve autre chose.$"
+
+foret_2_Text_8:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Ouais, magne-toi.$"
+
+foret_2_Text_9:
+	.string "Onix.. Il s'est transormé en rocher!\n"
+	.string "J'avais lu un truc semblable, comme quoi\l"
+	.string "les Pokémon une fois vidés de leur\l"
+	.string "énergie vitale deviennent de simples\l"
+	.string "exuvies ressemblant à des rochers,\l"
+	.string "dans un livre nommé les Mythes de\l"
+	.string "Kalos.$"
+
+foret_2_Text_10:
+	.string "Putain c'est horrible. Faut qu'on les\n"
+	.string "arrête mais.. pas tout de suite car nos\l"
+	.string "Pokémon pourraient subir le même sort.$"
+
+foret_2_Text_11:
+	.string "Faut qu'on quitte cette forêt le plus\n"
+	.string "vite possible.$"
 
 tombes_Text_0:
 	.string "À nos camarades partis trop tôt.$"
