@@ -14,18 +14,18 @@ midforest_1:
 	walk_up
 	walk_up
 	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 foret_1::
-	compare VAR_UNUSED_0x4083, 0
-	goto_if_eq foret_1_1
-	return
-
+	goto_if_unset FLAG_UNUSED_0x025, foret_1_2
 foret_1_1:
+	releaseall
+	end
+
+foret_1_2:
 	turnobject 30, DIR_WEST
 	turnobject 31, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
@@ -34,9 +34,16 @@ foret_1_1:
 	msgbox_mugshot foret_1_Text_2, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox foret_1_Text_3
 	msgbox_mugshot foret_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI
-	msgbox_mugshot foret_1_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
-	applymovement 31, midforest_1
-	removeobject 31, MAP_LAVARIDGE_TOWN
+	msgbox_mugshot foret_1_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI
+	applymovement 30, midforest_1
+	waitmovement 30
+	removeobject 30, MAP_LAVARIDGE_TOWN
+	setflag FLAG_UNUSED_0x025
+	goto foret_1_1
+
+
+tombes::
+	msgbox tombes_Text_0
 	releaseall
 	end
 
@@ -135,6 +142,12 @@ Drowzee::
 	end
 
 
+Chansey::
+	setwildbattle SPECIES_CHANSEY, 17
+	dowildbattle
+	end
+
+
 foret_1_Text_0:
 	.string "Putain de merde. C'est vraiment le pire\n"
 	.string "endroit où on aurait pu atterir.$"
@@ -157,8 +170,8 @@ foret_1_Text_3:
 	.string "Pokémon.$"
 
 foret_1_Text_4:
-	.string "Bordel. Il devait y avoir une trentaine\n"
-	.string "de scientifique dans ce train qui\l"
+	.string "Il devait y avoir une trentaine de\n"
+	.string "scientifique dans ce train qui\l"
 	.string "n'avaient rien fait de mal, qui rentrait\l"
 	.string "simplement chez eux après une dûre\l"
 	.string "semaine de travail. Quel genre de\l"
@@ -166,6 +179,9 @@ foret_1_Text_4:
 
 foret_1_Text_5:
 	.string "Bon, {PLAYER} on y va?$"
+
+tombes_Text_0:
+	.string "À nos camarades partis trop tôt.$"
 
 Lisa_soin_Text_0:
 	.string "Tu veux que je soigne tes Pokémon?$"

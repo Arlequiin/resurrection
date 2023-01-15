@@ -7,11 +7,10 @@ mapscripts LavaridgeTown_MapScripts{
 
 movement midforest_1{
 	walk_left*3
-	walk_up*3
-	walk_left*4
+	walk_up*6
 }
 script foret_1{
-   if (var(VAR_UNUSED_0x4083 )==0){
+   if (!flag(FLAG_UNUSED_0x025)){
 	//showobjectat(30, MAP_LAVARIDGE_TOWN)
 	//showobjectat(31, MAP_LAVARIDGE_TOWN)
 	turnobject(30,DIR_WEST)
@@ -21,13 +20,21 @@ script foret_1{
 	msgbox(format("Lisa : De ce que j'ai lu dans les livres, nombreux sont les cadavres dans cette forêt, rares sont les personnes qui en ressortent vivantes."))
 	msgbox_mugshot(format("Il faut que l'on se sépare pour trouver la sortie."),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox(format("Lisa : ..A.. Attendez! Les Pokémon de cette forêt sont très dangereux. Je vais rester là avec Évoli, venez me voir si vous avez besoin que je soigne vos Pokémon."))
-	msgbox_mugshot(format("Bordel. Il devait y avoir une trentaine de scientifique dans ce train qui n'avaient rien fait de mal, qui rentrait simplement chez eux après une dûre semaine de travail. Quel genre de monstre a pu faire ça?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
-	msgbox_mugshot(format("Bon, {PLAYER} on y va?"),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
-	applymovement(31, midforest_1)
-	removeobject(31, MAP_LAVARIDGE_TOWN)
+	msgbox_mugshot(format("Il devait y avoir une trentaine de scientifique dans ce train qui n'avaient rien fait de mal, qui rentrait simplement chez eux après une dûre semaine de travail. Quel genre de monstre a pu faire ça?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox_mugshot(format("Bon, {PLAYER} on y va?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	applymovement(30, midforest_1)
+	waitmovement(30)
+	removeobject(30, MAP_LAVARIDGE_TOWN)
+	setflag(FLAG_UNUSED_0x025)
+   }
+   releaseall
+   end
+}
+
+script tombes{
+	msgbox(format("À nos camarades partis trop tôt."))
 	releaseall
 	end
-   }
 }
 
 script Lisa_soin{
@@ -116,6 +123,12 @@ script Oddish{
 
 script Drowzee{
 	setwildbattle(SPECIES_DROWZEE,13)
+	dowildbattle
+	end
+}
+
+script Chansey{
+	setwildbattle(SPECIES_CHANSEY,17)
 	dowildbattle
 	end
 }
