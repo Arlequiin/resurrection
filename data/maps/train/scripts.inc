@@ -97,8 +97,8 @@ rivaux_train_1_7:
 	fadescreen 1
 	playse SE_M_ROCK_THROW
 	playse SE_M_EXPLOSION
-	warp MAP_CDR_INT_GARE, 1
-	msgbox rivaux_train_1_Text_31
+	warp MAP_LAVARIDGE, 0
+	setvar VAR_TEMP_0, 1
 rivaux_train_1_3:
 	fadescreen 0
 	releaseall
@@ -152,6 +152,7 @@ rivaux_train_1_4:
 	fadescreen 1
 	msgbox rivaux_train_1_Text_17
 	warp MAP_CDR_INT_GARE, 1
+	setvar VAR_TEMP_0, 1
 	goto rivaux_train_1_3
 
 rivaux_train_1_8:
@@ -335,7 +336,3 @@ rivaux_train_1_Text_30:
 	.string "PUISSANTE SUR CETTE VITRE!\l"
 	.string "{PLAYER}, Lisa, faut qu'on sorte de\l"
 	.string "là!$"
-
-rivaux_train_1_Text_31:
-	.string "La version démo s'arrête ici, merci\n"
-	.string "d'avoir joué.$"
