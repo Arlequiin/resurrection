@@ -782,49 +782,50 @@
       "flag": "FLAG_UNUSED_0x026"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
-      "x": 27,
-      "y": 35,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "midori_onix",
-      "flag": "FLAG_UNUSED_0x026"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ONIX",
       "x": 28,
-      "y": 35,
+      "y": 29,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "onix_1",
-      "flag": "FLAG_UNUSED_0x026"
+      "flag": "FLAG_UNUSED_0x027"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ONIX",
       "x": 34,
-      "y": 35,
+      "y": 29,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "onix_2",
-      "flag": "FLAG_UNUSED_0x026"
+      "flag": "FLAG_UNUSED_0x027"
     }
   ],
   "warp_events": [
     {
       "x": 27,
       "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN",
       "dest_warp_id": "0"

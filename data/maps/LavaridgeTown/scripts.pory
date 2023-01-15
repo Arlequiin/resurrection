@@ -27,21 +27,12 @@ movement midleave_forest2{
 	walk_down*4
 }
 
-movement onix1{
-	walk_right*8
-}
-
-movement onix2{
-	walk_left*8
-}
-
 script foret_1{
    if (!flag(FLAG_UNUSED_0x025)){
 	//showobjectat(30, MAP_LAVARIDGE_TOWN)
 	//showobjectat(31, MAP_LAVARIDGE_TOWN)
 	turnobject(26,DIR_WEST)
 	turnobject(27,DIR_WEST)
-	setflag(FLAG_UNUSED_0x027)
 	turnobject(OBJ_EVENT_ID_PLAYER,DIR_WEST)
 	msgbox_mugshot(format("Putain de merde. C'est vraiment le pire endroit où on aurait pu atterir."),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox(format("Lisa : De ce que j'ai lu dans les livres, nombreux sont les cadavres dans cette forêt, rares sont les personnes qui en ressortent vivantes."))
@@ -51,6 +42,9 @@ script foret_1{
 	msgbox_mugshot(format("Bon, {PLAYER} on y va?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	applymovement(26, midforest_1)
 	waitmovement(26)
+	hideobjectat(60,MAP_LAVARIDGE_TOWN)
+	hideobjectat(61,MAP_LAVARIDGE_TOWN)
+	setflag(FLAG_UNUSED_0x027)
 	removeobject(26, MAP_LAVARIDGE_TOWN)
 	setflag(FLAG_UNUSED_0x025)
 	setvar(VAR_UNUSED_0x4083,1)
@@ -98,7 +92,6 @@ script foret_2{
 	removeobject(54)
 	showobjectat(60,MAP_LAVARIDGE_TOWN)
 	showobjectat(61,MAP_LAVARIDGE_TOWN)
-	showobjectat(62,MAP_LAVARIDGE_TOWN)
 	setflag(FLAG_UNUSED_0x026)
 	clearflag(FLAG_UNUSED_0x027)
   } else {
@@ -119,31 +112,15 @@ script foret_2{
 	
 }
 
-script midori_onix{
-	if (!flag(FLAG_UNUSED_0x027)){
-		turnobject(61,DIR_EAST)
-		msgbox_mugshot(format("Eh, {PLAYER}! Regarde ce sont les Onix de tout à l'heure. On dirait qu'ils veulent nous aider à traverser."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
-		fadescreen(3)
-		msgbox(format("Les Onix aident Midori à aller de l'autre côté des rails."))
-		applymovement(61,onix1)
-		fadescreen(2)
-		msgbox_mugshot(format("Génial! Bon, sortons-vite d'ici. Dis à Lisa de nous rejoindre."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
-		applymovement(61,onix1)
-		removeobject(61,MAP_LAVARIDGE_TOWN)
-		setflag(FLAG_UNUSED_0x027)
-	}
-	releaseall
-	end
-}
-
 script onix_1{
 	faceplayer
 	playmoncry(SPECIES_ONIX, CRY_MODE_NORMAL)
 	msgbox("Onix!")
-	msgbox(format("{COLOR GREEN}{COLOR LIGHT_GREEN}Voulez-vous traverser?"),MSGBOX_YESNO)
+	msgbox(format("Voulez-vous traverser?"),MSGBOX_YESNO)
 	if (var(VAR_RESULT)==1){
 		fadescreen(3)
-		applymovement(OBJ_EVENT_ID_PLAYER,onix1)
+		msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Les Onix vous aident à traverser!"))
+		warp(MAP_LAVARIDGE_TOWN, 2)
 		fadescreen(2)
 	}
 }
@@ -152,10 +129,11 @@ script onix_2{
 	faceplayer
 	playmoncry(SPECIES_ONIX, CRY_MODE_NORMAL)
 	msgbox("Onix!")
-	msgbox(format("{COLOR GREEN}{COLOR LIGHT_GREEN}Voulez-vous traverser?"),MSGBOX_YESNO)
+	msgbox(format("Voulez-vous traverser?"),MSGBOX_YESNO)
 	if (var(VAR_RESULT)==1){
 		fadescreen(3)
-		applymovement(OBJ_EVENT_ID_PLAYER,onix2)
+		msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Les Onix vous aident à traverser!"))
+		warp(MAP_LAVARIDGE_TOWN, 1)
 		fadescreen(2)
 	}
 }

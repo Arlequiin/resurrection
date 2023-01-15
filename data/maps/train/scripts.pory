@@ -38,8 +38,8 @@ script rivaux_train_1{
     if (var(VAR_RESULT)<1){
     applymovement(9,bas)
     waitmovement(9)
-    applymovement(10,haut)
-    waitmovement(10)
+    applymovement(4,haut)
+    waitmovement(4)
     applymovement(OBJ_EVENT_ID_PLAYER, haut)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox_mugshot(format("..."), MSGBOX_SIGN, MUGSHOT_MIDORI)
@@ -86,7 +86,11 @@ script rivaux_train_1{
     setvar(VAR_TEMP_0,1)
     fadescreen(0)
     } else {
-        applymovement(OBJ_EVENT_ID_PLAYER, haut)
+        applymovement(9,bas)
+        waitmovement(9)
+        applymovement(4,haut)
+        waitmovement(4)
+        turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
         msgbox_mugshot(format("Re, vous avez choppé d'autres Pokémon?"), MSGBOX_SIGN, MUGSHOT_MIDORI)
         getpartysize
         if (var(VAR_RESULT)>1){

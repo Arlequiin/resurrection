@@ -58,28 +58,6 @@ midleave_forest2:
 	walk_down
 	step_end
 
-onix1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-onix2:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
 foret_1::
 	goto_if_unset FLAG_UNUSED_0x025, foret_1_2
 foret_1_1:
@@ -89,7 +67,6 @@ foret_1_1:
 foret_1_2:
 	turnobject 26, DIR_WEST
 	turnobject 27, DIR_WEST
-	setflag FLAG_UNUSED_0x027
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox_mugshot foret_1_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox foret_1_Text_1
@@ -99,6 +76,9 @@ foret_1_2:
 	msgbox_mugshot foret_1_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI
 	applymovement 26, midforest_1
 	waitmovement 26
+	hideobjectat 60, MAP_LAVARIDGE_TOWN
+	hideobjectat 61, MAP_LAVARIDGE_TOWN
+	setflag FLAG_UNUSED_0x027
 	removeobject 26, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x025
 	setvar VAR_UNUSED_0x4083, 1
@@ -151,7 +131,6 @@ foret_2_2:
 	removeobject 54
 	showobjectat 60, MAP_LAVARIDGE_TOWN
 	showobjectat 61, MAP_LAVARIDGE_TOWN
-	showobjectat 62, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x026
 	clearflag FLAG_UNUSED_0x027
 	goto foret_2_1
@@ -169,26 +148,6 @@ foret_2_5:
 	goto foret_2_1
 
 
-midori_onix::
-	goto_if_unset FLAG_UNUSED_0x027, midori_onix_2
-midori_onix_1:
-	releaseall
-	end
-
-midori_onix_2:
-	turnobject 61, DIR_EAST
-	msgbox_mugshot midori_onix_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
-	fadescreen 3
-	msgbox midori_onix_Text_1
-	applymovement 61, onix1
-	fadescreen 2
-	msgbox_mugshot midori_onix_Text_2, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
-	applymovement 61, onix1
-	removeobject 61, MAP_LAVARIDGE_TOWN
-	setflag FLAG_UNUSED_0x027
-	goto midori_onix_1
-
-
 onix_1::
 	faceplayer
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
@@ -200,7 +159,8 @@ onix_1::
 
 onix_1_1:
 	fadescreen 3
-	applymovement OBJ_EVENT_ID_PLAYER, onix1
+	msgbox onix_1_Text_2
+	warp MAP_LAVARIDGE_TOWN, 2
 	fadescreen 2
 	return
 
@@ -216,7 +176,8 @@ onix_2::
 
 onix_2_1:
 	fadescreen 3
-	applymovement OBJ_EVENT_ID_PLAYER, onix2
+	msgbox onix_1_Text_2
+	warp MAP_LAVARIDGE_TOWN, 1
 	fadescreen 2
 	return
 
@@ -500,24 +461,14 @@ foret_2_Text_11:
 foret_2_Text_12:
 	.string "C'est l'endroit ou l'Onix a été tué.$"
 
-midori_onix_Text_0:
-	.string "Eh, {PLAYER}! Regarde ce sont les Onix\n"
-	.string "de tout à l'heure. On dirait qu'ils\l"
-	.string "veulent nous aider à traverser.$"
-
-midori_onix_Text_1:
-	.string "Les Onix aident Midori à aller de l'autre\n"
-	.string "côté des rails.$"
-
-midori_onix_Text_2:
-	.string "Génial! Bon, sortons-vite d'ici. Dis à\n"
-	.string "Lisa de nous rejoindre.$"
-
 onix_1_Text_0:
 	.string "Onix!$"
 
 onix_1_Text_1:
-	.string "{COLOR GREEN}{COLOR LIGHT_GREEN}Voulez-vous traverser?$"
+	.string "Voulez-vous traverser?$"
+
+onix_1_Text_2:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Les Onix vous aident à traverser!$"
 
 reste_onix_Text_0:
 	.string "Ce sont les restes d'Onix.$"

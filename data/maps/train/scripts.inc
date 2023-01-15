@@ -56,7 +56,11 @@ rivaux_train_1_1:
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_lt rivaux_train_1_4
-	applymovement OBJ_EVENT_ID_PLAYER, haut
+	applymovement 9, bas
+	waitmovement 9
+	applymovement 4, haut
+	waitmovement 4
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox_mugshot rivaux_train_1_Text_18, MSGBOX_SIGN, MUGSHOT_MIDORI
 	getpartysize
 	compare VAR_RESULT, 1
@@ -106,8 +110,8 @@ rivaux_train_1_3:
 rivaux_train_1_4:
 	applymovement 9, bas
 	waitmovement 9
-	applymovement 10, haut
-	waitmovement 10
+	applymovement 4, haut
+	waitmovement 4
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
