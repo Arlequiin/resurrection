@@ -124,7 +124,7 @@
     {
       "id": "LAYOUT_LAVARIDGE_TOWN",
       "name": "LavaridgeTown_Layout",
-      "width": 50,
+      "width": 70,
       "height": 70,
       "primary_tileset": "gTileset_GeneralResu",
       "secondary_tileset": "gTileset_Solidago",
