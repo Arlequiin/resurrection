@@ -32,7 +32,8 @@ script foret_1{
 }
 
 script foret_2{
-	msgbox(format("Fais pas de bruit!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox_mugshot(format("Fais pas de bruit!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	end
 	
 }
 
@@ -85,8 +86,12 @@ script Caterpie{
 }
 
 script Heracross{
+  if (!flag(FLAG_TEMP_1)){
 	setwildbattle(SPECIES_HERACROSS,21)
 	dowildbattle
+	removeobject(10)
+	setflag(FLAG_TEMP_1)
+  }
 	end
 }
 
@@ -138,13 +143,13 @@ script Chansey{
 	end
 }
 
-script Pinsir{
+script PINSIR{
 	setwildbattle(SPECIES_PINSIR, 17)
 	dowildbattle
 	end
 }
 
-script Pinsir{
+script Scyther{
 	setwildbattle(SPECIES_SCYTHER, 17)
 	dowildbattle
 	end
@@ -175,13 +180,19 @@ script Shuckle{
 }
 
 script Ariados{
+	setwildbattle(SPECIES_ARIADOS, 21)
+	dowildbattle
+	end
+}
+
+script VENONAT{
 	setwildbattle(SPECIES_VENONAT, 21)
 	dowildbattle
 	end
 }
 
 script Venonat{
-	setwildbattle(SPECIES_ARIADOS, 21)
+	setwildbattle(SPECIES_VENONAT, 21)
 	dowildbattle
 	end
 }

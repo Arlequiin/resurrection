@@ -42,6 +42,11 @@ foret_1_2:
 	goto foret_1_1
 
 
+foret_2::
+	msgbox_mugshot foret_2_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
+	end
+
+
 tombes::
 	msgbox tombes_Text_0
 	releaseall
@@ -95,9 +100,16 @@ Caterpie::
 
 
 Heracross::
+	goto_if_unset FLAG_TEMP_1, Heracross_2
+Heracross_1:
+	end
+
+Heracross_2:
 	setwildbattle SPECIES_HERACROSS, 21
 	dowildbattle
-	end
+	removeobject 10
+	setflag FLAG_TEMP_1
+	goto Heracross_1
 
 
 Scizor::
@@ -148,6 +160,66 @@ Chansey::
 	end
 
 
+PINSIR::
+	setwildbattle SPECIES_PINSIR, 17
+	dowildbattle
+	end
+
+
+Scyther::
+	setwildbattle SPECIES_SCYTHER, 17
+	dowildbattle
+	end
+
+
+Parasect::
+	setwildbattle SPECIES_PARASECT, 23
+	dowildbattle
+	end
+
+
+Paras::
+	setwildbattle SPECIES_PARAS, 12
+	dowildbattle
+	end
+
+
+Venomoth::
+	setwildbattle SPECIES_VENOMOTH, 22
+	dowildbattle
+	end
+
+
+Shuckle::
+	setwildbattle SPECIES_SHUCKLE, 22
+	dowildbattle
+	end
+
+
+Ariados::
+	setwildbattle SPECIES_ARIADOS, 21
+	dowildbattle
+	end
+
+
+VENONAT::
+	setwildbattle SPECIES_VENONAT, 21
+	dowildbattle
+	end
+
+
+Venonat::
+	setwildbattle SPECIES_VENONAT, 21
+	dowildbattle
+	end
+
+
+Spinarak::
+	setwildbattle SPECIES_SPINARAK, 13
+	dowildbattle
+	end
+
+
 foret_1_Text_0:
 	.string "Putain de merde. C'est vraiment le pire\n"
 	.string "endroit où on aurait pu atterir.$"
@@ -179,6 +251,9 @@ foret_1_Text_4:
 
 foret_1_Text_5:
 	.string "Bon, {PLAYER} on y va?$"
+
+foret_2_Text_0:
+	.string "Fais pas de bruit!$"
 
 tombes_Text_0:
 	.string "À nos camarades partis trop tôt.$"
