@@ -31,6 +31,11 @@ script foret_1{
    end
 }
 
+script foret_2{
+	msgbox(format("Fais pas de bruit!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	
+}
+
 script tombes{
 	msgbox(format("À nos camarades partis trop tôt."))
 	releaseall
@@ -129,6 +134,60 @@ script Drowzee{
 
 script Chansey{
 	setwildbattle(SPECIES_CHANSEY,17)
+	dowildbattle
+	end
+}
+
+script Pinsir{
+	setwildbattle(SPECIES_PINSIR, 17)
+	dowildbattle
+	end
+}
+
+script Pinsir{
+	setwildbattle(SPECIES_SCYTHER, 17)
+	dowildbattle
+	end
+}
+
+script Parasect{
+	setwildbattle(SPECIES_PARASECT, 23)
+	dowildbattle
+	end
+}
+
+script Paras{
+	setwildbattle(SPECIES_PARAS, 12)
+	dowildbattle
+	end
+}
+
+script Venomoth{
+	setwildbattle(SPECIES_VENOMOTH, 22)
+	dowildbattle
+	end
+}
+
+script Shuckle{
+	setwildbattle(SPECIES_SHUCKLE, 22)
+	dowildbattle
+	end
+}
+
+script Ariados{
+	setwildbattle(SPECIES_VENONAT, 21)
+	dowildbattle
+	end
+}
+
+script Venonat{
+	setwildbattle(SPECIES_ARIADOS, 21)
+	dowildbattle
+	end
+}
+
+script Spinarak{
+	setwildbattle(SPECIES_SPINARAK, 13)
 	dowildbattle
 	end
 }
