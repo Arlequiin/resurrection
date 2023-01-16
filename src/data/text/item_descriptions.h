@@ -28,117 +28,119 @@ static const u8 sPremierBallDesc[] = _(
     "grand évènement.");
 
 static const u8 sHealBallDesc[] = _(
-    "A remedial Ball\n"
-    "that restores\n"
-    "caught Pokémon.");
+    "Une BALL qui soigne \n"
+    "le POKéMON attrapé.");
 
 static const u8 sNetBallDesc[] = _(
-    "A Ball that works\n"
-    "well on Water- and\n"
-    "Bug-type Pokémon.");
+    "Une BALL qui marche\n"
+    "bien sur un POKéMON\n"
+    "EAU ou INSECTE.");
 
 static const u8 sNestBallDesc[] = _(
-    "A Ball that works\n"
-    "better on weaker\n"
-    "Pokémon.");
+    "Une BALL qui marche\n"
+    "mieux avec les\n"
+    "POKéMON faibles.");
 
 static const u8 sDiveBallDesc[] = _(
-    "A Ball that works\n"
-    "better on Pokémon\n"
-    "on the ocean floor.");
+    "Une BALL qui marche\n"
+    "mieux avec les\n"
+    "{PKMN} sous-marins.");
 
 static const u8 sDuskBallDesc[] = _(
-    "Works well if\n"
-    "used in a\n"
-    "dark place.");
+    "Une BALL qui \n"
+    "marche mieux dans \n"
+    "les zones sombres.");
 
 static const u8 sTimerBallDesc[] = _(
-    "A Ball that gains\n"
-    "power in battles\n"
-    "taking many turns.");
+    "Plus efficace\n"
+    "pendant les\n"
+    "combats longs.");
 
 static const u8 sQuickBallDesc[] = _(
-    "Works well if\n"
-    "used on the\n"
-    "first turn.");
+    "Une BALL qui marche\n"
+    "mieux au début des \n"
+    "combats.");
 
 static const u8 sRepeatBallDesc[] = _(
-    "A Ball that works\n"
-    "better on Pokémon\n"
-    "caught before.");
+    "Une BALL qui marche\n"
+    "bien sur un POKéMON\n"
+    "déjà capturé.");
 
 static const u8 sLuxuryBallDesc[] = _(
-    "A cozy Ball that\n"
-    "makes Pokémon\n"
-    "more friendly.");
+    "Une BALL confor-\n"
+    "table qui rend les\n"
+    "POKéMON amicaux.");
 
 static const u8 sLevelBallDesc[] = _(
-    "A Ball that works\n"
-    "well on lower\n"
-    "level Pokémon.");
+    "Une BALL qui marche \n"
+    "bien sur les POKéMON\n"
+    "de bas niveau.");
 
 static const u8 sLureBallDesc[] = _(
-    "A Ball that works\n"
-    "well on fished\n"
-    "up Pokémon.");
+    "Une BALL qui marche \n"
+    "bien sur les POKéMON\n"
+    "ferrés.");
 
 static const u8 sMoonBallDesc[] = _(
-    "A Ball that works\n"
-    "well on Moon\n"
-    "Stone users.");
+    "Une BALL liée à \n"
+    "l'énergie lunaire et\n"
+    "à ses POKéMON.");
 
 static const u8 sFriendBallDesc[] = _(
-    "A Ball that makes\n"
-    "a Pokémon friendly\n"
-    "when caught.");
+    "Une BALL qui rend\n"
+    "les POKéMON attrapés\n"
+    "amicaux.");
 
 static const u8 sLoveBallDesc[] = _(
-    "Works well on\n"
-    "Pokémon of the\n"
-    "opposite gender.");
+    "Une BALL qui marche\n"
+    "bien sur les POKéMON\n"
+    "de sexe opposé.");
 
 static const u8 sFastBallDesc[] = _(
-    "Works well on\n"
-    "very fast\n"
-    "Pokémon.");
+    "Une BALL qui marche\n"
+    "bien sur les POKéMON\n"
+    "très rapides.");
 
 static const u8 sHeavyBallDesc[] = _(
-    "Works well on\n"
-    "very heavy\n"
-    "Pokémon.");
+    "Une BALL qui marche\n"
+    "bien sur les POKéMON\n"
+    "les plus lourds");
 
 static const u8 sDreamBallDesc[] = _(
 #if B_DREAM_BALL_MODIFIER >= GEN_8
-    "A Ball that works\n"
-    "well on sleeping\n"
-    "Pokémon.");
+    "Une BALL qui marche\n"
+    "bien sur les POKéMON\n"
+    "qui rêvent.");
 #else
-    "A Poké Ball used in\n"
-    "the Entree Forest.");
+    "Une BALL utilisée à \n"
+    "l'entrée de la forêt \n"
+    "des rêves.");
 #endif
 
 static const u8 sSafariBallDesc[] = _(
-    "A special Ball that\n"
-    "is used only in the\n"
-    "Safari Zone.");
+    "Une BALL spéciale\n"
+    "utilisée juste\n"
+    "au PARC SAFARI.");
 
 static const u8 sSportBallDesc[] = _(
-    "A special Ball used\n"
-    "in the Bug-Catching\n"
-    "Contest.");
+    "Une BALL utilisée\n"
+    "dans les concours\n"
+    "de capture.");
 
 static const u8 sParkBallDesc[] = _(
-    "A special Ball for\n"
-    "the Pal Park.");
+    "Une BALL spéciale\n"
+    "utilisable dans \n"
+    "le Parc des Amis.");
 
 static const u8 sBeastBallDesc[] = _(
-    "A Ball designed to\n"
-    "catch Ultra Beasts.");
+    "Une BALL créée pour\n"
+    "attraper des \n"
+    "Ultra-Chimères.");
 
 static const u8 sCherishBallDesc[] = _(
-    "A rare Ball made\n"
-    "in commemoration\n"
-    "of some event.");
+    "Une BALL spéciale\n"
+    "créée pour un évèn-\n"
+    "ement particulier");
 
 // Medicine
 static const u8 sPotionDesc[] = _(
