@@ -34,7 +34,7 @@
     },
     {
       "map_section": "MAPSEC_FALLARBOR_TOWN",
-      "name": "FALLARBOR TOWN",
+      "name": "Mirabillis",
       "x": 3,
       "y": 0,
       "width": 1,
@@ -42,7 +42,7 @@
     },
     {
       "map_section": "MAPSEC_VERDANTURF_TOWN",
-      "name": "VERDANTURF TOWN",
+      "name": "Calnuoa",
       "x": 4,
       "y": 6,
       "width": 1,
@@ -50,7 +50,7 @@
     },
     {
       "map_section": "MAPSEC_PACIFIDLOG_TOWN",
-      "name": "PACIFIDLOG TOWN",
+      "name": "Clepsydres",
       "x": 17,
       "y": 10,
       "width": 1,
@@ -58,7 +58,7 @@
     },
     {
       "map_section": "MAPSEC_PETALBURG_CITY",
-      "name": "PETALBURG CITY",
+      "name": "Village-Glacé",
       "x": 1,
       "y": 9,
       "width": 1,
@@ -66,7 +66,7 @@
     },
     {
       "map_section": "MAPSEC_SLATEPORT_CITY",
-      "name": "SLATEPORT CITY",
+      "name": "Merel",
       "x": 8,
       "y": 10,
       "width": 1,
@@ -74,7 +74,7 @@
     },
     {
       "map_section": "MAPSEC_MAUVILLE_CITY",
-      "name": "MAUVILLE CITY",
+      "name": "Starukopolis",
       "x": 8,
       "y": 6,
       "width": 2,
@@ -82,7 +82,7 @@
     },
     {
       "map_section": "MAPSEC_RUSTBORO_CITY",
-      "name": "RUSTBORO CITY",
+      "name": "Ville-Monde",
       "x": 0,
       "y": 5,
       "width": 1,
@@ -90,7 +90,7 @@
     },
     {
       "map_section": "MAPSEC_FORTREE_CITY",
-      "name": "FORTREE CITY",
+      "name": "Cimetière",
       "x": 12,
       "y": 0,
       "width": 1,
@@ -98,7 +98,7 @@
     },
     {
       "map_section": "MAPSEC_LILYCOVE_CITY",
-      "name": "LILYCOVE CITY",
+      "name": "Centrale",
       "x": 18,
       "y": 3,
       "width": 2,
@@ -106,7 +106,7 @@
     },
     {
       "map_section": "MAPSEC_MOSSDEEP_CITY",
-      "name": "MOSSDEEP CITY",
+      "name": "Zone d'Entrainement",
       "x": 24,
       "y": 5,
       "width": 2,
@@ -114,7 +114,7 @@
     },
     {
       "map_section": "MAPSEC_SOOTOPOLIS_CITY",
-      "name": "SOOTOPOLIS CITY",
+      "name": "Littoralia",
       "x": 21,
       "y": 7,
       "width": 1,
@@ -122,7 +122,7 @@
     },
     {
       "map_section": "MAPSEC_EVER_GRANDE_CITY",
-      "name": "EVER GRANDE CITY",
+      "name": "Ognette",
       "x": 27,
       "y": 8,
       "width": 1,
@@ -130,7 +130,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_101",
-      "name": "ROUTE 101",
+      "name": "Route 1",
       "x": 4,
       "y": 10,
       "width": 1,
@@ -138,7 +138,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_102",
-      "name": "ROUTE 102",
+      "name": "Route 2",
       "x": 2,
       "y": 9,
       "width": 2,
@@ -146,7 +146,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_103",
-      "name": "ROUTE 103",
+      "name": "Route 3",
       "x": 4,
       "y": 8,
       "width": 4,
@@ -154,7 +154,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_104",
-      "name": "ROUTE 104",
+      "name": "Route 4",
       "x": 0,
       "y": 7,
       "width": 1,
@@ -162,7 +162,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_105",
-      "name": "ROUTE 105",
+      "name": "Route 5",
       "x": 0,
       "y": 10,
       "width": 1,
@@ -170,7 +170,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_106",
-      "name": "ROUTE 106",
+      "name": "Route 6",
       "x": 0,
       "y": 13,
       "width": 2,
@@ -178,7 +178,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_107",
-      "name": "ROUTE 107",
+      "name": "Route 7",
       "x": 3,
       "y": 14,
       "width": 3,
@@ -186,7 +186,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_108",
-      "name": "ROUTE 108",
+      "name": "Route 8",
       "x": 6,
       "y": 14,
       "width": 2,
@@ -194,7 +194,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_109",
-      "name": "ROUTE 109",
+      "name": "Route 9",
       "x": 8,
       "y": 12,
       "width": 1,
@@ -202,7 +202,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_110",
-      "name": "ROUTE 110",
+      "name": "Route 10",
       "x": 8,
       "y": 7,
       "width": 1,
@@ -210,7 +210,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_111",
-      "name": "ROUTE 111",
+      "name": "Route 11",
       "x": 8,
       "y": 0,
       "width": 1,
@@ -218,7 +218,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_112",
-      "name": "ROUTE 112",
+      "name": "Route 12",
       "x": 6,
       "y": 3,
       "width": 2,
@@ -226,7 +226,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_113",
-      "name": "ROUTE 113",
+      "name": "Route 13",
       "x": 4,
       "y": 0,
       "width": 4,
@@ -234,7 +234,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_114",
-      "name": "ROUTE 114",
+      "name": "Route 14",
       "x": 1,
       "y": 0,
       "width": 2,
@@ -242,7 +242,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_115",
-      "name": "ROUTE 115",
+      "name": "Route 15",
       "x": 0,
       "y": 2,
       "width": 1,
@@ -250,7 +250,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_116",
-      "name": "ROUTE 116",
+      "name": "Route 16",
       "x": 1,
       "y": 5,
       "width": 4,
@@ -258,7 +258,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_117",
-      "name": "ROUTE 117",
+      "name": "Route 17",
       "x": 5,
       "y": 6,
       "width": 3,
@@ -266,7 +266,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_118",
-      "name": "ROUTE 118",
+      "name": "Route 18",
       "x": 10,
       "y": 6,
       "width": 2,
@@ -274,7 +274,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_119",
-      "name": "ROUTE 119",
+      "name": "Route 19",
       "x": 11,
       "y": 0,
       "width": 1,
@@ -282,7 +282,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_120",
-      "name": "ROUTE 120",
+      "name": "Route 20",
       "x": 13,
       "y": 0,
       "width": 1,
@@ -290,7 +290,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_121",
-      "name": "ROUTE 121",
+      "name": "Route 21",
       "x": 14,
       "y": 3,
       "width": 4,
@@ -298,7 +298,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_122",
-      "name": "ROUTE 122",
+      "name": "Route 22",
       "x": 16,
       "y": 4,
       "width": 1,
@@ -306,7 +306,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_123",
-      "name": "ROUTE 123",
+      "name": "Route 23",
       "x": 12,
       "y": 6,
       "width": 5,
@@ -314,7 +314,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_124",
-      "name": "ROUTE 124",
+      "name": "Route 24",
       "x": 20,
       "y": 3,
       "width": 4,
@@ -322,7 +322,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_125",
-      "name": "ROUTE 125",
+      "name": "Route 25",
       "x": 24,
       "y": 3,
       "width": 2,
@@ -330,7 +330,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_126",
-      "name": "ROUTE 126",
+      "name": "Route 26",
       "x": 20,
       "y": 6,
       "width": 3,
@@ -338,7 +338,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_127",
-      "name": "ROUTE 127",
+      "name": "Route 27",
       "x": 23,
       "y": 6,
       "width": 3,
@@ -346,7 +346,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_128",
-      "name": "ROUTE 128",
+      "name": "Route 28",
       "x": 23,
       "y": 9,
       "width": 4,
@@ -354,7 +354,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_129",
-      "name": "ROUTE 129",
+      "name": "Route 29",
       "x": 24,
       "y": 10,
       "width": 2,
@@ -362,7 +362,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_130",
-      "name": "ROUTE 130",
+      "name": "Route 30",
       "x": 21,
       "y": 10,
       "width": 3,
@@ -370,7 +370,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_131",
-      "name": "ROUTE 131",
+      "name": "Route 31",
       "x": 18,
       "y": 10,
       "width": 3,
@@ -378,7 +378,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_132",
-      "name": "ROUTE 132",
+      "name": "Route 32",
       "x": 15,
       "y": 10,
       "width": 2,
@@ -386,7 +386,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_133",
-      "name": "ROUTE 133",
+      "name": "Route 33",
       "x": 12,
       "y": 10,
       "width": 3,
@@ -394,7 +394,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_134",
-      "name": "ROUTE 134",
+      "name": "Route 34",
       "x": 9,
       "y": 10,
       "width": 3,
@@ -402,7 +402,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_124",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 20,
       "y": 3,
       "width": 4,
@@ -410,7 +410,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_126",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 20,
       "y": 6,
       "width": 3,
@@ -418,7 +418,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_127",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 23,
       "y": 6,
       "width": 3,
@@ -426,7 +426,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_128",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 23,
       "y": 9,
       "width": 4,
@@ -434,7 +434,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_SOOTOPOLIS",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 21,
       "y": 7,
       "width": 1,
@@ -442,7 +442,7 @@
     },
     {
       "map_section": "MAPSEC_GRANITE_CAVE",
-      "name": "GRANITE CAVE",
+      "name": "Île du Dragon",
       "x": 1,
       "y": 13,
       "width": 1,
@@ -555,7 +555,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_SEAFLOOR_CAVERN",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 24,
       "y": 9,
       "width": 1,
@@ -635,7 +635,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_SEALED_CHAMBER",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 11,
       "y": 10,
       "width": 1,
@@ -804,7 +804,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_10_POKECENTER",
-      "name": "ROUTE 10",
+      "name": "Route ",
       "name_clone": true,
       "x": 0,
       "y": 0,
@@ -885,7 +885,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_10",
-      "name": "ROUTE 10",
+      "name": "Route ",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -893,7 +893,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_11",
-      "name": "ROUTE 11",
+      "name": "Route 1",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -901,7 +901,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_12",
-      "name": "ROUTE 12",
+      "name": "Route 2",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -909,7 +909,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_13",
-      "name": "ROUTE 13",
+      "name": "Route 3",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1104,7 +1104,7 @@
     },
     {
       "map_section": "MAPSEC_POKEMON_LEAGUE",
-      "name": "POKéMON LEAGUE",
+      "name": "Plateau Amarante",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1641,7 +1641,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_MARINE_CAVE",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1657,7 +1657,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_105",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 0,
       "y": 10,
       "width": 1,
@@ -1665,7 +1665,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_125",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 24,
       "y": 3,
       "width": 2,
@@ -1673,7 +1673,7 @@
     },
     {
       "map_section": "MAPSEC_UNDERWATER_129",
-      "name": "UNDERWATER",
+      "name": "Fonds Marins",
       "x": 24,
       "y": 10,
       "width": 2,
