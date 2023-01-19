@@ -56,12 +56,14 @@ script foret_1{
 script foret_2{
   if (!flag(FLAG_UNUSED_0x026)){
 	applymovement(OBJ_EVENT_ID_PLAYER,protaforest_2)
+	playbgm(MUS_DP_CATASTROPHE,FALSE)
 	msgbox_mugshot(format("Fais pas de bruit! Je crois que c'est les types qui ont fait sauter le train, je les ai entendus parler de moteur."),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Plus que 9 litres d'énergie vitale et on pourra rentrer au Q.G. Cette mission se déroule à la perfection."))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Tu m'étonnes y a personne pour nous gêner, ils sont tous en train de moisir dans ce qui reste du train."))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : L'équipe de secours ne peut même pas nous suspecter s'ils viennent, on ne fait que nous promener dans la forêt, aucune preuve du contraire le moteur a déjà été envoyé à Ryuichi."))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Dépéchons-nous quand même, regarde moi ce bel Onix, aussi grand qu'il est il devrait nous rapporter bien plus que 9 L d'énergie vitale."))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Bah qu'est-ce que t'attends, actionne la machine!"))
+	closemessage
 	applymovement(56,leave)
 	waitmovement(56)
 	playmoncry(SPECIES_ONIX, CRY_MODE_NORMAL)
@@ -94,6 +96,7 @@ script foret_2{
 	showobjectat(61,MAP_LAVARIDGE_TOWN)
 	setflag(FLAG_UNUSED_0x026)
 	clearflag(FLAG_UNUSED_0x027)
+	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
   } else {
 	if (var(VAR_TEMP_2)==0){
 	setmetatile(2,2,0x2F8,TRUE)

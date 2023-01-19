@@ -95,12 +95,14 @@ foret_2_1:
 
 foret_2_2:
 	applymovement OBJ_EVENT_ID_PLAYER, protaforest_2
+	playbgm MUS_DP_CATASTROPHE, FALSE
 	msgbox_mugshot foret_2_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox foret_2_Text_1
 	msgbox foret_2_Text_2
 	msgbox foret_2_Text_3
 	msgbox foret_2_Text_4
 	msgbox foret_2_Text_5
+	closemessage
 	applymovement 56, leave
 	waitmovement 56
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
@@ -133,6 +135,7 @@ foret_2_2:
 	showobjectat 61, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x026
 	clearflag FLAG_UNUSED_0x027
+	playbgm MUS_DP_ETERNA_FOREST, FALSE
 	goto foret_2_1
 
 foret_2_5:
