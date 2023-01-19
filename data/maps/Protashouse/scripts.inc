@@ -30,6 +30,7 @@ maman_2:
 	faceplayer
 	applymovement 1, StopPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, FaceMom
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	msgbox maman_Text_0
 	closemessage
 	msgbox maman_Text_1
@@ -60,8 +61,8 @@ maman_2:
 	waitfanfare
 	closemessage
 	msgbox maman_Text_7
-	msgbox maman_Text_8
 	closemessage
+	playbgm MUS_HG_NEW_BARK, FALSE
 	goto maman_1
 
 
@@ -247,10 +248,6 @@ maman_Text_6:
 	.string "région de Hoenn.$"
 
 maman_Text_7:
-	.string "S'il te plaît reviens me voir ! Je tiens\n"
-	.string "beaucoup à toi$"
-
-maman_Text_8:
 	.string "{PLAYER} s'il t'arrive quelque chose\n"
 	.string "je ne pourrai pas m'en remettre. Les\l"
 	.string "séparations sont toujours\l"

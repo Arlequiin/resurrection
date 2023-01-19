@@ -2,7 +2,7 @@
   "id": "MAP_HALL_GARE",
   "name": "Hall_Gare",
   "layout": "LAYOUT_HALL_GARE",
-  "music": "MUS_RG_MYSTERY_GIFT",
+  "music": "MUS_HG_MYSTERY_GIFT",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

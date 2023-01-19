@@ -2,7 +2,7 @@
   "id": "MAP_TRAIN",
   "name": "train",
   "layout": "LAYOUT_TRAIN",
-  "music": "MUS_OCEANIC_MUSEUM",
+  "music": "MUS_DP_SUNYSHORE_DAY",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

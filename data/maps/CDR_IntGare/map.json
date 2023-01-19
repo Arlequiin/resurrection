@@ -2,7 +2,7 @@
   "id": "MAP_CDR_INT_GARE",
   "name": "CDR_IntGare",
   "layout": "LAYOUT_CDR_INT_GARE",
-  "music": "MUS_RG_MYSTERY_GIFT",
+  "music": "MUS_HG_MYSTERY_GIFT",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

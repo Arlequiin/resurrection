@@ -2,7 +2,7 @@
   "id": "MAP_PASSAGE",
   "name": "Passage",
   "layout": "LAYOUT_PASSAGE",
-  "music": "MUS_ROUTE101",
+  "music": "MUS_DP_CANALAVE_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

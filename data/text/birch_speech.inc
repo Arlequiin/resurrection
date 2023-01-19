@@ -10,7 +10,7 @@ gText_Birch_Welcome::
 	.string "Bien, assez parlé, nous lui laissons\p"
 	.string "la parole.\l"
 	.string "...............................                                                      \l"
-	.string "Gutten tag, je suis le Prof. Shwartz\n"
+	.string "Guten tag, je suis le Prof. Shwartz\n"
 	.string "Demain, trois jeunes adultes auront le\p"
 	.string "privilège de venir ici, ils ont été\n"
 	.string "tirés au sort parmis une bonne\p"
