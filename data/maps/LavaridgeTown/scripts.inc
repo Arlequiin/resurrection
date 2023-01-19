@@ -230,8 +230,12 @@ foret_3_1:
 	setmetatile 54, 3, 0x2F9, TRUE
 	setmetatile 54, 4, 0x301, TRUE
 	special DrawWholeMapView
+	removeobject 63
+	removeobject 61
+	removeobject 62
 	fadescreen 2
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
+	setvar VAR_TEMP_3, 1
 	releaseall
 	end
 
@@ -604,7 +608,7 @@ foret_3_Text_7:
 foret_3_Text_8:
 	.string "Lisa : Eh mais! Je reconnais cette voix,\n"
 	.string "vous êtes les types louches qui ont\l"
-	.string "fait sauté le train!$"
+	.string "fait sauter le train!$"
 
 foret_3_Text_9:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Belle déduction Sherlock.$"

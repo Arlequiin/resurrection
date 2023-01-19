@@ -982,8 +982,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_ARCEUS_ROCK             0xFA8
 #define OBJ_EVENT_PAL_TAG_ARCEUS_STEEL            0xFA7
 #define OBJ_EVENT_PAL_TAG_ARCEUS_WATER            0xFA6
+#define OBJ_EVENT_PAL_TAG_ACHILLE                 0x11FF
 
-#define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
+#define OBJ_EVENT_PAL_TAG_NONE                    0x2000
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
 #include "data/object_events/object_event_pic_tables.h"
@@ -1577,6 +1578,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Arceus_Rock,           OBJ_EVENT_PAL_TAG_ARCEUS_ROCK},
     {gObjectEventPal_Arceus_Steel,          OBJ_EVENT_PAL_TAG_ARCEUS_STEEL},
     {gObjectEventPal_Arceus_Water,          OBJ_EVENT_PAL_TAG_ARCEUS_WATER},
+    {gObjectEventPal_Achille,               OBJ_EVENT_PAL_TAG_ACHILLE},
     {},
 };
 

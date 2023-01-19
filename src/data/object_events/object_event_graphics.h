@@ -1473,3 +1473,4 @@ const u16 gObjectEventPal_Arceus_Psychic[] = INCBIN_U16("graphics/object_events/
 const u16 gObjectEventPal_Arceus_Rock[] = INCBIN_U16("graphics/object_events/palettes/followers/arceus_rock.gbapal");
 const u16 gObjectEventPal_Arceus_Steel[] = INCBIN_U16("graphics/object_events/palettes/followers/arceus_steel.gbapal");
 const u16 gObjectEventPal_Arceus_Water[] = INCBIN_U16("graphics/object_events/palettes/followers/arceus_water.gbapal");
+const u16 gObjectEventPal_Achille[] = INCBIN_U16("graphics/object_events/palettes/achille.gbapal");

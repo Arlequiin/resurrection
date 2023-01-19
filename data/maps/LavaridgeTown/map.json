@@ -904,6 +904,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "foret_3"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "foret_3"
     }
   ],
   "bg_events": [

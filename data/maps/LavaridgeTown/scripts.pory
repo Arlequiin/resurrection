@@ -187,6 +187,7 @@ script foret_3{
 	removeobject(62)
 	fadescreen(2)
 	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
+	setvar(VAR_TEMP_3,1)
 	releaseall
 	end
   } else {
