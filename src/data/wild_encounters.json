@@ -3581,7 +3581,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_MARILL"
+                "species": "SPECIES_PALKIA_ORIGIN"
               },
               {
                 "min_level": 26,
@@ -11496,7 +11496,7 @@
           "map": "MAP_LAVARIDGE_TOWN",
           "base_label": "gLavaridgeTown0",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 7,
             "mons": [
               {
                 "min_level": 5,
@@ -11551,7 +11551,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WHIRLIPEDE"
+                "species": "SPECIES_VENIPEDE"
               },
               {
                 "min_level": 5,
