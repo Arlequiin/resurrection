@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Gastly",
       "flag": "0"
     },
     {
@@ -289,8 +289,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LEDIAN",
-      "x": 42,
-      "y": 40,
+      "x": 53,
+      "y": 41,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_DOWN_RIGHT",
       "movement_range_x": 0,
@@ -536,19 +536,6 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VENONAT",
-      "x": 49,
-      "y": 22,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "VENONAT",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VENONAT",
       "x": 44,
       "y": 29,
       "elevation": 0,
@@ -642,19 +629,6 @@
       "graphics_id": "OBJ_EVENT_GFX_SPINARAK",
       "x": 10,
       "y": 17,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Spinarak",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPINARAK",
-      "x": 49,
-      "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -806,6 +780,71 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "onix_2",
       "flag": "FLAG_UNUSED_0x027"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 51,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 52,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
+      "x": 67,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EEVEE",
+      "x": 66,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
+      "x": 68,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -829,6 +868,13 @@
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -849,6 +895,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "foret_2"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
     }
   ],
   "bg_events": [

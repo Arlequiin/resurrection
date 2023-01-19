@@ -103,22 +103,22 @@ foret_2_2:
 	msgbox foret_2_Text_4
 	msgbox foret_2_Text_5
 	closemessage
-	applymovement 56, leave
-	waitmovement 56
+	applymovement 53, leave
+	waitmovement 53
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
-	applymovement 55, leave
-	waitmovement 56
+	applymovement 54, leave
+	waitmovement 54
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
-	removeobject 56, MAP_LAVARIDGE_TOWN
-	removeobject 55, MAP_LAVARIDGE_TOWN
+	removeobject 53, MAP_LAVARIDGE_TOWN
+	removeobject 54, MAP_LAVARIDGE_TOWN
 	msgbox_mugshot foret_2_Text_6, MSGBOX_SIGN, MUGSHOT_MIDORI
 	fadescreen 3
 	playmoncry SPECIES_ONIX, CRY_MODE_FAINT
 	msgbox foret_2_Text_7
 	msgbox foret_2_Text_8
-	removeobject 58, MAP_LAVARIDGE_TOWN
-	removeobject 59, MAP_LAVARIDGE_TOWN
+	removeobject 56, MAP_LAVARIDGE_TOWN
 	removeobject 57, MAP_LAVARIDGE_TOWN
+	removeobject 55, MAP_LAVARIDGE_TOWN
 	setmetatile 2, 2, 0x2F8, TRUE
 	setmetatile 2, 3, 0x300, TRUE
 	setmetatile 3, 2, 0x2F9, TRUE
@@ -128,9 +128,9 @@ foret_2_2:
 	msgbox_mugshot foret_2_Text_9, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_2_Text_10, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_2_Text_11, MSGBOX_SIGN, MUGSHOT_MIDORI
-	applymovement 54, midleave_forest2
-	waitmovement 54
-	removeobject 54
+	applymovement 52, midleave_forest2
+	waitmovement 52
+	removeobject 52
 	showobjectat 60, MAP_LAVARIDGE_TOWN
 	showobjectat 61, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x026
@@ -149,6 +149,27 @@ foret_2_5:
 	fadescreen 2
 	setvar VAR_TEMP_2, 1
 	goto foret_2_1
+
+
+foret_3::
+	goto_if_unset FLAG_UNUSED_0x028, foret_3_1
+	compare VAR_TEMP_3, 0
+	goto_if_ne foret_3_4
+	return
+
+foret_3_1:
+	playbgm MUS_DP_CATASTROPHE, FALSE
+	playbgm MUS_DP_ETERNA_FOREST, FALSE
+	releaseall
+	end
+
+foret_3_4:
+	fadescreen 3
+	special DrawWholeMapView
+	msgbox foret_3_Text_0
+	fadescreen 2
+	setvar VAR_TEMP_3, 1
+	return
 
 
 onix_1::
@@ -463,6 +484,9 @@ foret_2_Text_11:
 
 foret_2_Text_12:
 	.string "C'est l'endroit ou l'Onix a été tué.$"
+
+foret_3_Text_0:
+	.string "C'est l'endroit ou l'Évoli de Liz a été tué.$"
 
 onix_1_Text_0:
 	.string "Onix!$"
