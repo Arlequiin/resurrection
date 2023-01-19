@@ -151,6 +151,29 @@ foret_2_5:
 	goto foret_2_1
 
 
+mov_evoli:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+down_evoli:
+	walk_down
+	face_left
+	step_end
+
+seeevent:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	face_up
+	step_end
+
 foret_3::
 	goto_if_unset FLAG_UNUSED_0x028, foret_3_1
 	compare VAR_TEMP_3, 0
@@ -158,15 +181,68 @@ foret_3::
 	return
 
 foret_3_1:
+	applymovement OBJ_EVENT_ID_PLAYER, seeevent
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox foret_3_Text_0
+	msgbox foret_3_Text_1
+	msgbox foret_3_Text_2
+	msgbox foret_3_Text_3
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
+	applymovement 63, mov_evoli
+	waitmovement 63
+	applymovement 63, down_evoli
+	waitmovement 63
+	applymovement 62, mov_evoli
+	waitmovement 62
+	turnobject 63, DIR_NORTH
+	msgbox foret_3_Text_4
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
+	msgbox foret_3_Text_5
+	turnobject 60, DIR_EAST
+	turnobject 61, DIR_EAST
 	playbgm MUS_DP_CATASTROPHE, FALSE
+	msgbox foret_3_Text_6
+	msgbox foret_3_Text_7
+	turnobject 63, DIR_WEST
+	turnobject 62, DIR_WEST
+	msgbox foret_3_Text_8
+	msgbox foret_3_Text_9
+	msgbox foret_3_Text_10
+	applymovement 64, mov_evoli
+	applymovement 64, down_evoli
+	waitmovement 64
+	turnobject 64, DIR_WEST
+	msgbox_mugshot foret_3_Text_11, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox foret_3_Text_12
+	msgbox foret_3_Text_13
+	msgbox foret_3_Text_14
+	fadescreen 3
+	playmoncry SPECIES_EEVEE, CRY_MODE_FAINT
+	msgbox foret_3_Text_15
+	msgbox foret_3_Text_16
+	msgbox foret_3_Text_17
+	msgbox foret_3_Text_18
+	playmoncry SPECIES_SERVINE, CRY_MODE_NORMAL
+	msgbox foret_3_Text_19
+	msgbox foret_3_Text_20
+	setmetatile 53, 3, 0x2F8, TRUE
+	setmetatile 53, 4, 0x300, TRUE
+	setmetatile 54, 3, 0x2F9, TRUE
+	setmetatile 54, 4, 0x301, TRUE
+	special DrawWholeMapView
+	fadescreen 2
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
 	releaseall
 	end
 
 foret_3_4:
 	fadescreen 3
+	setmetatile 53, 3, 0x2F8, TRUE
+	setmetatile 53, 4, 0x300, TRUE
+	setmetatile 54, 3, 0x2F9, TRUE
+	setmetatile 54, 4, 0x301, TRUE
 	special DrawWholeMapView
-	msgbox foret_3_Text_0
+	msgbox foret_3_Text_21
 	fadescreen 2
 	setvar VAR_TEMP_3, 1
 	return
@@ -208,6 +284,12 @@ onix_2_1:
 
 reste_onix::
 	msgbox reste_onix_Text_0
+	releaseall
+	end
+
+
+reste_evoli::
+	msgbox reste_evoli_Text_0
 	releaseall
 	end
 
@@ -486,7 +568,91 @@ foret_2_Text_12:
 	.string "C'est l'endroit ou l'Onix a été tué.$"
 
 foret_3_Text_0:
-	.string "C'est l'endroit ou l'Évoli de Liz a été tué.$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Matte-moi ça, j'ai trouvé la\n"
+	.string "sortie.$"
+
+foret_3_Text_1:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Tu gères ! Bon bah, mission\n"
+	.string "accomplie à nous la prime et les belles\l"
+	.string "vacances.$"
+
+foret_3_Text_2:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : T'es con où quoi? T'as oublié la\n"
+	.string "mission à Mirabilis? T'as cru que ce\l"
+	.string "détour à la forêt c'était pour changer\l"
+	.string "d'air?$"
+
+foret_3_Text_3:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Ah oui merde, j'avais\n"
+	.string "totalement oublié.$"
+
+foret_3_Text_4:
+	.string "Oh tu as trouvé la sortie Évoli!$"
+
+foret_3_Text_5:
+	.string "Tu es si intelligente! ...$"
+
+foret_3_Text_6:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Tiens tiens, tu vois ce que je\n"
+	.string "vois?$"
+
+foret_3_Text_7:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Oh que oui, un Évoli! Une\n"
+	.string "source inestimable d'énérgie vitale,\l"
+	.string "juste ce qu'il nous fallait.$"
+
+foret_3_Text_8:
+	.string "Lisa : Eh mais! Je reconnais cette voix,\n"
+	.string "vous êtes les types louches qui ont\l"
+	.string "fait sauté le train!$"
+
+foret_3_Text_9:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Belle déduction Sherlock.$"
+
+foret_3_Text_10:
+	.string "Lisa : Bande de terroristes ! Je vais\n"
+	.string "vous montrer! Évoli attaque...$"
+
+foret_3_Text_11:
+	.string "Espèce d'abrutie qu'est-ce que tu fais!\n"
+	.string "Ton Évoli, ils vont la... Fuis tant que tu\l"
+	.string "le peux!$"
+
+foret_3_Text_12:
+	.string "Lisa : Attaque Charge!$"
+
+foret_3_Text_13:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : La machine est prête?$"
+
+foret_3_Text_14:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Bien entendu! Je l'active de\n"
+	.string "suite...$"
+
+foret_3_Text_15:
+	.string "No0o0o0o0o0on!$"
+
+foret_3_Text_16:
+	.string "Évoli! Pourquoi!!!!$"
+
+foret_3_Text_17:
+	.string ".... (larmes)$"
+
+foret_3_Text_18:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Wow! 23 litres d'énergie vitale!\n"
+	.string "Faut croire que la taille n'a aucun\l"
+	.string "rapport avec l'énergie.$"
+
+foret_3_Text_19:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : P'tain t'as entendu ce cri? Je\n"
+	.string "reconnaîtrai ce Pokémon entre 1000,\l"
+	.string "c'est le Lianaja d'Achille.$"
+
+foret_3_Text_20:
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Oula, ça va barder! Faut qu'on\n"
+	.string "se tire!$"
+
+foret_3_Text_21:
+	.string "C'est l'endroit ou l'Évoli de Lisa a été tué.$"
 
 onix_1_Text_0:
 	.string "Onix!$"
@@ -499,6 +665,9 @@ onix_1_Text_2:
 
 reste_onix_Text_0:
 	.string "Ce sont les restes d'Onix.$"
+
+reste_evoli_Text_0:
+	.string "Ce sont les restes de l'Évoli de Lisa.$"
 
 tombes_Text_0:
 	.string "À nos camarades partis trop tôt.$"

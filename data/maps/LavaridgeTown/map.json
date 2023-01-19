@@ -809,10 +809,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
-      "x": 67,
+      "x": 61,
       "y": 2,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -822,10 +822,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EEVEE",
-      "x": 66,
+      "x": 60,
       "y": 2,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -835,10 +835,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
-      "x": 68,
+      "x": 62,
       "y": 2,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -903,7 +903,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "foret_3"
     }
   ],
   "bg_events": [
@@ -1034,6 +1034,38 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "reste_onix"
+    },
+    {
+      "type": "sign",
+      "x": 54,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "reste_evoli"
+    },
+    {
+      "type": "sign",
+      "x": 54,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "reste_evoli"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "reste_evoli"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "reste_evoli"
     }
   ]
 }

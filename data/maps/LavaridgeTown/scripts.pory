@@ -115,17 +115,89 @@ script foret_2{
 	
 }
 
+movement mov_evoli{
+	walk_left*6
+	walk_down
+}
+
+movement down_evoli{
+	walk_down
+	face_left
+}
+
+movement seeevent{
+	walk_up*2
+	walk_right*2
+	face_up
+}
+
 script foret_3{
   if (!flag(FLAG_UNUSED_0x028)){
+	applymovement(OBJ_EVENT_ID_PLAYER,seeevent)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Matte-moi ça, j'ai trouvé la sortie."))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Tu gères ! Bon bah, mission accomplie à nous la prime et les belles vacances."))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : T'es con où quoi? T'as oublié la mission à Mirabilis? T'as cru que ce détour à la forêt c'était pour changer d'air?"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Ah oui merde, j'avais totalement oublié."))
+	playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
+	applymovement(63,mov_evoli)
+	waitmovement(63)
+	applymovement(63,down_evoli)
+	waitmovement(63)
+	applymovement(62,mov_evoli)
+	waitmovement(62)
+	turnobject(63,DIR_NORTH)
+	msgbox(format("Oh tu as trouvé la sortie Évoli!"))
+	playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
+	msgbox(format("Tu es si intelligente! ..."))
+	turnobject(60,DIR_EAST)
+	turnobject(61,DIR_EAST)
 	playbgm(MUS_DP_CATASTROPHE,FALSE)
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Tiens tiens, tu vois ce que je vois?"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Oh que oui, un Évoli! Une source inestimable d'énérgie vitale, juste ce qu'il nous fallait."))
+	turnobject(63,DIR_WEST)
+	turnobject(62,DIR_WEST)
+	msgbox(format("Lisa : Eh mais! Je reconnais cette voix, vous êtes les types louches qui ont fait sauter le train!"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Belle déduction Sherlock."))
+	msgbox(format("Lisa : Bande de terroristes ! Je vais vous montrer! Évoli attaque..."))
+	applymovement(64,mov_evoli)
+	applymovement(64,down_evoli)
+	waitmovement(64)
+	turnobject(64,DIR_WEST)
+	msgbox_mugshot(format("Espèce d'abrutie qu'est-ce que tu fais! Ton Évoli, ils vont la... Fuis tant que tu le peux!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox(format("Lisa : Attaque Charge!"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : La machine est prête?"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Bien entendu! Je l'active de suite..."))
+	fadescreen(3)
+	playmoncry(SPECIES_EEVEE, CRY_MODE_FAINT)
+	msgbox(format("No0o0o0o0o0on!"))
+	msgbox(format("Évoli! Pourquoi!!!!"))
+	msgbox(format(".... (larmes)"))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Wow! 23 litres d'énergie vitale! Faut croire que la taille n'a aucun rapport avec l'énergie."))
+	playmoncry(SPECIES_SERVINE, CRY_MODE_NORMAL)
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : P'tain t'as entendu ce cri? Je reconnaîtrai ce Pokémon entre 1000, c'est le Lianaja d'Achille."))
+	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Oula, ça va barder! Faut qu'on se tire!"))
+	setmetatile(53,3,0x2F8,TRUE)
+	setmetatile(53,4,0x300,TRUE)
+	setmetatile(54,3,0x2F9,TRUE)
+	setmetatile(54,4,0x301,TRUE)
+	special(DrawWholeMapView)
+	removeobject(63)
+	removeobject(61)
+	removeobject(62)
+	fadescreen(2)
 	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
 	releaseall
 	end
   } else {
 	if (var(VAR_TEMP_3)){
 	fadescreen(3)
+	setmetatile(53,3,0x2F8,TRUE)
+	setmetatile(53,4,0x300,TRUE)
+	setmetatile(54,3,0x2F9,TRUE)
+	setmetatile(54,4,0x301,TRUE)
 	special(DrawWholeMapView)
-	msgbox("C'est l'endroit ou l'Évoli de Liz a été tué.")
+	msgbox("C'est l'endroit ou l'Évoli de Lisa a été tué.")
 	fadescreen(2)
 	setvar(VAR_TEMP_3,1)
 	}
@@ -160,6 +232,12 @@ script onix_2{
 
 script reste_onix{
 	msgbox(format("Ce sont les restes d'Onix."))
+	releaseall
+	end
+}
+
+script reste_evoli{
+	msgbox(format("Ce sont les restes de l'Évoli de Lisa."))
 	releaseall
 	end
 }
