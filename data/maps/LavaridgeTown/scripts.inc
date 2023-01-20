@@ -175,12 +175,14 @@ seeevent:
 	step_end
 
 foret_3::
-	goto_if_unset FLAG_UNUSED_0x028, foret_3_1
+	goto_if_unset FLAG_UNUSED_0x028, foret_3_2
 	compare VAR_TEMP_3, 0
-	goto_if_ne foret_3_4
-	return
-
+	goto_if_eq foret_3_5
 foret_3_1:
+	releaseall
+	end
+
+foret_3_2:
 	applymovement OBJ_EVENT_ID_PLAYER, seeevent
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox foret_3_Text_0
@@ -235,11 +237,11 @@ foret_3_1:
 	removeobject 62
 	fadescreen 2
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
-	setvar VAR_TEMP_3, 1
+	setflag FLAG_UNUSED_0x028
 	releaseall
 	end
 
-foret_3_4:
+foret_3_5:
 	fadescreen 3
 	setmetatile 53, 3, 0x2F8, TRUE
 	setmetatile 53, 4, 0x300, TRUE
@@ -249,7 +251,7 @@ foret_3_4:
 	msgbox foret_3_Text_21
 	fadescreen 2
 	setvar VAR_TEMP_3, 1
-	return
+	goto foret_3_1
 
 
 onix_1::
@@ -569,7 +571,7 @@ foret_2_Text_11:
 	.string "vite possible.$"
 
 foret_2_Text_12:
-	.string "C'est l'endroit ou l'Onix a été tué.$"
+	.string "C'est l'endroit où l'Onix a été tué.$"
 
 foret_3_Text_0:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Matte-moi ça, j'ai trouvé la\n"
@@ -656,7 +658,8 @@ foret_3_Text_20:
 	.string "se tire!$"
 
 foret_3_Text_21:
-	.string "C'est l'endroit ou l'Évoli de Lisa a été tué.$"
+	.string "C'est l'endroit ou l'Évoli de Lisa a été\n"
+	.string "tué.$"
 
 onix_1_Text_0:
 	.string "Onix!$"

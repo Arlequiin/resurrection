@@ -105,7 +105,7 @@ script foret_2{
 	setmetatile(3,3,0x301,TRUE)
 	fadescreen(3)
 	special(DrawWholeMapView)
-	msgbox("C'est l'endroit ou l'Onix a été tué.")
+	msgbox("C'est l'endroit où l'Onix a été tué.")
 	fadescreen(2)
 	setvar(VAR_TEMP_2,1)
 	}
@@ -187,22 +187,24 @@ script foret_3{
 	removeobject(62)
 	fadescreen(2)
 	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
-	setvar(VAR_TEMP_3,1)
+	setflag(FLAG_UNUSED_0x028)
 	releaseall
 	end
   } else {
-	if (var(VAR_TEMP_3)){
+	if (var(VAR_TEMP_3)==0){
 	fadescreen(3)
 	setmetatile(53,3,0x2F8,TRUE)
 	setmetatile(53,4,0x300,TRUE)
 	setmetatile(54,3,0x2F9,TRUE)
 	setmetatile(54,4,0x301,TRUE)
 	special(DrawWholeMapView)
-	msgbox("C'est l'endroit ou l'Évoli de Lisa a été tué.")
+	msgbox(format("C'est l'endroit ou l'Évoli de Lisa a été tué."))
 	fadescreen(2)
 	setvar(VAR_TEMP_3,1)
 	}
   }
+  releaseall
+  end
 }
 
 script onix_1{
