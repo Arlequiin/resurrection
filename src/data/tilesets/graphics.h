@@ -174,6 +174,28 @@ const u16 gTilesetPalettes_Solidago[][16] =
 	INCBIN_U16("data/tilesets/secondary/solidago/palettes/15.gbapal"),
 };
 
+const u32 gTilesetTiles_Mirabilis[] = INCBIN_U32("data/tilesets/secondary/mirabilis/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Mirabilis[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mirabilis/palettes/15.gbapal"),
+};
+
 const u32 gTilesetTiles_Bedroom[] = INCBIN_U32("data/tilesets/secondary/bedroom/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_Bedroom[][16] =
