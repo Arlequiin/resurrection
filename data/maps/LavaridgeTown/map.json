@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
-  "map_type": "MAP_TYPE_UNDERGROUND",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -187,19 +187,6 @@
       "graphics_id": "OBJ_EVENT_GFX_KAKUNA",
       "x": 48,
       "y": 29,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Kakuna",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_KAKUNA",
-      "x": 37,
-      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -470,9 +457,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PARAS",
-      "x": 15,
-      "y": 34,
+      "graphics_id": "OBJ_EVENT_GFX_BURMY",
+      "x": 3,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -792,7 +779,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x028"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -805,7 +792,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x028"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
@@ -817,7 +804,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "FLAG_UNUSED_0x028",
       "flag": "0"
     },
     {
@@ -831,7 +818,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x028"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
@@ -843,7 +830,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "FLAG_UNUSED_0x028",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KAKUNA",
+      "x": 37,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Kakuna",
       "flag": "0"
     }
   ],
@@ -867,13 +867,6 @@
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 47,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_FALLARBOR_TOWN",
       "dest_warp_id": "0"
     }
   ],
@@ -1075,6 +1068,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "reste_evoli"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "grotto_mirabilis"
     }
   ]
 }

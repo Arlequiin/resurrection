@@ -131,6 +131,15 @@ movement seeevent{
 	face_up
 }
 
+script grotto_mirabilis{
+	msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les arbres, voulez-vous vous faufiler entre eux?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT)==1){
+		warp(MAP_FALLARBOR_TOWN,0)
+	}
+	releaseall
+	end
+}
+
 script foret_3{
   if (!flag(FLAG_UNUSED_0x028)){
 	applymovement(OBJ_EVENT_ID_PLAYER,seeevent)

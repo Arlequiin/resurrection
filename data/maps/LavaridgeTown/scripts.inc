@@ -174,6 +174,19 @@ seeevent:
 	face_up
 	step_end
 
+grotto_mirabilis::
+	msgbox grotto_mirabilis_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq grotto_mirabilis_2
+grotto_mirabilis_1:
+	releaseall
+	end
+
+grotto_mirabilis_2:
+	warp MAP_FALLARBOR_TOWN, 0
+	goto grotto_mirabilis_1
+
+
 foret_3::
 	goto_if_unset FLAG_UNUSED_0x028, foret_3_2
 	compare VAR_TEMP_3, 0
@@ -572,6 +585,11 @@ foret_2_Text_11:
 
 foret_2_Text_12:
 	.string "C'est l'endroit où l'Onix a été tué.$"
+
+grotto_mirabilis_Text_0:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
+	.string "arbres, voulez-vous vous faufiler\l"
+	.string "entre eux?$"
 
 foret_3_Text_0:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Matte-moi ça, j'ai trouvé la\n"
