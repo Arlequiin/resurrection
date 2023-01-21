@@ -51,7 +51,7 @@ static const struct Mugshot sMugshots[] = {
    [MUGSHOT_MIDORI] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
    [MUGSHOT_MIDORI_HAPPY] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_MidoriHappy, .palette = sMugshotPal_MidoriHappy},
    [MUGSHOT_SCHWARTZ] = {.x = 16, .y = 2, .width = 120, .height = 96, .image = sMugshotImg_Schwartz, .palette = sMugshotPal_Schwartz},
-   [MUGSHOT_LISA] = {.x = 16, .y = 2, .width = 128, .height = 96, .image = sMugshotImg_Lisa, .palette = sMugshotPal_Lisa},
+   [MUGSHOT_LISA] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_Lisa, .palette = sMugshotPal_Lisa},
    [MUGSHOT_LISA_CRY1] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaCry1, .palette = sMugshotPal_LisaCry1},
    [MUGSHOT_LISA_CRY2] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaCry2, .palette = sMugshotPal_LisaCry2},
    [MUGSHOT_LISA_CRY3] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaCry3, .palette = sMugshotPal_LisaCry3},

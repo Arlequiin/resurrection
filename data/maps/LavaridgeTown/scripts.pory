@@ -155,6 +155,8 @@ script foret_3{
 	waitmovement(60)
 	applymovement(59,mov_evoli)
 	waitmovement(59)
+	applymovement(59,down_evoli)
+	waitmovement(59)
 	turnobject(60,DIR_NORTH)
 	msgbox_mugshot(format("Oh tu as trouvé la sortie Évoli!"),MSGBOX_SIGN,MUGSHOT_LISA)
 	playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)

@@ -209,6 +209,8 @@ foret_3_2:
 	waitmovement 60
 	applymovement 59, mov_evoli
 	waitmovement 59
+	applymovement 59, down_evoli
+	waitmovement 59
 	turnobject 60, DIR_NORTH
 	msgbox_mugshot foret_3_Text_4, MSGBOX_SIGN, MUGSHOT_LISA
 	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
