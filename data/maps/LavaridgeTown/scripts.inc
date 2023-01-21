@@ -294,6 +294,7 @@ foret_3_2:
 	removeobject 61
 	removeobject 59
 	removeobject 25
+	warp MAP_FALLARBOR_TOWN, 0
 	fadescreen 0
 	setflag FLAG_UNUSED_0x028
 	releaseall

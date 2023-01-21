@@ -108,3 +108,23 @@ script mirabilis_bet{
 	releaseall
 	end
 }
+
+script mirabilis_npc{
+	faceplayer
+	msgbox(format("Aah, Mirabilis! Cette ville est comme une oasis en plein désert, c'est un endroit chaleureux où tout voyageur égaré peut se reposer. Elle est réputée pour ses Sequoias et son vieux temple dont on ne sait pas grand chose."))
+	showmoneybox(14,0)
+	hidemoneybox
+	removemoney(500)
+	showmoneybox(14,0)
+	msgbox(format("Tu feras gaffe aux faux guides la prochaine fois, haha."))
+	hidemoneybox
+	releaseall
+	end
+}
+
+script mirabilis_cyclist{
+	faceplayer
+	msgbox(format("Si je gagne le triathlon, je remporte un vélo incroyablement utile, un vélo qui peut rouler sur l'eau comme sur la terre ferme! Il est importé de Galar. Je m'entraîne dur pour l'avoir. Je n'aurais plus à payer la traversée Olnyris Ouest-Est."))
+	releaseall
+	end
+}

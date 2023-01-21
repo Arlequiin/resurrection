@@ -136,6 +136,19 @@ mirabilis_bet_9:
 	goto mirabilis_bet_1
 
 
+mirabilis_npc::
+	faceplayer
+	msgbox mirabilis_npc_Text_0
+	showmoneybox 14, 0
+	hidemoneybox
+	removemoney 500
+	showmoneybox 14, 0
+	msgbox mirabilis_npc_Text_1
+	hidemoneybox
+	releaseall
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -235,3 +248,15 @@ mirabilis_bet_Text_3:
 mirabilis_bet_Text_4:
 	.string "Hésite pas à revenir me voir si tu veux\n"
 	.string "rejouer.$"
+
+mirabilis_npc_Text_0:
+	.string "Aah, Mirabilis! Cette ville est comme une\n"
+	.string "oasis en plein désert, c'est un endroit\l"
+	.string "chaleureux où tout voyageur égaré\l"
+	.string "peut se reposer. Elle est réputée pour\l"
+	.string "ses Sequoias et son vieux temple dont\l"
+	.string "on ne sait pas grand chose.$"
+
+mirabilis_npc_Text_1:
+	.string "Tu feras gaffe aux faux guides la\n"
+	.string "prochaine fois, haha.$"
