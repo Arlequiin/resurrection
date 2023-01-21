@@ -187,6 +187,15 @@ grotto_mirabilis_2:
 	goto grotto_mirabilis_1
 
 
+forest_final:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 foret_3::
 	goto_if_unset FLAG_UNUSED_0x028, foret_3_2
 	compare VAR_TEMP_3, 0
@@ -211,7 +220,7 @@ foret_3_2:
 	waitmovement 59
 	applymovement 59, down_evoli
 	waitmovement 59
-	turnobject 60, DIR_NORTH
+	turnobject 60, DIR_EAST
 	msgbox_mugshot foret_3_Text_4, MSGBOX_SIGN, MUGSHOT_LISA
 	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
 	msgbox_mugshot foret_3_Text_5, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
@@ -252,8 +261,35 @@ foret_3_2:
 	removeobject 60
 	showobjectat 63, MAP_LAVARIDGE_TOWN
 	fadescreen 2
-	turnobject 63, DIR_NORTH
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
+	msgbox foret_3_Text_21
+	msgbox_mugshot foret_3_Text_22, MSGBOX_SIGN, MUGSHOT_LISA_CRY1
+	msgbox_mugshot foret_3_Text_23, MSGBOX_SIGN, MUGSHOT_LISA_CRY2
+	msgbox_mugshot foret_3_Text_24, MSGBOX_SIGN, MUGSHOT_LISA_CRY3
+	msgbox_mugshot foret_3_Text_25, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot foret_3_Text_26, MSGBOX_SIGN, MUGSHOT_LISA_CRY1
+	msgbox_mugshot foret_3_Text_26, MSGBOX_SIGN, MUGSHOT_LISA_CRY2
+	msgbox_mugshot foret_3_Text_27, MSGBOX_SIGN, MUGSHOT_LISA_CRY3
+	turnobject 63, DIR_EAST
+	msgbox foret_3_Text_28
+	msgbox_mugshot foret_3_Text_29, MSGBOX_SIGN, MUGSHOT_LISA_CRY2
+	msgbox foret_3_Text_30
+	msgbox_mugshot foret_3_Text_31, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox foret_3_Text_32
+	msgbox_mugshot foret_3_Text_33, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox foret_3_Text_34
+	msgbox_mugshot foret_3_Text_35, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox foret_3_Text_36
+	msgbox_mugshot foret_3_Text_37, MSGBOX_SIGN, MUGSHOT_LISA_CRY2
+	msgbox foret_3_Text_38
+	applymovement 63, forest_final
+	waitmovement 63
+	fadescreen 1
+	removeobject 63
+	removeobject 61
+	removeobject 59
+	removeobject 25
+	fadescreen 0
 	setflag FLAG_UNUSED_0x028
 	releaseall
 	end
@@ -265,7 +301,7 @@ foret_3_5:
 	setmetatile 54, 3, 0x2F9, TRUE
 	setmetatile 54, 4, 0x301, TRUE
 	special DrawWholeMapView
-	msgbox foret_3_Text_21
+	msgbox foret_3_Text_39
 	fadescreen 2
 	setvar VAR_TEMP_3, 1
 	goto foret_3_1
@@ -680,6 +716,104 @@ foret_3_Text_20:
 	.string "se tire!$"
 
 foret_3_Text_21:
+	.string "??? : Oh... Ciel! Quelle horreur!$"
+
+foret_3_Text_22:
+	.string "Évoli! Je ne me le pardonnerai jamais!$"
+
+foret_3_Text_23:
+	.string "Non! Pourquoi suis-je aussi\n"
+	.string "irresponsable!$"
+
+foret_3_Text_24:
+	.string "Je suis la pire dresseuse qui existe!$"
+
+foret_3_Text_25:
+	.string "Allons, Lisa, ce n'est pas de ta faute.\n"
+	.string "J'aurais du les en empêcher.$"
+
+foret_3_Text_26:
+	.string "C'est faux!$"
+
+foret_3_Text_27:
+	.string "Je suis la seule responsable de ce qui\n"
+	.string "s'est passé, ça ne sert à rien de me\l"
+	.string "chercher des excuses.$"
+
+foret_3_Text_28:
+	.string "??? : Bon, l'heure n'est pas aux remords.\n"
+	.string "Permettez-moi de me présenter, Achille,\l"
+	.string "garde forestier et champion de l'arène\l"
+	.string "de Mirabilis.$"
+
+foret_3_Text_29:
+	.string "T'étais où quand c'est arrivé! Tu\n"
+	.string "n'aurais pas pu faire quelque chose?!$"
+
+foret_3_Text_30:
+	.string "Achille : Excusez-moi, ma petite dame.\n"
+	.string "Tout cela s'est produit tellement vite\l"
+	.string "que ni moi ni l'équipe de secours du\l"
+	.string "Centre de Recherches n'avons pu\l"
+	.string "arriver à temps. Ces types ont commis\l"
+	.string "l'irréparable, en l'espace de quelques\l"
+	.string "dizaines de minutes, ils ont pris une\l"
+	.string "trentaine de vies humaines et aspiré\l"
+	.string "l'énergie vitale de deux Pokémon\l"
+	.string "causant de fait leur mort, un Onix et\l"
+	.string "ton pauvre Évoli.$"
+
+foret_3_Text_31:
+	.string "Bande d'enfoirés, je ferai tout pour\n"
+	.string "venger toutes ces âmes!$"
+
+foret_3_Text_32:
+	.string "Achille : Tu ne dois pas penser comme\n"
+	.string "ça, Midori.$"
+
+foret_3_Text_33:
+	.string "Euh, d'où vous connaissez mon nom?$"
+
+foret_3_Text_34:
+	.string "Tous les champions d'arènes\n"
+	.string "connaissent vos noms, les dresseurs du\l"
+	.string "CDR font partie des plus célèbres. On\l"
+	.string "en attend beaucoup de vous. Pour en\l"
+	.string "revenir à ce que je disais, nous ne les\l"
+	.string "connaissons pas et, nous ne savons\l"
+	.string "rien de leurs motivations. Ces roches\l"
+	.string "bizarres, comme ils disent à la télé\l"
+	.string "deviennent de plus en plus nombreuses\l"
+	.string "à Olnyris. Toute personne ayant\l"
+	.string "commencé à enquêter là-dessus\l"
+	.string "disparaît mystérieusement. Soyez\l"
+	.string "discrets. Ne parlez pas de ce à quoi\l"
+	.string "vous venez d'assister, car vous êtes\l"
+	.string "d'éventuels témoins qu'ils tenteront\l"
+	.string "de faire disparaître.$"
+
+foret_3_Text_35:
+	.string "Je veux en savoir plus sur eux.$"
+
+foret_3_Text_36:
+	.string "N'en parlons pas plus ici, les murs...\n"
+	.string "enfin les arbres ont des oreilles. À\l"
+	.string "Portokov, un homme qu'ils appellent Flo\l"
+	.string "répondra à toutes vos questions. Il\l"
+	.string "est caché dans un bâtiment, avec son\l"
+	.string "coéquipier Beladonis. Vous ne le\l"
+	.string "chercherez pas longtemps, il vous\l"
+	.string "trouvera avant.$"
+
+foret_3_Text_37:
+	.string "Que vais-je faire maintenant!$"
+
+foret_3_Text_38:
+	.string "Tout d'abord, je vous accompagne à\n"
+	.string "Mirabilis, la suite... On en parlera plus\l"
+	.string "tard. Suivez-moi.$"
+
+foret_3_Text_39:
 	.string "C'est l'endroit ou l'Évoli de Lisa a été\n"
 	.string "tué.$"
 

@@ -140,6 +140,10 @@ script grotto_mirabilis{
 	end
 }
 
+movement forest_final{
+	walk_left*6
+}
+
 script foret_3{
   if (!flag(FLAG_UNUSED_0x028)){
 	applymovement(OBJ_EVENT_ID_PLAYER,seeevent)
@@ -157,7 +161,7 @@ script foret_3{
 	waitmovement(59)
 	applymovement(59,down_evoli)
 	waitmovement(59)
-	turnobject(60,DIR_NORTH)
+	turnobject(60,DIR_EAST)
 	msgbox_mugshot(format("Oh tu as trouvé la sortie Évoli!"),MSGBOX_SIGN,MUGSHOT_LISA)
 	playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
 	msgbox_mugshot(format("Tu es si intelligente! ..."),MSGBOX_SIGN,MUGSHOT_LISA_HAPPY)
@@ -198,8 +202,36 @@ script foret_3{
 	removeobject(60)
 	showobjectat(63, MAP_LAVARIDGE_TOWN)
 	fadescreen(2)
-	turnobject(63, DIR_NORTH)
 	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
+	msgbox(format("??? : Oh... Ciel! Quelle horreur!"))
+	msgbox_mugshot(format("Évoli! Je ne me le pardonnerai jamais!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY1)
+	msgbox_mugshot(format("Non! Pourquoi suis-je aussi irresponsable!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY2)
+	msgbox_mugshot(format("Je suis la pire dresseuse qui existe!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY3)
+	msgbox_mugshot(format("Allons, Lisa, ce n'est pas de ta faute. J'aurais du les en empêcher."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox_mugshot(format("C'est faux!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY1)
+	msgbox_mugshot(format("C'est faux!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY2)
+	msgbox_mugshot(format("Je suis la seule responsable de ce qui s'est passé, ça ne sert à rien de me chercher des excuses."),MSGBOX_SIGN,MUGSHOT_LISA_CRY3)
+	turnobject(63, DIR_EAST)
+	msgbox(format("??? : Bon, l'heure n'est pas aux remords. Permettez-moi de me présenter, Achille, garde forestier et champion de l'arène de Mirabilis."))
+	msgbox_mugshot(format("T'étais où quand c'est arrivé! Tu n'aurais pas pu faire quelque chose?!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY2)
+	msgbox(format("Achille : Excusez-moi, ma petite dame. Tout cela s'est produit tellement vite que ni moi ni l'équipe de secours du Centre de Recherches n'avons pu arriver à temps. Ces types ont commis l'irréparable, en l'espace de quelques dizaines de minutes, ils ont pris une trentaine de vies humaines et aspiré l'énergie vitale de deux Pokémon causant de fait leur mort, un Onix et ton pauvre Évoli."))
+	msgbox_mugshot(format("Bande d'enfoirés, je ferai tout pour venger toutes ces âmes!"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox(format("Achille : Tu ne dois pas penser comme ça, Midori."))
+	msgbox_mugshot(format("Euh, d'où vous connaissez mon nom?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox(format("Tous les champions d'arènes connaissent vos noms, les dresseurs du CDR font partie des plus célèbres. On en attend beaucoup de vous. Pour en revenir à ce que je disais, nous ne les connaissons pas et, nous ne savons rien de leurs motivations. Ces roches bizarres, comme ils disent à la télé deviennent de plus en plus nombreuses à Olnyris. Toute personne ayant commencé à enquêter là-dessus disparaît mystérieusement. Soyez discrets. Ne parlez pas de ce à quoi vous venez d'assister, car vous êtes d'éventuels témoins qu'ils tenteront de faire disparaître."))
+	msgbox_mugshot(format("Je veux en savoir plus sur eux."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox(format("N'en parlons pas plus ici, les murs... enfin les arbres ont des oreilles. À Portokov, un homme qu'ils appellent Flo répondra à toutes vos questions. Il est caché dans un bâtiment, avec son coéquipier Beladonis. Vous ne le chercherez pas longtemps, il vous trouvera avant."))
+	msgbox_mugshot(format("Que vais-je faire maintenant!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY2)
+	msgbox(format("Tout d'abord, je vous accompagne à Mirabilis, la suite... On en parlera plus tard. Suivez-moi."))
+	applymovement(63, forest_final)
+	waitmovement(63)
+	fadescreen(1)
+	//warp(MAP_FALLARBOR_TOWN,0)
+	removeobject(63)
+	removeobject(61)
+	removeobject(59)
+	removeobject(25)
+	fadescreen(0)
 	setflag(FLAG_UNUSED_0x028)
 	releaseall
 	end
