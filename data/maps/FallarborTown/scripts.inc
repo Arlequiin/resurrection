@@ -149,6 +149,13 @@ mirabilis_npc::
 	end
 
 
+mirabilis_cyclist::
+	faceplayer
+	msgbox mirabilis_cyclist_Text_0
+	releaseall
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -260,3 +267,12 @@ mirabilis_npc_Text_0:
 mirabilis_npc_Text_1:
 	.string "Tu feras gaffe aux faux guides la\n"
 	.string "prochaine fois, haha.$"
+
+mirabilis_cyclist_Text_0:
+	.string "Si je gagne le triathlon, je remporte un\n"
+	.string "vélo incroyablement utile, un vélo qui\l"
+	.string "peut rouler sur l'eau comme sur la terre\l"
+	.string "ferme! Il est importé de Galar. Je\l"
+	.string "m'entraîne dur pour l'avoir. Je n'aurais\l"
+	.string "plus à payer la traversée Olnyris\l"
+	.string "Ouest-Est.$"
