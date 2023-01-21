@@ -53,7 +53,7 @@ LV7::
 
 
 lizbefore::
-	msgbox lizbefore_Text_0
+	msgbox_mugshot lizbefore_Text_0, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
 	releaseall
 	end
 
@@ -184,7 +184,7 @@ Schwartz_2:
 	msgbox_mugshot Schwartz_Text_6, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox Schwartz_Text_7
-	msgbox Schwartz_Text_8
+	msgbox_mugshot Schwartz_Text_8, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
 	applymovement 1, sch4
 	msgbox_mugshot Schwartz_Text_9, MSGBOX_SIGN, MUGSHOT_SCHWARTZ
 	goto Schwartz_1

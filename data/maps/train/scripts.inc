@@ -68,7 +68,7 @@ rivaux_train_1_1:
 rivaux_train_1_7:
 	msgbox_mugshot rivaux_train_1_Text_20, MSGBOX_SIGN, MUGSHOT_MIDORI
 	applymovement OBJ_EVENT_ID_PLAYER, bas
-	msgbox rivaux_train_1_Text_21
+	msgbox_mugshot rivaux_train_1_Text_21, MSGBOX_SIGN, MUGSHOT_LISA_AWK
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	msgbox_mugshot rivaux_train_1_Text_22, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	msgbox_mugshot rivaux_train_1_Text_23, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
@@ -119,13 +119,13 @@ rivaux_train_1_4:
 	msgbox_mugshot rivaux_train_1_Text_2, MSGBOX_SIGN, MUGSHOT_MIDORI
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_3
+	msgbox_mugshot rivaux_train_1_Text_3, MSGBOX_SIGN, MUGSHOT_LISA
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_5
+	msgbox_mugshot rivaux_train_1_Text_5, MSGBOX_SIGN, MUGSHOT_LISA_AWK
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_6, MSGBOX_SIGN, MUGSHOT_MIDORI
@@ -133,17 +133,17 @@ rivaux_train_1_4:
 	msgbox_mugshot rivaux_train_1_Text_8, MSGBOX_SIGN, MUGSHOT_MIDORI
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_9
+	msgbox_mugshot rivaux_train_1_Text_9, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
 	msgbox rivaux_train_1_Text_10
-	msgbox rivaux_train_1_Text_11
+	msgbox_mugshot rivaux_train_1_Text_11, MSGBOX_SIGN, MUGSHOT_LISA_SAD
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_12, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
 	applymovement OBJ_EVENT_ID_PLAYER, bas
 	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox rivaux_train_1_Text_13
+	msgbox_mugshot rivaux_train_1_Text_13, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
 	msgbox rivaux_train_1_Text_10
-	msgbox rivaux_train_1_Text_14
+	msgbox_mugshot rivaux_train_1_Text_14, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
 	applymovement OBJ_EVENT_ID_PLAYER, haut
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox_mugshot rivaux_train_1_Text_15, MSGBOX_SIGN, MUGSHOT_MIDORI
@@ -203,43 +203,42 @@ rivaux_train_1_Text_4:
 	.string "expat, je viens de la région de Kanto.$"
 
 rivaux_train_1_Text_5:
-	.string "Lisa : Ma mère assiste la Prof.\n"
-	.string "Keteleeria, c'est une grande dresseuse\l"
-	.string "et c'est grâce à elle que je m'y connais\l"
-	.string "bien en Pokémon.$"
+	.string "Ma mère assiste la Prof. Keteleeria,\n"
+	.string "c'est une grande dresseuse et c'est\l"
+	.string "grâce à elle que je m'y connais bien en\l"
+	.string "Pokémon.$"
 
 rivaux_train_1_Text_6:
-	.string "Midori : Je suis le fils de l'ex-maître de\n"
-	.string "la région de Kanto qui, aujourd'hui est\l"
-	.string "le Champion de l'arène de Jadielle.$"
+	.string "Je suis le fils de l'ex-maître de la\n"
+	.string "région de Kanto qui, aujourd'hui est le\l"
+	.string "Champion de l'arène de Jadielle.$"
 
 rivaux_train_1_Text_7:
 	.string "........$"
 
 rivaux_train_1_Text_8:
-	.string "Midori : Ton père était le PDG de Vitalis\n"
+	.string "Ton père était le PDG de Vitalis\n"
 	.string "Navitas?! Ouah la dinguerie!$"
 
 rivaux_train_1_Text_9:
-	.string "Lisa : Tu dis était, sous-entendant\n"
-	.string "ainsi qu'il n'a plus ce post. Pourquoi il\l"
-	.string "a quitté son poste?$"
+	.string "Tu dis était, sous-entendant ainsi qu'il\n"
+	.string "n'a plus ce post. Pourquoi il a quitté\l"
+	.string "son poste?$"
 
 rivaux_train_1_Text_10:
 	.string ".........$"
 
 rivaux_train_1_Text_11:
-	.string "Lisa : Je suis désolé de l'apprendre.$"
+	.string "Je suis désolé de l'apprendre.$"
 
 rivaux_train_1_Text_12:
-	.string "Midori : Vous avez choisi quel Pokémon?\n"
-	.string "Perso j'ai demandé un Coupenotte, j'ai\l"
+	.string "Vous avez choisi quel Pokémon? Perso\n"
+	.string "j'ai demandé un Coupenotte, j'ai\l"
 	.string "toujours rêvé d'en avoir un.$"
 
 rivaux_train_1_Text_13:
-	.string "Lisa : Pour ma part, un Évoli, tellement\n"
-	.string "de possibilités avec ce Pokémon! Et\l"
-	.string "toi?$"
+	.string "Pour ma part, un Évoli, tellement de\n"
+	.string "possibilités avec ce Pokémon! Et toi?$"
 
 rivaux_train_1_Text_14:
 	.string "Tu n'en as pas demandé?! Mais... La date\n"
@@ -250,8 +249,8 @@ rivaux_train_1_Text_14:
 	.string "trouveront un pour toi.$"
 
 rivaux_train_1_Text_15:
-	.string "Midori : Le train ralentit, je pense\n"
-	.string "qu'on va bientôt arriver.$"
+	.string "Le train ralentit, je pense qu'on va\n"
+	.string "bientôt arriver.$"
 
 rivaux_train_1_Text_16:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}(jingle ENCF) Le train pour le CDR est\n"

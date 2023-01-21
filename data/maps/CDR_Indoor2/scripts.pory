@@ -53,7 +53,7 @@ script LV7{
 }
 
 script lizbefore{
-	msgbox(format("Je ne tiens plus en place!!!! Je vais avoir mon tout premier Pokémon!"))
+	msgbox_mugshot(format("Je ne tiens plus en place!!!! Je vais avoir mon tout premier Pokémon!"),MSGBOX_SIGN,MUGSHOT_LISA_HAPPY)
 	releaseall
 	end
 }
@@ -165,7 +165,7 @@ script Schwartz{
 	msgbox_mugshot(format("Lisa, tu as demandé un Évoli, tiens."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox(format("{COLOR BLUE} Lisa a obtenu une ÉVOLI"))
-	msgbox("Oh ! Elle est si mignonne!!!")
+	msgbox_mugshot("Oh ! Elle est si mignonne!!!",MSGBOX_SIGN,MUGSHOT_LISA_HAPPY)
 	applymovement(1, sch4)
 	msgbox_mugshot(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
  }

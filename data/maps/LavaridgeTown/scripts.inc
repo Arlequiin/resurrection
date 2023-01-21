@@ -65,21 +65,21 @@ foret_1_1:
 	end
 
 foret_1_2:
-	turnobject 26, DIR_WEST
-	turnobject 27, DIR_WEST
+	turnobject 24, DIR_WEST
+	turnobject 25, DIR_WEST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox_mugshot foret_1_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
-	msgbox foret_1_Text_1
+	msgbox_mugshot foret_1_Text_1, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
 	msgbox_mugshot foret_1_Text_2, MSGBOX_SIGN, MUGSHOT_MIDORI
-	msgbox foret_1_Text_3
+	msgbox_mugshot foret_1_Text_3, MSGBOX_SIGN, MUGSHOT_LISA_AWK
 	msgbox_mugshot foret_1_Text_4, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_1_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI
-	applymovement 26, midforest_1
-	waitmovement 26
+	applymovement 24, midforest_1
+	waitmovement 24
 	hideobjectat 60, MAP_LAVARIDGE_TOWN
 	hideobjectat 61, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x027
-	removeobject 26, MAP_LAVARIDGE_TOWN
+	removeobject 24, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x025
 	setvar VAR_UNUSED_0x4083, 1
 	goto foret_1_1
@@ -103,22 +103,22 @@ foret_2_2:
 	msgbox foret_2_Text_4
 	msgbox foret_2_Text_5
 	closemessage
-	applymovement 53, leave
-	waitmovement 53
+	applymovement 51, leave
+	waitmovement 51
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
-	applymovement 54, leave
-	waitmovement 54
+	applymovement 50, leave
+	waitmovement 50
 	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
-	removeobject 53, MAP_LAVARIDGE_TOWN
-	removeobject 54, MAP_LAVARIDGE_TOWN
+	removeobject 50, MAP_LAVARIDGE_TOWN
+	removeobject 51, MAP_LAVARIDGE_TOWN
 	msgbox_mugshot foret_2_Text_6, MSGBOX_SIGN, MUGSHOT_MIDORI
 	fadescreen 3
 	playmoncry SPECIES_ONIX, CRY_MODE_FAINT
 	msgbox foret_2_Text_7
 	msgbox foret_2_Text_8
-	removeobject 56, MAP_LAVARIDGE_TOWN
-	removeobject 57, MAP_LAVARIDGE_TOWN
-	removeobject 55, MAP_LAVARIDGE_TOWN
+	removeobject 53, MAP_LAVARIDGE_TOWN
+	removeobject 54, MAP_LAVARIDGE_TOWN
+	removeobject 52, MAP_LAVARIDGE_TOWN
 	setmetatile 2, 2, 0x2F8, TRUE
 	setmetatile 2, 3, 0x300, TRUE
 	setmetatile 3, 2, 0x2F9, TRUE
@@ -128,11 +128,11 @@ foret_2_2:
 	msgbox_mugshot foret_2_Text_9, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_2_Text_10, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox_mugshot foret_2_Text_11, MSGBOX_SIGN, MUGSHOT_MIDORI
-	applymovement 52, midleave_forest2
-	waitmovement 52
-	removeobject 52
-	showobjectat 60, MAP_LAVARIDGE_TOWN
-	showobjectat 61, MAP_LAVARIDGE_TOWN
+	applymovement 49, midleave_forest2
+	waitmovement 49
+	removeobject 49
+	showobjectat 56, MAP_LAVARIDGE_TOWN
+	showobjectat 57, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x026
 	clearflag FLAG_UNUSED_0x027
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
@@ -203,32 +203,32 @@ foret_3_2:
 	msgbox foret_3_Text_2
 	msgbox foret_3_Text_3
 	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
-	applymovement 63, mov_evoli
-	waitmovement 63
-	applymovement 63, down_evoli
-	waitmovement 63
-	applymovement 62, mov_evoli
-	waitmovement 62
-	turnobject 63, DIR_NORTH
-	msgbox foret_3_Text_4
+	applymovement 60, mov_evoli
+	waitmovement 60
+	applymovement 60, down_evoli
+	waitmovement 60
+	applymovement 59, mov_evoli
+	waitmovement 59
+	turnobject 60, DIR_NORTH
+	msgbox_mugshot foret_3_Text_4, MSGBOX_SIGN, MUGSHOT_LISA
 	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
-	msgbox foret_3_Text_5
-	turnobject 60, DIR_EAST
-	turnobject 61, DIR_EAST
+	msgbox_mugshot foret_3_Text_5, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
+	turnobject 57, DIR_EAST
+	turnobject 58, DIR_EAST
 	playbgm MUS_DP_CATASTROPHE, FALSE
 	msgbox foret_3_Text_6
 	msgbox foret_3_Text_7
-	turnobject 63, DIR_WEST
-	turnobject 62, DIR_WEST
-	msgbox foret_3_Text_8
+	turnobject 59, DIR_WEST
+	turnobject 60, DIR_WEST
+	msgbox_mugshot foret_3_Text_8, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
 	msgbox foret_3_Text_9
-	msgbox foret_3_Text_10
-	applymovement 64, mov_evoli
-	applymovement 64, down_evoli
-	waitmovement 64
-	turnobject 64, DIR_WEST
+	msgbox_mugshot foret_3_Text_10, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
+	applymovement 61, mov_evoli
+	applymovement 61, down_evoli
+	waitmovement 61
+	turnobject 61, DIR_WEST
 	msgbox_mugshot foret_3_Text_11, MSGBOX_SIGN, MUGSHOT_MIDORI
-	msgbox foret_3_Text_12
+	msgbox_mugshot foret_3_Text_12, MSGBOX_SIGN, MUGSHOT_LISA_ANGRY
 	msgbox foret_3_Text_13
 	msgbox foret_3_Text_14
 	fadescreen 3
@@ -245,10 +245,12 @@ foret_3_2:
 	setmetatile 54, 3, 0x2F9, TRUE
 	setmetatile 54, 4, 0x301, TRUE
 	special DrawWholeMapView
-	removeobject 63
-	removeobject 61
-	removeobject 62
+	removeobject 57
+	removeobject 58
+	removeobject 60
+	showobjectat 63, MAP_LAVARIDGE_TOWN
 	fadescreen 2
+	turnobject 63, DIR_NORTH
 	playbgm MUS_DP_ETERNA_FOREST, FALSE
 	setflag FLAG_UNUSED_0x028
 	releaseall
@@ -325,7 +327,7 @@ Lisa_soin::
 	compare VAR_RESULT, 0
 	goto_if_ne Lisa_soin_2
 Lisa_soin_1:
-	msgbox Lisa_soin_Text_1
+	msgbox_mugshot Lisa_soin_Text_1, MSGBOX_SIGN, MUGSHOT_LISA
 	releaseall
 	end
 
@@ -491,7 +493,7 @@ foret_1_Text_0:
 	.string "endroit où on aurait pu atterir.$"
 
 foret_1_Text_1:
-	.string "Lisa : De ce que j'ai lu dans les livres,\n"
+	.string "De ce que j'ai lu dans les livres,\n"
 	.string "nombreux sont les cadavres dans cette\l"
 	.string "forêt, rares sont les personnes qui en\l"
 	.string "ressortent vivantes.$"
@@ -501,10 +503,10 @@ foret_1_Text_2:
 	.string "la sortie.$"
 
 foret_1_Text_3:
-	.string "Lisa : ..A.. Attendez! Les Pokémon de\n"
-	.string "cette forêt sont très dangereux. Je\l"
-	.string "vais rester là avec Évoli, venez me voir\l"
-	.string "si vous avez besoin que je soigne vos\l"
+	.string "..A.. Attendez! Les Pokémon de cette\n"
+	.string "forêt sont très dangereux. Je vais\l"
+	.string "rester là avec Évoli, venez me voir si\l"
+	.string "vous avez besoin que je soigne vos\l"
 	.string "Pokémon.$"
 
 foret_1_Text_4:
@@ -626,16 +628,16 @@ foret_3_Text_7:
 	.string "juste ce qu'il nous fallait.$"
 
 foret_3_Text_8:
-	.string "Lisa : Eh mais! Je reconnais cette voix,\n"
-	.string "vous êtes les types louches qui ont\l"
-	.string "fait sauter le train!$"
+	.string "Eh mais! Je reconnais cette voix, vous\n"
+	.string "êtes les types louches qui ont fait\l"
+	.string "sauter le train!$"
 
 foret_3_Text_9:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Belle déduction Sherlock.$"
 
 foret_3_Text_10:
-	.string "Lisa : Bande de terroristes ! Je vais\n"
-	.string "vous montrer! Évoli attaque...$"
+	.string "Bande de terroristes ! Je vais vous\n"
+	.string "montrer! Évoli attaque...$"
 
 foret_3_Text_11:
 	.string "Espèce d'abrutie qu'est-ce que tu fais!\n"
