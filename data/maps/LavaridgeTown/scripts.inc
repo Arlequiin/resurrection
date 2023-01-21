@@ -3,6 +3,11 @@ LavaridgeTown_MapScripts::
 	.byte 0
 
 LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	goto_if_unset FLAG_UNUSED_0x028, LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	setrespawn HEAL_LOCATION_FALLARBOR_TOWN
+	return
+
+LavaridgeTown_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
 	return
 

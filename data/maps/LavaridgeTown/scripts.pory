@@ -1,6 +1,10 @@
 mapscripts LavaridgeTown_MapScripts{
 	MAP_SCRIPT_ON_TRANSITION {
+	if (!flag(FLAG_UNUSED_0x028)){
 	setrespawn(HEAL_LOCATION_LAVARIDGE_TOWN)
+	} else {
+	   setrespawn(HEAL_LOCATION_FALLARBOR_TOWN)
+	}
 	}
 }
 
