@@ -230,11 +230,11 @@ script foret_3{
 	applymovement(63, forest_final)
 	waitmovement(63)
 	fadescreen(1)
-	//warp(MAP_FALLARBOR_TOWN,0)
 	removeobject(63)
 	removeobject(61)
 	removeobject(59)
 	removeobject(25)
+	warp(MAP_FALLARBOR_TOWN,0)
 	fadescreen(0)
 	setflag(FLAG_UNUSED_0x028)
 	releaseall

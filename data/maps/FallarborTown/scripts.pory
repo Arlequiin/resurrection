@@ -18,3 +18,93 @@ script restes{
 	releaseall
 	end
 }
+
+script porte{
+	random(3)
+	switch(var(VAR_RESULT)){
+	case 0:
+		msgbox(format("C'est fermé de l'intérieur."))
+	case 1:
+		msgbox(format("(une voix venant de l'intérieur) : IL EST OÙ LE RESPECT DE LA PROPRIÉTÉ PRIVÉE"))
+	case 2:
+		msgbox(format("C'est fermé à clé."))
+	}
+	releaseall
+	end
+}
+
+script aventurier_mirabilis{
+	faceplayer
+	msgbox(format("Ho ho ho! Le temple de la forêt! Je suis venu à pied jusqu'ici depuis un endroit très lointain! On dit qu'un trésor est enfoui dans ce temple depuis des millénaires. Je veux mettre la main dessus à tout prix!"))
+	releaseall
+	end
+}
+
+script mirabilis_scout{
+	faceplayer
+	msgbox(format("Regarde mon magnifique Scarhino. Je l'ai combattu au moins 10 fois avant qu'il n'accepte de se faire capturer."))
+	releaseall
+	end
+}
+
+script mirabilis_lady{
+	faceplayer
+	msgbox(format("Diantre ! J'ai encore égaré mes clés!"))
+	releaseall
+	end
+}
+
+script mirabilis_dresseur{
+	faceplayer
+	msgbox(format("T'es un dresseur aussi ? J'ai tenté de chopper le badge d'Achille mais il m'a bien remis à ma place. Il est invincible crois-moi."))
+	releaseall
+	end
+}
+
+script mirabilis_ecolier{
+	faceplayer
+	msgbox(format("Avant de me lancer dans le défi des arènes, j'essaye d'accumuler un maximum de connaissances."))
+	releaseall
+	end
+}
+
+script mirabilis_campalta{
+	msgbox(format("Bougre de merdre. Même 'po de poiscaille."))
+	msgbox(format("J'en puis plus de cette vie, j'en puis plus de cette ville."))
+	faceplayer
+	msgbox(format("Tu m'écoutes ? J'suis originaire de Campalta, une ville à l'est d'Olnyris, j'po t'dire que c'est bien loin d'ici, en plus faut traverser la mer."))
+	msgbox(format("De base j'étais venu ici pour bosser à Cellapolis Centre, mais d'puis que ces maudites roches ont fait leur apparition, je ne bosse pas et j'ai pas pu trouver de taff ailleurs. À Starupolis, ils demandent que des diplômés bac + j'sais pas combien, à Cellapolis Sud, diplômé ou pas c'est mort ils prennent que les gens du CDR, du coup je teste les autres villes. Comme tu peux le voir ici y a pas grand chose, donc je chôme."))
+	msgbox(format("J'essaye de pêcher des Magicarpes pour les revendre mais ils sont trop malins pour mordre. Tout ce que je veux là, c'est économiser 15000¥ pour prendre un bateau pour rentrer chez moi."))
+	releaseall
+	end
+}
+
+script mirabilis_bet{
+	faceplayer
+	showmoneybox(14,1)
+	msgbox(format("Salut l'ami. Ça te dit un petit pari? Chacun mise 1000¥, celui qui gagne emporte le tout. Ça va jouer à pile ou face. Pile c'est moi, face c'est toi. T'es prêt?"),MSGBOX_YESNO)
+	if (var(VAR_RESULT)==1){
+		checkmoney(1000)
+		if (var(VAR_RESULT)==1){
+		hidemoneybox
+		removemoney(1000)
+		showmoneybox(14,1)
+		random(2)
+		switch (var(VAR_RESULT)){
+			case 0:
+			msgbox(format("HA HA! Pile! À moi l'argent!"))
+			case 1:
+			msgbox(format("Face... Pourquoi suis-je aussi malchanceux!"))
+			hidemoneybox
+			addmoney(2000)
+			showmoneybox(14,1)
+		} 
+		} else {
+			msgbox(format("T'as pas assez."))
+		}
+	}
+	msgbox(format("Hésite pas à revenir me voir si tu veux rejouer."))
+	hidemoneybox
+	releaseall
+	end
+}
