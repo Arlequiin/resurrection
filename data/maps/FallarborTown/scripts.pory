@@ -128,3 +128,12 @@ script mirabilis_cyclist{
 	releaseall
 	end
 }
+
+script mirabilis_midori{
+	faceplayer
+	playbgm(MUS_DP_DAWN)
+	msgbox_mugshot(format("Je viens de chopper l'insigne du temple de la forêt. C'était pas facile pour être honnête, prépare-toi au maximum avant de relever le défi."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
+	msgbox_mugshot(format("Il est grand temps que l'on fasse notre premier combat en tant que dresseurs."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	trainerbattle_single(trainer:req, intro_text:req, lose_text:req, event_script=FALSE, music=TRUE)
+
+}
