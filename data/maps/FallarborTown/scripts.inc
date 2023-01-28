@@ -269,7 +269,7 @@ pokemon_util_16:
 
 
 axe::
-	giveitem ITEM_AXE
+	giveitem ITEM_SURFBOARD
 	releaseall
 	end
 

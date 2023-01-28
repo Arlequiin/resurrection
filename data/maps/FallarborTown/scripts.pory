@@ -220,9 +220,3 @@ script pokemon_util{
 	releaseall
 	end
 }
-
-script axe{
-	giveitem(ITEM_AXE)
-	releaseall
-	end
-}

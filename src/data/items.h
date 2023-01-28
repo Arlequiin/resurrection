@@ -9856,7 +9856,7 @@ const struct Item gItems[] =
 	// HM Items
     [ITEM_SURFBOARD] =
     {
-        .name = _("SURFBOARD"),
+        .name = _("Planche Surf"),
         .itemId = ITEM_SURFBOARD,
         .price = 0,
 		.importance = 1,
@@ -9869,7 +9869,7 @@ const struct Item gItems[] =
 
 	[ITEM_AXE] =
     {
-        .name = _("AXE"),
+        .name = _("Hâche"),
         .itemId = ITEM_AXE,
         .price = 0,
 		.importance = 1,
@@ -9882,7 +9882,7 @@ const struct Item gItems[] =
 
 	[ITEM_HAMMER] =
     {
-        .name = _("HAMMER"),
+        .name = _("Marteau"),
         .itemId = ITEM_HAMMER,
         .price = 0,
 		.importance = 1,
@@ -9895,7 +9895,7 @@ const struct Item gItems[] =
 
 	[ITEM_DIVING_SUIT] =
     {
-        .name = _("DIVING SUIT"),
+        .name = _("Combinaison"),
         .itemId = ITEM_DIVING_SUIT,
         .price = 0,
 		.importance = 1,
@@ -9908,7 +9908,7 @@ const struct Item gItems[] =
 
 	[ITEM_LANTERN] =
     {
-        .name = _("LANTERN"),
+        .name = _("Lanterne"),
         .itemId = ITEM_LANTERN,
         .price = 0,
 		.importance = 1,
@@ -9921,7 +9921,7 @@ const struct Item gItems[] =
 
 	[ITEM_POWER_GLOVE] =
     {
-        .name = _("POWER GLOVE"),
+        .name = _("Gants d'Or"),
         .itemId = ITEM_POWER_GLOVE,
         .price = 0,
 		.importance = 1,
