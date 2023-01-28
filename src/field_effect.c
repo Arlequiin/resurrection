@@ -1017,10 +1017,10 @@ bool8 FldEff_PokecenterHeal(void)
     nPokemon = CalculatePlayerPartyCount();
     task = &gTasks[CreateTask(Task_PokecenterHeal, 0xff)];
     task->tNumMons = nPokemon;
-    task->tFirstBallX = 93;
-    task->tFirstBallY = 36;
-    task->tMonitorX = 124;
-    task->tMonitorY = 24;
+    task->tFirstBallX = 110;
+    task->tFirstBallY = 7;
+    task->tMonitorX = 0;
+    task->tMonitorY = 0;
     return FALSE;
 }
 

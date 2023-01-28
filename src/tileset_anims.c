@@ -30,6 +30,7 @@ static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
 static void TilesetAnim_Mauville(u16);
+static void TilesetAnim_Pokecenter(u16);
 static void TilesetAnim_Lavaridge(u16);
 static void TilesetAnim_EverGrande(u16);
 static void TilesetAnim_Pacifidlog(u16);
@@ -744,6 +745,13 @@ void InitTilesetAnim_Gare(void)
 }
 
 void InitTilesetAnim_IntGare(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
+void InitTilesetAnim_Pokecenter(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
