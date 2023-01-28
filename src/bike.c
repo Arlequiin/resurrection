@@ -656,7 +656,7 @@ static void AcroBikeTransition_SideJump(u8 direction)
         }
     }
     playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    PlaySE(SE_BIKE_HOP);
+   PlayCry_ByMode(SPECIES_STOUTLAND, 3, CRY_MODE_HIGH_PITCH);
     playerObjEvent->facingDirectionLocked = 1;
     PlayerSetAnimId(GetJumpMovementAction(direction), COPY_MOVE_WALK);
 }
@@ -982,8 +982,8 @@ void GetOnOffBike(u8 transitionFlags)
     else
     {
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(MUS_CYCLING);
-        Overworld_ChangeMusicTo(MUS_CYCLING);
+        Overworld_SetSavedMusic(MUS_HG_POKEATHLON_EVENT);
+        Overworld_ChangeMusicTo(MUS_HG_POKEATHLON_EVENT);
     }
 }
 

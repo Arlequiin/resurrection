@@ -11,6 +11,17 @@ script FallarborTown_Mart_EventScript_Clerk{
 	end
 }
 
+script FallarborTown_Mart_EventScript_CT{
+	lock
+	faceplayer
+	msgbox(format("Bonjour! Bienvenue au point de vente des CT. Que puis-je faire pour vous?"))
+	waitmessage
+	pokemart(Mirabilis_CT)
+	msgbox(format("Merci pour votre visite!"))
+	release
+	end
+}
+
 mart FallarborTown_Mart_Pokemart{
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
@@ -26,4 +37,12 @@ mart FallarborTown_Mart_Pokemart{
 	ITEM_DIRE_HIT
 	ITEM_GUARD_SPEC
 	ITEM_NONE
+}
+
+mart Mirabilis_CT{
+	ITEM_TM07_HAIL
+	ITEM_TM11_SUNNY_DAY
+	ITEM_TM18_RAIN_DANCE
+	ITEM_TM37_SANDSTORM
+
 }
