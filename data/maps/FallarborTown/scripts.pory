@@ -215,8 +215,24 @@ script pokemon_util{
 				waitstate
 			}
 		case 2:
-
+			    bufferpartymonnick(0, 0)
+				msgbox("Votre {STR_VAR_1}...", MSGBOX_DEFAULT)
+				specialvar(VAR_RESULT, GetHpIV)
+				buffernumberstring(0, VAR_RESULT)
+				specialvar(VAR_RESULT, GetAtkIV)
+				buffernumberstring(1, VAR_RESULT)
+				specialvar(VAR_RESULT, GetDefIV)
+				buffernumberstring(2, VAR_RESULT)
+				msgbox("IV de PV : {STR_VAR_1}.\nIV d'Attaque :  {STR_VAR_2}.\pIV de Défense : {STR_VAR_3}.", MSGBOX_DEFAULT)
+				specialvar(VAR_RESULT, GetSpAtkIV)
+				buffernumberstring(0, VAR_RESULT)
+				specialvar(VAR_RESULT, GetSpDefIV)
+				buffernumberstring(1, VAR_RESULT)
+				specialvar(VAR_RESULT, GetSpeedIV)
+				buffernumberstring(2, VAR_RESULT)
+				msgbox("IV d'Attaque Spéciale : {STR_VAR_1}.\nIV de Défense Spéciale :  {STR_VAR_2}.\pIV de Vitesse : {STR_VAR_3}.", MSGBOX_DEFAULT)
 	}
 	releaseall
 	end
 }
+

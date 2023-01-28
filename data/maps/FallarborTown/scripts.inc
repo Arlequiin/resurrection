@@ -218,6 +218,7 @@ pokemon_util::
 	switch VAR_RESULT
 	case 0, pokemon_util_3
 	case 1, pokemon_util_4
+	case 2, pokemon_util_5
 pokemon_util_1:
 	releaseall
 	end
@@ -227,9 +228,9 @@ pokemon_util_3:
 	waitstate
 	special IsSelectedMonEgg
 	compare VAR_RESULT, TRUE
-	goto_if_eq pokemon_util_6
+	goto_if_eq pokemon_util_7
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
-	goto_if_ne pokemon_util_11
+	goto_if_ne pokemon_util_12
 	goto pokemon_util_1
 
 pokemon_util_4:
@@ -237,41 +238,54 @@ pokemon_util_4:
 	waitstate
 	special IsSelectedMonEgg
 	compare VAR_RESULT, TRUE
-	goto_if_eq pokemon_util_9
+	goto_if_eq pokemon_util_10
 	compare VAR_0x8005, 0
-	goto_if_eq pokemon_util_14
+	goto_if_eq pokemon_util_15
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
-	goto_if_ne pokemon_util_16
+	goto_if_ne pokemon_util_17
 	goto pokemon_util_1
 
-pokemon_util_6:
+pokemon_util_5:
+	bufferpartymonnick 0, 0
+	msgbox pokemon_util_Text_2, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetHpIV
+	buffernumberstring 0, VAR_RESULT
+	specialvar VAR_RESULT, GetAtkIV
+	buffernumberstring 1, VAR_RESULT
+	specialvar VAR_RESULT, GetDefIV
+	buffernumberstring 2, VAR_RESULT
+	msgbox pokemon_util_Text_3, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetSpAtkIV
+	buffernumberstring 0, VAR_RESULT
+	specialvar VAR_RESULT, GetSpDefIV
+	buffernumberstring 1, VAR_RESULT
+	specialvar VAR_RESULT, GetSpeedIV
+	buffernumberstring 2, VAR_RESULT
+	msgbox pokemon_util_Text_4, MSGBOX_DEFAULT
+	goto pokemon_util_1
+
+pokemon_util_7:
 	msgbox pokemon_util_Text_0
 	goto pokemon_util_1
 
-pokemon_util_9:
+pokemon_util_10:
 	msgbox pokemon_util_Text_0
 	goto pokemon_util_1
 
-pokemon_util_11:
+pokemon_util_12:
 	call Common_EventScript_NameReceivedPartyMon
 	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
 	special BufferMonNickname
 	goto pokemon_util_1
 
-pokemon_util_14:
+pokemon_util_15:
 	msgbox pokemon_util_Text_1
 	goto pokemon_util_1
 
-pokemon_util_16:
+pokemon_util_17:
 	special TeachMoveRelearnerMove
 	waitstate
 	goto pokemon_util_1
-
-
-axe::
-	giveitem ITEM_SURFBOARD
-	releaseall
-	end
 
 
 grotto_solidago_Text_0:
@@ -462,3 +476,12 @@ pokemon_util_Text_0:
 pokemon_util_Text_1:
 	.string "Aucune attaque à apprendre à ce\n"
 	.string "Pokémon, opération terminée.$"
+
+pokemon_util_Text_2:
+	.string "Votre {STR_VAR_1}...$"
+
+pokemon_util_Text_3:
+	.string "IV de PV : {STR_VAR_1}.\nIV d'Attaque :  {STR_VAR_2}.\pIV de Défense : {STR_VAR_3}.$"
+
+pokemon_util_Text_4:
+	.string "IV d'Attaque Spéciale : {STR_VAR_1}.\nIV de Défense Spéciale :  {STR_VAR_2}.\pIV de Vitesse : {STR_VAR_3}.$"
