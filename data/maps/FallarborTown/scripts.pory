@@ -185,15 +185,24 @@ script pokemon_util{
 	lock
 	multichoice(0,0,MULTI_CENTER,TRUE)
 	switch (var(VAR_RESULT)){
-		case 1:
-			special(ChooseMonForMoveRelearner)
-			if (var(VAR_0x8004)==PARTY_NOTHING_CHOSEN){
-				msgbox(format("Aucun Pokémon choisi, opération terminée."))
-				break
-			}
+		case 0:
+			special(ChoosePartyMon)
 			waitstate
 			special(IsSelectedMonEgg)
-			if (var(VAR_RESULT)){
+			if (var(VAR_RESULT)==TRUE){
+				msgbox(format("Le Pokémon choisi est un œuf, opération impossible."))
+				break
+			}
+			if (var(VAR_0x8004)!=PARTY_NOTHING_CHOSEN){
+				call(Common_EventScript_NameReceivedPartyMon)
+				specialvar(VAR_RESULT, TryPutNameRaterShowOnTheAir)
+				special(BufferMonNickname)
+			}
+		case 1:
+			special(ChooseMonForMoveRelearner)
+			waitstate
+			special(IsSelectedMonEgg)
+			if (var(VAR_RESULT)==TRUE){
 				msgbox(format("Le Pokémon choisi est un œuf, opération impossible."))
 				break
 			}
@@ -201,8 +210,12 @@ script pokemon_util{
 				msgbox(format("Aucune attaque à apprendre à ce Pokémon, opération terminée."))
 				break
 			}
-			special(TeachMoveRelearnerMove)
-			waitstate
+			if (var(VAR_0x8004)!=PARTY_NOTHING_CHOSEN){
+				special(TeachMoveRelearnerMove)
+				waitstate
+			}
+		case 2:
+		
 	}
 	releaseall
 	end

@@ -796,6 +796,7 @@ static const struct MenuAction MultichoiceList_Center[] =
     {gText_Rename},
     {gText_Relearn},
     {gText_Stats},
+    {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_Exit[] =

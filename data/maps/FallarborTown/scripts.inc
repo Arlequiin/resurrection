@@ -216,35 +216,55 @@ pokemon_util::
 	lock
 	multichoice 0, 0, MULTI_CENTER, TRUE
 	switch VAR_RESULT
-	case 2, pokemon_util_3
+	case 0, pokemon_util_3
+	case 1, pokemon_util_4
 pokemon_util_1:
 	releaseall
 	end
 
 pokemon_util_3:
-	special ChooseMonForMoveRelearner
-	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
-	goto_if_eq pokemon_util_5
+	special ChoosePartyMon
 	waitstate
 	special IsSelectedMonEgg
-	compare VAR_RESULT, 0
-	goto_if_ne pokemon_util_8
-	compare VAR_0x8005, 0
-	goto_if_eq pokemon_util_11
-	special TeachMoveRelearnerMove
-	waitstate
+	compare VAR_RESULT, TRUE
+	goto_if_eq pokemon_util_6
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_ne pokemon_util_11
 	goto pokemon_util_1
 
-pokemon_util_5:
+pokemon_util_4:
+	special ChooseMonForMoveRelearner
+	waitstate
+	special IsSelectedMonEgg
+	compare VAR_RESULT, TRUE
+	goto_if_eq pokemon_util_9
+	compare VAR_0x8005, 0
+	goto_if_eq pokemon_util_14
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_ne pokemon_util_16
+	goto pokemon_util_1
+
+pokemon_util_6:
 	msgbox pokemon_util_Text_0
 	goto pokemon_util_1
 
-pokemon_util_8:
-	msgbox pokemon_util_Text_1
+pokemon_util_9:
+	msgbox pokemon_util_Text_0
 	goto pokemon_util_1
 
 pokemon_util_11:
-	msgbox pokemon_util_Text_2
+	call Common_EventScript_NameReceivedPartyMon
+	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
+	special BufferMonNickname
+	goto pokemon_util_1
+
+pokemon_util_14:
+	msgbox pokemon_util_Text_1
+	goto pokemon_util_1
+
+pokemon_util_16:
+	special TeachMoveRelearnerMove
+	waitstate
 	goto pokemon_util_1
 
 
@@ -430,13 +450,9 @@ mystery_gift_Text_1:
 	.string "valide.$"
 
 pokemon_util_Text_0:
-	.string "Aucun Pokémon choisi, opération\n"
-	.string "terminée.$"
-
-pokemon_util_Text_1:
 	.string "Le Pokémon choisi est un œuf, opération\n"
 	.string "impossible.$"
 
-pokemon_util_Text_2:
+pokemon_util_Text_1:
 	.string "Aucune attaque à apprendre à ce\n"
 	.string "Pokémon, opération terminée.$"
