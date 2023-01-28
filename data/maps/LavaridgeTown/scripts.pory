@@ -60,7 +60,7 @@ script foret_1{
 script foret_2{
   if (!flag(FLAG_UNUSED_0x026)){
 	applymovement(OBJ_EVENT_ID_PLAYER,protaforest_2)
-	playbgm(MUS_DP_CATASTROPHE,FALSE)
+	playbgm(MUS_DP_CATASTROPHE,TRUE)
 	msgbox_mugshot(format("Fais pas de bruit! Je crois que c'est les types qui ont fait sauter le train, je les ai entendus parler de moteur."),MSGBOX_SIGN,MUGSHOT_MIDORI)
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Plus que 9 litres d'énergie vitale et on pourra rentrer au Q.G. Cette mission se déroule à la perfection."))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Tu m'étonnes y a personne pour nous gêner, ils sont tous en train de moisir dans ce qui reste du train."))
@@ -100,7 +100,7 @@ script foret_2{
 	showobjectat(57,MAP_LAVARIDGE_TOWN)
 	setflag(FLAG_UNUSED_0x026)
 	clearflag(FLAG_UNUSED_0x027)
-	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
+	playbgm(MUS_DP_ETERNA_FOREST,TRUE)
   } else {
 	if (var(VAR_TEMP_2)==0){
 	setmetatile(2,2,0x2F8,TRUE)
@@ -171,7 +171,7 @@ script foret_3{
 	msgbox_mugshot(format("Tu es si intelligente! ..."),MSGBOX_SIGN,MUGSHOT_LISA_HAPPY)
 	turnobject(57,DIR_EAST)
 	turnobject(58,DIR_EAST)
-	playbgm(MUS_DP_CATASTROPHE,FALSE)
+	playbgm(MUS_DP_CATASTROPHE,TRUE)
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 1 : Tiens tiens, tu vois ce que je vois?"))
 	msgbox(format("{COLOR BLUE}{SHADOW LIGHT_BLUE}Sbire 2 : Oh que oui, un Évoli! Une source inestimable d'énérgie vitale, juste ce qu'il nous fallait."))
 	turnobject(59,DIR_WEST)
@@ -206,7 +206,7 @@ script foret_3{
 	removeobject(60)
 	showobjectat(63, MAP_LAVARIDGE_TOWN)
 	fadescreen(2)
-	playbgm(MUS_DP_ETERNA_FOREST,FALSE)
+	playbgm(MUS_DP_ETERNA_FOREST,TRUE)
 	msgbox(format("??? : Oh... Ciel! Quelle horreur!"))
 	msgbox_mugshot(format("Évoli! Je ne me le pardonnerai jamais!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY1)
 	msgbox_mugshot(format("Non! Pourquoi suis-je aussi irresponsable!"),MSGBOX_SIGN,MUGSHOT_LISA_CRY2)

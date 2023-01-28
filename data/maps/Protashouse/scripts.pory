@@ -18,7 +18,7 @@ script maman{
 	faceplayer
 	applymovement(1, StopPlayer)
 	applymovement(OBJ_EVENT_ID_PLAYER, FaceMom)
-	playbgm(MUS_DP_FOLLOW_ME,FALSE)
+	playbgm(MUS_DP_FOLLOW_ME,TRUE)
 	msgbox(format("Ah, tu es là!"))
 	closemessage
 	msgbox(format("Bon, {PLAYER} tu vas être en retard, le train part dans moins d'une heure. Tu as dormi comme un Ronflex ! J'ai quelques objets à te donner avant que l'on se quitte"))
@@ -50,7 +50,7 @@ script maman{
 	closemessage
 	msgbox(format("{PLAYER} s'il t'arrive quelque chose je ne pourrai pas m'en remettre. Les séparations sont toujours compliquées... Mais bon, la vie l'exige, moi aussi j'étais une grande dresseuse à une époque. Le niveau de Florizarre en témoigne. Dis lui au revoir en sortant ! Bien. Je ne te retiens pas plus. Au revoir mon bouchon ... (larme)"))
 	closemessage
-	playbgm(MUS_HG_NEW_BARK,FALSE)
+	playbgm(MUS_HG_NEW_BARK,TRUE)
   } 
 	releaseall
 	end

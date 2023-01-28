@@ -156,6 +156,31 @@ mirabilis_cyclist::
 	end
 
 
+mirabilis_up:
+	walk_up
+	step_end
+
+mirabilis_midori::
+	faceplayer
+	msgbox_mugshot mirabilis_midori_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot mirabilis_midori_Text_1, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	msgbox_mugshot mirabilis_midori_Text_2, MSGBOX_SIGN, MUGSHOT_MIDORI
+	msgbox_mugshot mirabilis_midori_Text_3, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, mirabilis_midori_Text_4
+	msgbox_mugshot mirabilis_midori_Text_5, MSGBOX_SIGN, MUGSHOT_MIDORI
+	special HealPlayerParty
+	playfanfare MUS_HEAL
+	msgbox_mugshot mirabilis_midori_Text_6, MSGBOX_SIGN, MUGSHOT_MIDORI_HAPPY
+	turnobject 35, DIR_NORTH
+	applymovement 35, mirabilis_up
+	fadescreen 1
+	removeobject 35
+	fadescreen 0
+	setflag FLAG_MIDORI_MIRABILIS
+	releaseall
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -276,3 +301,43 @@ mirabilis_cyclist_Text_0:
 	.string "m'entraîne dur pour l'avoir. Je n'aurais\l"
 	.string "plus à payer la traversée Olnyris\l"
 	.string "Ouest-Est.$"
+
+mirabilis_midori_Text_0:
+	.string "Ah t'es là. Archie a emmené Lisa chez un\n"
+	.string "Taxi-Volant, elle ira à Portokov\l"
+	.string "rencontrer ce fameux Flo. La pauvre, sa\l"
+	.string "carrière de dresseuse a déjà pris fin.$"
+
+mirabilis_midori_Text_1:
+	.string "Il m'a expliqué 2-3 trucs concernant le\n"
+	.string "défi des arènes, contrairement à\l"
+	.string "d'autres régions, il n'y a pas de\l"
+	.string "bâtiment pour le combat d'arène,\l"
+	.string "seulement un terrain. Les champions\l"
+	.string "sont très occupés donc ils doivent\l"
+	.string "choisir leurs adversaires au\l"
+	.string "compte-goutte, d'où l'intérêt du défi!\l"
+	.string "Le défi de cette arène consiste à\l"
+	.string "battre le dominant du Temple Forestier,\l"
+	.string "ça ne risque pas d'être simple!$"
+
+mirabilis_midori_Text_2:
+	.string "Le dominant est terriblement fort, je\n"
+	.string "te propose de faire équipe pour le\l"
+	.string "combattre.$"
+
+mirabilis_midori_Text_3:
+	.string "Mais avant ça, j'aimerais que l'on fasse\n"
+	.string "notre premier combat de dresseurs!$"
+
+mirabilis_midori_Text_4:
+	.string "Tu es devenu si fort en si peu de temps!\n"
+	.string "Le prochain combat je gagnerai, c'est\l"
+	.string "une promesse.$"
+
+mirabilis_midori_Text_5:
+	.string "Je ne pouvais pas m'attendre à plus,\n"
+	.string "laisse-moi soigner tes Pokémon.$"
+
+mirabilis_midori_Text_6:
+	.string "Je file, me fais pas trop attendre.$"

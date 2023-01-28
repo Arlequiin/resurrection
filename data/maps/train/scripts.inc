@@ -78,7 +78,7 @@ rivaux_train_1_7:
 	showobjectat 6, MAP_TRAIN
 	showobjectat 5, MAP_TRAIN
 	fadescreen 0
-	playbgm MUS_DP_CATASTROPHE, FALSE
+	playbgm MUS_DP_CATASTROPHE, TRUE
 	applymovement OBJ_EVENT_ID_PLAYER, regard_droit
 	msgbox_mugshot rivaux_train_1_Text_25, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox rivaux_train_1_Text_26

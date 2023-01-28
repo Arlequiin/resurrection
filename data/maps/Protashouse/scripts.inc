@@ -30,7 +30,7 @@ maman_2:
 	faceplayer
 	applymovement 1, StopPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, FaceMom
-	playbgm MUS_DP_FOLLOW_ME, FALSE
+	playbgm MUS_DP_FOLLOW_ME, TRUE
 	msgbox maman_Text_0
 	closemessage
 	msgbox maman_Text_1
@@ -62,7 +62,7 @@ maman_2:
 	closemessage
 	msgbox maman_Text_7
 	closemessage
-	playbgm MUS_HG_NEW_BARK, FALSE
+	playbgm MUS_HG_NEW_BARK, TRUE
 	goto maman_1
 
 

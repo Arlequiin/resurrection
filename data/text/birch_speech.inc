@@ -33,7 +33,7 @@ gText_Birch_MainSpeech::
 	.string "seuls les scientifiques les plus\n"
 	.string "brillants peuvent y accéder. Les\p"
 	.string "personnes que le hasard a choisi sont\n"
-	.string "les suivantes : le premier se namen\p"
+	.string "les suivantes : le premier se nomme\p"
 	.string "Midori, originaire de Kanto. \n"
 	.string "La deuxième quant à elle se nomme\p"
 	.string "Lisa, elle vient d'Unys.$"
@@ -45,17 +45,16 @@ gText_Birch_AndYouAre::
 
 gText_Birch_BoyOrGirl::
 	.string "C'est un.. une?\p"
-	.string "(Mädchen oder Junge?)$"
+	.string "(C'est une fille ou un garçon?)$"
 
 gText_Birch_WhatsYourName::
 	.string "... erm, il se nomme...\p"
-	.string "Wie heißt er?$"
+	.string "C'est quoi son nom déjà?$"
 
 gText_Birch_SoItsPlayer::
 	.string "{PLAYER}{KUN} c'est cela?$"
 
 gText_Birch_YourePlayer::
-	.string "(danke)\n"
 	.string "Le troisième est {PLAYER}{KUN}\p"
 	.string "$"
 

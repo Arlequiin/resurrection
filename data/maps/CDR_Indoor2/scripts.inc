@@ -644,7 +644,7 @@ Schwartz_Text_9:
 	.string "en dit long sur ton implication... Il est\l"
 	.string "trop tard pour faire demi-tour donc,\l"
 	.string "j'ai préparé quelques Pokémon pour toi.\l"
-	.string "Il y a derrière moi 9 trio de Pokémon\l"
+	.string "Il y a derrière moi 8 trios de Pokémon\l"
 	.string "venant de différentes régions, 24 au\l"
 	.string "total. La dernière machine est...\l"
 	.string "quelque peu défaillante, le Pokémon\l"

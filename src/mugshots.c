@@ -47,6 +47,9 @@ static const u16 sMugshotPal_LisaSad[] = INCBIN_U16("graphics/mugshots/liz_mug6.
 static const u32 sMugshotImg_Schwartz[] = INCBIN_U32("graphics/mugshots/schwartz.4bpp.lz");
 static const u16 sMugshotPal_Schwartz[] = INCBIN_U16("graphics/mugshots/schwartz.gbapal");
 
+static const u32 sMugshotImg_Vs[] = INCBIN_U32("graphics/mugshots/vs.4bpp.lz");
+static const u16 sMugshotPal_Vs[] = INCBIN_U16("graphics/mugshots/vs.gbapal");
+
 static const struct Mugshot sMugshots[] = {
    [MUGSHOT_MIDORI] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
    [MUGSHOT_MIDORI_HAPPY] = {.x = 16, .y = 6, .width = 96, .height = 64, .image = sMugshotImg_MidoriHappy, .palette = sMugshotPal_MidoriHappy},
@@ -59,6 +62,7 @@ static const struct Mugshot sMugshots[] = {
    [MUGSHOT_LISA_SAD] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaSad, .palette = sMugshotPal_LisaSad},
    [MUGSHOT_LISA_AWK] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaAwk, .palette = sMugshotPal_LisaAwk},
    [MUGSHOT_LISA_ANGRY] = {.x = 16, .y = 6, .width = 128, .height = 96, .image = sMugshotImg_LisaAngry, .palette = sMugshotPal_LisaAngry},
+   [MUGSHOT_VS] = {.x = 9, .y = 6, .width = 72, .height = 64, .image = sMugshotImg_Midori, .palette = sMugshotPal_Midori},
 };
 
 

@@ -33,7 +33,7 @@ sc_amour_2:
 sc_amour_5:
 	removeitem ITEM_PRETTY_FEATHER, 1
 	msgbox sc_amour_Text_4
-	random 17
+	random 18
 	switch VAR_RESULT
 	case 0, sc_amour_9
 	case 1, sc_amour_10

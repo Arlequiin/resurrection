@@ -100,7 +100,7 @@ foret_2_1:
 
 foret_2_2:
 	applymovement OBJ_EVENT_ID_PLAYER, protaforest_2
-	playbgm MUS_DP_CATASTROPHE, FALSE
+	playbgm MUS_DP_CATASTROPHE, TRUE
 	msgbox_mugshot foret_2_Text_0, MSGBOX_SIGN, MUGSHOT_MIDORI
 	msgbox foret_2_Text_1
 	msgbox foret_2_Text_2
@@ -140,7 +140,7 @@ foret_2_2:
 	showobjectat 57, MAP_LAVARIDGE_TOWN
 	setflag FLAG_UNUSED_0x026
 	clearflag FLAG_UNUSED_0x027
-	playbgm MUS_DP_ETERNA_FOREST, FALSE
+	playbgm MUS_DP_ETERNA_FOREST, TRUE
 	goto foret_2_1
 
 foret_2_5:
@@ -231,7 +231,7 @@ foret_3_2:
 	msgbox_mugshot foret_3_Text_5, MSGBOX_SIGN, MUGSHOT_LISA_HAPPY
 	turnobject 57, DIR_EAST
 	turnobject 58, DIR_EAST
-	playbgm MUS_DP_CATASTROPHE, FALSE
+	playbgm MUS_DP_CATASTROPHE, TRUE
 	msgbox foret_3_Text_6
 	msgbox foret_3_Text_7
 	turnobject 59, DIR_WEST
@@ -266,7 +266,7 @@ foret_3_2:
 	removeobject 60
 	showobjectat 63, MAP_LAVARIDGE_TOWN
 	fadescreen 2
-	playbgm MUS_DP_ETERNA_FOREST, FALSE
+	playbgm MUS_DP_ETERNA_FOREST, TRUE
 	msgbox foret_3_Text_21
 	msgbox_mugshot foret_3_Text_22, MSGBOX_SIGN, MUGSHOT_LISA_CRY1
 	msgbox_mugshot foret_3_Text_23, MSGBOX_SIGN, MUGSHOT_LISA_CRY2

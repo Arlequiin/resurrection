@@ -108,7 +108,7 @@ script rivaux_train_1{
         showobjectat(6, MAP_TRAIN)
         showobjectat(5, MAP_TRAIN)
         fadescreen(0)
-        playbgm(MUS_DP_CATASTROPHE,FALSE)
+        playbgm(MUS_DP_CATASTROPHE,TRUE)
         applymovement(OBJ_EVENT_ID_PLAYER, regard_droit)
         msgbox_mugshot(format("Pourquoi le train s'arrête?"),MSGBOX_SIGN,MUGSHOT_MIDORI)
         msgbox(format("{COLOR LIGHT_RED}{COLOR RED}HAUT PARLEURS : Salut tout le monde, j'suis pas spécialement croyant mais je me suis dit que ce serait bien de vous prévenir pour les dernières prières."))

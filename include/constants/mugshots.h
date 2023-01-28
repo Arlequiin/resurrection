@@ -12,5 +12,6 @@
 #define MUGSHOT_LISA_SAD 8
 #define MUGSHOT_LISA_AWK 9
 #define MUGSHOT_LISA_ANGRY 10
+#define MUGSHOT_VS 11
 
 #endif

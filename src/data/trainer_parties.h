@@ -6781,12 +6781,28 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Mudkip[] = {
+static const struct TrainerMonItemCustomMoves sParty_BrendanRoute103Mudkip[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_TREECKO,
-    }
+    .iv = 50,
+    .lvl = 18,
+    .species = SPECIES_SCYTHER,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_FURY_CUTTER, MOVE_AERIAL_ACE, MOVE_ROOST},
+    },
+    {
+    .iv = 50,
+    .lvl = 18,
+    .species = SPECIES_GEODUDE,
+    .heldItem = ITEM_HARD_STONE,
+    .moves = {MOVE_ROLLOUT, MOVE_BULLDOZE, MOVE_NONE, MOVE_NONE},
+    },
+    {
+    .iv = 100,
+    .lvl = 20,
+    .species = SPECIES_AXEW,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ROCK_TOMB, MOVE_DRAGON_RAGE, MOVE_DRAGON_BREATH, MOVE_REST},
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Mudkip[] = {

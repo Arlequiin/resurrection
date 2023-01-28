@@ -111,6 +111,7 @@ static void Task_Sidney(u8);
 static void Task_Phoebe(u8);
 static void Task_Glacia(u8);
 static void Task_Drake(u8);
+static void Task_Rival(u8);
 static void Task_Champion(u8);
 static void Task_Aqua(u8);
 static void Task_Magma(u8);
@@ -362,6 +363,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_PHOEBE] = Task_Phoebe,
     [B_TRANSITION_GLACIA] = Task_Glacia,
     [B_TRANSITION_DRAKE] = Task_Drake,
+    [B_TRANSITION_RIVAL] = Task_Rival,
     [B_TRANSITION_CHAMPION] = Task_Champion,
     [B_TRANSITION_AQUA] = Task_Aqua,
     [B_TRANSITION_MAGMA] = Task_Magma,
@@ -548,6 +550,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_GLACIA]   = TRAINER_PIC_ELITE_FOUR_GLACIA,
     [MUGSHOT_DRAKE]    = TRAINER_PIC_ELITE_FOUR_DRAKE,
     [MUGSHOT_CHAMPION] = TRAINER_PIC_CHAMPION_WALLACE,
+    [MUGSHOT_MIDORI_VS] = TRAINER_PIC_RS_BRENDAN,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -555,6 +558,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_PHOEBE] =   {0x200, 0x200},
     [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
     [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
+    [MUGSHOT_MIDORI_VS] =    {0x1A0, 0x1A0},
     [MUGSHOT_CHAMPION] = {0x188, 0x188},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
@@ -886,6 +890,7 @@ static const u16 sFieldEffectPal_Pokeball[] = INCBIN_U16("graphics/field_effects
 
 const struct SpritePalette gSpritePalette_Pokeball = {sFieldEffectPal_Pokeball, FLDEFF_PAL_TAG_POKEBALL_TRAIL};
 
+static const u16 sMugshotPal_Rival[] = INCBIN_U16("graphics/battle_transitions/rival.gbapal");
 static const u16 sMugshotPal_Sidney[] = INCBIN_U16("graphics/battle_transitions/sidney_bg.gbapal");
 static const u16 sMugshotPal_Phoebe[] = INCBIN_U16("graphics/battle_transitions/phoebe_bg.gbapal");
 static const u16 sMugshotPal_Glacia[] = INCBIN_U16("graphics/battle_transitions/glacia_bg.gbapal");
@@ -896,6 +901,7 @@ static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
+    [MUGSHOT_MIDORI_VS] = sMugshotPal_Rival,
     [MUGSHOT_SIDNEY] = sMugshotPal_Sidney,
     [MUGSHOT_PHOEBE] = sMugshotPal_Phoebe,
     [MUGSHOT_GLACIA] = sMugshotPal_Glacia,
@@ -2281,6 +2287,12 @@ static void Task_Glacia(u8 taskId)
 static void Task_Drake(u8 taskId)
 {
     gTasks[taskId].tMugshotId = MUGSHOT_DRAKE;
+    DoMugshotTransition(taskId);
+}
+
+static void Task_Rival(u8 taskId)
+{
+    gTasks[taskId].tMugshotId = MUGSHOT_MIDORI_VS;
     DoMugshotTransition(taskId);
 }
 

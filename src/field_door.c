@@ -28,7 +28,10 @@ struct DoorAnimFrame
 };
 
 static bool8 ShouldUseMultiCorridorDoor(void);
-
+/*
+Littleroot <=> Cellapolis Nord
+*/
+//old
 static const u8 sDoorAnimTiles_Littleroot[] = INCBIN_U8("graphics/door_anims/littleroot.4bpp");
 static const u16 sDoorNullPalette1[16] = {};
 static const u8 sDoorAnimTiles_BirchsLab[] = INCBIN_U8("graphics/door_anims/birchs_lab.4bpp");

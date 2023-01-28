@@ -167,7 +167,7 @@ script Schwartz{
 	msgbox(format("{COLOR BLUE} Lisa a obtenu une ÉVOLI"))
 	msgbox_mugshot("Oh ! Elle est si mignonne!!!",MSGBOX_SIGN,MUGSHOT_LISA_HAPPY)
 	applymovement(1, sch4)
-	msgbox_mugshot(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 9 trio de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
+	msgbox_mugshot(format("Enfin... {PLAYER}... Tu n'as même pas pris le temps d'envoyer ton mail, ce qui en dit long sur ton implication... Il est trop tard pour faire demi-tour donc, j'ai préparé quelques Pokémon pour toi. Il y a derrière moi 8 trios de Pokémon venant de différentes régions, 24 au total. La dernière machine est... quelque peu défaillante, le Pokémon reçu sera aléatoire."),MSGBOX_SIGN,MUGSHOT_SCHWARTZ)
  }
 	releaseall
 	end

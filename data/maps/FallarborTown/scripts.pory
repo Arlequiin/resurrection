@@ -129,11 +129,27 @@ script mirabilis_cyclist{
 	end
 }
 
+movement mirabilis_up{
+	walk_up
+}
+
 script mirabilis_midori{
 	faceplayer
-	playbgm(MUS_DP_DAWN)
-	msgbox_mugshot(format("Je viens de chopper l'insigne du temple de la forêt. C'était pas facile pour être honnête, prépare-toi au maximum avant de relever le défi."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
-	msgbox_mugshot(format("Il est grand temps que l'on fasse notre premier combat en tant que dresseurs."),MSGBOX_SIGN,MUGSHOT_MIDORI)
-	trainerbattle_single(trainer:req, intro_text:req, lose_text:req, event_script=FALSE, music=TRUE)
-
+	msgbox_mugshot(format("Ah t'es là. Archie a emmené Lisa chez un Taxi-Volant, elle ira à Portokov rencontrer ce fameux Flo. La pauvre, sa carrière de dresseuse a déjà pris fin."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox_mugshot(format("Il m'a expliqué 2-3 trucs concernant le défi des arènes, contrairement à d'autres régions, il n'y a pas de bâtiment pour le combat d'arène, seulement un terrain. Les champions sont très occupés donc ils doivent choisir leurs adversaires au compte-goutte, d'où l'intérêt du défi! Le défi de cette arène consiste à battre le dominant du Temple Forestier, ça ne risque pas d'être simple!"),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
+	msgbox_mugshot(format("Le dominant est terriblement fort, je te propose de faire équipe pour le combattre."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	msgbox_mugshot(format("Mais avant ça, j'aimerais que l'on fasse notre premier combat de dresseurs!"),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
+	trainerbattle_no_intro(TRAINER_BRENDAN_ROUTE_103_MUDKIP, format("Tu es devenu si fort en si peu de temps! Le prochain combat je gagnerai, c'est une promesse."))
+	msgbox_mugshot(format("Je ne pouvais pas m'attendre à plus, laisse-moi soigner tes Pokémon."),MSGBOX_SIGN,MUGSHOT_MIDORI)
+	special(HealPlayerParty)
+	playfanfare(MUS_HEAL)
+	msgbox_mugshot(format("Je file, me fais pas trop attendre."),MSGBOX_SIGN,MUGSHOT_MIDORI_HAPPY)
+	turnobject(35,DIR_NORTH)
+	applymovement(35,mirabilis_up)
+	fadescreen(1)
+	removeobject(35)
+	fadescreen(0)
+	setflag(FLAG_MIDORI_MIRABILIS)
+	releaseall
+	end
 }

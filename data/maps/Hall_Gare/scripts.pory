@@ -21,7 +21,7 @@ script sc_amour{
 	    if (var(VAR_RESULT)==1){
 			removeitem(ITEM_PRETTY_FEATHER,1)
 			msgbox(format("Merci beaucoup! Tiens, c'est pour toi."))
-			random(17)
+			random(18)
 			switch (var(VAR_RESULT)) {
 			case 0: giveitem(ITEM_BLACK_BELT)
 			case 1: giveitem(ITEM_BLACK_GLASSES)
