@@ -982,8 +982,8 @@ void GetOnOffBike(u8 transitionFlags)
     else
     {
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(MUS_HG_POKEATHLON_EVENT);
-        Overworld_ChangeMusicTo(MUS_HG_POKEATHLON_EVENT);
+        Overworld_SetSavedMusic(MUS_HG_POKEATHLON_EVENT); // Musique velo
+        Overworld_ChangeMusicTo(MUS_HG_POKEATHLON_EVENT); //Musique velo
     }
 }
 

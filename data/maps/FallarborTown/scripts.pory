@@ -153,3 +153,57 @@ script mirabilis_midori{
 	releaseall
 	end
 }
+
+script mirabilis_center_man{
+	faceplayer
+	msgbox(format("J'adore les Sequoias de Mirabilis. Ils donnent un certain charme à la ville."))
+	releaseall
+	end
+}
+
+script mirabilis_center_boy{
+	faceplayer
+	msgbox(format("Le défi de l'arène il est insurmontable, j'ai beau entraîner mes Pokémon je n'arrive pas à battre le dominant. Peut-être ne suis-je pas né pour devenir dresseur."))
+	releaseall
+	end
+}
+
+script mystery_gift{
+	faceplayer
+	playbgm(MUS_HG_MYSTERY_GIFT,TRUE)
+	msgbox(format("Bonjour. J'ai un cadeau pour vous mais avant, je dois vérifier votre identité. Veuillez saisir le code de réception."),MSGBOX_YESNO)
+	if (var(VAR_RESULT)==1){
+		special(DoWaldaNamingScreen)
+		msgbox(format("Je regrette, mais votre code n'est pas valide."))
+	}
+	playbgm(MUS_DP_POKE_CENTER_NIGHT,TRUE)
+	releaseall
+	end
+}
+
+script pokemon_util{
+	lock
+	multichoice(0,0,MULTI_CENTER,TRUE)
+	switch (var(VAR_RESULT)){
+		case 1:
+			special(ChooseMonForMoveRelearner)
+			if (var(VAR_0x8004)==PARTY_NOTHING_CHOSEN){
+				msgbox(format("Aucun Pokémon choisi, opération terminée."))
+				break
+			}
+			waitstate
+			special(IsSelectedMonEgg)
+			if (var(VAR_RESULT)){
+				msgbox(format("Le Pokémon choisi est un œuf, opération impossible."))
+				break
+			}
+			if (var(VAR_0x8005)==0){
+				msgbox(format("Aucune attaque à apprendre à ce Pokémon, opération terminée."))
+				break
+			}
+			special(TeachMoveRelearnerMove)
+			waitstate
+	}
+	releaseall
+	end
+}

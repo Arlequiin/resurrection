@@ -181,6 +181,73 @@ mirabilis_midori::
 	end
 
 
+mirabilis_center_man::
+	faceplayer
+	msgbox mirabilis_center_man_Text_0
+	releaseall
+	end
+
+
+mirabilis_center_boy::
+	faceplayer
+	msgbox mirabilis_center_boy_Text_0
+	releaseall
+	end
+
+
+mystery_gift::
+	faceplayer
+	playbgm MUS_HG_MYSTERY_GIFT, TRUE
+	msgbox mystery_gift_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq mystery_gift_2
+mystery_gift_1:
+	playbgm MUS_DP_POKE_CENTER_NIGHT, TRUE
+	releaseall
+	end
+
+mystery_gift_2:
+	special DoWaldaNamingScreen
+	msgbox mystery_gift_Text_1
+	goto mystery_gift_1
+
+
+pokemon_util::
+	lock
+	multichoice 0, 0, MULTI_CENTER, TRUE
+	switch VAR_RESULT
+	case 2, pokemon_util_3
+pokemon_util_1:
+	releaseall
+	end
+
+pokemon_util_3:
+	special ChooseMonForMoveRelearner
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_eq pokemon_util_5
+	waitstate
+	special IsSelectedMonEgg
+	compare VAR_RESULT, 0
+	goto_if_ne pokemon_util_8
+	compare VAR_0x8005, 0
+	goto_if_eq pokemon_util_11
+	special TeachMoveRelearnerMove
+	waitstate
+	goto pokemon_util_1
+
+pokemon_util_5:
+	msgbox pokemon_util_Text_0
+	goto pokemon_util_1
+
+pokemon_util_8:
+	msgbox pokemon_util_Text_1
+	goto pokemon_util_1
+
+pokemon_util_11:
+	msgbox pokemon_util_Text_2
+	goto pokemon_util_1
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -341,3 +408,35 @@ mirabilis_midori_Text_5:
 
 mirabilis_midori_Text_6:
 	.string "Je file, me fais pas trop attendre.$"
+
+mirabilis_center_man_Text_0:
+	.string "J'adore les Sequoias de Mirabilis. Ils\n"
+	.string "donnent un certain charme à la ville.$"
+
+mirabilis_center_boy_Text_0:
+	.string "Le défi de l'arène il est insurmontable,\n"
+	.string "j'ai beau entraîner mes Pokémon je\l"
+	.string "n'arrive pas à battre le dominant.\l"
+	.string "Peut-être ne suis-je pas né pour\l"
+	.string "devenir dresseur.$"
+
+mystery_gift_Text_0:
+	.string "Bonjour. J'ai un cadeau pour vous mais\n"
+	.string "avant, je dois vérifier votre identité.\l"
+	.string "Veuillez saisir le code de réception.$"
+
+mystery_gift_Text_1:
+	.string "Je regrette, mais votre code n'est pas\n"
+	.string "valide.$"
+
+pokemon_util_Text_0:
+	.string "Aucun Pokémon choisi, opération\n"
+	.string "terminée.$"
+
+pokemon_util_Text_1:
+	.string "Le Pokémon choisi est un œuf, opération\n"
+	.string "impossible.$"
+
+pokemon_util_Text_2:
+	.string "Aucune attaque à apprendre à ce\n"
+	.string "Pokémon, opération terminée.$"

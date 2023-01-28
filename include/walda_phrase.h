@@ -1,7 +1,7 @@
 #ifndef GUARD_WALDA_PHRASE_H
 #define GUARD_WALDA_PHRASE_H
 
-#define WALDA_PHRASE_LENGTH 15
+#define WALDA_PHRASE_LENGTH 10
 
 u16 TryBufferWaldaPhrase(void);
 void DoWaldaNamingScreen(void);

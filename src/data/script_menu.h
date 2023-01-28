@@ -791,6 +791,13 @@ static const struct MenuAction MultichoiceList_FireWaterGrass[] =
     {gText_Water},
 };
 
+static const struct MenuAction MultichoiceList_Center[] =
+{
+    {gText_Rename},
+    {gText_Relearn},
+    {gText_Stats},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -920,6 +927,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_FIREWATERGRASS]             = MULTICHOICE(MultichoiceList_FireWaterGrass),
     [MULTI_STARTERS]                   = MULTICHOICE(MultichoiceList_StarterChoose),
+    [MULTI_CENTER]                     = MULTICHOICE(MultichoiceList_Center),
 };
 
 const u8 *const gStdStrings[] =

@@ -3155,7 +3155,10 @@ extern const u8 gText_Alea[];
 extern const u8 gText_Grass[];
 extern const u8 gText_Fire[];
 extern const u8 gText_Water[];
-
+//Pokemon Center
+extern const u8 gText_Relearn[];
+extern const u8 gText_Rename[];
+extern const u8 gText_Stats[];
 // Naming Screen
 extern const u8 gText_MoveOkBack[];
 extern const u8 gText_YourName[];
