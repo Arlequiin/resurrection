@@ -268,6 +268,12 @@ pokemon_util_16:
 	goto pokemon_util_1
 
 
+axe::
+	giveitem ITEM_AXE
+	releaseall
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
