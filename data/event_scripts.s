@@ -1083,3 +1083,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CDR_Indoor2/scripts.inc"
 
 	.include "data/maps/CDR_Indoor3/scripts.inc"
+
+	.include "data/maps/Temple_Forestier/scripts.inc"

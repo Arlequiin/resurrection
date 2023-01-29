@@ -288,6 +288,42 @@ pokemon_util_17:
 	goto pokemon_util_1
 
 
+echange_miracle::
+	lock
+	faceplayer
+	setvar VAR_0x8008, SPECIES_EEVEE
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox echange_miracle_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq echange_miracle_2
+	msgbox echange_miracle_Text_1
+echange_miracle_1:
+	release
+	end
+
+echange_miracle_2:
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_0x800A, VAR_0x8004
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_ne echange_miracle_5
+	goto echange_miracle_1
+
+echange_miracle_5:
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	goto echange_miracle_1
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -485,3 +521,10 @@ pokemon_util_Text_3:
 
 pokemon_util_Text_4:
 	.string "IV d'Attaque Spéciale : {STR_VAR_1}.\nIV de Défense Spéciale :  {STR_VAR_2}.\pIV de Vitesse : {STR_VAR_3}.$"
+
+echange_miracle_Text_0:
+	.string "Bonjour, voulez-vous procéder à un\n"
+	.string "échange miracle?$"
+
+echange_miracle_Text_1:
+	.string "À bientôt!$"

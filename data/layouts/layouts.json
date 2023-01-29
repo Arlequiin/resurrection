@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CDR_Indoor3/border.bin",
       "blockdata_filepath": "data/layouts/CDR_Indoor3/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEMPLE_FORESTIER",
+      "name": "Temple_Forestier_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_GeneralResu",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/Temple_Forestier/border.bin",
+      "blockdata_filepath": "data/layouts/Temple_Forestier/map.bin"
     }
   ]
 }
