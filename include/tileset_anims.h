@@ -12,6 +12,7 @@ void InitTilesetAnim_CellapolisNord(void);
 void InitTilesetAnim_Gare(void);
 void InitTilesetAnim_IndoorCdr(void);
 void InitTilesetAnim_IntGare(void);
+void InitTilesetAnim_ForestTemple(void);
 void InitTilesetAnim_Pokecenter(void);
 void InitTilesetAnim_Train(void);
 void InitTilesetAnim_CDR(void);

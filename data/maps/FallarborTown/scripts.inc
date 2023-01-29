@@ -324,6 +324,13 @@ echange_miracle_5:
 	goto echange_miracle_1
 
 
+dominant::
+	setwildbattle SPECIES_GOGOAT, 43, ITEM_SILK_SCARF, SPECIES_FERROTHORN, 35, ITEM_NONE
+	settotemboost B_POSITION_OPPONENT_LEFT, atk = 2, def = 2, speed = 2, spatk = 2, spdef = 2, acc = 2, evas = 0
+	dowildbattle
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"

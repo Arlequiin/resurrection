@@ -16,6 +16,9 @@ const u16 gMetatileAttributes_Gare[] = INCBIN_U16("data/tilesets/secondary/gare/
 const u16 gMetatiles_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatiles.bin");
 const u16 gMetatileAttributes_IntGare[] = INCBIN_U16("data/tilesets/secondary/intgare/metatile_attributes.bin");
 
+const u16 gMetatiles_ForestTemple[] = INCBIN_U16("data/tilesets/secondary/forest_temple/metatiles.bin");
+const u16 gMetatileAttributes_ForestTemple[] = INCBIN_U16("data/tilesets/secondary/forest_temple/metatile_attributes.bin");
+
 const u16 gMetatiles_Pokecenter[] = INCBIN_U16("data/tilesets/secondary/pokecenter/metatiles.bin");
 const u16 gMetatileAttributes_Pokecenter[] = INCBIN_U16("data/tilesets/secondary/pokecenter/metatile_attributes.bin");
 

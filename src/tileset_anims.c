@@ -751,6 +751,13 @@ void InitTilesetAnim_IntGare(void)
     sSecondaryTilesetAnimCallback = NULL;
 }
 
+void InitTilesetAnim_ForestTemple(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
 void InitTilesetAnim_Pokecenter(void)
 {
     sSecondaryTilesetAnimCounter = 0;

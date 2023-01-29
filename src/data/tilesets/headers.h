@@ -97,6 +97,18 @@ const struct Tileset gTileset_IntGare =
     .callback = InitTilesetAnim_IntGare,
 };
 
+const struct Tileset gTileset_ForestTemple =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ForestTemple,
+    .palettes = gTilesetPalettes_ForestTemple,
+    .metatiles = gMetatiles_ForestTemple,
+    .metatileAttributes = gMetatileAttributes_ForestTemple,
+    .callback = InitTilesetAnim_ForestTemple,
+};
+
+
 const struct Tileset gTileset_Train =
 {
     .isCompressed = TRUE,

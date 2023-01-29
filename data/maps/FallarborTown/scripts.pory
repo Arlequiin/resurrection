@@ -265,3 +265,10 @@ script echange_miracle{
 	release
 	end
 }
+
+script dominant{
+	setwildbattle(SPECIES_GOGOAT, 43, ITEM_SILK_SCARF, SPECIES_FERROTHORN, 35, ITEM_NONE)
+	settotemboost(B_POSITION_OPPONENT_LEFT, atk=2,def=2,speed=2,spatk=2,spdef=2,acc=2,evas=0)
+	dowildbattle
+	end
+}

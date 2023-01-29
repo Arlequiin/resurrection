@@ -86,6 +86,28 @@ const u16 gTilesetPalettes_IntGare[][16] =
 	INCBIN_U16("data/tilesets/secondary/intgare/palettes/15.gbapal"),
 };
 
+const u32 gTilesetTiles_ForestTemple[] = INCBIN_U32("data/tilesets/secondary/forest_temple/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_ForestTemple[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/forest_temple/palettes/15.gbapal"),
+};
+
 const u32 gTilesetTiles_Pokecenter[] = INCBIN_U32("data/tilesets/secondary/pokecenter/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_Pokecenter[][16] =
