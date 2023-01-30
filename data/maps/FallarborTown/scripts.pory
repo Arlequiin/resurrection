@@ -272,3 +272,15 @@ script dominant{
 	dowildbattle
 	end
 }
+
+script Bulbasaur{
+	setwildbattle(SPECIES_BULBASAUR, 13)
+	dowildbattle
+	end
+}
+
+script Chikorita{
+	setwildbattle(SPECIES_CHIKORITA, 12)
+	dowildbattle
+	end
+}

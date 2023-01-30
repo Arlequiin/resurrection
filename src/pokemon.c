@@ -7800,6 +7800,10 @@ u16 GetBattleBGM(void)
         #ifdef POKEMON_EXPANSION
         case SPECIES_LARVESTA:
         case SPECIES_VENIPEDE:
+        case SPECIES_BULBASAUR:
+        case SPECIES_CHIKORITA:
+        case SPECIES_SNIVY:
+        case SPECIES_ROWLET:
             return MUS_HG_VS_WILD;
         case SPECIES_UXIE:
         case SPECIES_MESPRIT:
