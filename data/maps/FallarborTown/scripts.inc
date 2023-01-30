@@ -331,6 +331,18 @@ dominant::
 	end
 
 
+Bulbasaur::
+	setwildbattle SPECIES_BULBASAUR, 13
+	dowildbattle
+	end
+
+
+Chikorita::
+	setwildbattle SPECIES_CHIKORITA, 12
+	dowildbattle
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
