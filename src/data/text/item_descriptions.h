@@ -3794,9 +3794,9 @@ static const u8 sDivingSuitDesc[] = _(
     "the SURFBOARD.");
 
 static const u8 sLanternDesc[] = _(
-	"A bright lantern\n"
-    "that can light dark\n"
-    "caves.");
+	"Une lanterne conçue\n"
+    "par V.N pour explorer\n"
+    "les endroits sombres.");
 
 static const u8 sPowerGloveDesc[] = _(
 	"A special glove\n"

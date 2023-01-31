@@ -208,7 +208,14 @@ mystery_gift_1:
 
 mystery_gift_2:
 	special DoWaldaNamingScreen
+	compare VAR_0x8004, 0
+	goto_if_eq mystery_gift_4
+	msgbox mystery_gift_Text_2
+	goto mystery_gift_1
+
+mystery_gift_4:
 	msgbox mystery_gift_Text_1
+	givemon SPECIES_VICTINI, 5, ITEM_CHOICE_SPECS
 	goto mystery_gift_1
 
 
@@ -340,6 +347,37 @@ Bulbasaur::
 Chikorita::
 	setwildbattle SPECIES_CHIKORITA, 12
 	dowildbattle
+	end
+
+
+Lanterne::
+	faceplayer
+	checkitem ITEM_LANTERN
+	compare VAR_RESULT, 0
+	goto_if_eq Lanterne_2
+	msgbox Lanterne_Text_6
+Lanterne_1:
+	releaseall
+	end
+
+Lanterne_2:
+	msgbox Lanterne_Text_0
+	msgbox Lanterne_Text_1
+	giveitem ITEM_LANTERN, 1
+	msgbox Lanterne_Text_2
+	msgbox Lanterne_Text_3
+	msgbox Lanterne_Text_4
+	setflag FLAG_REGISTER_RIVAL_POKENAV
+	setflag FLAG_ENABLE_MOM_MATCH_CALL
+	setflag FLAG_ENABLE_WALLY_MATCH_CALL
+	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
+	msgbox Lanterne_Text_5
+	goto Lanterne_1
+
+
+noturhouse::
+	msgbox noturhouse_Text_0
+	releaseall
 	end
 
 
@@ -521,8 +559,10 @@ mystery_gift_Text_0:
 	.string "Veuillez saisir le code de réception.$"
 
 mystery_gift_Text_1:
-	.string "Je regrette, mais votre code n'est pas\n"
-	.string "valide.$"
+	.string "Vous avez reçu un pokémon$"
+
+mystery_gift_Text_2:
+	.string "Je regrette, votre code est invalide.$"
 
 pokemon_util_Text_0:
 	.string "Le Pokémon choisi est un œuf, opération\n"
@@ -547,3 +587,57 @@ echange_miracle_Text_0:
 
 echange_miracle_Text_1:
 	.string "À bientôt!$"
+
+Lanterne_Text_0:
+	.string "Bonjour dresseur! Je suis un employé\n"
+	.string "chez V.N, dit Vitalis Navitas, tu dois\l"
+	.string "sans doute nous connaître on invente\l"
+	.string "tellement de choses!$"
+
+Lanterne_Text_1:
+	.string "Tu t'appelles {PLAYER} n'est-il pas? À\n"
+	.string "Vitalis Navitas on cherche à aider les\l"
+	.string "jeunes dresseurs. J'ai un petit quelque\l"
+	.string "chose pour toi, il t'aidera à visiter le\l"
+	.string "temple de la forêt.$"
+
+Lanterne_Text_2:
+	.string "C'est une lanterne très spéciale, tu\n"
+	.string "n'auras jamais besoin d'y mettre de\l"
+	.string "l'huile, elle reçoit l'énergie nécessaire\l"
+	.string "à son fonctionnement par induction,\l"
+	.string "cette énergie vient directement de nos\l"
+	.string "laboratoires, elle est totalement\l"
+	.string "décarbonisée et est produite euh...\l"
+	.string "Avec nos moyens de production\l"
+	.string "d'énergie.$"
+
+Lanterne_Text_3:
+	.string "N'est-ce pas fascinant ? De\n"
+	.string "l'électricté gratuite partout dans la\l"
+	.string "région? Vitalis Navitas fait beaucoup\l"
+	.string "de choses pour améliorer la vie des\l"
+	.string "individus.$"
+
+Lanterne_Text_4:
+	.string "Oh, j'ai un dernier truc à t'offrir!$"
+
+Lanterne_Text_5:
+	.string "Maintenant tu peux appeler tes amis et\n"
+	.string "ta famille, directement avec ton V.N\l"
+	.string "Tech (qui est aussi un produit de\l"
+	.string "Vitalis Navitas!), j'espère que tu te\l"
+	.string "serviras de tous mes cadeaux! Je te\l"
+	.string "souhaite bon courage pour la suite!$"
+
+Lanterne_Text_6:
+	.string "Bonjour! Comment ça va? Tu devrais\n"
+	.string "visiter le Centre Commercial de Vitalis\l"
+	.string "Navitas à Portokov ou à la Ville-Monde,\l"
+	.string "tu y trouveras sans doute quelque\l"
+	.string "chose d'intéressant!$"
+
+noturhouse_Text_0:
+	.string "En haut se trouvent les chambres à\n"
+	.string "coucher... Il vaudrait mieux ne pas\l"
+	.string "monter$"
