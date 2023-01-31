@@ -299,12 +299,13 @@ script Lanterne{
 		giveitem(ITEM_LANTERN,1)
 		msgbox(format("C'est une lanterne très spéciale, tu n'auras jamais besoin d'y mettre de l'huile, elle reçoit l'énergie nécessaire à son fonctionnement par induction, cette énergie vient directement de nos laboratoires, elle est totalement décarbonisée et est produite euh... Avec nos moyens de production d'énergie."))
 		msgbox(format("N'est-ce pas fascinant ? De l'électricté gratuite partout dans la région? Vitalis Navitas fait beaucoup de choses pour améliorer la vie des individus."))
-		msgbox(format("Oh, j'ai un dernier truc à t'offrir!"))
-		setflag(FLAG_REGISTER_RIVAL_POKENAV)
-		setflag(FLAG_ENABLE_MOM_MATCH_CALL)
-		setflag(FLAG_ENABLE_WALLY_MATCH_CALL)
-		setflag(FLAG_ADDED_MATCH_CALL_TO_POKENAV)
-		msgbox(format("Maintenant tu peux appeler tes amis et ta famille, directement avec ton V.N Tech (qui est aussi un produit de Vitalis Navitas!), j'espère que tu te serviras de tous mes cadeaux! Je te souhaite bon courage pour la suite!"))
+		//msgbox(format("Oh, j'ai un dernier truc à t'offrir!"))
+		//setflag(FLAG_ENABLE_RIVAL_MATCH_CALL)
+		//setflag(FLAG_ENABLE_MOM_MATCH_CALL)
+		//setflag(FLAG_ENABLE_WALLY_MATCH_CALL)
+		//setflag(FLAG_ADDED_MATCH_CALL_TO_POKENAV)
+		//msgbox(format("Maintenant tu peux appeler tes amis et ta famille, directement avec ton V.N Tech (qui est aussi un produit de Vitalis Navitas!), j'espère que tu te serviras de tous mes cadeaux! Je te souhaite bon courage pour la suite! J'ai ajouté le numéro d'assistance de V.N."))
+
 	} else {
 		msgbox(format("Bonjour! Comment ça va? Tu devrais visiter le Centre Commercial de Vitalis Navitas à Portokov ou à la Ville-Monde, tu y trouveras sans doute quelque chose d'intéressant!"))
 	}

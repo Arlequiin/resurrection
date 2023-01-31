@@ -106,7 +106,7 @@ recolt_eau_Text_1:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Vous avez rempli votre bouteille d'eau$"
 
 temple_forest_desech1_Text_0:
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Cette liane est déssechée. Il est\n"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Cette liane est dessechée. Il est\n"
 	.string "impossible de s'en servir pour monter.$"
 
 temple_forest_desech1_Text_1:

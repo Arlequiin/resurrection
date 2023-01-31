@@ -355,7 +355,7 @@ Lanterne::
 	checkitem ITEM_LANTERN
 	compare VAR_RESULT, 0
 	goto_if_eq Lanterne_2
-	msgbox Lanterne_Text_6
+	msgbox Lanterne_Text_4
 Lanterne_1:
 	releaseall
 	end
@@ -366,12 +366,6 @@ Lanterne_2:
 	giveitem ITEM_LANTERN, 1
 	msgbox Lanterne_Text_2
 	msgbox Lanterne_Text_3
-	msgbox Lanterne_Text_4
-	setflag FLAG_REGISTER_RIVAL_POKENAV
-	setflag FLAG_ENABLE_MOM_MATCH_CALL
-	setflag FLAG_ENABLE_WALLY_MATCH_CALL
-	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
-	msgbox Lanterne_Text_5
 	goto Lanterne_1
 
 
@@ -620,17 +614,6 @@ Lanterne_Text_3:
 	.string "individus.$"
 
 Lanterne_Text_4:
-	.string "Oh, j'ai un dernier truc à t'offrir!$"
-
-Lanterne_Text_5:
-	.string "Maintenant tu peux appeler tes amis et\n"
-	.string "ta famille, directement avec ton V.N\l"
-	.string "Tech (qui est aussi un produit de\l"
-	.string "Vitalis Navitas!), j'espère que tu te\l"
-	.string "serviras de tous mes cadeaux! Je te\l"
-	.string "souhaite bon courage pour la suite!$"
-
-Lanterne_Text_6:
 	.string "Bonjour! Comment ça va? Tu devrais\n"
 	.string "visiter le Centre Commercial de Vitalis\l"
 	.string "Navitas à Portokov ou à la Ville-Monde,\l"

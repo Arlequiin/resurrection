@@ -45,7 +45,7 @@ script recolt_eau{
 
 script temple_forest_desech1{
     if (var(VAR_TEMP_2)!=1){
-        msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Cette liane est déssechée. Il est impossible de s'en servir pour monter."))
+        msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Cette liane est dessechée. Il est impossible de s'en servir pour monter."))
         if (var(VAR_TEMP_9)==1){
             msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Voulez-vous l'arroser?"),MSGBOX_YESNO)
             if (var(VAR_RESULT)==1){
