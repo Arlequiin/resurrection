@@ -14,34 +14,52 @@ escalade_liane2:
 	walk_down
 	step_end
 
+escalade_onix:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+fly_jumpluff:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 liane_up::
 	msgbox liane_up_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq liane_up_1
-	return
-
+	goto_if_eq liane_up_2
 liane_up_1:
+	releaseall
+	end
+
+liane_up_2:
 	fadescreen 1
 	applymovement OBJ_EVENT_ID_PLAYER, escalade_liane
 	waitmovement OBJ_EVENT_ID_PLAYER
 	fadescreen 0
-	releaseall
-	end
+	goto liane_up_1
 
 
 liane_down::
 	msgbox liane_down_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 1
-	goto_if_eq liane_down_1
-	return
-
+	goto_if_eq liane_down_2
 liane_down_1:
+	releaseall
+	end
+
+liane_down_2:
 	fadescreen 1
 	applymovement OBJ_EVENT_ID_PLAYER, escalade_liane2
 	waitmovement OBJ_EVENT_ID_PLAYER
 	fadescreen 0
-	releaseall
-	end
+	goto liane_down_1
 
 
 recolt_eau::
@@ -90,6 +108,188 @@ temple_forest_desech1_6:
 	goto temple_forest_desech1_1
 
 
+temple_forest_desech2::
+	compare VAR_TEMP_3, 1
+	goto_if_ne temple_forest_desech2_2
+temple_forest_desech2_1:
+	releaseall
+	end
+
+temple_forest_desech2_2:
+	msgbox temple_forest_desech1_Text_0
+	compare VAR_TEMP_9, 1
+	goto_if_eq temple_forest_desech2_4
+	goto temple_forest_desech2_1
+
+temple_forest_desech2_4:
+	msgbox temple_forest_desech1_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq temple_forest_desech2_6
+	goto temple_forest_desech2_1
+
+temple_forest_desech2_6:
+	setvar VAR_TEMP_9, 0
+	setvar VAR_TEMP_3, 1
+	fadescreen 1
+	setmetatile 11, 35, 0x2FF, FALSE
+	setmetatile 11, 34, 0x326, TRUE
+	setmetatile 11, 33, 0x31E, TRUE
+	special DrawWholeMapView
+	fadescreen 0
+	msgbox temple_forest_desech1_Text_2
+	goto temple_forest_desech2_1
+
+
+temple_forest_desech3::
+	compare VAR_TEMP_4, 1
+	goto_if_ne temple_forest_desech3_2
+temple_forest_desech3_1:
+	releaseall
+	end
+
+temple_forest_desech3_2:
+	msgbox temple_forest_desech1_Text_0
+	compare VAR_TEMP_9, 1
+	goto_if_eq temple_forest_desech3_4
+	goto temple_forest_desech3_1
+
+temple_forest_desech3_4:
+	msgbox temple_forest_desech1_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq temple_forest_desech3_6
+	goto temple_forest_desech3_1
+
+temple_forest_desech3_6:
+	setvar VAR_TEMP_9, 0
+	setvar VAR_TEMP_4, 1
+	fadescreen 1
+	setmetatile 19, 29, 0x2FF, FALSE
+	setmetatile 19, 28, 0x326, TRUE
+	setmetatile 19, 27, 0x31E, TRUE
+	special DrawWholeMapView
+	fadescreen 0
+	msgbox temple_forest_desech1_Text_2
+	goto temple_forest_desech3_1
+
+
+onix_temple::
+	msgbox onix_temple_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq onix_temple_2
+onix_temple_1:
+	releaseall
+	end
+
+onix_temple_2:
+	playmoncry SPECIES_ONIX, CRY_MODE_NORMAL
+	fadescreen 1
+	applymovement OBJ_EVENT_ID_PLAYER, escalade_onix
+	waitmovement OBJ_EVENT_ID_PLAYER
+	fadescreen 0
+	goto onix_temple_1
+
+
+coton_temple::
+	msgbox coton_temple_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq coton_temple_2
+coton_temple_1:
+	releaseall
+	end
+
+coton_temple_2:
+	fadescreen 1
+	setwildbattle SPECIES_JUMPLUFF, 24
+	dowildbattle
+	msgbox coton_temple_Text_1
+	applymovement OBJ_EVENT_ID_PLAYER, fly_jumpluff
+	waitmovement OBJ_EVENT_ID_PLAYER
+	fadescreen 0
+	goto coton_temple_1
+
+
+egouts::
+	msgbox egouts_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq egouts_2
+egouts_1:
+	releaseall
+	end
+
+egouts_2:
+	warp MAP_TEMPLE_FORESTIER, 1
+	goto egouts_1
+
+
+egouts2::
+	msgbox egouts_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq egouts2_2
+egouts2_1:
+	releaseall
+	end
+
+egouts2_2:
+	warp MAP_TEMPLE_FORESTIER, 2
+	goto egouts2_1
+
+
+Vileplume::
+	goto_if_unset FLAG_TEMP_1, Vileplume_2
+Vileplume_1:
+	end
+
+Vileplume_2:
+	setwildbattle SPECIES_VILEPLUME, 27
+	dowildbattle
+	removeobject 7
+	setflag FLAG_TEMP_1
+	goto Vileplume_1
+
+
+weepinbell::
+	goto_if_unset FLAG_TEMP_2, weepinbell_2
+weepinbell_1:
+	releaseall
+	end
+
+weepinbell_2:
+	setwildbattle SPECIES_WEEPINBELL, 20
+	dowildbattle
+	removeobject 8
+	setflag FLAG_TEMP_2
+	goto weepinbell_1
+
+
+Gloom::
+	goto_if_unset FLAG_TEMP_3, Gloom_2
+Gloom_1:
+	releaseall
+	end
+
+Gloom_2:
+	setwildbattle SPECIES_GLOOM, 20
+	dowildbattle
+	removeobject 3
+	setflag FLAG_TEMP_3
+	goto Gloom_1
+
+
+solarbeam::
+	giveitem ITEM_TM22_SOLAR_BEAM
+	setflag FLAG_ITEM_SAFARI_ZONE_NORTH_WEST_TM22
+	releaseall
+	end
+
+
+reloadmap::
+	fadescreen 1
+	special DrawWholeMapView
+	fadescreen 0
+	releaseall
+	end
+
+
 liane_up_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il est possible d'escalader cette liane,\n"
 	.string "voulez-vous l'escalader?$"
@@ -115,3 +315,21 @@ temple_forest_desech1_Text_1:
 temple_forest_desech1_Text_2:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}La plante redevient verte, elle vous\n"
 	.string "remercit.$"
+
+onix_temple_Text_0:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Onix semble vouloir vous aider à\n"
+	.string "descendre. Descendre?$"
+
+coton_temple_Text_0:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Cotovol semble reticient à vous aider à\n"
+	.string "traverser... Le combattre?$"
+
+coton_temple_Text_1:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Maintenant calmé, il vous aide à\n"
+	.string "traverser.$"
+
+egouts_Text_0:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Cette bouche d'évacuation des eaux\n"
+	.string "semble assez grande pour qu'un humain\l"
+	.string "s'y faufile. Voulez-vous vous y\l"
+	.string "faufiler?$"

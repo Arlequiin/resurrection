@@ -11565,66 +11565,66 @@
           "map": "MAP_TEMPLE_FORESTIER",
           "base_label": "gTemple_Forestier0",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 6,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 16,
                 "species": "SPECIES_PHANTUMP"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 8,
+                "max_level": 16,
                 "species": "SPECIES_PUMPKABOO"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 13,
                 "species": "SPECIES_PANSAGE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 12,
                 "species": "SPECIES_COTTONEE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 19,
                 "species": "SPECIES_APPLIN"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 10,
                 "species": "SPECIES_GOSSIFLEUR"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 7,
+                "max_level": 11,
                 "species": "SPECIES_FOMANTIS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 10,
                 "species": "SPECIES_MORELULL"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 19,
                 "species": "SPECIES_CHESPIN"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 18,
                 "species": "SPECIES_FERROSEED"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 19,
                 "species": "SPECIES_ROWLET"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 19,
                 "species": "SPECIES_SNIVY"
               }
             ]
