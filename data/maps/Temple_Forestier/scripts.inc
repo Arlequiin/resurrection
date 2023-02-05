@@ -198,13 +198,13 @@ coton_temple_1:
 	end
 
 coton_temple_2:
-	fadescreen 1
 	setwildbattle SPECIES_JUMPLUFF, 24
 	dowildbattle
+	fadescreen 3
 	msgbox coton_temple_Text_1
 	applymovement OBJ_EVENT_ID_PLAYER, fly_jumpluff
 	waitmovement OBJ_EVENT_ID_PLAYER
-	fadescreen 0
+	fadescreen 2
 	goto coton_temple_1
 
 
@@ -290,6 +290,40 @@ reloadmap::
 	end
 
 
+domimid:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	face_left
+	step_end
+
+dominant::
+	showobjectat MAP_TEMPLE_FORESTIER, 14
+	applymovement 14, domimid
+	settotemboost B_POSITION_OPPONENT_LEFT, atk = 2, def = 2, speed = 2, spatk = 2, spdef = 2, acc = 2, evas = 0
+	msgbox_mugshot dominant_Text_0, MSGBOX_NPC, MUGSHOT_MIDORI
+	special SavePlayerParty
+	fadescreen 1
+	special ChooseHalfPartyForBattle
+	waitstate
+	special LoadPlayerParty
+	special ReducePlayerPartyToSelectedMons
+	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
+	setvar VAR_0x8004, SPECIAL_BATTLE_STEVEN
+	setvar VAR_0x8005, 0
+	special DoSpecialTrainerBattle
+	waitstate
+	frontier_saveparty
+	special LoadPlayerParty
+	fadescreen 1
+	special SetCB2WhiteOut
+	waitstate
+	end
+
+
 liane_up_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il est possible d'escalader cette liane,\n"
 	.string "voulez-vous l'escalader?$"
@@ -333,3 +367,6 @@ egouts_Text_0:
 	.string "semble assez grande pour qu'un humain\l"
 	.string "s'y faufile. Voulez-vous vous y\l"
 	.string "faufiler?$"
+
+dominant_Text_0:
+	.string "Combat choisis 3 pokemon$"

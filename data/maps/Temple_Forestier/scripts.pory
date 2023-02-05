@@ -133,13 +133,14 @@ script onix_temple{
 script coton_temple{
     msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Cotovol semble reticient à vous aider à traverser... Le combattre?"),MSGBOX_YESNO)
     if (var(VAR_RESULT)==1){
-        fadescreen(1)
+
         setwildbattle(SPECIES_JUMPLUFF, 24)
 	    dowildbattle
+        fadescreen(3)
         msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}Maintenant calmé, il vous aide à traverser."))
         applymovement(OBJ_EVENT_ID_PLAYER,fly_jumpluff)
         waitmovement(OBJ_EVENT_ID_PLAYER)
-        fadescreen(0)
+        fadescreen(2)
 
     }
     releaseall
@@ -209,4 +210,36 @@ script reloadmap{
     fadescreen(0)
     releaseall
     end
+}
+
+movement domimid{
+    walk_up*4
+    walk_right*1
+    walk_up*1
+    face_left
+}
+
+script dominant{
+	//setwildbattle(SPECIES_GOGOAT, 43, ITEM_SILK_SCARF, SPECIES_FERROTHORN, 35, ITEM_NONE)
+    showobjectat(MAP_TEMPLE_FORESTIER,14)
+    applymovement(14,domimid)
+	settotemboost(B_POSITION_OPPONENT_LEFT, atk=2,def=2,speed=2,spatk=2,spdef=2,acc=2,evas=0)
+    msgbox_mugshot("Combat choisis 3 pokemon",MSGBOX_NPC,MUGSHOT_MIDORI)
+    special(SavePlayerParty)
+	fadescreen(1)
+	special(ChooseHalfPartyForBattle)
+	waitstate
+	special(LoadPlayerParty)
+	special(ReducePlayerPartyToSelectedMons)
+	frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
+	setvar(VAR_0x8004, SPECIAL_BATTLE_STEVEN)
+	setvar(VAR_0x8005, 0)
+	special(DoSpecialTrainerBattle)
+	waitstate()
+	frontier_saveparty()
+	special(LoadPlayerParty)
+	fadescreen(1)
+	special(SetCB2WhiteOut)
+	waitstate
+	end
 }
