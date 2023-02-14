@@ -4525,7 +4525,7 @@
       "id": "LAYOUT_TEMPLE_FORESTIER",
       "name": "Temple_Forestier_Layout",
       "width": 40,
-      "height": 70,
+      "height": 72,
       "primary_tileset": "gTileset_GeneralResu",
       "secondary_tileset": "gTileset_ForestTemple",
       "border_filepath": "data/layouts/Temple_Forestier/border.bin",

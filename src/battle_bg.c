@@ -1170,11 +1170,6 @@ void DrawBattleEntryBackground(void)
             CopyBgTilemapBufferToVram(2);
         }
     }
-    else if (gBattleTypeFlags & BATTLE_TYPE_GROUDON)
-    {
-        LZDecompressVram(gBattleTerrainAnimTiles_Cave, (void *)(BG_CHAR_ADDR(1)));
-        LZDecompressVram(gBattleTerrainAnimTilemap_Cave, (void *)(BG_SCREEN_ADDR(28)));
-    }
     else if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE)
     {
         LZDecompressVram(gBattleTerrainAnimTiles_Underwater, (void *)(BG_CHAR_ADDR(1)));
