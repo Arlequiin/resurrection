@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BULBASAUR",
-      "x": 23,
-      "y": 58,
+      "x": 22,
+      "y": 60,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CHIKORITA",
       "x": 25,
-      "y": 56,
+      "y": 59,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HAUNTER",
       "x": 26,
-      "y": 43,
+      "y": 45,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ONIX",
       "x": 34,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -82,7 +82,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_JUMPLUFF",
       "x": 23,
-      "y": 18,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -95,7 +95,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VILEPLUME",
       "x": 16,
-      "y": 14,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -108,7 +108,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WEEPINBELL",
       "x": 20,
-      "y": 43,
+      "y": 45,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -121,7 +121,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 38,
-      "y": 29,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -134,7 +134,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 39,
-      "y": 68,
+      "y": 71,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -147,7 +147,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
-      "y": 31,
+      "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -185,8 +185,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
-      "x": 29,
-      "y": 6,
+      "x": 31,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
@@ -200,21 +200,21 @@
   "warp_events": [
     {
       "x": 19,
-      "y": 69,
+      "y": 71,
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN",
       "dest_warp_id": "2"
     },
     {
       "x": 14,
-      "y": 14,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_TEMPLE_FORESTIER",
       "dest_warp_id": "0"
     },
     {
       "x": 2,
-      "y": 14,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_TEMPLE_FORESTIER",
       "dest_warp_id": "0"
@@ -227,7 +227,7 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 62,
+      "y": 64,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -235,7 +235,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 42,
+      "y": 44,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -243,7 +243,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 41,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
@@ -251,23 +251,23 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 61,
+      "y": 63,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 63,
+      "x": 12,
+      "y": 65,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "recolt_eau"
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 63,
+      "x": 11,
+      "y": 65,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "recolt_eau"
@@ -275,7 +275,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 62,
+      "y": 64,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -283,31 +283,15 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 61,
+      "y": 63,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
-    },
-    {
-      "type": "sign",
-      "x": 13,
-      "y": 51,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "liane_down"
-    },
-    {
-      "type": "sign",
-      "x": 13,
-      "y": 52,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "liane_up"
     },
     {
       "type": "sign",
       "x": 24,
-      "y": 63,
+      "y": 65,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "temple_forest_desech1"
@@ -315,7 +299,7 @@
     {
       "type": "sign",
       "x": 10,
-      "y": 58,
+      "y": 60,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -323,7 +307,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 58,
+      "y": 60,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -331,7 +315,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 57,
+      "y": 59,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -339,7 +323,7 @@
     {
       "type": "sign",
       "x": 10,
-      "y": 57,
+      "y": 59,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -411,7 +395,7 @@
     {
       "type": "sign",
       "x": 31,
-      "y": 52,
+      "y": 54,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -419,7 +403,7 @@
     {
       "type": "sign",
       "x": 31,
-      "y": 51,
+      "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -427,7 +411,7 @@
     {
       "type": "sign",
       "x": 32,
-      "y": 51,
+      "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -435,6 +419,22 @@
     {
       "type": "sign",
       "x": 32,
+      "y": 54,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "restes"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 53,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "restes"
+    },
+    {
+      "type": "sign",
+      "x": 36,
       "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -442,16 +442,8 @@
     },
     {
       "type": "sign",
-      "x": 36,
-      "y": 51,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "restes"
-    },
-    {
-      "type": "sign",
-      "x": 36,
-      "y": 50,
+      "x": 37,
+      "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -459,15 +451,7 @@
     {
       "type": "sign",
       "x": 37,
-      "y": 50,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "restes"
-    },
-    {
-      "type": "sign",
-      "x": 37,
-      "y": 51,
+      "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -475,7 +459,7 @@
     {
       "type": "sign",
       "x": 15,
-      "y": 47,
+      "y": 49,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -483,7 +467,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 47,
+      "y": 49,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -491,7 +475,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 46,
+      "y": 48,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -499,7 +483,7 @@
     {
       "type": "sign",
       "x": 15,
-      "y": 46,
+      "y": 48,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -507,7 +491,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 37,
+      "y": 39,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -515,7 +499,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 37,
+      "y": 39,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -523,7 +507,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 36,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -531,7 +515,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 36,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -539,7 +523,7 @@
     {
       "type": "sign",
       "x": 31,
-      "y": 57,
+      "y": 59,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "recolt_eau"
@@ -547,7 +531,7 @@
     {
       "type": "sign",
       "x": 32,
-      "y": 57,
+      "y": 59,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "recolt_eau"
@@ -571,7 +555,7 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 43,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "tombes"
@@ -579,7 +563,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 43,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "tombes"
@@ -587,7 +571,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 40,
+      "y": 42,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -595,7 +579,7 @@
     {
       "type": "sign",
       "x": 26,
-      "y": 40,
+      "y": 42,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -603,7 +587,7 @@
     {
       "type": "sign",
       "x": 26,
-      "y": 39,
+      "y": 41,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -611,7 +595,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 39,
+      "y": 41,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "restes"
@@ -619,7 +603,7 @@
     {
       "type": "sign",
       "x": 2,
-      "y": 14,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "egouts"
@@ -627,7 +611,7 @@
     {
       "type": "sign",
       "x": 1,
-      "y": 14,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "egouts"
@@ -635,7 +619,7 @@
     {
       "type": "sign",
       "x": 15,
-      "y": 14,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "egouts2"
@@ -643,7 +627,7 @@
     {
       "type": "sign",
       "x": 14,
-      "y": 14,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "egouts2"
@@ -651,7 +635,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 33,
+      "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
@@ -659,7 +643,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 34,
+      "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -667,7 +651,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 35,
+      "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "temple_forest_desech2"
@@ -675,7 +659,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 28,
+      "y": 30,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -683,7 +667,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 27,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
@@ -691,7 +675,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 29,
+      "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "temple_forest_desech3"
@@ -699,7 +683,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 27,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
@@ -707,7 +691,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 28,
+      "y": 30,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -715,7 +699,7 @@
     {
       "type": "sign",
       "x": 5,
-      "y": 45,
+      "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "tombes"
@@ -723,7 +707,7 @@
     {
       "type": "sign",
       "x": 4,
-      "y": 45,
+      "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "tombes"
@@ -731,7 +715,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 42,
+      "y": 44,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_up"
@@ -739,7 +723,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 41,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "liane_down"
@@ -747,15 +731,7 @@
     {
       "type": "sign",
       "x": 21,
-      "y": 42,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "reloadmap"
-    },
-    {
-      "type": "sign",
-      "x": 35,
-      "y": 21,
+      "y": 44,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "reloadmap"
@@ -763,7 +739,7 @@
     {
       "type": "sign",
       "x": 29,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "dominant"

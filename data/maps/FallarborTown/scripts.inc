@@ -368,6 +368,13 @@ noturhouse::
 	end
 
 
+tmcase::
+	msgbox tmcase_Text_0
+	giveitem ITEM_TM_CASE
+	releaseall
+	end
+
+
 grotto_solidago_Text_0:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Il y a un petit passage entre les\n"
 	.string "arbres, voulez-vous vous faufiler\l"
@@ -617,3 +624,6 @@ noturhouse_Text_0:
 	.string "En haut se trouvent les chambres à\n"
 	.string "coucher... Il vaudrait mieux ne pas\l"
 	.string "monter$"
+
+tmcase_Text_0:
+	.string "tiens et tg$"

@@ -99,9 +99,9 @@ temple_forest_desech1_6:
 	setvar VAR_TEMP_9, 0
 	setvar VAR_TEMP_2, 1
 	fadescreen 1
-	setmetatile 24, 63, 0x2FF, FALSE
-	setmetatile 24, 62, 0x326, TRUE
-	setmetatile 24, 61, 0x31E, TRUE
+	setmetatile 24, 65, 0x2FF, FALSE
+	setmetatile 24, 64, 0x326, TRUE
+	setmetatile 24, 63, 0x31E, TRUE
 	special DrawWholeMapView
 	fadescreen 0
 	msgbox temple_forest_desech1_Text_2
@@ -131,9 +131,9 @@ temple_forest_desech2_6:
 	setvar VAR_TEMP_9, 0
 	setvar VAR_TEMP_3, 1
 	fadescreen 1
-	setmetatile 11, 35, 0x2FF, FALSE
-	setmetatile 11, 34, 0x326, TRUE
-	setmetatile 11, 33, 0x31E, TRUE
+	setmetatile 11, 37, 0x2FF, FALSE
+	setmetatile 11, 36, 0x326, TRUE
+	setmetatile 11, 35, 0x31E, TRUE
 	special DrawWholeMapView
 	fadescreen 0
 	msgbox temple_forest_desech1_Text_2
@@ -163,9 +163,9 @@ temple_forest_desech3_6:
 	setvar VAR_TEMP_9, 0
 	setvar VAR_TEMP_4, 1
 	fadescreen 1
-	setmetatile 19, 29, 0x2FF, FALSE
-	setmetatile 19, 28, 0x326, TRUE
-	setmetatile 19, 27, 0x31E, TRUE
+	setmetatile 19, 31, 0x2FF, FALSE
+	setmetatile 19, 30, 0x326, TRUE
+	setmetatile 19, 29, 0x31E, TRUE
 	special DrawWholeMapView
 	fadescreen 0
 	msgbox temple_forest_desech1_Text_2
@@ -312,7 +312,7 @@ dominant::
 	special LoadPlayerParty
 	special ReducePlayerPartyToSelectedMons
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_0x8004, SPECIAL_BATTLE_STEVEN
+	setvar VAR_0x8004, SPECIAL_BATTLE_EREADER
 	setvar VAR_0x8005, 0
 	special DoSpecialTrainerBattle
 	waitstate

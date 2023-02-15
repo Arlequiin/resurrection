@@ -249,6 +249,7 @@ Schwartz0_5:
 	giveitem ITEM_ABILITY_PATCH, 1
 	giveitem ITEM_ABILITY_CAPSULE, 1
 	msgbox Schwartz0_Text_8
+	giveitem ITEM_TM_CASE
 	giveitem ITEM_TM10_HIDDEN_POWER
 	msgbox Schwartz0_Text_9
 	msgbox Schwartz0_Text_10
@@ -695,8 +696,9 @@ Schwartz0_Text_7:
 	.string "convoités. Faites-en bon usage!$"
 
 Schwartz0_Text_8:
-	.string "Une dernière chose, voici la CT\n"
-	.string "Puissance Cachée.$"
+	.string "Une dernière chose, voici une boîte CT\n"
+	.string "accompagnée d'une CT Puissance\l"
+	.string "Cachée.$"
 
 Schwartz0_Text_9:
 	.string "Bien, filez jeunesse, qui sait, peut être\n"

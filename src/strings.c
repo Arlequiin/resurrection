@@ -1957,3 +1957,12 @@ const u8 gText_FORMS_NONE[]                         = _("{STR_VAR_1} n'a pas de 
 const u8 gText_Relearn[]                            = _("Réapprendre");
 const u8 gText_Rename[]                             = _("Renommer");
 const u8 gText_Stats[]                              = _("Stats");
+
+// frlg_tm_case_port
+const u8 gText_TMCase[] =               _("Boîte CT");
+const u8 gText_Close[] =                _("Fermer");
+const u8 gText_TMCaseWillBePutAway[] =  _("The TM CASE will be\nput away.");
+const u8 gText_FontSmall[] =            _("{FONT_SMALL}");
+const u8 gText_FontShort[] =            _("{FONT_SHORT}");
+const u8 gText_TMCase_Blue[] =          _("{COLOR_HIGHLIGHT_SHADOW BLUE TRANSPARENT LIGHT_BLUE}{STR_VAR_2}");
+

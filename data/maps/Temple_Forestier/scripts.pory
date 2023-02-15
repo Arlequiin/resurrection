@@ -60,9 +60,9 @@ script temple_forest_desech1{
                 setvar(VAR_TEMP_9,0)
                 setvar(VAR_TEMP_2,1)
                 fadescreen(1)
-                setmetatile(24,63,0x2FF,FALSE)#supprime graine
-                setmetatile(24,62,0x326,TRUE)#vert
-                setmetatile(24,61,0x31E,TRUE)#vert 2
+                setmetatile(24,65,0x2FF,FALSE)#supprime graine
+                setmetatile(24,64,0x326,TRUE)#vert
+                setmetatile(24,63,0x31E,TRUE)#vert 2
                 special(DrawWholeMapView)
                 fadescreen(0)
                 msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}La plante redevient verte, elle vous remercit."))
@@ -82,9 +82,9 @@ script temple_forest_desech2{
                 setvar(VAR_TEMP_9,0)
                 setvar(VAR_TEMP_3,1)
                 fadescreen(1)
-                setmetatile(11,35,0x2FF,FALSE)#supprime graine
-                setmetatile(11,34,0x326,TRUE)#vert
-                setmetatile(11,33,0x31E,TRUE)#vert 2
+                setmetatile(11,37,0x2FF,FALSE)#supprime graine
+                setmetatile(11,36,0x326,TRUE)#vert
+                setmetatile(11,35,0x31E,TRUE)#vert 2
                 special(DrawWholeMapView)
                 fadescreen(0)
                 msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}La plante redevient verte, elle vous remercit."))
@@ -104,9 +104,9 @@ script temple_forest_desech3{
                 setvar(VAR_TEMP_9,0)
                 setvar(VAR_TEMP_4,1)
                 fadescreen(1)
-                setmetatile(19,29,0x2FF,FALSE)#supprime graine
-                setmetatile(19,28,0x326,TRUE)#vert
-                setmetatile(19,27,0x31E,TRUE)#vert 2
+                setmetatile(19,31,0x2FF,FALSE)#supprime graine
+                setmetatile(19,30,0x326,TRUE)#vert
+                setmetatile(19,29,0x31E,TRUE)#vert 2
                 special(DrawWholeMapView)
                 fadescreen(0)
                 msgbox(format("{COLOR GREEN}{SHADOW LIGHT_GREEN}La plante redevient verte, elle vous remercit."))
@@ -232,7 +232,7 @@ script dominant{
 	special(LoadPlayerParty)
 	special(ReducePlayerPartyToSelectedMons)
 	frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
-	setvar(VAR_0x8004, SPECIAL_BATTLE_STEVEN)
+	setvar(VAR_0x8004, SPECIAL_BATTLE_EREADER)
 	setvar(VAR_0x8005, 0)
 	special(DoSpecialTrainerBattle)
 	waitstate()

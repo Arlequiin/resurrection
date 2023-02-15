@@ -311,3 +311,10 @@ script noturhouse{
 	releaseall
 	end
 }
+
+script tmcase{
+	msgbox(format("tiens et tg"))
+	giveitem(ITEM_TM_CASE)
+	releaseall
+	end
+}
