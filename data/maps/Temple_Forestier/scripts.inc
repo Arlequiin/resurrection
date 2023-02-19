@@ -304,22 +304,6 @@ dominant::
 	showobjectat MAP_TEMPLE_FORESTIER, 14
 	applymovement 14, domimid
 	settotemboost B_POSITION_OPPONENT_LEFT, atk = 2, def = 2, speed = 2, spatk = 2, spdef = 2, acc = 2, evas = 0
-	msgbox_mugshot dominant_Text_0, MSGBOX_NPC, MUGSHOT_MIDORI
-	special SavePlayerParty
-	fadescreen 1
-	special ChooseHalfPartyForBattle
-	waitstate
-	special LoadPlayerParty
-	special ReducePlayerPartyToSelectedMons
-	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_0x8004, SPECIAL_BATTLE_EREADER
-	setvar VAR_0x8005, 0
-	special DoSpecialTrainerBattle
-	waitstate
-	frontier_saveparty
-	special LoadPlayerParty
-	fadescreen 1
-	special SetCB2WhiteOut
 	waitstate
 	end
 
@@ -367,6 +351,3 @@ egouts_Text_0:
 	.string "semble assez grande pour qu'un humain\l"
 	.string "s'y faufile. Voulez-vous vous y\l"
 	.string "faufiler?$"
-
-dominant_Text_0:
-	.string "Combat choisis 3 pokemon$"

@@ -810,6 +810,11 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
 	[ITEM_DIVING_SUIT] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
 	[ITEM_LANTERN] = {gItemIcon_Lantern, gItemIconPalette_Lantern},
 	[ITEM_POWER_GLOVE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_ABILITY_SHIELD] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_AbilityShield, gItemIconPalette_AbilityShield},
+    [ITEM_CLEAR_AMULET] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_ClearAmulet, gItemIconPalette_ClearAmulet},
+    [ITEM_PUNCHING_GLOVE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_PunchingGlove, gItemIconPalette_PunchingGlove},
+    [ITEM_COVERT_CLOAK] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_CovertCloak, gItemIconPalette_CovertCloak},
+    [ITEM_LOADED_DICE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, // {gItemIcon_LoadedDice, gItemIconPalette_LoadedDice},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

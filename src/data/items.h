@@ -1385,7 +1385,7 @@ const struct Item gItems[] =
         .itemId = ITEM_EXP_CANDY_S,
         .price = 240,
         .holdEffectParam = EXP_800,
-        .description = sExpCandyXSDesc,
+        .description = sExpCandySDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -9930,5 +9930,70 @@ const struct Item gItems[] =
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_PowerGlove,
         .secondaryId = 0,
+    },
+    [ITEM_ABILITY_SHIELD] =
+    {
+        .name = _("Garde-Talent"),
+        .itemId = ITEM_ABILITY_SHIELD,
+        .price = 20000,
+        .holdEffect = HOLD_EFFECT_ABILITY_SHIELD,
+        .description = sAbilityShieldDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_CLEAR_AMULET] =
+    {
+        .name = _("Talisman Sain"),
+        .itemId = ITEM_CLEAR_AMULET,
+        .price = 30000,
+        .holdEffect = HOLD_EFFECT_CLEAR_AMULET,
+        .description = sClearAmuletDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_PUNCHING_GLOVE] =
+    {
+        .name = _("Gant de Boxe"),
+        .itemId = ITEM_PUNCHING_GLOVE,
+        .price = 15000,
+        .holdEffect = HOLD_EFFECT_PUNCHING_GLOVE,
+        .description = sPunchingGloveDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_COVERT_CLOAK] =
+    {
+        .name = _("Cape Obscure"),
+        .itemId = ITEM_COVERT_CLOAK,
+        .price = 20000,
+        .holdEffect = HOLD_EFFECT_COVERT_CLOAK,
+        .description = sCovertCloakDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_LOADED_DICE] =
+    {
+                 //YellwApricorn
+        .name = _("Dé Pipé"),
+        .itemId = ITEM_LOADED_DICE,
+        .price = 20000,
+        .holdEffect = HOLD_EFFECT_LOADED_DICE,
+        .description = sLoadedDiceDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
     },
 };
